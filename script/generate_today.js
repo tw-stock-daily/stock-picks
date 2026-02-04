@@ -11,7 +11,6 @@ function taipeiNowString() {
 async function main() {
   const FINMIND_TOKEN = process.env.FINMIND_TOKEN || "";
 
-  // 你想固定參數就寫死在這（跟你 API 預設一致）
   const data = await pickStocks({
     FINMIND_TOKEN,
     windowDays: 10,
