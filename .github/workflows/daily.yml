@@ -25,18 +25,18 @@ jobs:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
-            - name: Commit and push if changed
+      - name: Commit and push if changed
         run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          # 先把變更加入並提交（避免 pull/rebase 時工作區不乾淨）
-          git add public/today.json
-          git commit -m "chore: update today.json" || echo "No changes"
+          # 先把工作區所有變更都收進來，避免 pull --rebase 因為 unstaged changes 失敗
+          git add -A
+          git commit -m "chore: update generated files" || echo "No changes"
 
-          # 再把遠端最新變更拉下來並 rebase（避免 push 被拒絕）
-          git pull --rebase
+          # 再 rebase 遠端最新狀態，避免 push 被拒絕
+          git pull --rebase origin main
 
           # 最後推上去
-          git push
+          git push origin main
 
