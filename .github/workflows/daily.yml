@@ -11,11 +11,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: .   # ✅ 明確指定在 repo 根目錄執行
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,28 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      # ✅ 把 runner 看到的狀態印出來（避免其實沒在你以為的位置）
-      - name: Debug - show repo state
-        run: |
-          echo "=== pwd ==="
-          pwd
-          echo "=== ls -la ==="
-          ls -la
-          echo "=== package.json ==="
-          cat package.json
-
-      # ✅ 強制重裝（乾淨、可重現）
-      - name: Install dependencies (clean)
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install --no-fund --no-audit
-
-      # ✅ 關鍵：強制驗證 express 是否真的存在（沒有就直接紅叉在這一步）
-      - name: Verify express installed (must pass)
-        run: |
-          node -e "console.log('express version:', require('express/package.json').version)"
-          ls -la node_modules/express | head -n 20
 
       - name: Generate today.json
         env:
