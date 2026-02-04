@@ -2,8 +2,7 @@ name: daily-picks
 
 on:
   schedule:
-    # UTC 12:00 = 台北時間 20:00（週一～週五）
-    - cron: "0 12 * * 1-5"
+    - cron: "0 12 * * 1-5"   # UTC 12:00 = 台北 20:00（週一～週五）
   workflow_dispatch: {}
 
 permissions:
@@ -12,61 +11,52 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: .   # ✅ 明確指定在 repo 根目錄執行
 
     steps:
-      # 1️⃣ Checkout 專案
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ 安裝 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      # 3️⃣ 安裝 npm 套件
-      - name: Install dependencies
-        run: |
-          echo "=== npm version ==="
-          npm -v
-          echo "=== node version ==="
-          node -v
-          echo "=== npm install ==="
-          npm install
-
-      # 4️⃣ 除錯：確認目前目錄與檔案
-      - name: Debug - show working directory and files
+      # ✅ 把 runner 看到的狀態印出來（避免其實沒在你以為的位置）
+      - name: Debug - show repo state
         run: |
           echo "=== pwd ==="
           pwd
           echo "=== ls -la ==="
           ls -la
-          echo "=== ls script ==="
-          ls -la script || echo "no script dir"
-          echo "=== ls scripts ==="
-          ls -la scripts || echo "no scripts dir"
           echo "=== package.json ==="
           cat package.json
 
-      # 5️⃣ 除錯：確認 express 是否真的安裝成功
-      - name: Debug - verify express installation
+      # ✅ 強制重裝（乾淨、可重現）
+      - name: Install dependencies (clean)
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install --no-fund --no-audit
+
+      # ✅ 關鍵：強制驗證 express 是否真的存在（沒有就直接紅叉在這一步）
+      - name: Verify express installed (must pass)
         run: |
           node -e "console.log('express version:', require('express/package.json').version)"
+          ls -la node_modules/express | head -n 20
 
-      # 6️⃣ 執行產生 today.json（真正跑你的程式）
       - name: Generate today.json
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
-      # 7️⃣ Commit 並 push（只有成功才會走到這一步）
       - name: Commit and push if changed
         run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
-
           git pull --rebase
-
           git add public/today.json
           git commit -m "chore: update today.json" || echo "No changes"
           git push
