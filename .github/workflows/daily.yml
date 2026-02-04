@@ -2,7 +2,7 @@ name: daily-picks
 
 on:
   schedule:
-    # UTC 12:00 = 台北 20:00（週一～週五）
+    # UTC 12:00 = 台北時間 20:00（週一～週五）
     - cron: "0 12 * * 1-5"
   workflow_dispatch: {}
 
@@ -12,26 +12,35 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      # 1️⃣ 取出 repo 原始碼
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      # 2️⃣ 安裝 Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # 3️⃣ 安裝套件（解決 express / 其他依賴）
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ 產生 today.json（跑你的選股程式）
       - name: Generate today.json
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
+      # 5️⃣ 將更新後的 today.json 推回 repo
       - name: Commit and push if changed
         run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          # ✅ 避免你手動 commit 與 Actions 同時更新造成 push 被拒絕
+          # 避免與你手動修改衝突
           git pull --rebase
 
           git add public/today.json
