@@ -1,33 +1,35 @@
 // script/generate_today.js
-import fs from "fs";
-import { pickStocks } from "../lib/pickStocks.js";
+const fs = require("fs");
+const { pickStocks } = require("../lib/pickStocks.js");
 
-function pad(n) {
-  return String(n).padStart(2, "0");
-}
-
+function pad(n) { return String(n).padStart(2, "0"); }
 function taipeiNowString() {
-  // GitHub Actions 用 UTC，我們手動轉台北時間 +8
   const now = new Date(Date.now() + 8 * 60 * 60 * 1000);
-  const y = now.getUTCFullYear();
-  const m = pad(now.getUTCMonth() + 1);
-  const d = pad(now.getUTCDate());
-  const hh = pad(now.getUTCHours());
-  const mm = pad(now.getUTCMinutes());
-  return `${y}-${m}-${d} ${hh}:${mm}`;
+  return `${now.getUTCFullYear()}-${pad(now.getUTCMonth()+1)}-${pad(now.getUTCDate())} ${pad(now.getUTCHours())}:${pad(now.getUTCMinutes())}`;
 }
 
 async function main() {
   const FINMIND_TOKEN = process.env.FINMIND_TOKEN || "";
 
-  // 目前先讓流程跑通：就算沒 token 也可以產出假資料
-  const result = await pickStocks({ FINMIND_TOKEN });
+  // 你想固定參數就寫死在這（跟你 API 預設一致）
+  const data = await pickStocks({
+    FINMIND_TOKEN,
+    windowDays: 10,
+    bucket: "all",
+    topK: 40,
+  });
 
   const out = {
     market: "TW",
     generatedAt: taipeiNowString(),
-    topN: result.topN ?? (result.picks ? result.picks.length : 0),
-    picks: result.picks ?? []
+    topN: 3,
+    picks: (data.picks || []).slice(0, 3),
+    meta: {
+      finmindEnabled: data.finmindEnabled,
+      windowDays: data.windowDays,
+      bucket: data.bucket,
+      pool: data.pool,
+    }
   };
 
   fs.mkdirSync("public", { recursive: true });
