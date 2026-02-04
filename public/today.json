@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-04 15:32",
+  "generatedAt": "2026-02-04 23:09",
   "topN": 3,
   "picks": [
     {
@@ -13,13 +13,13 @@
       "symbol": "2454",
       "name": "聯發科",
       "score": 88,
-      "reason": "技術面轉強、量能放大"
+      "reason": "技術面轉強"
     },
     {
       "symbol": "2317",
       "name": "鴻海",
       "score": 85,
-      "reason": "低檔整理後反彈"
+      "reason": "低檔反彈"
     }
   ]
 }
