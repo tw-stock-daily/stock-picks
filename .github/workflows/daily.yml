@@ -1,0 +1,32 @@
+name: daily-picks
+
+on:
+  schedule:
+    - cron: "0 12 * * 1-5"   # UTC 12:00 = 台北 20:00 (週一～五)
+  workflow_dispatch: {}       # 允許你手動按一下就跑（測試用）
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate today.json
+        run: npm run generate
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "tw-stock-daily-bot"
+          git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+          git add public/today.json
+          git commit -m "chore: update today.json" || echo "No changes"
+          git push
