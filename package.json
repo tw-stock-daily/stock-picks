@@ -2,6 +2,6 @@
   "name": "stock-picks",
   "private": true,
   "scripts": {
-    "generate": "node script/generate_today.mjs"
+    "generate": "node script/generate_today.js"
   }
 }
