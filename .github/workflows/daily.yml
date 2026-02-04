@@ -21,6 +21,8 @@ jobs:
           node-version: "20"
 
       - name: Generate today.json
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
       - name: Commit and push if changed
