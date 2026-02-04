@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 取完整歷史，避免少數情況 push 出問題
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,18 +27,17 @@ jobs:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
-      - name: Commit and push if changed
+      - name: Commit and push
         run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          # 先把工作區所有變更都收進來，避免 pull --rebase 因為 unstaged changes 失敗
+          # 把所有變更加入（避免漏掉造成工作區不乾淨）
           git add -A
-          git commit -m "chore: update generated files" || echo "No changes"
 
-          # 再 rebase 遠端最新狀態，避免 push 被拒絕
-          git pull --rebase origin main
+          # 沒變更就結束（不算失敗）
+          git commit -m "chore: update generated files" || exit 0
 
-          # 最後推上去
-          git push origin main
-
+          # 直接推回 main，不做 pull/rebase（避免 unstaged changes 問題）
+          # --force-with-lease 會保護：如果遠端在你 checkout 後被別人更新，會拒絕推送
+          git push --force-with-lease origin HEAD:main
