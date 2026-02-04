@@ -3,5 +3,8 @@
   "private": true,
   "scripts": {
     "generate": "node script/generate_today.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
