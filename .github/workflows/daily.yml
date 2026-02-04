@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ 取出 repo 原始碼
+      # 1️⃣ Checkout 專案
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -24,23 +24,47 @@ jobs:
         with:
           node-version: "20"
 
-      # 3️⃣ 安裝套件（解決 express / 其他依賴）
+      # 3️⃣ 安裝 npm 套件
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "=== npm version ==="
+          npm -v
+          echo "=== node version ==="
+          node -v
+          echo "=== npm install ==="
+          npm install
 
-      # 4️⃣ 產生 today.json（跑你的選股程式）
+      # 4️⃣ 除錯：確認目前目錄與檔案
+      - name: Debug - show working directory and files
+        run: |
+          echo "=== pwd ==="
+          pwd
+          echo "=== ls -la ==="
+          ls -la
+          echo "=== ls script ==="
+          ls -la script || echo "no script dir"
+          echo "=== ls scripts ==="
+          ls -la scripts || echo "no scripts dir"
+          echo "=== package.json ==="
+          cat package.json
+
+      # 5️⃣ 除錯：確認 express 是否真的安裝成功
+      - name: Debug - verify express installation
+        run: |
+          node -e "console.log('express version:', require('express/package.json').version)"
+
+      # 6️⃣ 執行產生 today.json（真正跑你的程式）
       - name: Generate today.json
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
-      # 5️⃣ 將更新後的 today.json 推回 repo
+      # 7️⃣ Commit 並 push（只有成功才會走到這一步）
       - name: Commit and push if changed
         run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          # 避免與你手動修改衝突
           git pull --rebase
 
           git add public/today.json
