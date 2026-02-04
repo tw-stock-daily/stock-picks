@@ -2,9 +2,6 @@
   "name": "stock-picks",
   "private": true,
   "scripts": {
-    "generate": "node script/generate_today.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2"
+    "generate": "node script/generate_today.mjs"
   }
 }
