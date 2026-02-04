@@ -2,8 +2,9 @@ name: daily-picks
 
 on:
   schedule:
-    - cron: "0 12 * * 1-5"   # UTC 12:00 = 台北 20:00 (週一～五)
-  workflow_dispatch: {}       # 允許你手動按一下就跑（測試用）
+    # UTC 12:00 = 台北 20:00（週一～週五）
+    - cron: "0 12 * * 1-5"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -29,6 +30,10 @@ jobs:
         run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+
+          # ✅ 避免你手動 commit 與 Actions 同時更新造成 push 被拒絕
+          git pull --rebase
+
           git add public/today.json
           git commit -m "chore: update today.json" || echo "No changes"
           git push
