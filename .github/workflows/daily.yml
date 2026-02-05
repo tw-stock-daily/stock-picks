@@ -27,10 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
 
-      # 若存在 package-lock.json → 用 npm ci（更穩）
-      # 若沒有 lock 檔 → fallback 用 npm install
       - name: Install dependencies
         shell: bash
         run: |
@@ -52,10 +49,8 @@ jobs:
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          # 只提交 today.json 的變更
           git add public/today.json
 
-          # 如果沒有變更就結束
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
