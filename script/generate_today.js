@@ -28,6 +28,8 @@ async function main() {
       windowDays: data.windowDays,
       bucket: data.bucket,
       pool: data.pool,
+      finmindStage2TopK: data.finmindStage2TopK,
+      minPickScore: data.minPickScore,
     }
   };
 
