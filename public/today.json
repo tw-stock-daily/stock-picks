@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-05 21:36",
+  "generatedAt": "2026-02-05 21:53",
   "topN": 3,
   "picks": [
     {
@@ -31,6 +31,18 @@
       "POOL_SIZE": 600,
       "MIN_LIQ_SHARES": 500000,
       "MIN_PRICE": 10
+    },
+    "marketGuard": {
+      "level": "riskOn",
+      "maxPicks": 3,
+      "index": {
+        "symbol": "^TWII",
+        "last": 31801.26953125,
+        "ma20": 31638.72578125,
+        "ma60": 29250.855729166666,
+        "rsi14": 58.081122433149055
+      },
+      "reasons": []
     }
   }
 }

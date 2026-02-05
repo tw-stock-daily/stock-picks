@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-02-05T13:55:01.876Z",
+  "range": {
+    "filesUsed": 1,
+    "from": "2026-02-05",
+    "to": "2026-02-05"
+  },
+  "summary": {
+    "D+1": {
+      "samples": 0,
+      "winRate": 0,
+      "avgReturnPct": 0,
+      "medianReturnPct": 0
+    },
+    "D+5": {
+      "samples": 0,
+      "winRate": 0,
+      "avgReturnPct": 0,
+      "medianReturnPct": 0
+    },
+    "D+10": {
+      "samples": 0,
+      "winRate": 0,
+      "avgReturnPct": 0,
+      "medianReturnPct": 0
+    }
+  }
+}
