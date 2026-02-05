@@ -1,25 +1,23 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-04 23:37",
+  "generatedAt": "2026-02-05 20:27",
   "topN": 3,
-  "picks": [
-    {
-      "symbol": "2330",
-      "name": "台積電",
-      "score": 92,
-      "reason": "法人買超、趨勢偏多"
+  "picks": [],
+  "meta": {
+    "finmindEnabled": true,
+    "windowDays": 10,
+    "bucket": {
+      "key": "all",
+      "label": "不限"
     },
-    {
-      "symbol": "2454",
-      "name": "聯發科",
-      "score": 88,
-      "reason": "技術面轉強"
+    "pool": {
+      "type": "TWSE_TOP_VOLUME",
+      "size": 0,
+      "POOL_SIZE": 600,
+      "MIN_LIQ_SHARES": 500000,
+      "MIN_PRICE": 10
     },
-    {
-      "symbol": "2317",
-      "name": "鴻海",
-      "score": 85,
-      "reason": "低檔反彈"
-    }
-  ]
+    "finmindStage2TopK": 40,
+    "minPickScore": 0
+  }
 }
