@@ -2,7 +2,7 @@ name: daily-picks
 
 on:
   schedule:
-    # 台北時間每天 23:10 ＝ UTC 15:10
+    # 台北時間每天 23:10（UTC 15:10）
     - cron: "10 15 * * *"
   workflow_dispatch: {}
 
@@ -37,7 +37,7 @@ jobs:
             npm install
           fi
 
-      - name: Generate today.json
+      - name: Generate today.json and history
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
@@ -49,12 +49,13 @@ jobs:
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          git add public/today.json
+          # 提交 today.json 與 history
+          git add public/today.json public/history
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: update today.json"
+          git commit -m "chore: update today.json and history"
           git push
