@@ -1,25 +1,28 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-05T12:52:26.721Z",
+  "generatedAt": "2026-02-05T13:09:58.649Z",
   "topN": 3,
   "picks": [
     {
-      "symbol": "3481",
-      "name": "群創",
-      "score": 100,
-      "reason": "資料來源正常（驗證用）"
+      "symbol": "6861",
+      "name": "睿生光電",
+      "score": 107.0434,
+      "passed": true,
+      "reason": "主推"
     },
     {
-      "symbol": "2337",
-      "name": "旺宏",
-      "score": 95,
-      "reason": "資料來源正常（驗證用）"
+      "symbol": "6451",
+      "name": "訊芯-KY",
+      "score": 93.7774,
+      "passed": true,
+      "reason": "主推"
     },
     {
-      "symbol": "6443",
-      "name": "元晶",
-      "score": 90,
-      "reason": "資料來源正常（驗證用）"
+      "symbol": "4960",
+      "name": "誠美材",
+      "score": 89.6206,
+      "passed": true,
+      "reason": "主推"
     }
   ],
   "meta": {
