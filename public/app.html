@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>台股精選｜今日推薦</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --card2:#0f172a;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --line:rgba(255,255,255,.08);
+      --chip:#1f2a44;
+      --btn:#1e293b;
+      --btn2:#24324f;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+    }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans TC", Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: linear-gradient(180deg, #060a12, var(--bg));
+      color:var(--text);
+    }
+    .wrap{max-width: 920px; margin:0 auto; padding: 18px 14px 30px;}
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom: 14px;}
+    .title{font-size: 20px; font-weight: 800; letter-spacing:.5px;}
+    .sub{color:var(--muted); font-size: 12px; margin-top:4px;}
+    .actions{display:flex; gap:10px; align-items:center;}
+    .btn{
+      background: linear-gradient(180deg, var(--btn2), var(--btn));
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 650;
+      font-size: 13px;
+    }
+    .btn:active{transform: translateY(1px);}
+    .grid{display:grid; grid-template-columns: 1fr; gap: 12px;}
+    @media (min-width: 860px){
+      .grid-2{grid-template-columns: 1.2fr .8fr;}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .hd{padding:14px 14px 10px; border-bottom: 1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+    .card .bd{padding:14px;}
+    .h{font-weight: 800;}
+    .muted{color:var(--muted);}
+    .chip{display:inline-block; padding: 6px 10px; border-radius:999px; background: rgba(31,42,68,.65); border:1px solid var(--line); font-size: 12px;}
+    .pill{display:inline-block; padding: 7px 10px; border-radius:999px; background: rgba(17,26,46,.75); border:1px solid var(--line); font-size:12px; color:var(--muted);}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
+    .list{display:flex; flex-direction:column; gap: 10px;}
+    .pick{
+      background: rgba(17,26,46,.55);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 12px;
+    }
+    .pickTop{display:flex; justify-content:space-between; gap:12px; align-items:flex-start;}
+    .pickName{font-size: 16px; font-weight: 850;}
+    .pickMeta{color:var(--muted); font-size: 12px; margin-top:4px;}
+    .score{font-weight: 850;}
+    details{margin-top:10px;}
+    details summary{cursor:pointer; color:var(--muted); font-weight:650;}
+    .kv{display:grid; grid-template-columns: 120px 1fr; gap:8px 10px; margin-top:10px; font-size: 13px;}
+    .kv div:nth-child(odd){color:var(--muted);}
+    .hr{height:1px; background: var(--line); margin: 10px 0;}
+    .small{font-size: 12px; color: var(--muted); line-height: 1.5;}
+    code{background: rgba(0,0,0,.2); padding: 2px 6px; border-radius: 8px; border:1px solid var(--line);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <div class="title">台股精選｜今日推薦</div>
+        <div class="sub" id="updated">更新時間：讀取中…</div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btnRefresh">重新整理</button>
+        <button class="btn" id="btnSource">資料來源</button>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <!-- 左：今日推薦 -->
+      <div class="card">
+        <div class="hd">
+          <div>
+            <div class="h">今日推薦</div>
+            <div class="sub" id="pickSub">載入中…</div>
+          </div>
+          <span class="pill" id="marketPill">TW</span>
+        </div>
+        <div class="bd">
+          <div class="list" id="pickList"></div>
+          <div class="small" id="emptyHint" style="display:none;">
+            今天沒有推薦或資料尚未更新。通常是交易日資料尚未就緒或盤勢保護縮減推薦數。
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：盤勢保護 + 回測 -->
+      <div class="grid" style="gap:12px;">
+        <div class="card">
+          <div class="hd">
+            <div>
+              <div class="h">盤勢保護</div>
+              <div class="sub">不改排名，只縮減推薦數</div>
+            </div>
+            <span class="chip" id="guardPill">讀取中</span>
+          </div>
+          <div class="bd" id="guardBody">
+            <div class="small muted">讀取中…</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="hd">
+            <div>
+              <div class="h">績效追蹤</div>
+              <div class="sub">D+1 / D+5 / D+10（交易日）</div>
+            </div>
+            <span class="chip" id="perfPill">回測中</span>
+          </div>
+          <div class="bd" id="perfBody">
+            <div class="small muted">回測資料累積中（通常第 2 天開始 D+1 會有樣本）。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="small">
+      小提醒：這個頁面會讀 <code>public/today.json</code> 與 <code>public/performance/summary.json</code>。
+      之後做 Android APP（WebView）時，直接載入這個頁面即可。
+    </div>
+  </div>
+
+<script>
+  // 你的 today.json / performance.json 路徑
+  const TODAY_URL = "./today.json";
+  const PERF_URL = "./performance/summary.json";
+
+  function el(id){ return document.getElementById(id); }
+  function fmt(n, d=2){
+    if (n === null || n === undefined || Number.isNaN(Number(n))) return "-";
+    return Number(n).toFixed(d);
+  }
+
+  async function fetchJSON(url){
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error(url + " " + r.status);
+    return await r.json();
+  }
+
+  function setSourceModal(src){
+    alert("資料來源（today.json）：\n" + src);
+  }
+
+  function renderPicks(data){
+    el("updated").textContent = `更新時間：${data.generatedAt || "未知"}`;
+    el("marketPill").textContent = data.market || "TW";
+
+    const picks = Array.isArray(data.picks) ? data.picks : [];
+    el("pickSub").textContent = picks.length ? `共 ${picks.length} 檔（最多顯示 3 檔）` : "目前無推薦";
+    const list = el("pickList");
+    list.innerHTML = "";
+
+    el("emptyHint").style.display = picks.length ? "none" : "block";
+
+    picks.slice(0,3).forEach((p, idx) => {
+      const symbol = p.symbol || "";
+      const name = p.name || "";
+      const score = p.score;
+      const reason = p.reason || p.pickType || "";
+
+      // 兼容你後面若加入更完整欄位（lastClose/ma/rsi/plan等）
+      const lastClose = p.lastClose ?? p.signals?.lastClose;
+      const rsi14 = p.rsi14 ?? p.signals?.rsi14;
+      const volRatio = p.volRatio ?? p.signals?.volRatio;
+      const ma5 = p.ma5 ?? p.signals?.ma5;
+      const ma20 = p.ma20 ?? p.signals?.ma20;
+
+      const plan = p.plan ?? p.signals?.plan;
+
+      const div = document.createElement("div");
+      div.className = "pick";
+      div.innerHTML = `
+        <div class="pickTop">
+          <div>
+            <div class="pickName">#${idx+1} ${symbol} ${name}</div>
+            <div class="pickMeta">${reason ? reason : "—"}</div>
+          </div>
+          <div class="score">分數：${score !== undefined ? fmt(score, 2) : "-"}</div>
+        </div>
+
+        <details>
+          <summary>看詳情</summary>
+          <div class="kv">
+            <div>收盤價</div><div>${lastClose ? fmt(lastClose,2) : "-"}</div>
+            <div>MA5 / MA20</div><div>${ma5 ? fmt(ma5,2) : "-"} / ${ma20 ? fmt(ma20,2) : "-"}</div>
+            <div>RSI14</div><div>${rsi14 ? fmt(rsi14,1) : "-"}</div>
+            <div>量比</div><div>${volRatio ? fmt(volRatio,2) : "-"}</div>
+          </div>
+
+          ${plan ? `
+            <div class="hr"></div>
+            <div class="kv">
+              <div>進場區間</div><div>${fmt(plan.entryLow,2)} ~ ${fmt(plan.entryHigh,2)}</div>
+              <div>停損</div><div>${fmt(plan.stop,2)}</div>
+              <div>TP1 / TP2</div><div>${fmt(plan.tp1,2)} / ${fmt(plan.tp2,2)}</div>
+            </div>
+          ` : ``}
+        </details>
+      `;
+      list.appendChild(div);
+    });
+  }
+
+  function renderGuard(data){
+    const g = data?.meta?.marketGuard;
+    if (!g){
+      el("guardPill").textContent = "未啟用";
+      el("guardBody").innerHTML = `<div class="small muted">尚未提供 marketGuard 資訊。</div>`;
+      return;
+    }
+    const level = g.level || "unknown";
+    const maxPicks = g.maxPicks ?? 3;
+
+    el("guardPill").textContent = level;
+    const reasons = Array.isArray(g.reasons) ? g.reasons : [];
+    const idx = g.index || {};
+
+    el("guardBody").innerHTML = `
+      <div class="row" style="margin-bottom:10px;">
+        <span class="chip">狀態：${level}</span>
+        <span class="chip">最多推薦：${maxPicks} 檔</span>
+      </div>
+      <div class="small">
+        ${reasons.length ? "理由：" + reasons.join(" / ") : "理由：—"}
+      </div>
+      <div class="hr"></div>
+      <div class="kv">
+        <div>指數</div><div>${idx.symbol || "^TWII"}</div>
+        <div>收盤 / MA20 / MA60</div><div>${idx.last ? fmt(idx.last,2) : "-"} / ${idx.ma20 ? fmt(idx.ma20,2) : "-"} / ${idx.ma60 ? fmt(idx.ma60,2) : "-"}</div>
+        <div>RSI14</div><div>${idx.rsi14 ? fmt(idx.rsi14,1) : "-"}</div>
+      </div>
+    `;
+  }
+
+  async function renderPerformance(){
+    try{
+      const perf = await fetchJSON(PERF_URL);
+      const sum = perf.summary || {};
+      el("perfPill").textContent = "已更新";
+
+      const row = (k) => {
+        const v = sum[k] || {};
+        return `
+          <div class="kv">
+            <div>${k}</div><div>樣本 ${v.samples ?? 0}｜勝率 ${fmt(v.winRate ?? 0,2)}%｜平均 ${fmt(v.avgReturnPct ?? 0,3)}%</div>
+          </div>
+        `;
+      }
+
+      el("perfBody").innerHTML = `
+        <div class="small muted">範圍：${perf.range?.from || "-"} ～ ${perf.range?.to || "-" }（共 ${perf.range?.filesUsed || 0} 天）</div>
+        <div class="hr"></div>
+        ${row("D+1")}
+        ${row("D+5")}
+        ${row("D+10")}
+      `;
+    }catch(e){
+      el("perfPill").textContent = "回測中";
+      el("perfBody").innerHTML = `<div class="small muted">回測資料累積中（通常第 2 天開始 D+1 會有樣本）。</div>`;
+    }
+  }
+
+  async function load(){
+    const today = await fetchJSON(TODAY_URL);
+    renderPicks(today);
+    renderGuard(today);
+    await renderPerformance();
+
+    // 資料來源按鈕
+    el("btnSource").onclick = () => {
+      const src = location.href.replace(/\/[^\/]*$/, "/") + "today.json";
+      setSourceModal(src);
+    };
+  }
+
+  el("btnRefresh").onclick = () => load();
+  load().catch(err => {
+    el("pickSub").textContent = "載入失敗";
+    el("pickList").innerHTML = `<div class="small muted">讀取 today.json 失敗：${String(err.message || err)}</div>`;
+  });
+</script>
+</body>
+</html>
