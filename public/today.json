@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-05T15:14:28.020Z",
+  "generatedAt": "2026-02-05T15:38:48.370Z",
   "topN": 3,
   "picks": [
     {
@@ -23,7 +23,30 @@
         "tp1": 80.01946500666409,
         "tp2": 82.5791967470567
       },
-      "techUpdatedAt": "2026-02-05T15:14:28.092Z"
+      "techUpdatedAt": "2026-02-05T15:38:48.412Z",
+      "inst": {
+        "windowDays": 10,
+        "nameFromT86": "睿生光電",
+        "sumForeign": 322000,
+        "sumTrust": 0,
+        "sumDealer": -10000,
+        "sumTotal": 312000,
+        "buyStreak": 4,
+        "sellStreak": 0,
+        "latestTotalNet": 256000,
+        "dates": [
+          "20260205",
+          "20260204",
+          "20260203",
+          "20260202",
+          "20260130",
+          "20260129",
+          "20260128",
+          "20260127",
+          "20260126",
+          "20260123"
+        ]
+      }
     },
     {
       "symbol": "6451",
@@ -45,7 +68,30 @@
         "tp1": 219.6370796350012,
         "tp2": 230.45561945250176
       },
-      "techUpdatedAt": "2026-02-05T15:14:28.262Z"
+      "techUpdatedAt": "2026-02-05T15:38:48.474Z",
+      "inst": {
+        "windowDays": 10,
+        "nameFromT86": "訊芯-KY",
+        "sumForeign": 4667324,
+        "sumTrust": 0,
+        "sumDealer": 0,
+        "sumTotal": 4667324,
+        "buyStreak": 8,
+        "sellStreak": 0,
+        "latestTotalNet": 2972900,
+        "dates": [
+          "20260205",
+          "20260204",
+          "20260203",
+          "20260202",
+          "20260130",
+          "20260129",
+          "20260128",
+          "20260127",
+          "20260126",
+          "20260123"
+        ]
+      }
     },
     {
       "symbol": "4960",
@@ -67,7 +113,30 @@
         "tp1": 15.805415078739589,
         "tp2": 16.308122522741954
       },
-      "techUpdatedAt": "2026-02-05T15:14:28.171Z"
+      "techUpdatedAt": "2026-02-05T15:39:06.765Z",
+      "inst": {
+        "windowDays": 10,
+        "nameFromT86": "誠美材",
+        "sumForeign": -1511903,
+        "sumTrust": 0,
+        "sumDealer": 0,
+        "sumTotal": -1511903,
+        "buyStreak": 0,
+        "sellStreak": 1,
+        "latestTotalNet": -1901000,
+        "dates": [
+          "20260205",
+          "20260204",
+          "20260203",
+          "20260202",
+          "20260130",
+          "20260129",
+          "20260128",
+          "20260127",
+          "20260126",
+          "20260123"
+        ]
+      }
     }
   ],
   "meta": {
@@ -78,8 +147,13 @@
       "MIN_PRICE": 10
     },
     "tech": {
-      "note": "tech欄位由 generate_today.js 針對 picks 補齊（不影響排序）",
+      "note": "技術欄位由 generate_today.js 針對 picks 補齊（不影響排序）",
       "source": "Yahoo chart"
+    },
+    "inst": {
+      "note": "法人欄位由 generate_today.js 針對 picks 補齊（TWSE T86）",
+      "source": "TWSE T86",
+      "windowDays": 10
     }
   }
 }
