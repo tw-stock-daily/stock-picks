@@ -87,7 +87,6 @@
 
   <div class="grid grid-2">
 
-    <!-- 今日推薦 -->
     <div class="card">
       <div class="hd">
         <div class="h">今日推薦</div>
@@ -99,7 +98,6 @@
       </div>
     </div>
 
-    <!-- 說明 -->
     <div class="card">
       <div class="hd">
         <div class="h">說明</div>
@@ -107,8 +105,8 @@
       <div class="bd">
         <div class="small">
           本頁顯示「策略推薦結果」。<br/>
-          收盤價、RSI、均線、量比與進出場計畫，會由每日資料自動產生並更新。<br/>
-          <span class="muted">若你剛改版，第一次跑完 workflow 後才會開始出現完整欄位。</span>
+          技術面與交易計畫（進場/停損/TP）與法人摘要（T86）會由每日資料自動產生。<br/>
+          <span class="muted">若某天資料源短暫失效，該欄位可能顯示「尚未提供」。</span>
         </div>
         <div class="hr"></div>
         <div class="small">
@@ -129,6 +127,15 @@
   function fmt(n, d=2){
     if (n === null || n === undefined || Number.isNaN(Number(n))) return null;
     return Number(n).toFixed(d);
+  }
+  function fmtInt(n){
+    if (n === null || n === undefined || Number.isNaN(Number(n))) return null;
+    return String(Math.round(Number(n)));
+  }
+  function sign(n){
+    const v = Number(n);
+    if (!Number.isFinite(v)) return "";
+    return v > 0 ? "+" : (v < 0 ? "-" : "");
   }
 
   async function load(){
@@ -160,6 +167,15 @@
 
       const tradeStyle = p.tradeStyle || "—";
 
+      const inst = p.inst || null;
+      const sumTotal = inst ? fmtInt(inst.sumTotal) : null;
+      const sumForeign = inst ? fmtInt(inst.sumForeign) : null;
+      const sumTrust = inst ? fmtInt(inst.sumTrust) : null;
+      const sumDealer = inst ? fmtInt(inst.sumDealer) : null;
+      const buyStreak = inst ? inst.buyStreak : null;
+      const latestTotalNet = inst ? fmtInt(inst.latestTotalNet) : null;
+      const wDays = inst ? inst.windowDays : null;
+
       const div = document.createElement("div");
       div.className = "pick";
       div.innerHTML = `
@@ -172,10 +188,10 @@
         </div>
 
         <details>
-          <summary>看技術與交易計畫</summary>
+          <summary>看詳情（技術 / 交易計畫 / 法人）</summary>
 
           <div class="kv">
-            <div>收盤價</div><div>${lastClose ?? "尚未提供（下一次 workflow 後更新）"}</div>
+            <div>收盤價</div><div>${lastClose ?? "尚未提供"}</div>
             <div>MA5 / MA20</div><div>${(ma5 && ma20) ? (ma5 + " / " + ma20) : "尚未提供"}</div>
             <div>RSI14</div><div>${rsi14 ?? "尚未提供"}</div>
             <div>量比</div><div>${volRatio ?? "尚未提供"}</div>
@@ -189,13 +205,22 @@
             <div>TP1 / TP2</div><div>${(tp1 && tp2) ? (tp1 + " / " + tp2) : "尚未提供"}</div>
           </div>
 
+          <div class="hr"></div>
+
+          <div class="kv">
+            <div>法人（T86）</div><div>${wDays ? `近 ${wDays} 日摘要` : "尚未提供"}</div>
+            <div>合計淨買</div><div>${sumTotal ? `${sign(inst.sumTotal)}${sumTotal}` : "尚未提供"}</div>
+            <div>外資 / 投信 / 自營</div><div>${(sumForeign && sumTrust && sumDealer) ? `${sign(inst.sumForeign)}${sumForeign} / ${sign(inst.sumTrust)}${sumTrust} / ${sign(inst.sumDealer)}${sumDealer}` : "尚未提供"}</div>
+            <div>連買 / 最新一日</div><div>${(buyStreak != null && latestTotalNet) ? `${buyStreak} 日 / ${sign(inst.latestTotalNet)}${latestTotalNet}` : "尚未提供"}</div>
+          </div>
+
           ${p.tech?.error ? `<div class="hr"></div><div class="small muted">技術資料抓取失敗：${p.tech.error}</div>` : ``}
+          ${p.inst?.error ? `<div class="hr"></div><div class="small muted">法人資料抓取失敗：${p.inst.error}</div>` : ``}
         </details>
       `;
       list.appendChild(div);
     });
 
-    // 資料來源按鈕
     el("btnSource").onclick = () => {
       const base = location.href.replace(/\/[^\/]*$/, "/");
       alert("資料來源：\n" + base + "today.json");
