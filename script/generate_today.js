@@ -1,45 +1,32 @@
-// script/generate_today.js
 const fs = require("fs");
-const { pickStocks } = require("../lib/pickStocks.js");
-
-function pad(n) { return String(n).padStart(2, "0"); }
-function taipeiNowString() {
-  const now = new Date(Date.now() + 8 * 60 * 60 * 1000);
-  return `${now.getUTCFullYear()}-${pad(now.getUTCMonth()+1)}-${pad(now.getUTCDate())} ${pad(now.getUTCHours())}:${pad(now.getUTCMinutes())}`;
-}
+const path = require("path");
+const { pickStocks } = require("../lib/pickStocks");
 
 async function main() {
-  const FINMIND_TOKEN = process.env.FINMIND_TOKEN || "";
+  const data = await pickStocks();
 
-  const data = await pickStocks({
-    FINMIND_TOKEN,
-    windowDays: 10,
-    bucket: "all",
-    topK: 40,
-  });
+  if (
+    !data ||
+    !Array.isArray(data.picks) ||
+    data.picks.length === 0 ||
+    !data.meta ||
+    !data.meta.pool ||
+    data.meta.pool.size === 0
+  ) {
+    console.log("⚠️ No valid data today. Skip overwrite.");
+    return;
+  }
 
-  const out = {
-    market: "TW",
-    generatedAt: taipeiNowString(),
-    topN: 3,
-    picks: (data.picks || []).slice(0, 3),
-    meta: {
-      finmindEnabled: data.finmindEnabled,
-      windowDays: data.windowDays,
-      bucket: data.bucket,
-      pool: data.pool,
-      finmindStage2TopK: data.finmindStage2TopK,
-      minPickScore: data.minPickScore,
-    }
-  };
+  const outDir = path.join(process.cwd(), "public");
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
-  fs.mkdirSync("public", { recursive: true });
-  fs.writeFileSync("public/today.json", JSON.stringify(out, null, 2) + "\n", "utf8");
+  const outFile = path.join(outDir, "today.json");
+  fs.writeFileSync(outFile, JSON.stringify(data, null, 2), "utf-8");
 
-  console.log("✅ Generated public/today.json");
+  console.log("✅ today.json generated");
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error(err);
   process.exit(1);
 });
