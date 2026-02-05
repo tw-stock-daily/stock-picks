@@ -42,6 +42,9 @@ jobs:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: npm run generate
 
+      - name: Evaluate performance
+        run: node script/evaluate_performance.js
+
       - name: Commit and push if changed
         shell: bash
         run: |
@@ -49,13 +52,12 @@ jobs:
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          # 提交 today.json 與 history
-          git add public/today.json public/history
+          git add public/today.json public/history public/performance
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: update today.json and history"
+          git commit -m "chore: update today/history/performance"
           git push
