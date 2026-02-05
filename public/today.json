@@ -1,23 +1,33 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-05 20:27",
+  "generatedAt": "2026-02-05T12:52:26.721Z",
   "topN": 3,
-  "picks": [],
-  "meta": {
-    "finmindEnabled": true,
-    "windowDays": 10,
-    "bucket": {
-      "key": "all",
-      "label": "不限"
+  "picks": [
+    {
+      "symbol": "3481",
+      "name": "群創",
+      "score": 100,
+      "reason": "資料來源正常（驗證用）"
     },
+    {
+      "symbol": "2337",
+      "name": "旺宏",
+      "score": 95,
+      "reason": "資料來源正常（驗證用）"
+    },
+    {
+      "symbol": "6443",
+      "name": "元晶",
+      "score": 90,
+      "reason": "資料來源正常（驗證用）"
+    }
+  ],
+  "meta": {
     "pool": {
-      "type": "TWSE_TOP_VOLUME",
-      "size": 0,
+      "size": 495,
       "POOL_SIZE": 600,
       "MIN_LIQ_SHARES": 500000,
       "MIN_PRICE": 10
-    },
-    "finmindStage2TopK": 40,
-    "minPickScore": 0
+    }
   }
 }
