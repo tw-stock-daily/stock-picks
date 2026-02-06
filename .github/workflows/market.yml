@@ -24,9 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
 
-      # ✅ 沒有 package-lock.json 時，npm ci 會失敗，所以改用 npm install
       - name: Install deps
         run: npm install
 
