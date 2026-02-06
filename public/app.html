@@ -22,7 +22,7 @@
       color:var(--text);
     }
     .wrap{max-width: 980px; margin:0 auto; padding: 18px 14px 30px;}
-    .topbar{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom: 14px;}
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom: 10px;}
     .title{font-size: 20px; font-weight: 800;}
     .sub{color:var(--muted); font-size: 12px; margin-top:4px;}
     .actions{display:flex; gap:10px;}
@@ -36,6 +36,21 @@
       font-weight: 650;
       font-size: 13px;
     }
+
+    .banner{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-bottom: 14px;
+      background: rgba(17,26,46,.55);
+      box-shadow: var(--shadow);
+    }
+    .bannerTop{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
+    .bannerTitle{font-weight:900;}
+    .bannerMeta{color:var(--muted); font-size:12px; margin-top:4px;}
+    .bannerMsg{margin-top:10px; color: var(--text); line-height:1.5; font-size: 13px;}
+    .pill{display:inline-block; padding: 6px 10px; border-radius:999px; background: rgba(17,26,46,.75); border:1px solid var(--line); font-size:12px; white-space:nowrap;}
+
     .grid{display:grid; grid-template-columns: 1fr; gap: 12px;}
     @media (min-width: 900px){
       .grid-2{grid-template-columns: 1.25fr .75fr;}
@@ -51,7 +66,6 @@
     .card .bd{padding:14px;}
     .h{font-weight: 800;}
     .muted{color:var(--muted);}
-    .pill{display:inline-block; padding: 6px 10px; border-radius:999px; background: rgba(17,26,46,.75); border:1px solid var(--line); font-size:12px;}
     .list{display:flex; flex-direction:column; gap: 10px;}
     .pick{
       background: rgba(17,26,46,.55);
@@ -85,6 +99,19 @@
     </div>
   </div>
 
+  <!-- 盤勢燈號（早上 08:00 更新） -->
+  <div class="banner" id="marketBanner">
+    <div class="bannerTop">
+      <div>
+        <div class="bannerTitle">盤勢燈號（開盤前提示）</div>
+        <div class="bannerMeta" id="marketMeta">尚未更新</div>
+      </div>
+      <div class="pill" id="marketPill">—</div>
+    </div>
+    <div class="bannerMsg" id="marketMsg">等待 market.json 更新（早上 08:00 自動產生）。</div>
+    <div class="bannerMeta" id="marketNote"></div>
+  </div>
+
   <div class="grid grid-2">
 
     <div class="card">
@@ -104,14 +131,15 @@
       </div>
       <div class="bd">
         <div class="small">
-          本頁顯示「策略推薦結果」。<br/>
-          技術面與交易計畫（進場/停損/TP）與法人摘要（T86）會由每日資料自動產生。<br/>
-          <span class="muted">若某天資料源短暫失效，該欄位可能顯示「尚未提供」。</span>
+          <b>推薦個股</b>（晚上自動計算）與 <b>盤勢燈號</b>（早上開盤前提示）是分開的：<br/>
+          - 盤勢燈號只做風險提醒，不改推薦名單。<br/>
+          - 若燈號偏風險，建議降低部位/分批/嚴守停損。<br/>
         </div>
         <div class="hr"></div>
         <div class="small">
           today.json：<code>public/today.json</code><br/>
-          APP（WebView）日後直接載入：<code>public/app.html</code>
+          market.json：<code>public/market.json</code><br/>
+          APP（WebView）載入：<code>public/app.html</code>
         </div>
       </div>
     </div>
@@ -122,6 +150,7 @@
 
 <script>
   const TODAY_URL = "./today.json";
+  const MARKET_URL = "./market.json";
 
   function el(id){ return document.getElementById(id); }
   function fmt(n, d=2){
@@ -138,7 +167,25 @@
     return v > 0 ? "+" : (v < 0 ? "-" : "");
   }
 
-  async function load(){
+  async function loadMarket(){
+    try{
+      const r = await fetch(MARKET_URL, { cache:"no-store" });
+      if (!r.ok) throw new Error("market.json not ready");
+      const m = await r.json();
+
+      el("marketPill").textContent = m.label || m.signal || "—";
+      el("marketMeta").textContent = `更新：${m.asOfLocal || m.generatedAt || "未知"}`;
+      el("marketMsg").textContent = m.message || "—";
+      el("marketNote").textContent = m.note ? `備註：${m.note}` : "";
+    }catch(e){
+      el("marketPill").textContent = "—";
+      el("marketMeta").textContent = "尚未更新";
+      el("marketMsg").textContent = "等待 market.json 更新（早上 08:00 自動產生）。";
+      el("marketNote").textContent = "";
+    }
+  }
+
+  async function loadToday(){
     const r = await fetch(TODAY_URL, { cache:"no-store" });
     if (!r.ok) throw new Error("today.json 讀取失敗：" + r.status);
     const data = await r.json();
@@ -223,12 +270,16 @@
 
     el("btnSource").onclick = () => {
       const base = location.href.replace(/\/[^\/]*$/, "/");
-      alert("資料來源：\n" + base + "today.json");
+      alert("資料來源：\n" + base + "today.json\n" + base + "market.json");
     };
   }
 
-  el("btnRefresh").onclick = () => load().catch(e => alert(String(e?.message || e)));
-  load().catch(e => {
+  async function loadAll(){
+    await Promise.allSettled([loadMarket(), loadToday()]);
+  }
+
+  el("btnRefresh").onclick = () => loadAll().catch(e => alert(String(e?.message || e)));
+  loadAll().catch(e => {
     el("pickSub").textContent = "載入失敗";
     el("pickList").innerHTML = `<div class="small muted">${String(e?.message || e)}</div>`;
   });
