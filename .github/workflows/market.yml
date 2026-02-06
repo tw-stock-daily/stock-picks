@@ -1,0 +1,40 @@
+name: Market Signal (08:00)
+
+on:
+  schedule:
+    # 08:00 Asia/Taipei = 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-signal
+  cancel-in-progress: true
+
+jobs:
+  market:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Generate market.json
+        run: node script/generate_market.js
+
+      - name: Commit & push market.json
+        run: |
+          git config user.name "tw-stock-daily-bot"
+          git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+          git add public/market.json
+          git commit -m "chore: update market signal" || echo "No changes to commit"
+          git push
