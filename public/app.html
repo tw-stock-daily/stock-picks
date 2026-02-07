@@ -2,495 +2,374 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>台股精選｜今日推薦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台股精選</title>
 
   <style>
     :root{
-      --bg:#0b1220;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --line:rgba(255,255,255,.08);
-      --btn:#1e293b;
-      --btn2:#24324f;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius:16px;
-
-      --hot:#f59e0b;   /* 橘：偏熱 */
-      --cold:#60a5fa;  /* 藍：偏冷 */
-      --good:#34d399;  /* 綠：偏好 */
-      --bad:#fb7185;   /* 紅：偏風險 */
-      --warn:#fbbf24;  /* 黃：提醒 */
+      --bg:#0f1220;
+      --card:#171a2f;
+      --line:#262a4a;
+      --text:#e9ecff;
+      --muted:#9aa0ff;
+      --pill:#2a2f66;
+      --accent:#7aa2ff;
+      --btn:#1f2350;
+      --good:#39d98a;
+      --warn:#ffd66b;
+      --bad:#ff6b6b;
     }
-
+    *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans TC", Arial;
-      background: linear-gradient(180deg, #060a12, var(--bg));
+      padding:14px;
+      background:var(--bg);
       color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC",sans-serif;
+      font-size:16px;       /* 手機不要小於 16px */
+      line-height:1.55;     /* 行距放大 */
+    }
+    h1{ font-size:1.35rem; margin:0 0 8px; }
+    .small{ font-size:0.9rem; color:var(--muted); }
+    .muted{ color:var(--muted); }
+
+    .wrap{ max-width:860px; margin:0 auto; }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      margin-bottom:14px;
     }
 
-    .wrap{max-width: 980px; margin:0 auto; padding: 18px 14px 30px;}
-    .topbar{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom: 10px;}
-    .title{font-size: 20px; font-weight: 900;}
-    .sub{color:var(--muted); font-size: 12px; margin-top:4px;}
-    .actions{display:flex; gap:10px;}
-    .btn{
-      background: linear-gradient(180deg, var(--btn2), var(--btn));
-      border: 1px solid var(--line);
-      color: var(--text);
-      padding: 10px 12px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 13px;
-    }
-
-    .banner{
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 12px;
-      margin-bottom: 14px;
-      background: rgba(17,26,46,.55);
-      box-shadow: var(--shadow);
-    }
-    .bannerTop{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
-    .bannerTitle{font-weight: 900;}
-    .bannerMeta{color:var(--muted); font-size:12px; margin-top:4px;}
-    .bannerMsg{margin-top:10px; color: var(--text); line-height:1.55; font-size: 13px;}
-    .bannerAction{
-      margin-top: 10px;
-      padding: 10px 10px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(0,0,0,.18);
-      font-size: 13px;
-      font-weight: 800;
+    .row{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-start;
     }
 
     .pill{
       display:inline-block;
-      padding: 6px 10px;
+      padding:4px 10px;
       border-radius:999px;
-      background: rgba(17,26,46,.75);
-      border:1px solid var(--line);
-      font-size:12px;
+      background:var(--pill);
+      font-size:0.85rem;
       white-space:nowrap;
     }
+    .pill.good{ background:rgba(57,217,138,.18); color:var(--good); border:1px solid rgba(57,217,138,.35); }
+    .pill.warn{ background:rgba(255,214,107,.18); color:var(--warn); border:1px solid rgba(255,214,107,.35); }
+    .pill.bad{  background:rgba(255,107,107,.18); color:var(--bad);  border:1px solid rgba(255,107,107,.35); }
 
-    .grid{display:grid; grid-template-columns: 1fr; gap: 12px;}
-    @media (min-width: 900px){
-      .grid-2{grid-template-columns: 1.25fr .75fr;}
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .card .hd{padding:14px; border-bottom: 1px solid var(--line);}
-    .card .bd{padding:14px;}
-    .h{font-weight: 900;}
-    .muted{color:var(--muted);}
-
-    .list{display:flex; flex-direction:column; gap: 10px;}
-    .pick{
-      background: rgba(17,26,46,.55);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px;
-    }
-    .row{display:flex; justify-content:space-between; gap:12px; align-items:flex-start;}
-    .pickName{font-size: 16px; font-weight: 900;}
-    .pickMeta{color:var(--muted); font-size: 12px; margin-top:4px; line-height:1.35;}
-    .pickHint{
-      margin-top: 8px;
-      padding: 10px 10px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(0,0,0,.16);
-      font-size: 13px;
-      line-height:1.45;
-    }
-    details{margin-top:10px;}
-    details summary{cursor:pointer; color:var(--muted); font-weight:700;}
-    .kv{display:grid; grid-template-columns: 130px 1fr; gap:8px 10px; margin-top:10px; font-size: 13px;}
-    .kv div:nth-child(odd){color:var(--muted);}
-    .hr{height:1px; background: var(--line); margin: 10px 0;}
-    .small{font-size: 12px; color: var(--muted); line-height: 1.5;}
-    code{background: rgba(0,0,0,.2); padding: 2px 6px; border-radius: 8px; border:1px solid var(--line);}
-
-    /* === 顏色提示 === */
-    .hot { color: var(--hot); font-weight: 900; }
-    .cold{ color: var(--cold); font-weight: 900; }
-    .good{ color: var(--good); font-weight: 900; }
-    .bad { color: var(--bad); font-weight: 900; }
-    .warn{ color: var(--warn); font-weight: 900; }
-
-    /* === 價格區間 Filter === */
-    .filterBar{
+    .controls{
       display:flex;
       flex-wrap:wrap;
-      gap:8px;
+      gap:10px;
+      align-items:center;
       margin-top:10px;
     }
-    .fbtn{
-      background: rgba(0,0,0,.18);
-      border: 1px solid var(--line);
-      color: var(--text);
-      padding: 7px 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 800;
-      font-size: 12px;
+    select{
+      width:100%;
+      max-width:260px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--btn);
+      color:var(--text);
+      font-size:1rem;
+      outline:none;
     }
-    .fbtn.active{
-      background: rgba(37,99,235,.22);
-      border-color: rgba(37,99,235,.65);
+    button{
+      width:100%;
+      max-width:260px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--btn);
+      color:var(--text);
+      font-size:1rem;
+    }
+
+    .pick{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      margin-bottom:14px;
+    }
+    .pickName{
+      font-size:1.05rem;
+      font-weight:750;
+      margin-bottom:4px;
+    }
+    .pickMeta{
+      font-size:0.85rem;
+      color:var(--muted);
+    }
+
+    details{ margin-top:10px; }
+    summary{
+      cursor:pointer;
+      font-size:0.92rem;
+      color:var(--accent);
+      margin-bottom:6px;
+    }
+
+    .kv{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:8px 10px;
+      font-size:0.92rem;
+    }
+    .kv div:nth-child(odd){ color:var(--muted); }
+
+    .hr{ height:1px; background:var(--line); margin:10px 0; }
+
+    #emptyHint{
+      display:none;
+      padding:12px;
+      border-radius:12px;
+      border:1px dashed rgba(154,160,255,.45);
+      color:var(--muted);
+    }
+
+    /* 小手機再加強 */
+    @media (max-width:420px){
+      body{ font-size:17px; padding:12px; }
+      .pickName{ font-size:1.12rem; }
+      .kv{ grid-template-columns:100px 1fr; }
+      select, button{ max-width:100%; }
     }
   </style>
 </head>
 
 <body>
-<div class="wrap">
+  <div class="wrap">
+    <h1>台股精選</h1>
+    <div class="small muted" id="updated">更新時間：—</div>
 
-  <div class="topbar">
-    <div>
-      <div class="title">台股精選｜今日推薦</div>
-      <div class="sub" id="updated">更新時間：讀取中…</div>
-    </div>
-    <div class="actions">
-      <button class="btn" id="btnRefresh">重新整理</button>
-      <button class="btn" id="btnSource">資料來源</button>
-    </div>
-  </div>
-
-  <!-- 盤勢燈號（早上 08:00 更新） -->
-  <div class="banner" id="marketBanner">
-    <div class="bannerTop">
-      <div>
-        <div class="bannerTitle">盤勢燈號（開盤前提示）</div>
-        <div class="bannerMeta" id="marketMeta">尚未更新</div>
-      </div>
-      <div class="pill" id="marketPill">—</div>
-    </div>
-    <div class="bannerMsg" id="marketMsg">等待 market.json 更新（早上 08:00 自動產生）。</div>
-    <div class="bannerAction" id="marketAction">—</div>
-    <div class="bannerMeta" id="marketNote"></div>
-  </div>
-
-  <div class="grid grid-2">
-
+    <!-- 盤勢燈號 -->
     <div class="card">
-      <div class="hd">
-        <div class="h">今日推薦</div>
-        <div class="sub" id="pickSub">載入中…</div>
-
-        <!-- ✅ 新增：價格區間 -->
-        <div class="filterBar" id="priceFilter">
-          <button class="fbtn active" data-range="all">不限</button>
-          <button class="fbtn" data-range="lt100">100 以內</button>
-          <button class="fbtn" data-range="100_300">100~300</button>
-          <button class="fbtn" data-range="300_600">300~600</button>
-          <button class="fbtn" data-range="600_1000">600~1000</button>
-          <button class="fbtn" data-range="gt1000">1000 以上</button>
-        </div>
+      <div class="row">
+        <div style="font-weight:750;">今日盤勢燈號</div>
+        <div id="marketPill" class="pill">—</div>
       </div>
-
-      <div class="bd">
-        <div class="list" id="pickList"></div>
-        <div class="small muted" id="emptyHint" style="display:none;">此價格區間目前沒有推薦股票（可切回「不限」查看）。</div>
-      </div>
+      <div class="small muted" id="marketMeta" style="margin-top:6px;">尚未更新</div>
+      <div style="margin-top:8px;" id="marketMsg">等待 market.json 更新（早上 08:00 自動產生）。</div>
+      <div class="small muted" id="marketNote" style="margin-top:8px;"></div>
     </div>
 
+    <!-- 控制列 -->
     <div class="card">
-      <div class="hd">
-        <div class="h">使用提醒</div>
-      </div>
-      <div class="bd">
-        <div class="small">
-          <b>推薦個股</b>（晚上自動計算）與 <b>盤勢燈號</b>（早上開盤前提示）是分開的：<br/>
-          - 盤勢燈號只做風險提醒，不改推薦名單。<br/>
-          - 若燈號偏風險，建議降低部位/分批/嚴守停損。<br/>
-          - 價格區間是「顯示過濾」，不會影響策略與股票池。<br/>
+      <div class="row">
+        <div>
+          <div style="font-weight:750;">今日推薦</div>
+          <div class="small muted" id="pickSub">—</div>
         </div>
-        <div class="hr"></div>
-        <div class="small">
-          today.json：<code>public/today.json</code><br/>
-          market.json：<code>public/market.json</code><br/>
-          App（入口）：<code>/app.html</code>
+        <div style="font-weight:850;" class="pill">TOP 3</div>
+      </div>
+
+      <div class="controls">
+        <div>
+          <div class="small muted" style="margin-bottom:6px;">價格區間</div>
+          <select id="bucketSel">
+            <option value="all">不限</option>
+            <option value="lt100">100 以內</option>
+            <option value="100_300">100 ~ 300</option>
+            <option value="300_600">300 ~ 600</option>
+            <option value="600_1000">600 ~ 1000</option>
+            <option value="gt1000">1000 以上</option>
+          </select>
+        </div>
+
+        <div>
+          <div class="small muted" style="margin-bottom:6px;">操作</div>
+          <button id="btnRefresh">重新整理</button>
+        </div>
+
+        <div>
+          <div class="small muted" style="margin-bottom:6px;">來源</div>
+          <button id="btnSource">查看 JSON</button>
         </div>
       </div>
     </div>
 
+    <div id="emptyHint">目前沒有符合條件的推薦（或資料尚未更新）。</div>
+    <div id="pickList"></div>
   </div>
-</div>
 
-<script>
-  const TODAY_URL = "./today.json";
-  const MARKET_URL = "./market.json";
+  <script>
+    const TODAY_URL = "./today.json";
+    const MARKET_URL = "./market.json";
 
-  function el(id){ return document.getElementById(id); }
-  function fmt(n, d=2){
-    if (n === null || n === undefined || Number.isNaN(Number(n))) return null;
-    return Number(n).toFixed(d);
-  }
-  function fmtInt(n){
-    if (n === null || n === undefined || Number.isNaN(Number(n))) return null;
-    return String(Math.round(Number(n)));
-  }
-  function sign(n){
-    const v = Number(n);
-    if (!Number.isFinite(v)) return "";
-    return v > 0 ? "+" : (v < 0 ? "-" : "");
-  }
-
-  // === 盤勢→行動指引 ===
-  function marketActionHint(signal){
-    switch(String(signal || "").trim()){
-      case "riskOn":
-      case "bull":
-        return { text: "📈 偏多盤：可正常操作、順勢為主（仍請留意突發消息）", cls: "good" };
-      case "caution":
-        return { text: "⚠ 震盪盤：建議小部位、分批進出、嚴守止損（避免追高）", cls: "warn" };
-      case "riskOff":
-      case "bear":
-        return { text: "🛑 風險盤：以觀察為主或極小部位，優先保本", cls: "bad" };
-      default:
-        return { text: "—", cls: "" };
+    function el(id){ return document.getElementById(id); }
+    function fmt(n, d=2){
+      if (n === null || n === undefined || Number.isNaN(Number(n))) return null;
+      return Number(n).toFixed(d);
     }
-  }
-
-  // === 股票→白話提示 ===
-  function tradeHint(style, plan, marketSignal){
-    const s = String(style || "").trim();
-    const ms = String(marketSignal || "").trim();
-
-    const base = (s === "短期")
-      ? "短線操作：以量能/隔日延續為主，建議分批，漲多不要追。"
-      : (s === "波段")
-        ? "波段操作：以趨勢續抱為主，跌破止損即退出，避免凹單。"
-        : "依計畫分批進出，嚴守止損。";
-
-    const riskAddon = (ms === "riskOff")
-      ? "（今日風險偏高：建議更小部位，或等待更佳時機）"
-      : (ms === "caution")
-        ? "（今日震盪：可分批、不要重押）"
-        : "";
-
-    if (!plan) return base + riskAddon;
-    return base + " " + riskAddon;
-  }
-
-  // === 數字→顏色 class ===
-  function rsiClass(v){
-    const n = Number(v);
-    if (!Number.isFinite(n)) return "";
-    if (n >= 70) return "hot";
-    if (n <= 30) return "cold";
-    return "";
-  }
-  function volRatioClass(v){
-    const n = Number(v);
-    if (!Number.isFinite(n)) return "";
-    if (n >= 2) return "good";
-    if (n < 1) return "warn";
-    return "";
-  }
-  function instClass(sumTotal){
-    const n = Number(sumTotal);
-    if (!Number.isFinite(n)) return "";
-    if (n > 0) return "good";
-    if (n < 0) return "bad";
-    return "";
-  }
-
-  // === 價格區間 ===
-  const PRICE_RANGES = {
-    all:      { label: "不限",    min: -Infinity, max: Infinity },
-    lt100:    { label: "100 以內", min: -Infinity, max: 100 },
-    "100_300":{ label: "100~300", min: 100, max: 300 },
-    "300_600":{ label: "300~600", min: 300, max: 600 },
-    "600_1000":{label:"600~1000", min: 600, max: 1000 },
-    gt1000:   { label: "1000 以上", min: 1000, max: Infinity },
-  };
-
-  function inPriceRange(price, key){
-    const p = Number(price);
-    if (!Number.isFinite(p)) return false;
-    const r = PRICE_RANGES[key] || PRICE_RANGES.all;
-    if (r.max === Infinity) return p >= r.min;
-    if (r.min === -Infinity) return p < r.max;
-    return p >= r.min && p < r.max;
-  }
-
-  let CURRENT_MARKET_SIGNAL = "";   // riskOn/caution/riskOff
-  let CURRENT_PRICE_RANGE = "all";  // all/lt100/100_300/...
-  let ALL_PICKS = [];               // today.json 原始 picks
-
-  async function loadMarket(){
-    try{
-      const r = await fetch(MARKET_URL, { cache:"no-store" });
-      if (!r.ok) throw new Error("market.json not ready");
-      const m = await r.json();
-
-      CURRENT_MARKET_SIGNAL = String(m.signal || "").trim();
-
-      el("marketPill").textContent = m.label || m.signal || "—";
-      el("marketMeta").textContent = `更新：${m.asOfLocal || m.generatedAt || "未知"}`;
-      el("marketMsg").textContent = m.message || "—";
-
-      const act = marketActionHint(m.signal);
-      el("marketAction").textContent = act.text;
-      el("marketAction").className = "bannerAction " + (act.cls || "");
-
-      el("marketNote").textContent = m.note ? `備註：${m.note}` : "";
-    }catch(e){
-      CURRENT_MARKET_SIGNAL = "";
-      el("marketPill").textContent = "—";
-      el("marketMeta").textContent = "尚未更新";
-      el("marketMsg").textContent = "等待 market.json 更新（早上 08:00 自動產生）。";
-      el("marketAction").textContent = "—";
-      el("marketAction").className = "bannerAction";
-      el("marketNote").textContent = "";
+    function fmtInt(n){
+      if (n === null || n === undefined || Number.isNaN(Number(n))) return null;
+      return String(Math.round(Number(n)));
     }
-  }
+    function sign(n){
+      const v = Number(n);
+      if (!Number.isFinite(v)) return "";
+      return v > 0 ? "+" : (v < 0 ? "-" : "");
+    }
 
-  async function loadToday(){
-    const r = await fetch(TODAY_URL, { cache:"no-store" });
-    if (!r.ok) throw new Error("today.json 讀取失敗：" + r.status);
-    const data = await r.json();
+    function bucketOf(price){
+      const p = Number(price);
+      if (!Number.isFinite(p)) return "unknown";
+      if (p < 100) return "lt100";
+      if (p < 300) return "100_300";
+      if (p < 600) return "300_600";
+      if (p < 1000) return "600_1000";
+      return "gt1000";
+    }
 
-    el("updated").textContent = "更新時間：" + (data.generatedAt || "未知");
-    ALL_PICKS = Array.isArray(data.picks) ? data.picks : [];
+    function inBucket(price, bucket){
+      if (bucket === "all") return true;
+      return bucketOf(price) === bucket;
+    }
 
-    renderPicks();
-  }
+    async function loadMarket(){
+      try{
+        const r = await fetch(MARKET_URL, { cache:"no-store" });
+        if (!r.ok) throw new Error("market.json not ready");
+        const m = await r.json();
 
-  function renderPicks(){
-    const list = el("pickList");
-    list.innerHTML = "";
+        // 盤勢燈號視覺
+        const pill = el("marketPill");
+        const sig = (m.signal || "").toLowerCase();
+        pill.className = "pill";
+        if (sig.includes("risk") || sig.includes("bad")) pill.classList.add("bad");
+        else if (sig.includes("caution") || sig.includes("warn") || sig.includes("side")) pill.classList.add("warn");
+        else if (sig.includes("on") || sig.includes("good") || sig.includes("bull")) pill.classList.add("good");
 
-    // 依價格區間過濾（顯示層，不影響後端）
-    const filtered = ALL_PICKS.filter(p => inPriceRange(p.lastClose, CURRENT_PRICE_RANGE));
+        pill.textContent = m.label || m.signal || "—";
+        el("marketMeta").textContent = `更新：${m.asOfLocal || m.generatedAt || "未知"}`;
+        el("marketMsg").textContent = m.message || "—";
+        el("marketNote").textContent = m.note ? `備註：${m.note}` : "";
+      }catch(e){
+        el("marketPill").className = "pill";
+        el("marketPill").textContent = "—";
+        el("marketMeta").textContent = "尚未更新";
+        el("marketMsg").textContent = "等待 market.json 更新（早上 08:00 自動產生）。";
+        el("marketNote").textContent = "";
+      }
+    }
 
-    // 文字顯示：顯示幾檔 / 原始總數
-    el("pickSub").textContent = `顯示 ${filtered.length} / ${ALL_PICKS.length} 檔（價格：${PRICE_RANGES[CURRENT_PRICE_RANGE]?.label || "不限"}）`;
-    el("emptyHint").style.display = filtered.length ? "none" : "block";
+    let lastTodayData = null;
 
-    filtered.forEach((p, i) => {
-      const lastClose = fmt(p.lastClose, 2);
-      const ma5 = fmt(p.ma5, 2);
-      const ma20 = fmt(p.ma20, 2);
-      const rsi14 = fmt(p.rsi14, 1);
-      const volRatio = fmt(p.volRatio, 2);
+    function renderPicks(data){
+      el("updated").textContent = "更新時間：" + (data.generatedAt || "未知");
 
-      const plan = p.plan || null;
-      const entryLow = plan ? fmt(plan.entryLow, 2) : null;
-      const entryHigh = plan ? fmt(plan.entryHigh, 2) : null;
-      const stop = plan ? fmt(plan.stop, 2) : null;
-      const tp1 = plan ? fmt(plan.tp1, 2) : null;
-      const tp2 = plan ? fmt(plan.tp2, 2) : null;
+      const bucketSel = el("bucketSel").value || "all";
 
-      const tradeStyle = p.tradeStyle || "—";
+      const picksAll = data.picks || [];
+      const picks = picksAll.filter(p => inBucket(p.lastClose, bucketSel));
 
-      const inst = p.inst || null;
-      const sumTotal = inst ? fmtInt(inst.sumTotal) : null;
-      const sumForeign = inst ? fmtInt(inst.sumForeign) : null;
-      const sumTrust = inst ? fmtInt(inst.sumTrust) : null;
-      const sumDealer = inst ? fmtInt(inst.sumDealer) : null;
-      const buyStreak = inst ? inst.buyStreak : null;
-      const latestTotalNet = inst ? fmtInt(inst.latestTotalNet) : null;
-      const wDays = inst ? inst.windowDays : null;
+      el("pickSub").textContent = "共 " + (picks.length || 0) + " 檔（篩選後）";
+      el("emptyHint").style.display = picks.length ? "none" : "block";
 
-      const rsiCls = rsi14 != null ? rsiClass(Number(rsi14)) : "";
-      const volCls = volRatio != null ? volRatioClass(Number(volRatio)) : "";
-      const instCls = inst && inst.sumTotal != null ? instClass(inst.sumTotal) : "";
+      const list = el("pickList");
+      list.innerHTML = "";
 
-      const hint = tradeHint(tradeStyle, plan, CURRENT_MARKET_SIGNAL);
+      picks.forEach((p, i) => {
+        const lastClose = fmt(p.lastClose, 2);
+        const ma5 = fmt(p.ma5, 2);
+        const ma20 = fmt(p.ma20, 2);
+        const rsi14 = fmt(p.rsi14, 1);
+        const volRatio = fmt(p.volRatio, 2);
 
-      const div = document.createElement("div");
-      div.className = "pick";
-      div.innerHTML = `
-        <div class="row">
-          <div>
-            <div class="pickName">#${i+1} ${p.symbol} ${p.name}</div>
-            <div class="pickMeta">${p.reason || "—"} ｜ 操作：<span class="pill">${tradeStyle}</span> ｜ 收盤：${lastClose ?? "—"}</div>
+        const plan = p.plan || null;
+        const entryLow = plan ? fmt(plan.entryLow, 2) : null;
+        const entryHigh = plan ? fmt(plan.entryHigh, 2) : null;
+        const stop = plan ? fmt(plan.stop, 2) : null;
+        const tp1 = plan ? fmt(plan.tp1, 2) : null;
+        const tp2 = plan ? fmt(plan.tp2, 2) : null;
+
+        const tradeStyle = p.tradeStyle || "—";
+
+        const inst = p.inst || null;
+        const sumTotal = inst ? fmtInt(inst.sumTotal) : null;
+        const sumForeign = inst ? fmtInt(inst.sumForeign) : null;
+        const sumTrust = inst ? fmtInt(inst.sumTrust) : null;
+        const sumDealer = inst ? fmtInt(inst.sumDealer) : null;
+        const buyStreak = inst ? inst.buyStreak : null;
+        const latestTotalNet = inst ? fmtInt(inst.latestTotalNet) : null;
+        const wDays = inst ? inst.windowDays : null;
+
+        const div = document.createElement("div");
+        div.className = "pick";
+        div.innerHTML = `
+          <div class="row">
+            <div>
+              <div class="pickName">#${i+1} ${p.symbol} ${p.name}</div>
+              <div class="pickMeta">${p.reason || "—"} ｜ 操作：<span class="pill">${tradeStyle}</span></div>
+            </div>
+            <div style="font-weight:850;">${p.score !== undefined ? fmt(p.score, 4) : "-"}</div>
           </div>
-          <div style="font-weight:900;">${p.score !== undefined ? fmt(p.score, 4) : "-"}</div>
-        </div>
 
-        <div class="pickHint">👉 ${hint}</div>
+          <details>
+            <summary>看詳情（技術 / 交易計畫 / 法人）</summary>
 
-        <details>
-          <summary>看詳情（技術 / 交易計畫 / 法人）</summary>
+            <div class="kv">
+              <div>收盤價</div><div>${lastClose ?? "尚未提供"}</div>
+              <div>MA5 / MA20</div><div>${(ma5 && ma20) ? (ma5 + " / " + ma20) : "尚未提供"}</div>
+              <div>RSI14</div><div>${rsi14 ?? "尚未提供"}</div>
+              <div>量比</div><div>${volRatio ?? "尚未提供"}</div>
+            </div>
 
-          <div class="kv">
-            <div>收盤價</div><div>${lastClose ?? "尚未提供"}</div>
-            <div>MA5 / MA20</div><div>${(ma5 && ma20) ? (ma5 + " / " + ma20) : "尚未提供"}</div>
-            <div>RSI14</div><div class="${rsiCls}">${rsi14 ?? "尚未提供"}</div>
-            <div>量比</div><div class="${volCls}">${volRatio ?? "尚未提供"}</div>
-          </div>
+            <div class="hr"></div>
 
-          <div class="hr"></div>
+            <div class="kv">
+              <div>進場區間</div><div>${(entryLow && entryHigh) ? (entryLow + " ~ " + entryHigh) : "尚未提供"}</div>
+              <div>止損</div><div>${stop ?? "尚未提供"}</div>
+              <div>TP1 / TP2</div><div>${(tp1 && tp2) ? (tp1 + " / " + tp2) : "尚未提供"}</div>
+            </div>
 
-          <div class="kv">
-            <div>進場區間</div><div>${(entryLow && entryHigh) ? (entryLow + " ~ " + entryHigh) : "尚未提供"}</div>
-            <div>止損</div><div class="bad">${stop ?? "尚未提供"}</div>
-            <div>TP1 / TP2</div><div class="good">${(tp1 && tp2) ? (tp1 + " / " + tp2) : "尚未提供"}</div>
-          </div>
+            <div class="hr"></div>
 
-          <div class="hr"></div>
+            <div class="kv">
+              <div>法人（T86）</div><div>${wDays ? `近 ${wDays} 日摘要` : "尚未提供"}</div>
+              <div>合計淨買</div><div>${sumTotal ? `${sign(inst.sumTotal)}${sumTotal}` : "尚未提供"}</div>
+              <div>外資/投信/自營</div><div>${(sumForeign && sumTrust && sumDealer) ? `${sign(inst.sumForeign)}${sumForeign} / ${sign(inst.sumTrust)}${sumTrust} / ${sign(inst.sumDealer)}${sumDealer}` : "尚未提供"}</div>
+              <div>連買 / 最新一日</div><div>${(buyStreak != null && latestTotalNet) ? `${buyStreak} 日 / ${sign(inst.latestTotalNet)}${latestTotalNet}` : "尚未提供"}</div>
+            </div>
 
-          <div class="kv">
-            <div>法人（T86）</div><div>${wDays ? `近 ${wDays} 日摘要` : "尚未提供"}</div>
-            <div>合計淨買</div><div class="${instCls}">${sumTotal ? `${sign(inst.sumTotal)}${sumTotal}` : "尚未提供"}</div>
-            <div>外資 / 投信 / 自營</div><div>${(sumForeign && sumTrust && sumDealer) ? `${sign(inst.sumForeign)}${sumForeign} / ${sign(inst.sumTrust)}${sumTrust} / ${sign(inst.sumDealer)}${sumDealer}` : "尚未提供"}</div>
-            <div>連買 / 最新一日</div><div>${(buyStreak != null && latestTotalNet) ? `${buyStreak} 日 / ${sign(inst.latestTotalNet)}${latestTotalNet}` : "尚未提供"}</div>
-          </div>
+          </details>
+        `;
+        list.appendChild(div);
+      });
+    }
 
-          ${p.tech?.error ? `<div class="hr"></div><div class="small muted">技術資料抓取失敗：${p.tech.error}</div>` : ``}
-          ${p.inst?.error ? `<div class="hr"></div><div class="small muted">法人資料抓取失敗：${p.inst.error}</div>` : ``}
-        </details>
-      `;
-      list.appendChild(div);
-    });
+    async function loadToday(){
+      const r = await fetch(TODAY_URL, { cache:"no-store" });
+      if (!r.ok) throw new Error("today.json 讀取失敗：" + r.status);
+      const data = await r.json();
+      lastTodayData = data;
+      renderPicks(data);
+    }
+
+    async function loadAll(){
+      await Promise.allSettled([loadMarket(), loadToday()]);
+    }
+
+    // 事件
+    el("btnRefresh").onclick = () => loadAll().catch(e => alert(String(e?.message || e)));
+    el("bucketSel").onchange = () => { if (lastTodayData) renderPicks(lastTodayData); };
 
     el("btnSource").onclick = () => {
       const base = location.href.replace(/\/[^\/]*$/, "/");
       alert("資料來源：\n" + base + "today.json\n" + base + "market.json");
     };
-  }
 
-  async function loadAll(){
-    // 先載 market 再載 today：讓白話提示可以吃到 CURRENT_MARKET_SIGNAL
-    await loadMarket();
-    await loadToday();
-  }
-
-  // 價格區間按鈕事件
-  el("priceFilter").onclick = (e) => {
-    const key = e?.target?.dataset?.range;
-    if (!key) return;
-    CURRENT_PRICE_RANGE = key;
-
-    // toggle active
-    [...document.querySelectorAll("#priceFilter .fbtn")]
-      .forEach(b => b.classList.toggle("active", b.dataset.range === key));
-
-    // 只重新渲染，不重新抓資料
-    renderPicks();
-  };
-
-  el("btnRefresh").onclick = () => loadAll().catch(e => alert(String(e?.message || e)));
-
-  loadAll().catch(e => {
-    el("pickSub").textContent = "載入失敗";
-    el("pickList").innerHTML = `<div class="small muted">${String(e?.message || e)}</div>`;
-  });
-</script>
-
+    loadAll().catch(e => {
+      el("pickSub").textContent = "載入失敗";
+      el("pickList").innerHTML = `<div class="small muted">${String(e?.message || e)}</div>`;
+    });
+  </script>
 </body>
 </html>
