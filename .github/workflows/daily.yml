@@ -1,63 +1,77 @@
-name: daily-picks
+name: daily
 
 on:
+  workflow_dispatch:
   schedule:
-    # 台北時間每天 23:10（UTC 15:10）
+    # 08:00 Asia/Taipei  == 00:00 UTC
+    - cron: "0 0 * * *"
+    # 23:10 Asia/Taipei  == 15:10 UTC
     - cron: "10 15 * * *"
-  workflow_dispatch: {}
 
 permissions:
   contents: write
 
-concurrency:
-  group: daily-picks
-  cancel-in-progress: false
-
 jobs:
-  generate:
+  run:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Taipei
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install dependencies
-        shell: bash
+      - name: Install deps
+        run: npm install
+
+      # 你如果有 market 的腳本（例如 npm run market），就會在 08:00 自動產生 market.json
+      # 若你目前 market 是另一路腳本，先留著，不會影響 picks
+      - name: Decide run mode (Taipei time)
+        id: mode
         run: |
-          if [ -f package-lock.json ]; then
-            npm ci
+          echo "NOW=$(date '+%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_OUTPUT
+          H=$(date '+%H')
+          # 08 點（台北）跑 market；其他時間跑 picks（23:10）
+          if [ "$H" = "08" ]; then
+            echo "MODE=market" >> $GITHUB_OUTPUT
           else
-            npm install
+            echo "MODE=picks" >> $GITHUB_OUTPUT
           fi
 
-      - name: Generate today.json and history
-        env:
-          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+      - name: Run picks (today + history)
+        if: steps.mode.outputs.MODE == 'picks'
         run: npm run generate
 
-      - name: Evaluate performance
-        run: node script/evaluate_performance.js
-
-      - name: Commit and push if changed
-        shell: bash
+      - name: Run market (optional)
+        if: steps.mode.outputs.MODE == 'market'
         run: |
-          set -e
+          if npm run | grep -q "market"; then
+            npm run market
+          else
+            echo "No market script found; skip."
+          fi
+
+      - name: Commit and push
+        run: |
           git config user.name "tw-stock-daily-bot"
           git config user.email "tw-stock-daily-bot@users.noreply.github.com"
 
-          git add public/today.json public/history public/performance
+          # 避免偶發衝突
+          git pull --rebase origin main || true
+
+          git add public/today.json public/history/*.json public/market.json public/stats/*.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: update today/history/performance"
+          git commit -m "chore: update json ($(date '+%Y-%m-%d %H:%M:%S %Z'))"
           git push
