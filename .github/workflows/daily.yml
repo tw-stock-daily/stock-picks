@@ -60,18 +60,44 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "tw-stock-daily-bot"
-          git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+         set -e
+
+         git config user.name "tw-stock-daily-bot"
+         git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+
+         echo "=== DEBUG: list public/ and history ==="
+         ls -la public || true
+         ls -la public/history || true
+
+         echo "=== DEBUG: git status before pull ==="
+          git status --porcelain || true
 
           # 避免偶發衝突
           git pull --rebase origin main || true
 
-          git add public/today.json public/history/*.json public/market.json public/stats/*.json 2>/dev/null || true
+          echo "=== DEBUG: git status after pull ==="
+          git status --porcelain || true
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
+          echo "=== DEBUG: stage files ==="
+          # 不要吃掉錯誤：如果路徑錯，讓它直接報錯
+         git add public/today.json
+         if [ -d "public/history" ]; then
+         git add public/history
+         fi
+         if [ -f "public/market.json" ]; then
+         git add public/market.json
+         fi
+         if [ -d "public/stats" ]; then
+         git add public/stats
+         fi
 
-          git commit -m "chore: update json ($(date '+%Y-%m-%d %H:%M:%S %Z'))"
-          git push
+         echo "=== DEBUG: staged diff ==="
+         git diff --cached --name-only || true
+
+         if git diff --cached --quiet; then
+         echo "No changes to commit."
+         exit 0
+         fi
+
+         git commit -m "chore: update json ($(date '+%Y-%m-%d %H:%M:%S %Z'))"
+         git push
