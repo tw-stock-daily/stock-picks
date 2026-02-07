@@ -79,6 +79,13 @@
       color:var(--text);
       font-size:1rem;
     }
+    button{
+      cursor:pointer;
+    }
+    button:disabled{
+      opacity:.65;
+      cursor:default;
+    }
 
     .pick{
       background:var(--card);
@@ -95,6 +102,22 @@
     .pickMeta{
       font-size:0.85rem;
       color:var(--muted);
+    }
+
+    /* ✅ 右側分數：改成「同一行」不會像價格 */
+    .scoreLine{
+      min-width: 140px;
+      text-align:right;
+      font-weight:850;
+      font-size:1.05rem;
+      line-height:1.25;
+      white-space:nowrap;
+    }
+    .scoreLine .label{
+      font-weight:650;
+      color:var(--muted);
+      font-size:0.82rem;
+      margin-right:6px;
     }
 
     details{ margin-top:10px; }
@@ -127,6 +150,7 @@
       body{ font-size:17px; padding:12px; }
       .pickName{ font-size:1.12rem; }
       .kv{ grid-template-columns:100px 1fr; }
+      .scoreLine{ min-width: 0; font-size:1.0rem; }
     }
   </style>
 </head>
@@ -176,8 +200,18 @@
 </div>
 
 <script>
-const TODAY_URL = "./today.json";
-const MARKET_URL = "./market.json";
+/**
+ * ✅ 關鍵修正：
+ * 如果是 APK 內用 file:// 開啟（android_asset），
+ * 就強制改用 GitHub Pages 的 JSON，讓「重新整理」一定有效。
+ */
+const REMOTE_BASE = "https://tw-stock-daily.github.io/stock-picks/";
+const BASE = (location.protocol === "file:")
+  ? REMOTE_BASE
+  : new URL("./", location.href).href;
+
+const TODAY_URL  = BASE + "today.json";
+const MARKET_URL = BASE + "market.json";
 
 function el(id){ return document.getElementById(id); }
 function fmt(n,d=2){ return (n==null||isNaN(n))?null:Number(n).toFixed(d); }
@@ -197,19 +231,23 @@ let lastToday=null;
 async function loadMarket(){
   try{
     const r=await fetch(MARKET_URL,{cache:"no-store"});
-    if(!r.ok)throw 0;
+    if(!r.ok)throw new Error("market.json not ready");
     const m=await r.json();
     const pill=el("marketPill");
     pill.className="pill";
-    if(m.signal?.includes("risk"))pill.classList.add("bad");
-    else if(m.signal?.includes("caution"))pill.classList.add("warn");
+    if((m.signal||"").includes("risk")) pill.classList.add("bad");
+    else if((m.signal||"").includes("caution")) pill.classList.add("warn");
     else pill.classList.add("good");
+
     pill.textContent=m.label||m.signal||"—";
     el("marketMeta").textContent=`更新：${m.asOfLocal||m.generatedAt||"—"}`;
     el("marketMsg").textContent=m.message||"—";
     el("marketNote").textContent=m.note?`備註：${m.note}`:"";
-  }catch{
+  }catch(e){
     el("marketPill").textContent="—";
+    el("marketMeta").textContent="尚未更新";
+    el("marketMsg").textContent="等待 market.json 更新（早上 08:00 自動產生）。";
+    el("marketNote").textContent="";
   }
 }
 
@@ -217,23 +255,63 @@ function render(data){
   el("updated").textContent="更新時間："+(data.generatedAt||"—");
   const b=el("bucketSel").value;
   const picks=(data.picks||[]).filter(p=>inBucket(p.lastClose,b));
+
   el("pickSub").textContent=`共 ${picks.length} 檔`;
   el("emptyHint").style.display=picks.length?"none":"block";
-  const list=el("pickList"); list.innerHTML="";
+
+  const list=el("pickList");
+  list.innerHTML="";
+
   picks.forEach((p,i)=>{
     const div=document.createElement("div");
     div.className="pick";
+
+    const scoreText = (p.score !== undefined && p.score !== null) ? fmt(p.score,4) : "-";
+
     div.innerHTML=`
       <div class="row">
         <div>
           <div class="pickName">#${i+1} ${p.symbol} ${p.name}</div>
           <div class="pickMeta">${p.reason||"—"} ｜ 操作：<span class="pill">${p.tradeStyle||"—"}</span></div>
         </div>
-        <div style="text-align:right;">
-          <div class="small muted">綜合評分</div>
-          <div style="font-weight:850; font-size:1.05rem;">${fmt(p.score,4)||"-"}</div>
+
+        <!-- ✅ 分數改成同一行：避免被誤認為價格 -->
+        <div class="scoreLine">
+          <span class="label">綜合評分：</span><span>${scoreText}</span>
         </div>
       </div>
+
+      <details>
+        <summary>看詳情（技術 / 交易計畫 / 法人）</summary>
+
+        <div class="kv">
+          <div>收盤價</div><div>${fmt(p.lastClose,2) ?? "尚未提供"}</div>
+          <div>MA5 / MA20</div><div>${(fmt(p.ma5,2) && fmt(p.ma20,2)) ? (fmt(p.ma5,2) + " / " + fmt(p.ma20,2)) : "尚未提供"}</div>
+          <div>RSI14</div><div>${fmt(p.rsi14,1) ?? "尚未提供"}</div>
+          <div>量比</div><div>${fmt(p.volRatio,2) ?? "尚未提供"}</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="kv">
+          <div>進場區間</div><div>${(p.plan && fmt(p.plan.entryLow,2) && fmt(p.plan.entryHigh,2)) ? (fmt(p.plan.entryLow,2) + " ~ " + fmt(p.plan.entryHigh,2)) : "尚未提供"}</div>
+          <div>止損</div><div>${(p.plan && fmt(p.plan.stop,2)) ? fmt(p.plan.stop,2) : "尚未提供"}</div>
+          <div>TP1 / TP2</div><div>${(p.plan && fmt(p.plan.tp1,2) && fmt(p.plan.tp2,2)) ? (fmt(p.plan.tp1,2) + " / " + fmt(p.plan.tp2,2)) : "尚未提供"}</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="kv">
+          <div>法人（T86）</div><div>${p.inst?.windowDays ? `近 ${p.inst.windowDays} 日摘要` : "尚未提供"}</div>
+          <div>合計淨買</div><div>${p.inst?.sumTotal != null ? `${sign(p.inst.sumTotal)}${fmtInt(p.inst.sumTotal)}` : "尚未提供"}</div>
+          <div>外資 / 投信 / 自營</div><div>${(p.inst?.sumForeign!=null && p.inst?.sumTrust!=null && p.inst?.sumDealer!=null)
+            ? `${sign(p.inst.sumForeign)}${fmtInt(p.inst.sumForeign)} / ${sign(p.inst.sumTrust)}${fmtInt(p.inst.sumTrust)} / ${sign(p.inst.sumDealer)}${fmtInt(p.inst.sumDealer)}`
+            : "尚未提供"}</div>
+          <div>連買 / 最新一日</div><div>${(p.inst?.buyStreak!=null && p.inst?.latestTotalNet!=null)
+            ? `${p.inst.buyStreak} 日 / ${sign(p.inst.latestTotalNet)}${fmtInt(p.inst.latestTotalNet)}`
+            : "尚未提供"}</div>
+        </div>
+      </details>
     `;
     list.appendChild(div);
   });
@@ -241,15 +319,44 @@ function render(data){
 
 async function loadToday(){
   const r=await fetch(TODAY_URL,{cache:"no-store"});
+  if(!r.ok) throw new Error("today.json 讀取失敗：" + r.status);
   const d=await r.json();
-  lastToday=d; render(d);
+  lastToday=d;
+  render(d);
 }
 
-el("btnRefresh").onclick=()=>Promise.all([loadMarket(),loadToday()]);
-el("bucketSel").onchange=()=>lastToday&&render(lastToday);
-el("btnSource").onclick=()=>alert("資料來源：today.json / market.json");
+async function loadAll(){
+  await Promise.allSettled([loadMarket(), loadToday()]);
+}
 
-loadMarket(); loadToday();
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = el("btnRefresh");
+  const bucket = el("bucketSel");
+
+  btn.addEventListener("click", async () => {
+    const old = btn.textContent;
+    try{
+      btn.disabled = true;
+      btn.textContent = "更新中…";
+      await loadAll();
+    }catch(e){
+      alert(String(e?.message || e));
+    }finally{
+      btn.textContent = old;
+      btn.disabled = false;
+    }
+  });
+
+  bucket.addEventListener("change", () => {
+    if(lastToday) render(lastToday);
+  });
+
+  el("btnSource").addEventListener("click", () => {
+    alert("資料來源：\n" + TODAY_URL + "\n" + MARKET_URL);
+  });
+
+  loadAll().catch(()=>{});
+});
 </script>
 </body>
 </html>
