@@ -79,13 +79,8 @@
       color:var(--text);
       font-size:1rem;
     }
-    button{
-      cursor:pointer;
-    }
-    button:disabled{
-      opacity:.65;
-      cursor:default;
-    }
+    button{ cursor:pointer; }
+    button:disabled{ opacity:.65; cursor:default; }
 
     .pick{
       background:var(--card);
@@ -94,30 +89,59 @@
       padding:14px;
       margin-bottom:14px;
     }
-    .pickName{
-      font-size:1.05rem;
-      font-weight:750;
-      margin-bottom:4px;
+
+    /* ✅ 兩行標題：避免擁擠、避免分數跑出畫面 */
+    .pickHeader{ display:flex; flex-direction:column; gap:6px; }
+
+    .line1, .line2{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:baseline;
+      min-width:0; /* 重要：避免 flex 子項溢出 */
     }
+
+    .codeLine{
+      font-size:1.05rem;
+      font-weight:850;
+      white-space:nowrap;
+      flex:1;
+      min-width:0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .scoreLabel{
+      font-size:0.9rem;
+      font-weight:750;
+      color:var(--muted);
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+
+    .nameLine{
+      font-size:1.02rem;
+      font-weight:750;
+      color:var(--text);
+      flex:1;
+      min-width:0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap; /* ✅ 名稱不拆行，避免變兩行 */
+    }
+
+    .scoreValue{
+      font-size:1.15rem;
+      font-weight:900;
+      white-space:nowrap;
+      flex-shrink:0;
+      margin-left:10px;
+    }
+
     .pickMeta{
       font-size:0.85rem;
       color:var(--muted);
-    }
-
-    /* ✅ 右側分數：改成「同一行」不會像價格 */
-    .scoreLine{
-      min-width: 140px;
-      text-align:right;
-      font-weight:850;
-      font-size:1.05rem;
-      line-height:1.25;
-      white-space:nowrap;
-    }
-    .scoreLine .label{
-      font-weight:650;
-      color:var(--muted);
-      font-size:0.82rem;
-      margin-right:6px;
+      margin-top:2px;
     }
 
     details{ margin-top:10px; }
@@ -148,9 +172,10 @@
 
     @media (max-width:420px){
       body{ font-size:17px; padding:12px; }
-      .pickName{ font-size:1.12rem; }
+      .codeLine{ font-size:1.08rem; }
+      .nameLine{ font-size:1.05rem; }
+      .scoreValue{ font-size:1.18rem; }
       .kv{ grid-template-columns:100px 1fr; }
-      .scoreLine{ min-width: 0; font-size:1.0rem; }
     }
   </style>
 </head>
@@ -200,11 +225,6 @@
 </div>
 
 <script>
-/**
- * ✅ 關鍵修正：
- * 如果是 APK 內用 file:// 開啟（android_asset），
- * 就強制改用 GitHub Pages 的 JSON，讓「重新整理」一定有效。
- */
 const REMOTE_BASE = "https://tw-stock-daily.github.io/stock-picks/";
 const BASE = (location.protocol === "file:")
   ? REMOTE_BASE
@@ -233,6 +253,7 @@ async function loadMarket(){
     const r=await fetch(MARKET_URL,{cache:"no-store"});
     if(!r.ok)throw new Error("market.json not ready");
     const m=await r.json();
+
     const pill=el("marketPill");
     pill.className="pill";
     if((m.signal||"").includes("risk")) pill.classList.add("bad");
@@ -253,6 +274,7 @@ async function loadMarket(){
 
 function render(data){
   el("updated").textContent="更新時間："+(data.generatedAt||"—");
+
   const b=el("bucketSel").value;
   const picks=(data.picks||[]).filter(p=>inBucket(p.lastClose,b));
 
@@ -263,22 +285,25 @@ function render(data){
   list.innerHTML="";
 
   picks.forEach((p,i)=>{
-    const div=document.createElement("div");
-    div.className="pick";
-
     const scoreText = (p.score !== undefined && p.score !== null) ? fmt(p.score,4) : "-";
 
+    const div=document.createElement("div");
+    div.className="pick";
     div.innerHTML=`
-      <div class="row">
-        <div>
-          <div class="pickName">#${i+1} ${p.symbol} ${p.name}</div>
-          <div class="pickMeta">${p.reason||"—"} ｜ 操作：<span class="pill">${p.tradeStyle||"—"}</span></div>
+      <div class="pickHeader">
+        <!-- ✅ 第一行：代號 +「綜合評分」文字 -->
+        <div class="line1">
+          <div class="codeLine">#${i+1} ${p.symbol}</div>
+          <div class="scoreLabel">綜合評分</div>
         </div>
 
-        <!-- ✅ 分數改成同一行：避免被誤認為價格 -->
-        <div class="scoreLine">
-          <span class="label">綜合評分：</span><span>${scoreText}</span>
+        <!-- ✅ 第二行：名稱 + 分數數字 -->
+        <div class="line2">
+          <div class="nameLine">${p.name || "—"}</div>
+          <div class="scoreValue">${scoreText}</div>
         </div>
+
+        <div class="pickMeta">${p.reason||"—"} ｜ 操作：<span class="pill">${p.tradeStyle||"—"}</span></div>
       </div>
 
       <details>
