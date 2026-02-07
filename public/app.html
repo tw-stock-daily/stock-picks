@@ -22,7 +22,12 @@
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      padding:14px;
+      /* ✅ 整體下移：避免被狀態列遮住 */
+      padding:
+        calc(16px + env(safe-area-inset-top, 0px))
+        14px
+        calc(16px + env(safe-area-inset-bottom, 0px))
+        14px;
       background:var(--bg);
       color:var(--text);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC",sans-serif;
@@ -90,49 +95,50 @@
       margin-bottom:14px;
     }
 
-    /* ✅ 兩行標題：避免擁擠、避免分數跑出畫面 */
-    .pickHeader{ display:flex; flex-direction:column; gap:6px; }
+    /* ✅ 新版：第一行「代號+名稱」、第二行「綜合評分+分數」 */
+    .pickHeader{ display:flex; flex-direction:column; gap:6px; min-width:0; }
 
-    .line1, .line2{
+    .lineTop, .lineScore{
       display:flex;
       justify-content:space-between;
       gap:10px;
       align-items:baseline;
-      min-width:0; /* 重要：避免 flex 子項溢出 */
+      min-width:0;
     }
 
-    .codeLine{
+    .topLeft{
+      display:flex;
+      gap:10px;
+      align-items:baseline;
+      min-width:0;
+      flex:1;
+    }
+    .idxCode{
+      font-size:1.05rem;
+      font-weight:900;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+    .stockName{
       font-size:1.05rem;
       font-weight:850;
       white-space:nowrap;
-      flex:1;
-      min-width:0;
       overflow:hidden;
       text-overflow:ellipsis;
+      min-width:0;
+      flex:1;
     }
 
     .scoreLabel{
       font-size:0.9rem;
-      font-weight:750;
+      font-weight:800;
       color:var(--muted);
       white-space:nowrap;
       flex-shrink:0;
     }
-
-    .nameLine{
-      font-size:1.02rem;
-      font-weight:750;
-      color:var(--text);
-      flex:1;
-      min-width:0;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      white-space:nowrap; /* ✅ 名稱不拆行，避免變兩行 */
-    }
-
     .scoreValue{
       font-size:1.15rem;
-      font-weight:900;
+      font-weight:950;
       white-space:nowrap;
       flex-shrink:0;
       margin-left:10px;
@@ -171,9 +177,9 @@
     }
 
     @media (max-width:420px){
-      body{ font-size:17px; padding:12px; }
-      .codeLine{ font-size:1.08rem; }
-      .nameLine{ font-size:1.05rem; }
+      body{ font-size:17px; }
+      .idxCode{ font-size:1.07rem; }
+      .stockName{ font-size:1.07rem; }
       .scoreValue{ font-size:1.18rem; }
       .kv{ grid-template-columns:100px 1fr; }
     }
@@ -188,7 +194,7 @@
   <!-- 盤勢燈號 -->
   <div class="card">
     <div class="row">
-      <div style="font-weight:750;">今日盤勢燈號</div>
+      <div style="font-weight:800;">今日盤勢燈號</div>
       <div id="marketPill" class="pill">—</div>
     </div>
     <div class="small muted" id="marketMeta" style="margin-top:6px;">尚未更新</div>
@@ -200,7 +206,7 @@
   <div class="card">
     <div class="row">
       <div>
-        <div style="font-weight:750;">今日推薦</div>
+        <div style="font-weight:800;">今日推薦</div>
         <div class="small muted" id="pickSub">—</div>
       </div>
       <div class="pill">TOP 3</div>
@@ -215,8 +221,9 @@
         <option value="600_1000">600 ~ 1000</option>
         <option value="gt1000">1000 以上</option>
       </select>
+
+      <!-- ✅ 只留「重新整理」 -->
       <button id="btnRefresh">重新整理</button>
-      <button id="btnSource">查看 JSON</button>
     </div>
   </div>
 
@@ -236,7 +243,7 @@ const MARKET_URL = BASE + "market.json";
 function el(id){ return document.getElementById(id); }
 function fmt(n,d=2){ return (n==null||isNaN(n))?null:Number(n).toFixed(d); }
 function fmtInt(n){ return (n==null||isNaN(n))?null:String(Math.round(Number(n))); }
-function sign(n){ return n>0?"+":(n<0?"-":""); }
+function sign(n){ n=Number(n); return n>0?"+":(n<0?"-":""); }
 
 function bucketOf(p){
   p=Number(p); if(!isFinite(p))return"unknown";
@@ -291,15 +298,17 @@ function render(data){
     div.className="pick";
     div.innerHTML=`
       <div class="pickHeader">
-        <!-- ✅ 第一行：代號 +「綜合評分」文字 -->
-        <div class="line1">
-          <div class="codeLine">#${i+1} ${p.symbol}</div>
-          <div class="scoreLabel">綜合評分</div>
+        <!-- ✅ 第一行：代號 + 名稱（同一行） -->
+        <div class="lineTop">
+          <div class="topLeft">
+            <div class="idxCode">#${i+1} ${p.symbol}</div>
+            <div class="stockName">${p.name || "—"}</div>
+          </div>
         </div>
 
-        <!-- ✅ 第二行：名稱 + 分數數字 -->
-        <div class="line2">
-          <div class="nameLine">${p.name || "—"}</div>
+        <!-- ✅ 第二行：綜合評分 + 分數（同一行） -->
+        <div class="lineScore">
+          <div class="scoreLabel">綜合評分</div>
           <div class="scoreValue">${scoreText}</div>
         </div>
 
@@ -374,10 +383,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   bucket.addEventListener("change", () => {
     if(lastToday) render(lastToday);
-  });
-
-  el("btnSource").addEventListener("click", () => {
-    alert("資料來源：\n" + TODAY_URL + "\n" + MARKET_URL);
   });
 
   loadAll().catch(()=>{});
