@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-08 00:06:08",
+  "generatedAt": "2026-02-08 23:55:10",
   "topN": 3,
   "picks": [
     {
@@ -11,16 +11,16 @@
       "reason": "主推"
     },
     {
-      "symbol": "6152",
-      "name": "百一",
-      "score": 91.4235,
+      "symbol": "1342",
+      "name": "八貫",
+      "score": 92.1538,
       "passed": true,
       "reason": "主推"
     },
     {
-      "symbol": "6861",
-      "name": "睿生光電",
-      "score": 88.4757,
+      "symbol": "6152",
+      "name": "百一",
+      "score": 91.4235,
       "passed": true,
       "reason": "主推"
     }
