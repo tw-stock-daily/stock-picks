@@ -46,6 +46,8 @@ jobs:
           npm install --no-audit --no-fund
 
       - name: Generate JSON
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: |
           set -e
           # 如果你的指令不是 generate，改成你原本產檔的那個
