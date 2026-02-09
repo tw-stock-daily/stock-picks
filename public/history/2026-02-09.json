@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-09 22:30:44",
+  "generatedAt": "2026-02-09 23:31:27",
   "topN": 3,
   "picks": [
     {
@@ -8,29 +8,432 @@
       "name": "聚隆",
       "score": 100.2035,
       "passed": true,
-      "reason": "主推"
+      "reason": "主推",
+      "tradeStyle": "波段",
+      "lastClose": 17.25,
+      "ma5": 15.7,
+      "ma20": 14.77,
+      "rsi14": 81.07,
+      "volRatio": 7.66,
+      "plan": {
+        "entryLow": 16.89,
+        "entryHigh": 17.13,
+        "stop": 16.42,
+        "tp1": 17.85,
+        "tp2": 18.32
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
     },
     {
       "symbol": "3550",
       "name": "聯穎",
       "score": 89.2807,
       "passed": true,
-      "reason": "主推"
+      "reason": "主推",
+      "tradeStyle": "波段",
+      "lastClose": 20.6,
+      "ma5": 17.89,
+      "ma20": 16.32,
+      "rsi14": 77.72,
+      "volRatio": 4.69,
+      "plan": {
+        "entryLow": 19.92,
+        "entryHigh": 20.37,
+        "stop": 19.01,
+        "tp1": 21.74,
+        "tp2": 22.65
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
     },
     {
       "symbol": "3576",
       "name": "聯合再生",
       "score": 72.3941,
       "passed": true,
-      "reason": "主推"
+      "reason": "主推",
+      "tradeStyle": "波段",
+      "lastClose": 15.15,
+      "ma5": 14.34,
+      "ma20": 11.69,
+      "rsi14": 76.39,
+      "volRatio": 2.32,
+      "plan": {
+        "entryLow": 14.56,
+        "entryHigh": 14.95,
+        "stop": 13.78,
+        "tp1": 16.13,
+        "tp2": 16.91
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "1466",
+      "name": "聚隆",
+      "score": 100.2035,
+      "passed": true,
+      "reason": "價格帶：100 以內",
+      "tradeStyle": "波段",
+      "lastClose": 17.25,
+      "ma5": 15.7,
+      "ma20": 14.77,
+      "rsi14": 81.07,
+      "volRatio": 7.66,
+      "plan": {
+        "entryLow": 16.89,
+        "entryHigh": 17.13,
+        "stop": 16.42,
+        "tp1": 17.85,
+        "tp2": 18.32
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "3550",
+      "name": "聯穎",
+      "score": 89.2807,
+      "passed": true,
+      "reason": "價格帶：100 以內",
+      "tradeStyle": "波段",
+      "lastClose": 20.6,
+      "ma5": 17.89,
+      "ma20": 16.32,
+      "rsi14": 77.72,
+      "volRatio": 4.69,
+      "plan": {
+        "entryLow": 19.92,
+        "entryHigh": 20.37,
+        "stop": 19.01,
+        "tp1": 21.74,
+        "tp2": 22.65
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "3576",
+      "name": "聯合再生",
+      "score": 72.3941,
+      "passed": true,
+      "reason": "價格帶：100 以內",
+      "tradeStyle": "波段",
+      "lastClose": 15.15,
+      "ma5": 14.34,
+      "ma20": 11.69,
+      "rsi14": 76.39,
+      "volRatio": 2.32,
+      "plan": {
+        "entryLow": 14.56,
+        "entryHigh": 14.95,
+        "stop": 13.78,
+        "tp1": 16.13,
+        "tp2": 16.91
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "6830",
+      "name": "汎銓",
+      "score": 63.1115,
+      "passed": true,
+      "reason": "價格帶：100 ~ 300",
+      "tradeStyle": "波段",
+      "lastClose": 225.5,
+      "ma5": 210.7,
+      "ma20": 188.18,
+      "rsi14": 68.2,
+      "volRatio": 3.34,
+      "plan": {
+        "entryLow": 218.61,
+        "entryHigh": 223.2,
+        "stop": 209.42,
+        "tp1": 236.98,
+        "tp2": 246.17
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "7610",
+      "name": "聯友金屬-創",
+      "score": 45.4057,
+      "passed": true,
+      "reason": "價格帶：100 ~ 300",
+      "tradeStyle": "波段",
+      "lastClose": 241,
+      "ma5": 213.6,
+      "ma20": 201,
+      "rsi14": 73.83,
+      "volRatio": 1.56,
+      "plan": {
+        "entryLow": 232.52,
+        "entryHigh": 238.17,
+        "stop": 221.22,
+        "tp1": 255.13,
+        "tp2": 266.43
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "2486",
+      "name": "一詮",
+      "score": 43.3243,
+      "passed": false,
+      "reason": "價格帶：100 ~ 300",
+      "tradeStyle": "波段",
+      "lastClose": 142,
+      "ma5": 135.7,
+      "ma20": 113.96,
+      "rsi14": 75.56,
+      "volRatio": 0.41,
+      "plan": {
+        "entryLow": 137.71,
+        "entryHigh": 140.57,
+        "stop": 131.99,
+        "tp1": 149.15,
+        "tp2": 154.87
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "8046",
+      "name": "南電",
+      "score": 25.5525,
+      "passed": false,
+      "reason": "價格帶：300 ~ 600",
+      "tradeStyle": "波段",
+      "lastClose": 416.5,
+      "ma5": 399.5,
+      "ma20": 357.23,
+      "rsi14": 67.6,
+      "volRatio": 0.24,
+      "plan": {
+        "entryLow": 402.48,
+        "entryHigh": 411.83,
+        "stop": 383.79,
+        "tp1": 439.86,
+        "tp2": 458.55
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "3711",
+      "name": "日月光投控",
+      "score": 22.799,
+      "passed": true,
+      "reason": "價格帶：300 ~ 600",
+      "tradeStyle": "波段",
+      "lastClose": 327,
+      "ma5": 304,
+      "ma20": 301.45,
+      "rsi14": 66.26,
+      "volRatio": 1.58,
+      "plan": {
+        "entryLow": 319.15,
+        "entryHigh": 324.38,
+        "stop": 308.67,
+        "tp1": 340.09,
+        "tp2": 350.56
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "3037",
+      "name": "欣興",
+      "score": 12.9744,
+      "passed": true,
+      "reason": "價格帶：300 ~ 600",
+      "tradeStyle": "波段",
+      "lastClose": 347.5,
+      "ma5": 365.2,
+      "ma20": 329.6,
+      "rsi14": 59.64,
+      "volRatio": 1.21,
+      "plan": {
+        "entryLow": 333.98,
+        "entryHigh": 342.99,
+        "stop": 315.96,
+        "tp1": 370.03,
+        "tp2": 388.05
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "8996",
+      "name": "高力",
+      "score": 31.4269,
+      "passed": false,
+      "reason": "價格帶：600 ~ 1000",
+      "tradeStyle": "波段",
+      "lastClose": 883,
+      "ma5": 832,
+      "ma20": 757.65,
+      "rsi14": 70.9,
+      "volRatio": 0.83,
+      "plan": {
+        "entryLow": 854.09,
+        "entryHigh": 873.36,
+        "stop": 815.54,
+        "tp1": 931.19,
+        "tp2": 969.74
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "2368",
+      "name": "金像電",
+      "score": 28.3473,
+      "passed": false,
+      "reason": "價格帶：600 ~ 1000",
+      "tradeStyle": "波段",
+      "lastClose": 797,
+      "ma5": 770.8,
+      "ma20": 691.25,
+      "rsi14": 65.97,
+      "volRatio": 0.78,
+      "plan": {
+        "entryLow": 772.78,
+        "entryHigh": 788.93,
+        "stop": 740.48,
+        "tp1": 837.37,
+        "tp2": 869.67
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "6446",
+      "name": "藥華藥",
+      "score": 15.8627,
+      "passed": false,
+      "reason": "價格帶：600 ~ 1000",
+      "tradeStyle": "波段",
+      "lastClose": 731,
+      "ma5": 745.8,
+      "ma20": 655.4,
+      "rsi14": 66.98,
+      "volRatio": 0.28,
+      "plan": {
+        "entryLow": 713.34,
+        "entryHigh": 725.11,
+        "stop": 689.79,
+        "tp1": 760.43,
+        "tp2": 783.98
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "7750",
+      "name": "新代",
+      "score": 50.6477,
+      "passed": true,
+      "reason": "價格帶：1000 以上",
+      "tradeStyle": "波段",
+      "lastClose": 1140,
+      "ma5": 1077.2,
+      "ma20": 952.1,
+      "rsi14": 81.11,
+      "volRatio": 2.12,
+      "plan": {
+        "entryLow": 1113.43,
+        "entryHigh": 1131.14,
+        "stop": 1078,
+        "tp1": 1184.29,
+        "tp2": 1219.72
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "2383",
+      "name": "台光電",
+      "score": 39.2847,
+      "passed": true,
+      "reason": "價格帶：1000 以上",
+      "tradeStyle": "波段",
+      "lastClose": 2080,
+      "ma5": 1970,
+      "ma20": 1767.25,
+      "rsi14": 66.31,
+      "volRatio": 1.39,
+      "plan": {
+        "entryLow": 2012.72,
+        "entryHigh": 2057.57,
+        "stop": 1923.02,
+        "tp1": 2192.13,
+        "tp2": 2281.83
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
+    },
+    {
+      "symbol": "6442",
+      "name": "光聖",
+      "score": 38.2956,
+      "passed": false,
+      "reason": "價格帶：1000 以上",
+      "tradeStyle": "波段",
+      "lastClose": 1850,
+      "ma5": 1798,
+      "ma20": 1509.5,
+      "rsi14": 67.1,
+      "volRatio": 0.32,
+      "plan": {
+        "entryLow": 1783.94,
+        "entryHigh": 1827.98,
+        "stop": 1695.86,
+        "tp1": 1960.1,
+        "tp2": 2048.18
+      },
+      "inst": null,
+      "dataDate": "2026-02-09"
     }
   ],
   "meta": {
+    "dataDate": "2026-02-09",
     "pool": {
       "size": 517,
       "POOL_SIZE": 600,
       "MIN_LIQ_SHARES": 500000,
       "MIN_PRICE": 10
-    }
+    },
+    "priceBuckets": [
+      {
+        "key": "lt100",
+        "label": "100 以內",
+        "take": 3
+      },
+      {
+        "key": "100_300",
+        "label": "100 ~ 300",
+        "take": 3
+      },
+      {
+        "key": "300_600",
+        "label": "300 ~ 600",
+        "take": 3
+      },
+      {
+        "key": "600_1000",
+        "label": "600 ~ 1000",
+        "take": 3
+      },
+      {
+        "key": "gt1000",
+        "label": "1000 以上",
+        "take": 3
+      }
+    ]
   }
 }
