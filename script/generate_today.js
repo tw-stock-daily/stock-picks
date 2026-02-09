@@ -7,12 +7,10 @@ const path = require("path");
 
 // ===== 台北時間工具 =====
 function tzDateISO(tz = "Asia/Taipei") {
-  // YYYY-MM-DD
   return new Date().toLocaleDateString("en-CA", { timeZone: tz });
 }
 
 function tzDateTime(tz = "Asia/Taipei") {
-  // YYYY-MM-DD HH:mm:ss
   return new Intl.DateTimeFormat("sv-SE", {
     timeZone: tz,
     year: "numeric",
@@ -31,36 +29,24 @@ function ensureDir(p) {
 
 // ===== 取得 pickStocks 函式（相容各種 export）=====
 function resolvePickStocks(mod) {
-  // 可能是：function / {pickStocks} / {default:function} / {default:{pickStocks}} ...
   if (!mod) return null;
-
-  // 1) 直接就是 function
   if (typeof mod === "function") return mod;
-
-  // 2) named export
   if (typeof mod.pickStocks === "function") return mod.pickStocks;
-
-  // 3) default export 是 function
   if (typeof mod.default === "function") return mod.default;
-
-  // 4) default export 是 object，裡面有 pickStocks
   if (mod.default && typeof mod.default.pickStocks === "function") return mod.default.pickStocks;
-
   return null;
 }
 
 async function main() {
   const TZ = "Asia/Taipei";
-  const todayKey = tzDateISO(TZ);     // ✅ 台北日期當檔名
-  const generatedAt = tzDateTime(TZ); // ✅ 台北時間顯示
+  const todayKey = tzDateISO(TZ);     // 台北日期當檔名（即使週末也照寫，方便你驗證每天有無產檔）
+  const generatedAt = tzDateTime(TZ); // 台北時間顯示
 
-  // === 輸出資料夾 ===
   const outPublic = path.join(process.cwd(), "public");
   const outHistory = path.join(outPublic, "history");
   ensureDir(outPublic);
   ensureDir(outHistory);
 
-  // === 載入 pickStocks ===
   const modPath = path.join(process.cwd(), "lib", "pickStocks.js");
   let mod;
   try {
@@ -85,14 +71,12 @@ async function main() {
   console.log("   historyKey(Taipei):", todayKey);
 
   // === 跑選股 ===
-  // 你目前的 pickStocks 已經能跑出：picks + meta（含 pool/marketGuard/inst/plan/tradeStyle）
-  // 我們只傳最小必要參數，避免改動你的核心邏輯
   const result = await pickStocks({
     market: "TW",
     generatedAt,
+    tradeStyle: "波段",
   });
 
-  // 兼容 result 可能直接就是 {picks, meta} 或整個 today 結構
   const picks = result?.picks || [];
   const meta = result?.meta || {};
 
@@ -101,20 +85,19 @@ async function main() {
     generatedAt,
     topN: 3,
     picks,
-    meta,
+    meta, // ✅ 內含 meta.dataDate = 最近交易日
   };
 
-  // today.json（App 讀）
   const todayPath = path.join(outPublic, "today.json");
   fs.writeFileSync(todayPath, JSON.stringify(todayJson, null, 2), "utf-8");
 
-  // history（每天一份，不覆蓋）
   const historyPath = path.join(outHistory, `${todayKey}.json`);
   fs.writeFileSync(historyPath, JSON.stringify(todayJson, null, 2), "utf-8");
 
   console.log("✅ wrote:", path.relative(process.cwd(), todayPath));
   console.log("✅ wrote:", path.relative(process.cwd(), historyPath));
   console.log("✅ picks count:", picks.length);
+  console.log("✅ meta.dataDate:", meta?.dataDate || null);
 }
 
 main().catch((e) => {
