@@ -1,24 +1,25 @@
-name: daily
+name: daily-json
 
 on:
-  workflow_dispatch:
   schedule:
-    # 08:00 Asia/Taipei  == 00:00 UTC
-    - cron: "0 0 * * *"
-    # 23:10 Asia/Taipei  == 15:10 UTC
-    - cron: "10 15 * * *"
+    # 你原本的排程可以保留；這裡只是示例（UTC 13:00 = 台灣 21:00）
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+# 防止同時間跑兩次造成互相打架（很容易導致 non-fast-forward）
+concurrency:
+  group: daily-json
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
-    env:
-      TZ: Asia/Taipei
 
     steps:
-      - name: Checkout
+      - name: Checkout (full history for rebase)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -28,76 +29,72 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # ★重點：任何產檔前，先把工作樹同步成遠端最新且乾淨
+      - name: Sync to origin/main BEFORE generate
+        run: |
+          set -e
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+          git clean -fdx
+          echo "=== DEBUG: git log -1 ==="
+          git --no-pager log -1 --oneline
+
       - name: Install deps
-        run: npm install
-
-      # 你如果有 market 的腳本（例如 npm run market），就會在 08:00 自動產生 market.json
-      # 若你目前 market 是另一路腳本，先留著，不會影響 picks
-      - name: Decide run mode (Taipei time)
-        id: mode
         run: |
-          echo "NOW=$(date '+%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_OUTPUT
-          H=$(date '+%H')
-          # 08 點（台北）跑 market；其他時間跑 picks（23:10）
-          if [ "$H" = "08" ]; then
-            echo "MODE=market" >> $GITHUB_OUTPUT
-          else
-            echo "MODE=picks" >> $GITHUB_OUTPUT
+          set -e
+          npm ci
+
+      - name: Generate JSON
+        run: |
+          set -e
+          # ★把這行改成你真正產檔的指令（你原本怎麼跑就填什麼）
+          # 例：node scripts/generate.js
+          # 例：npm run build:json
+          npm run generate
+
+      - name: Debug list output
+        run: |
+          set -e
+          echo "=== DEBUG: list public/ and history ==="
+          ls -al public || true
+          ls -al public/history || true
+          echo "=== DEBUG: git status ==="
+          git status --porcelain
+
+      - name: Commit & Push (safe rebase + retry)
+        run: |
+          set -e
+
+          # 只加入你要推的檔案，避免 node_modules/package-lock 造成髒狀態
+          git add public/today.json public/market.json public/history/*.json || true
+
+          # 若沒有變更就結束
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
 
-      - name: Run picks (today + history)
-        if: steps.mode.outputs.MODE == 'picks'
-        run: npm run generate
+          git commit -m "chore: update json ($(date -u +'%Y-%m-%d %H:%M:%S') UTC)"
 
-      - name: Run market (optional)
-        if: steps.mode.outputs.MODE == 'market'
-        run: |
-          if npm run | grep -q "market"; then
-            npm run market
-          else
-            echo "No market script found; skip."
-          fi
+          # Push 前再做一次同步，避免遠端比你新造成 non-fast-forward
+          for i in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || (git rebase --abort && exit 1)
 
-      - name: Commit and push
-        run: |
-         set -e
+            if git push origin main; then
+              echo "Push success."
+              exit 0
+            fi
 
-         git config user.name "tw-stock-daily-bot"
-         git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+            echo "Push failed (likely non-fast-forward). Retry in 3s..."
+            sleep 3
+          done
 
-         echo "=== DEBUG: list public/ and history ==="
-         ls -la public || true
-         ls -la public/history || true
-
-         echo "=== DEBUG: git status before pull ==="
-          git status --porcelain || true
-
-          # 避免偶發衝突
-          git pull --rebase origin main || true
-
-          echo "=== DEBUG: git status after pull ==="
-          git status --porcelain || true
-
-          echo "=== DEBUG: stage files ==="
-          # 不要吃掉錯誤：如果路徑錯，讓它直接報錯
-         git add public/today.json
-         if [ -d "public/history" ]; then
-         git add public/history
-         fi
-         if [ -f "public/market.json" ]; then
-         git add public/market.json
-         fi
-         if [ -d "public/stats" ]; then
-         git add public/stats
-         fi
-
-         echo "=== DEBUG: staged diff ==="
-         git diff --cached --name-only || true
-
-         if git diff --cached --quiet; then
-         echo "No changes to commit."
-         exit 0
-         fi
-
-         git commit -m "chore: update json ($(date '+%Y-%m-%d %H:%M:%S %Z'))"
-         git push
+          echo "Push failed after retries."
+          exit 1
