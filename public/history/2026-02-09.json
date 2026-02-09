@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-09 23:33:47",
+  "generatedAt": "2026-02-09 23:45:31",
   "topN": 3,
   "picks": [
     {
@@ -22,7 +22,17 @@
         "tp1": 17.85,
         "tp2": 18.32
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -51,
+        "sumForeign": -277,
+        "sumTrust": 0,
+        "sumDealer": 226,
+        "buyStreak": 0,
+        "latestTotalNet": -180,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -44,7 +54,17 @@
         "tp1": 21.74,
         "tp2": 22.65
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -9,
+        "sumForeign": 21,
+        "sumTrust": 0,
+        "sumDealer": -30,
+        "buyStreak": 0,
+        "latestTotalNet": -42,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -66,7 +86,17 @@
         "tp1": 16.13,
         "tp2": 16.91
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 14509,
+        "sumForeign": 14497,
+        "sumTrust": 0,
+        "sumDealer": 12,
+        "buyStreak": 0,
+        "latestTotalNet": -13606,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -88,7 +118,17 @@
         "tp1": 17.85,
         "tp2": 18.32
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -51,
+        "sumForeign": -277,
+        "sumTrust": 0,
+        "sumDealer": 226,
+        "buyStreak": 0,
+        "latestTotalNet": -180,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -110,7 +150,17 @@
         "tp1": 21.74,
         "tp2": 22.65
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -9,
+        "sumForeign": 21,
+        "sumTrust": 0,
+        "sumDealer": -30,
+        "buyStreak": 0,
+        "latestTotalNet": -42,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -132,7 +182,17 @@
         "tp1": 16.13,
         "tp2": 16.91
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 14509,
+        "sumForeign": 14497,
+        "sumTrust": 0,
+        "sumDealer": 12,
+        "buyStreak": 0,
+        "latestTotalNet": -13606,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -154,7 +214,17 @@
         "tp1": 236.98,
         "tp2": 246.17
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 1392,
+        "sumForeign": 760,
+        "sumTrust": 0,
+        "sumDealer": 632,
+        "buyStreak": 1,
+        "latestTotalNet": 285,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -176,7 +246,17 @@
         "tp1": 255.13,
         "tp2": 266.43
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 270,
+        "sumForeign": 275,
+        "sumTrust": 0,
+        "sumDealer": -6,
+        "buyStreak": 3,
+        "latestTotalNet": 383,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -198,7 +278,17 @@
         "tp1": 149.15,
         "tp2": 154.87
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 14236,
+        "sumForeign": 12708,
+        "sumTrust": 2072,
+        "sumDealer": -544,
+        "buyStreak": 1,
+        "latestTotalNet": 530,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -220,7 +310,17 @@
         "tp1": 439.86,
         "tp2": 458.55
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 2844,
+        "sumForeign": 2553,
+        "sumTrust": 26,
+        "sumDealer": 264,
+        "buyStreak": 1,
+        "latestTotalNet": 371,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -242,7 +342,17 @@
         "tp1": 340.09,
         "tp2": 350.56
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 17103,
+        "sumForeign": 16582,
+        "sumTrust": 872,
+        "sumDealer": -351,
+        "buyStreak": 2,
+        "latestTotalNet": 7900,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -264,7 +374,17 @@
         "tp1": 370.03,
         "tp2": 388.05
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -28423,
+        "sumForeign": -53827,
+        "sumTrust": 28436,
+        "sumDealer": -3032,
+        "buyStreak": 0,
+        "latestTotalNet": -8278,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -286,7 +406,17 @@
         "tp1": 931.19,
         "tp2": 969.74
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 280,
+        "sumForeign": -981,
+        "sumTrust": 1327,
+        "sumDealer": -66,
+        "buyStreak": 2,
+        "latestTotalNet": 434,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -308,7 +438,17 @@
         "tp1": 837.37,
         "tp2": 869.67
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 11972,
+        "sumForeign": 10933,
+        "sumTrust": 1730,
+        "sumDealer": -691,
+        "buyStreak": 2,
+        "latestTotalNet": 1691,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -330,7 +470,17 @@
         "tp1": 760.43,
         "tp2": 783.98
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 7779,
+        "sumForeign": 6515,
+        "sumTrust": 1517,
+        "sumDealer": -253,
+        "buyStreak": 3,
+        "latestTotalNet": 3,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -352,7 +502,17 @@
         "tp1": 1184.29,
         "tp2": 1219.72
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 1195,
+        "sumForeign": 1046,
+        "sumTrust": 114,
+        "sumDealer": 36,
+        "buyStreak": 18,
+        "latestTotalNet": 63,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -374,7 +534,17 @@
         "tp1": 2192.13,
         "tp2": 2281.83
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 1712,
+        "sumForeign": 604,
+        "sumTrust": 1469,
+        "sumDealer": -360,
+        "buyStreak": 1,
+        "latestTotalNet": 441,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     },
     {
@@ -396,7 +566,17 @@
         "tp1": 1960.1,
         "tp2": 2048.18
       },
-      "inst": null,
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 2994,
+        "sumForeign": 3148,
+        "sumTrust": -151,
+        "sumDealer": -3,
+        "buyStreak": 2,
+        "latestTotalNet": 239,
+        "latestDate": "2026-02-09",
+        "unit": "lots"
+      },
       "dataDate": "2026-02-09"
     }
   ],
