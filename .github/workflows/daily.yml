@@ -2,11 +2,9 @@ name: daily-json
 
 on:
   schedule:
-    # 你原本的排程可以保留；這裡只是示例（UTC 13:00 = 台灣 21:00）
     - cron: "0 13 * * *"
   workflow_dispatch:
 
-# 防止同時間跑兩次造成互相打架（很容易導致 non-fast-forward）
 concurrency:
   group: daily-json
   cancel-in-progress: false
@@ -34,7 +32,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      # ★重點：任何產檔前，先把工作樹同步成遠端最新且乾淨
       - name: Sync to origin/main BEFORE generate
         run: |
           set -e
@@ -42,20 +39,16 @@ jobs:
           git checkout main
           git reset --hard origin/main
           git clean -fdx
-          echo "=== DEBUG: git log -1 ==="
-          git --no-pager log -1 --oneline
 
       - name: Install deps
         run: |
           set -e
-          npm ci
+          npm install --no-audit --no-fund
 
       - name: Generate JSON
         run: |
           set -e
-          # ★把這行改成你真正產檔的指令（你原本怎麼跑就填什麼）
-          # 例：node scripts/generate.js
-          # 例：npm run build:json
+          # 如果你的指令不是 generate，改成你原本產檔的那個
           npm run generate
 
       - name: Debug list output
@@ -70,11 +63,8 @@ jobs:
       - name: Commit & Push (safe rebase + retry)
         run: |
           set -e
-
-          # 只加入你要推的檔案，避免 node_modules/package-lock 造成髒狀態
           git add public/today.json public/market.json public/history/*.json || true
 
-          # 若沒有變更就結束
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
@@ -82,7 +72,6 @@ jobs:
 
           git commit -m "chore: update json ($(date -u +'%Y-%m-%d %H:%M:%S') UTC)"
 
-          # Push 前再做一次同步，避免遠端比你新造成 non-fast-forward
           for i in 1 2 3; do
             git fetch origin main
             git rebase origin/main || (git rebase --abort && exit 1)
