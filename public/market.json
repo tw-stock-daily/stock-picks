@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-02-08T05:19:04.882Z",
-  "asOfLocal": "2026-02-08 13:19:04",
+  "generatedAt": "2026-02-09T05:45:58.407Z",
+  "asOfLocal": "2026-02-09 13:45:58",
   "signal": "riskOn",
   "label": "🟢 偏多",
   "sources": {
@@ -15,11 +15,11 @@
     "nightProxy": {
       "symbol": "^N225",
       "direction": "up",
-      "last": 54253.6796875,
-      "prev": 53818.0390625,
-      "change": 435.640625,
-      "changePct": 0.8094695246961369,
-      "lastDate": "2026-02-06",
+      "last": 56681.171875,
+      "prev": 54253.6796875,
+      "change": 2427.4921875,
+      "changePct": 4.4743364901372615,
+      "lastDate": "2026-02-09",
       "note": null
     }
   },
