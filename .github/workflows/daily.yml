@@ -2,6 +2,7 @@ name: daily-json
 
 on:
   schedule:
+    # 每天台北時間 21:00（UTC 13:00）
     - cron: "0 13 * * *"
   workflow_dispatch:
 
@@ -17,21 +18,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout (full history for rebase)
+      # --------------------------------------------------
+      # 1. Checkout（完整歷史，避免 rebase 出問題）
+      # --------------------------------------------------
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # --------------------------------------------------
+      # 2. Node 環境
+      # --------------------------------------------------
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # --------------------------------------------------
+      # 3. Git 身份
+      # --------------------------------------------------
       - name: Git identity
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      # --------------------------------------------------
+      # 4. 同步 main（避免 non-fast-forward）
+      # --------------------------------------------------
       - name: Sync to origin/main BEFORE generate
         run: |
           set -e
@@ -40,32 +53,62 @@ jobs:
           git reset --hard origin/main
           git clean -fdx
 
+      # --------------------------------------------------
+      # 5. 安裝套件
+      # --------------------------------------------------
       - name: Install deps
         run: |
           set -e
           npm install --no-audit --no-fund
 
-      - name: Generate JSON
+      # --------------------------------------------------
+      # 6. 產生 today.json / history（個股推薦）
+      # --------------------------------------------------
+      - name: Generate Today JSON
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: |
           set -e
-          # 如果你的指令不是 generate，改成你原本產檔的那個
           npm run generate
 
+      # --------------------------------------------------
+      # 7. 產生績效追蹤（performance）
+      # --------------------------------------------------
+      - name: Generate Performance
+        run: |
+          set -e
+          node script/generate_performance.js
+
+      # --------------------------------------------------
+      # 8. Debug（確認檔案真的有出來）
+      # --------------------------------------------------
       - name: Debug list output
         run: |
           set -e
-          echo "=== DEBUG: list public/ and history ==="
+          echo "=== DEBUG: list public ==="
           ls -al public || true
+          echo "=== DEBUG: list history ==="
           ls -al public/history || true
+          echo "=== DEBUG: list performance ==="
+          ls -al public/performance || true
+          ls -al public/performance/positions || true
           echo "=== DEBUG: git status ==="
           git status --porcelain
 
+      # --------------------------------------------------
+      # 9. Commit & Push（包含 performance）
+      # --------------------------------------------------
       - name: Commit & Push (safe rebase + retry)
         run: |
           set -e
-          git add public/today.json public/market.json public/history/*.json || true
+
+          git add \
+            public/today.json \
+            public/market.json \
+            public/history/*.json \
+            public/performance/positions.json \
+            public/performance/positions/*.json \
+            public/performance/positions/.gitkeep || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
