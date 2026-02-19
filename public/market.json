@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-02-18T05:15:45.990Z",
-  "asOfLocal": "2026-02-18 13:15:45",
+  "generatedAt": "2026-02-19T05:14:26.506Z",
+  "asOfLocal": "2026-02-19 13:14:26",
   "signal": "riskOn",
   "label": "🟢 偏多",
   "sources": {
     "usMarket": {
       "symbol": "^GSPC",
-      "last": 6843.22021484375,
-      "prev": 6836.169921875,
-      "change": 7.05029296875,
-      "changePct": 0.10313220779064941,
-      "lastDate": "2026-02-17"
+      "last": 6881.31005859375,
+      "prev": 6843.22021484375,
+      "change": 38.08984375,
+      "changePct": 0.5566070147410812,
+      "lastDate": "2026-02-18"
     },
     "nightProxy": {
       "symbol": "^N225",
       "direction": "up",
-      "last": 57342.51171875,
-      "prev": 56566.48828125,
-      "change": 776.0234375,
-      "changePct": 1.3718784055350792,
-      "lastDate": "2026-02-18",
+      "last": 57525,
+      "prev": 57143.83984375,
+      "change": 381.16015625,
+      "changePct": 0.6670188025379759,
+      "lastDate": "2026-02-19",
       "note": null
     }
   },
