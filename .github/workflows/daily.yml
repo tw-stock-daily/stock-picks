@@ -45,6 +45,13 @@ jobs:
           set -e
           npm install --no-audit --no-fund
 
+      # ✅ 安全檢查：只印 token 長度，不印內容
+      - name: Debug FINMIND_TOKEN presence (safe)
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+        run: |
+          node -e "console.log('FINMIND_TOKEN length =', (process.env.FINMIND_TOKEN||'').length)"
+
       - name: Generate JSON
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
@@ -55,7 +62,7 @@ jobs:
       - name: Commit & Push (safe rebase + retry)
         run: |
           set -e
-          git add public/today.json public/history/*.json || true
+          git add public/today.json public/market.json public/history/*.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
