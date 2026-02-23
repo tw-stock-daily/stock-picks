@@ -1,146 +1,96 @@
-// script/generate_market.js
-// 目的：早上 08:00 產生盤勢燈號 market.json（不影響 today.json / 個股推薦）
-//
-// 資料來源（穩定版）：Yahoo Finance 指數日線
-// - 美股：^GSPC（S&P 500）
-// - 夜盤代理：先用 ^N225 作 fallback（明天再換成更準的台指期夜盤資料源）
-//
-// 規則（最簡單、最穩）：
-// - 取「上一交易日」(last) vs 「前一日」(prev) 漲跌
-// - up/up => riskOn
-// - down/down => riskOff
-// - 其他 => caution
+// script/generate_today.js
+// 產生 public/today.json + public/history/YYYY-MM-DD.json（台北日期）
+// 方案C：today.json 回填完整資料（技術/計畫/法人）
+// 重要：假日不中斷，選股依最近收盤日 asOfDataDate
 
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
 
-function toNum(x) {
-  if (x == null) return null;
-  if (typeof x === "number") return x;
-  const s = String(x).replace(/,/g, "").trim();
-  if (!s || s === "--") return null;
-  const n = Number(s);
-  return Number.isFinite(n) ? n : null;
+function tzDateISO(tz = "Asia/Taipei") {
+  return new Date().toLocaleDateString("en-CA", { timeZone: tz }); // YYYY-MM-DD
 }
-
-async function fetchYahooLast2(symbol) {
-  // 取最近 10 天日線，找出最後兩個有效 close
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`;
-  const resp = await axios.get(url, {
-    params: { range: "10d", interval: "1d", includePrePost: false },
-    timeout: 20000,
-    headers: { "User-Agent": "Mozilla/5.0" },
-  });
-
-  const r = resp.data?.chart?.result?.[0];
-  if (!r) throw new Error(`Yahoo chart no result: ${symbol}`);
-
-  const ts = r.timestamp || [];
-  const q = r.indicators?.quote?.[0] || {};
-  const closes = (q.close || []).map(toNum);
-
-  const bars = ts.map((t, i) => ({
-    date: new Date(t * 1000).toISOString().slice(0, 10),
-    close: closes[i],
-  })).filter(b => b.close != null);
-
-  if (bars.length < 2) throw new Error(`Not enough bars: ${symbol}`);
-
-  const last = bars[bars.length - 1];
-  const prev = bars[bars.length - 2];
-
-  const change = last.close - prev.close;
-  const changePct = (prev.close !== 0) ? (change / prev.close) * 100 : 0;
-
-  return {
-    symbol,
-    last: last.close,
-    prev: prev.close,
-    change,
-    changePct,
-    lastDate: last.date,
-    prevDate: prev.date,
-    direction: change > 0 ? "up" : (change < 0 ? "down" : "flat"),
-  };
+function tzDateTime(tz = "Asia/Taipei") {
+  return new Intl.DateTimeFormat("sv-SE", {
+    timeZone: tz,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(new Date());
 }
+function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
 
-function decideSignal(usDir, nightDir) {
-  if (usDir === "down" && nightDir === "down") return "riskOff";
-  if (usDir === "up" && nightDir === "up") return "riskOn";
-  return "caution";
-}
-
-function messageFor(signal, us, night) {
-  const usTxt = us?.direction === "up" ? "上漲" : (us?.direction === "down" ? "下跌" : "持平");
-  const nTxt = night?.direction === "up" ? "上漲" : (night?.direction === "down" ? "下跌" : "持平");
-
-  if (signal === "riskOff") {
-    return `美股與夜盤同向走弱（美股${usTxt} / 夜盤${nTxt}），今日盤勢風險偏高：可觀察為主、降低部位、嚴守停損。`;
-  }
-  if (signal === "riskOn") {
-    return `美股與夜盤同向偏強（美股${usTxt} / 夜盤${nTxt}），今日盤勢偏多：可依策略正常執行，仍請留意突發消息。`;
-  }
-  return `美股與夜盤訊號不一致（美股${usTxt} / 夜盤${nTxt}），今日盤勢可能震盪：建議分批、降低槓桿與部位。`;
+function resolvePickStocks(mod) {
+  if (!mod) return null;
+  if (typeof mod === "function") return mod;
+  if (typeof mod.pickStocks === "function") return mod.pickStocks;
+  if (typeof mod.default === "function") return mod.default;
+  if (mod.default && typeof mod.default.pickStocks === "function") return mod.default.pickStocks;
+  return null;
 }
 
 async function main() {
-  // 你要的：早上 08:00 產生燈號
-  // 美股（S&P500）與夜盤代理（先用日經做 fallback）
-  const us = await fetchYahooLast2("^GSPC");
+  const TZ = "Asia/Taipei";
+  const todayKey = tzDateISO(TZ);     // 檔名用「產檔日」（不中斷）
+  const generatedAt = tzDateTime(TZ); // 顯示用台北時間
 
-  let night = null;
+  const outPublic = path.join(process.cwd(), "public");
+  const outHistory = path.join(outPublic, "history");
+  ensureDir(outPublic);
+  ensureDir(outHistory);
+
+  const modPath = path.join(process.cwd(), "lib", "pickStocks.js");
+  let mod;
   try {
-    night = await fetchYahooLast2("^N225"); // fallback 先用日經
+    mod = require(modPath);
   } catch (e) {
-    // 若夜盤代理抓不到，就退化成只看美股，避免 workflow 失敗
-    night = { symbol: "^N225", direction: "flat", note: "night fallback unavailable" };
+    console.error("❌ 無法載入 lib/pickStocks.js：", e?.message || e);
+    process.exit(1);
   }
 
-  const signal = decideSignal(us.direction, night.direction);
-  const levelLabel = signal === "riskOn" ? "偏多" : (signal === "riskOff" ? "風險高" : "震盪");
-  const emoji = signal === "riskOn" ? "🟢" : (signal === "riskOff" ? "🔴" : "🟡");
+  const pickStocks = resolvePickStocks(mod);
+  if (!pickStocks) {
+    console.error("❌ 找不到可呼叫的 pickStocks 函式。");
+    console.error("   exports keys：", Object.keys(mod || {}));
+    if (mod && mod.default && typeof mod.default === "object") {
+      console.error("   default keys：", Object.keys(mod.default));
+    }
+    process.exit(1);
+  }
 
-  const out = {
-    generatedAt: new Date().toISOString(),
-    asOfLocal: new Date().toLocaleString("sv-SE", { timeZone: "Asia/Taipei" }).replace("T", " "),
-    signal,
-    label: `${emoji} ${levelLabel}`,
-    sources: {
-      usMarket: {
-        symbol: us.symbol,
-        last: us.last,
-        prev: us.prev,
-        change: us.change,
-        changePct: us.changePct,
-        lastDate: us.lastDate,
-      },
-      nightProxy: {
-        symbol: night.symbol,
-        direction: night.direction,
-        last: night.last ?? null,
-        prev: night.prev ?? null,
-        change: night.change ?? null,
-        changePct: night.changePct ?? null,
-        lastDate: night.lastDate ?? null,
-        note: night.note ?? null,
-      }
-    },
-    message: messageFor(signal, us, night),
-    note: "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。"
+  console.log("✅ pickStocks resolved OK");
+  console.log("   generatedAt(Taipei):", generatedAt);
+  console.log("   historyKey(Taipei):", todayKey);
+
+  const result = await pickStocks({ market: "TW", generatedAt });
+
+  const picks = result?.picks || [];
+  const meta = result?.meta || {};
+
+  const todayJson = {
+    market: "TW",
+    generatedAt,
+    topN: 3,
+    picks,
+    meta
   };
 
-  const publicDir = path.join(process.cwd(), "public");
-  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  const todayPath = path.join(outPublic, "today.json");
+  fs.writeFileSync(todayPath, JSON.stringify(todayJson, null, 2), "utf-8");
 
-  const file = path.join(publicDir, "market.json");
-  fs.writeFileSync(file, JSON.stringify(out, null, 2), "utf8");
+  const historyPath = path.join(outHistory, `${todayKey}.json`);
+  fs.writeFileSync(historyPath, JSON.stringify(todayJson, null, 2), "utf-8");
 
-  console.log("✅ wrote:", file);
-  console.log("✅ signal:", out.signal, out.label);
+  console.log("✅ wrote:", path.relative(process.cwd(), todayPath));
+  console.log("✅ wrote:", path.relative(process.cwd(), historyPath));
+  console.log("✅ picks count:", picks.length);
+  console.log("✅ asOfDataDate:", meta?.asOfDataDate || "—");
 }
 
 main().catch((e) => {
-  console.error("❌ generate_market failed:", e);
+  console.error("❌ generate_today failed:", e);
   process.exit(1);
 });
