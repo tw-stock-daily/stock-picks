@@ -2,7 +2,8 @@
   "name": "stock-picks",
   "private": true,
   "scripts": {
-    "generate": "node script/generate_today.js"
+    "generate": "node script/generate_today.js",
+    "market": "node script/generate_market.js"
   },
   "dependencies": {
     "axios": "^1.6.0",
