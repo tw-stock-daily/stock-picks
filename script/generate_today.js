@@ -1,15 +1,14 @@
 // script/generate_today.js
 // 產生 public/today.json + public/history/YYYY-MM-DD.json（台北日期）
-// 相容各種 pickStocks 匯出形式（CJS/ESM default/named）
+// 方案C：today.json 回填完整資料（技術/計畫/法人）
+// 重要：假日不中斷，選股依最近收盤日 asOfDataDate
 
 const fs = require("fs");
 const path = require("path");
 
-// ===== 台北時間工具 =====
 function tzDateISO(tz = "Asia/Taipei") {
-  return new Date().toLocaleDateString("en-CA", { timeZone: tz });
+  return new Date().toLocaleDateString("en-CA", { timeZone: tz }); // YYYY-MM-DD
 }
-
 function tzDateTime(tz = "Asia/Taipei") {
   return new Intl.DateTimeFormat("sv-SE", {
     timeZone: tz,
@@ -22,12 +21,8 @@ function tzDateTime(tz = "Asia/Taipei") {
     hour12: false,
   }).format(new Date());
 }
+function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
 
-function ensureDir(p) {
-  fs.mkdirSync(p, { recursive: true });
-}
-
-// ===== 取得 pickStocks 函式（相容各種 export）=====
 function resolvePickStocks(mod) {
   if (!mod) return null;
   if (typeof mod === "function") return mod;
@@ -39,8 +34,8 @@ function resolvePickStocks(mod) {
 
 async function main() {
   const TZ = "Asia/Taipei";
-  const todayKey = tzDateISO(TZ);     // 台北日期當檔名（即使週末也照寫，方便你驗證每天有無產檔）
-  const generatedAt = tzDateTime(TZ); // 台北時間顯示
+  const todayKey = tzDateISO(TZ);     // 檔名用「產檔日」（不中斷）
+  const generatedAt = tzDateTime(TZ); // 顯示用台北時間
 
   const outPublic = path.join(process.cwd(), "public");
   const outHistory = path.join(outPublic, "history");
@@ -59,7 +54,7 @@ async function main() {
   const pickStocks = resolvePickStocks(mod);
   if (!pickStocks) {
     console.error("❌ 找不到可呼叫的 pickStocks 函式。");
-    console.error("   目前 lib/pickStocks.js 的 exports 是：", Object.keys(mod || {}));
+    console.error("   exports keys：", Object.keys(mod || {}));
     if (mod && mod.default && typeof mod.default === "object") {
       console.error("   default keys：", Object.keys(mod.default));
     }
@@ -70,12 +65,7 @@ async function main() {
   console.log("   generatedAt(Taipei):", generatedAt);
   console.log("   historyKey(Taipei):", todayKey);
 
-  // === 跑選股 ===
-  const result = await pickStocks({
-    market: "TW",
-    generatedAt,
-    tradeStyle: "波段",
-  });
+  const result = await pickStocks({ market: "TW", generatedAt });
 
   const picks = result?.picks || [];
   const meta = result?.meta || {};
@@ -85,7 +75,7 @@ async function main() {
     generatedAt,
     topN: 3,
     picks,
-    meta, // ✅ 內含 meta.dataDate = 最近交易日
+    meta
   };
 
   const todayPath = path.join(outPublic, "today.json");
@@ -97,7 +87,7 @@ async function main() {
   console.log("✅ wrote:", path.relative(process.cwd(), todayPath));
   console.log("✅ wrote:", path.relative(process.cwd(), historyPath));
   console.log("✅ picks count:", picks.length);
-  console.log("✅ meta.dataDate:", meta?.dataDate || null);
+  console.log("✅ asOfDataDate:", meta?.asOfDataDate || "—");
 }
 
 main().catch((e) => {
