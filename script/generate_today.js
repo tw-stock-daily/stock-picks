@@ -1,14 +1,15 @@
 // script/generate_today.js
 // 產生 public/today.json + public/history/YYYY-MM-DD.json（台北日期）
-// 方案C：today.json 回填完整資料（技術/計畫/法人）
-// 重要：假日不中斷，選股依最近收盤日 asOfDataDate
+// - todayKey：用台北日期做檔名（每天一份）
+// - asOfDataDate：用「最近交易日」做資料日（假日/休市不中斷）
 
 const fs = require("fs");
 const path = require("path");
 
 function tzDateISO(tz = "Asia/Taipei") {
-  return new Date().toLocaleDateString("en-CA", { timeZone: tz }); // YYYY-MM-DD
+  return new Date().toLocaleDateString("en-CA", { timeZone: tz });
 }
+
 function tzDateTime(tz = "Asia/Taipei") {
   return new Intl.DateTimeFormat("sv-SE", {
     timeZone: tz,
@@ -21,7 +22,10 @@ function tzDateTime(tz = "Asia/Taipei") {
     hour12: false,
   }).format(new Date());
 }
-function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
+
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
+}
 
 function resolvePickStocks(mod) {
   if (!mod) return null;
@@ -34,8 +38,8 @@ function resolvePickStocks(mod) {
 
 async function main() {
   const TZ = "Asia/Taipei";
-  const todayKey = tzDateISO(TZ);     // 檔名用「產檔日」（不中斷）
-  const generatedAt = tzDateTime(TZ); // 顯示用台北時間
+  const todayKey = tzDateISO(TZ);
+  const generatedAt = tzDateTime(TZ);
 
   const outPublic = path.join(process.cwd(), "public");
   const outHistory = path.join(outPublic, "history");
@@ -53,11 +57,7 @@ async function main() {
 
   const pickStocks = resolvePickStocks(mod);
   if (!pickStocks) {
-    console.error("❌ 找不到可呼叫的 pickStocks 函式。");
-    console.error("   exports keys：", Object.keys(mod || {}));
-    if (mod && mod.default && typeof mod.default === "object") {
-      console.error("   default keys：", Object.keys(mod.default));
-    }
+    console.error("❌ 找不到可呼叫的 pickStocks 函式。exports keys:", Object.keys(mod || {}));
     process.exit(1);
   }
 
@@ -65,17 +65,22 @@ async function main() {
   console.log("   generatedAt(Taipei):", generatedAt);
   console.log("   historyKey(Taipei):", todayKey);
 
-  const result = await pickStocks({ market: "TW", generatedAt });
+  const result = await pickStocks({
+    market: "TW",
+    generatedAt,
+  });
 
   const picks = result?.picks || [];
   const meta = result?.meta || {};
+  const asOfDataDate = result?.asOfDataDate || null;
 
   const todayJson = {
     market: "TW",
     generatedAt,
+    asOfDataDate,       // ✅ 重要：資料日（最近交易日）
     topN: 3,
     picks,
-    meta
+    meta,
   };
 
   const todayPath = path.join(outPublic, "today.json");
@@ -87,7 +92,7 @@ async function main() {
   console.log("✅ wrote:", path.relative(process.cwd(), todayPath));
   console.log("✅ wrote:", path.relative(process.cwd(), historyPath));
   console.log("✅ picks count:", picks.length);
-  console.log("✅ asOfDataDate:", meta?.asOfDataDate || "—");
+  console.log("✅ asOfDataDate:", asOfDataDate || "—");
 }
 
 main().catch((e) => {
