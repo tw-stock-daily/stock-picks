@@ -2,7 +2,8 @@ name: daily-json
 
 on:
   schedule:
-    - cron: "0 13 * * *" # 台北 21:00
+    # 台北 21:00 = UTC 13:00
+    - cron: "0 13 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -17,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout (full history for rebase)
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -45,13 +46,6 @@ jobs:
           set -e
           npm install --no-audit --no-fund
 
-      # ✅ 安全檢查：只印 token 長度，不印內容
-      - name: Debug FINMIND_TOKEN presence (safe)
-        env:
-          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
-        run: |
-          node -e "console.log('FINMIND_TOKEN length =', (process.env.FINMIND_TOKEN||'').length)"
-
       - name: Generate JSON
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
@@ -59,10 +53,19 @@ jobs:
           set -e
           npm run generate
 
+      - name: Debug list output
+        run: |
+          set -e
+          echo "=== DEBUG: list public/ and history ==="
+          ls -al public || true
+          ls -al public/history || true
+          echo "=== DEBUG: git status ==="
+          git status --porcelain
+
       - name: Commit & Push (safe rebase + retry)
         run: |
           set -e
-          git add public/today.json public/market.json public/history/*.json || true
+          git add public/today.json public/history/*.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
