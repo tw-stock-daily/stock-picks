@@ -1,40 +1,59 @@
-name: Market Signal (08:00)
+# .github/workflows/market.yml
+name: Generate market signal (market.json)
 
 on:
+  workflow_dispatch:
+
   schedule:
-    # 08:00 Asia/Taipei = 00:00 UTC
-    - cron: "0 0 * * *"
-  workflow_dispatch: {}
+    # GitHub cron is UTC
+    # Asia/Taipei 06:10 => UTC 22:10 (previous day)
+    - cron: "10 22 * * 0-6"
+    # Asia/Taipei 16:30 => UTC 08:30
+    - cron: "30 8 * * 1-5"
 
 permissions:
   contents: write
 
 concurrency:
-  group: market-signal
-  cancel-in-progress: true
+  group: market-json
+  cancel-in-progress: false
 
 jobs:
-  market:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install deps
-        run: npm install
+      - name: Install deps (if package-lock exists)
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install --no-audit --no-fund
+          fi
 
       - name: Generate market.json
-        run: node script/generate_market.js
+        run: node scripts/generate_market.js
 
-      - name: Commit & push market.json
+      - name: Commit and push if changed
         run: |
-          git config user.name "tw-stock-daily-bot"
-          git config user.email "tw-stock-daily-bot@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add public/market.json
-          git commit -m "chore: update market signal" || echo "No changes to commit"
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: update market.json"
           git push
