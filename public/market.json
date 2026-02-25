@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-02-25T16:17:52.198Z",
-  "asOfLocal": "2026-02-26 00:17:52",
+  "generatedAt": "2026-02-25T23:44:44.141Z",
+  "asOfLocal": "2026-02-26 07:44:44",
   "signalDate": "2026-02-26",
   "stale": false,
   "signal": "good",
@@ -8,12 +8,12 @@
   "sources": {
     "usMarket": {
       "symbol": "^GSPC",
-      "last": 6924.580078125,
+      "last": 6946.1298828125,
       "prev": 6890.06982421875,
-      "change": 34.51025390625,
-      "changePct": 0.5008694365468646,
+      "change": 56.06005859375,
+      "changePct": 0.8136355657340022,
       "lastDate": "2026-02-26",
-      "lastTs": "2026-02-26T00:17:51+08:00",
+      "lastTs": "2026-02-26T06:19:20+08:00",
       "ok": true,
       "error": null
     },
