@@ -1,89 +1,86 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-25 00:45:50",
+  "generatedAt": "2026-02-25 21:53:42",
   "asOfDataDate": null,
   "topN": 3,
   "picks": [
     {
-      "symbol": "6861",
-      "name": "睿生光電",
-      "lastClose": 94.80000305175781,
-      "ma5": 80.82000122070312,
-      "ma20": 69.98000011444091,
-      "rsi14": 81.18269208609757,
-      "volRatio": 2.984150200728308,
-      "atr14": 4.060895122444756,
+      "symbol": "8046",
+      "name": "南電",
+      "lastClose": 553,
+      "ma5": 467.8,
+      "ma20": 404.15,
+      "rsi14": 81.30094761854066,
+      "volRatio": 2.1060106918627906,
+      "atr14": 28.999354674403882,
       "plan": {
-        "entryLow": 93.18,
-        "entryHigh": 95.61,
-        "stop": 89.93,
-        "tp1": 98.86,
-        "tp2": 102.11
+        "entryLow": 541.4,
+        "entryHigh": 558.8,
+        "stop": 518.2,
+        "tp1": 582,
+        "tp2": 605.2
       },
-      "asOfDataDate": "2026-02-24",
-      "score": 90.7761,
+      "asOfDataDate": "2026-02-25",
+      "score": 84.7209,
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
-      "inst": null,
-      "instError": "FINMIND_ERROR"
+      "inst": null
     },
     {
-      "symbol": "6202",
-      "name": "盛群",
-      "lastClose": 62.79999923706055,
-      "ma5": 56.789999389648436,
-      "ma20": 48.51750011444092,
-      "rsi14": 78.6164486706705,
-      "volRatio": 2.271174549057416,
-      "atr14": 3.183218096452678,
+      "symbol": "4927",
+      "name": "泰鼎-KY",
+      "lastClose": 44.25,
+      "ma5": 37.22999954223633,
+      "ma20": 34.634999942779544,
+      "rsi14": 75.40989040773883,
+      "volRatio": 3.280523799788846,
+      "atr14": 2.170074109010224,
       "plan": {
-        "entryLow": 61.53,
-        "entryHigh": 63.44,
-        "stop": 58.98,
-        "tp1": 65.98,
-        "tp2": 68.53
+        "entryLow": 43.38,
+        "entryHigh": 44.68,
+        "stop": 41.65,
+        "tp1": 46.42,
+        "tp2": 48.16
       },
-      "asOfDataDate": "2026-02-24",
-      "score": 71.5874,
+      "asOfDataDate": "2026-02-25",
+      "score": 78.3271,
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
-      "inst": null,
-      "instError": "FINMIND_ERROR"
+      "inst": null
     },
     {
-      "symbol": "2460",
-      "name": "建通",
-      "lastClose": 29,
-      "ma5": 25.9,
-      "ma20": 23.25750026702881,
-      "rsi14": 77.7377706224222,
-      "volRatio": 3.1622256827636153,
-      "atr14": 1.5263445155378346,
+      "symbol": "4722",
+      "name": "國精化",
+      "lastClose": 207,
+      "ma5": 182.3,
+      "ma20": 167.15,
+      "rsi14": 75.64078359663783,
+      "volRatio": 3.348300841531086,
+      "atr14": 9.436000961650313,
       "plan": {
-        "entryLow": 28.39,
-        "entryHigh": 29.31,
-        "stop": 27.17,
-        "tp1": 30.53,
-        "tp2": 31.75
+        "entryLow": 203.23,
+        "entryHigh": 208.89,
+        "stop": 195.68,
+        "tp1": 216.44,
+        "tp2": 223.98
       },
-      "asOfDataDate": "2026-02-24",
-      "score": 71.0042,
+      "asOfDataDate": "2026-02-25",
+      "score": 71.1647,
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
-      "inst": null,
-      "instError": "FINMIND_ERROR"
+      "inst": null
     }
   ],
   "meta": {
     "pool": {
-      "size": 574,
+      "size": 551,
       "POOL_SIZE": 600,
       "MIN_LIQ_SHARES": 500000,
       "MIN_PRICE": 10
     },
-    "dataSource": "Yahoo(tech) + FinMind(optional inst)"
+    "dataSource": "Yahoo(tech) + TWSE(T86 inst)"
   }
 }
