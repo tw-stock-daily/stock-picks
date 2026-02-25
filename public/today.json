@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-25 21:53:42",
+  "generatedAt": "2026-02-25 22:46:02",
   "asOfDataDate": null,
   "topN": 3,
   "picks": [
@@ -25,7 +25,22 @@
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
-      "inst": null
+      "inst": {
+        "windowDays": 20,
+        "asOfDate": "2026-02-25",
+        "latestDate": "20260225",
+        "sumTotal": 18216,
+        "sumForeign": 0,
+        "sumTrust": 12925,
+        "sumDealer": -48,
+        "buyStreak": 2,
+        "latestTotalNet": 2005,
+        "latestForeignNet": 0,
+        "latestTrustNet": 1968,
+        "latestDealerNet": -173,
+        "unit": "張",
+        "source": "TWSE T86 (json)"
+      }
     },
     {
       "symbol": "4927",
@@ -48,7 +63,22 @@
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
-      "inst": null
+      "inst": {
+        "windowDays": 20,
+        "asOfDate": "2026-02-25",
+        "latestDate": "20260225",
+        "sumTotal": 26786,
+        "sumForeign": 0,
+        "sumTrust": 0,
+        "sumDealer": 63,
+        "buyStreak": 4,
+        "latestTotalNet": 10080,
+        "latestForeignNet": 0,
+        "latestTrustNet": 0,
+        "latestDealerNet": -99,
+        "unit": "張",
+        "source": "TWSE T86 (json)"
+      }
     },
     {
       "symbol": "4722",
@@ -71,7 +101,22 @@
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
-      "inst": null
+      "inst": {
+        "windowDays": 20,
+        "asOfDate": "2026-02-25",
+        "latestDate": "20260225",
+        "sumTotal": 6602,
+        "sumForeign": 0,
+        "sumTrust": -645,
+        "sumDealer": 296,
+        "buyStreak": 13,
+        "latestTotalNet": 2168,
+        "latestForeignNet": 0,
+        "latestTrustNet": 7,
+        "latestDealerNet": 8,
+        "unit": "張",
+        "source": "TWSE T86 (json)"
+      }
     }
   ],
   "meta": {
@@ -81,6 +126,6 @@
       "MIN_LIQ_SHARES": 500000,
       "MIN_PRICE": 10
     },
-    "dataSource": "Yahoo(tech) + TWSE(T86 inst)"
+    "dataSource": "Yahoo(tech) + TWSE(T86 inst json)"
   }
 }
