@@ -1,96 +1,232 @@
-// script/generate_today.js
-// 產生 public/today.json + public/history/YYYY-MM-DD.json（台北日期）
-// 方案C：today.json 回填完整資料（技術/計畫/法人）
-// 重要：假日不中斷，選股依最近收盤日 asOfDataDate
+// scripts/generate_market.js
+// Node 18+ (GitHub Actions ubuntu-latest usually ok)
+// Generates: public/market.json
 
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
-function tzDateISO(tz = "Asia/Taipei") {
-  return new Date().toLocaleDateString("en-CA", { timeZone: tz }); // YYYY-MM-DD
-}
-function tzDateTime(tz = "Asia/Taipei") {
-  return new Intl.DateTimeFormat("sv-SE", {
-    timeZone: tz,
+const OUT_FILE = path.join(process.cwd(), "public", "market.json");
+
+function fmtTaipeiISO(ms) {
+  const d = new Date(ms);
+  const parts = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Taipei",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
-    hour12: false,
-  }).format(new Date());
+    hourCycle: "h23",
+  })
+    .formatToParts(d)
+    .reduce((a, p) => {
+      a[p.type] = p.value;
+      return a;
+    }, {});
+  return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}+08:00`;
 }
-function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
 
-function resolvePickStocks(mod) {
-  if (!mod) return null;
-  if (typeof mod === "function") return mod;
-  if (typeof mod.pickStocks === "function") return mod.pickStocks;
-  if (typeof mod.default === "function") return mod.default;
-  if (mod.default && typeof mod.default.pickStocks === "function") return mod.default.pickStocks;
-  return null;
+function fmtTaipeiDate(ms) {
+  return new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date(ms)); // YYYY-MM-DD
+}
+
+async function fetchYahooChart(symbol) {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(
+    symbol
+  )}?range=10d&interval=1d`;
+
+  const r = await fetch(url, {
+    headers: { "user-agent": "Mozilla/5.0" },
+  });
+  if (!r.ok) throw new Error(`Yahoo ${symbol} HTTP ${r.status}`);
+  const j = await r.json();
+
+  const result = j?.chart?.result?.[0];
+  const tsArr = result?.timestamp;
+  const quote = result?.indicators?.quote?.[0];
+  if (!tsArr?.length || !quote?.close?.length) {
+    throw new Error(`Yahoo ${symbol} parse fail`);
+  }
+
+  // last valid close index (avoid trailing nulls)
+  let idx = tsArr.length - 1;
+  while (idx >= 0 && (quote.close[idx] == null)) idx--;
+  if (idx < 0) throw new Error(`Yahoo ${symbol} no valid close`);
+
+  // prev valid close index
+  let pidx = idx - 1;
+  while (pidx >= 0 && (quote.close[pidx] == null)) pidx--;
+  if (pidx < 0) throw new Error(`Yahoo ${symbol} no prev close`);
+
+  const lastTsMs = tsArr[idx] * 1000;
+  const last = quote.close[idx];
+  const prev = quote.close[pidx];
+
+  return { lastTsMs, last, prev };
+}
+
+function buildSignal(usChangePct, nightChangePct) {
+  // 你原本的判斷可換掉這裡；先給一個穩定、可理解的版本：
+  // - 同方向：綠/紅（取平均強度）
+  // - 反方向：黃（震盪）
+  const usUp = usChangePct >= 0;
+  const nightUp = nightChangePct >= 0;
+
+  if (usUp !== nightUp) {
+    return {
+      signal: "caution",
+      label: "🟡 震盪",
+      message:
+        `美股與夜盤訊號不一致（美股${usUp ? "上漲" : "下跌"} / 夜盤${
+          nightUp ? "上漲" : "下跌"
+        }），今日盤勢可能震盪：建議分批、降低槓桿與部位。`,
+    };
+  }
+
+  // 同方向
+  const avgAbs = (Math.abs(usChangePct) + Math.abs(nightChangePct)) / 2;
+
+  if (usUp && nightUp) {
+    const strong = avgAbs >= 0.8;
+    return {
+      signal: strong ? "good" : "ok",
+      label: strong ? "🟢 偏多" : "🟩 偏多(溫和)",
+      message: strong
+        ? "美股與夜盤同向上漲，偏多盤勢：可分批布局，控制風險。"
+        : "美股與夜盤同向小漲，偏多但力道溫和：可分批布局，避免追價。",
+    };
+  } else {
+    const strong = avgAbs >= 0.8;
+    return {
+      signal: strong ? "bad" : "warn",
+      label: strong ? "🔴 偏空" : "🟠 偏空(溫和)",
+      message: strong
+        ? "美股與夜盤同向下跌，偏空盤勢：建議保守、降低部位或等待。"
+        : "美股與夜盤同向小跌，偏空但力道溫和：建議降低曝險，分批觀望。",
+    };
+  }
 }
 
 async function main() {
-  const TZ = "Asia/Taipei";
-  const todayKey = tzDateISO(TZ);     // 檔名用「產檔日」（不中斷）
-  const generatedAt = tzDateTime(TZ); // 顯示用台北時間
+  const now = Date.now();
 
-  const outPublic = path.join(process.cwd(), "public");
-  const outHistory = path.join(outPublic, "history");
-  ensureDir(outPublic);
-  ensureDir(outHistory);
-
-  const modPath = path.join(process.cwd(), "lib", "pickStocks.js");
-  let mod;
-  try {
-    mod = require(modPath);
-  } catch (e) {
-    console.error("❌ 無法載入 lib/pickStocks.js：", e?.message || e);
-    process.exit(1);
-  }
-
-  const pickStocks = resolvePickStocks(mod);
-  if (!pickStocks) {
-    console.error("❌ 找不到可呼叫的 pickStocks 函式。");
-    console.error("   exports keys：", Object.keys(mod || {}));
-    if (mod && mod.default && typeof mod.default === "object") {
-      console.error("   default keys：", Object.keys(mod.default));
-    }
-    process.exit(1);
-  }
-
-  console.log("✅ pickStocks resolved OK");
-  console.log("   generatedAt(Taipei):", generatedAt);
-  console.log("   historyKey(Taipei):", todayKey);
-
-  const result = await pickStocks({ market: "TW", generatedAt });
-
-  const picks = result?.picks || [];
-  const meta = result?.meta || {};
-
-  const todayJson = {
-    market: "TW",
-    generatedAt,
-    topN: 3,
-    picks,
-    meta
+  const out = {
+    generatedAt: new Date(now).toISOString(), // UTC
+    asOfLocal: fmtTaipeiISO(now).replace("T", " ").replace("+08:00", ""), // human readable like you had
+    signalDate: null, // new
+    stale: true, // new
+    signal: "unknown",
+    label: "⚪️ 未知",
+    sources: {
+      usMarket: {
+        symbol: "^GSPC",
+        last: null,
+        prev: null,
+        change: null,
+        changePct: null,
+        lastDate: null,
+        lastTs: null, // new
+        ok: false,
+        error: null,
+      },
+      nightProxy: {
+        symbol: "^N225",
+        direction: null,
+        last: null,
+        prev: null,
+        change: null,
+        changePct: null,
+        lastDate: null,
+        lastTs: null, // new
+        note: null,
+        ok: false,
+        error: null,
+      },
+    },
+    message: "",
+    note: "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。",
   };
 
-  const todayPath = path.join(outPublic, "today.json");
-  fs.writeFileSync(todayPath, JSON.stringify(todayJson, null, 2), "utf-8");
+  // Fetch US
+  try {
+    const us = await fetchYahooChart("^GSPC");
+    const change = us.last - us.prev;
+    const changePct = (change / us.prev) * 100;
 
-  const historyPath = path.join(outHistory, `${todayKey}.json`);
-  fs.writeFileSync(historyPath, JSON.stringify(todayJson, null, 2), "utf-8");
+    out.sources.usMarket.last = us.last;
+    out.sources.usMarket.prev = us.prev;
+    out.sources.usMarket.change = change;
+    out.sources.usMarket.changePct = changePct;
+    out.sources.usMarket.lastTs = fmtTaipeiISO(us.lastTsMs);
+    out.sources.usMarket.lastDate = fmtTaipeiDate(us.lastTsMs);
+    out.sources.usMarket.ok = true;
+  } catch (e) {
+    out.sources.usMarket.error = String(e?.message || e);
+  }
 
-  console.log("✅ wrote:", path.relative(process.cwd(), todayPath));
-  console.log("✅ wrote:", path.relative(process.cwd(), historyPath));
-  console.log("✅ picks count:", picks.length);
-  console.log("✅ asOfDataDate:", meta?.asOfDataDate || "—");
+  // Fetch Night proxy
+  try {
+    const nk = await fetchYahooChart("^N225");
+    const change = nk.last - nk.prev;
+    const changePct = (change / nk.prev) * 100;
+
+    out.sources.nightProxy.last = nk.last;
+    out.sources.nightProxy.prev = nk.prev;
+    out.sources.nightProxy.change = change;
+    out.sources.nightProxy.changePct = changePct;
+    out.sources.nightProxy.direction = changePct >= 0 ? "up" : "down";
+    out.sources.nightProxy.lastTs = fmtTaipeiISO(nk.lastTsMs);
+    out.sources.nightProxy.lastDate = fmtTaipeiDate(nk.lastTsMs);
+    out.sources.nightProxy.ok = true;
+  } catch (e) {
+    out.sources.nightProxy.error = String(e?.message || e);
+  }
+
+  // Decide signalDate by newest available lastTs
+  const tsCandidates = [];
+  if (out.sources.usMarket.ok) {
+    const d = new Date(out.sources.usMarket.lastTs).getTime();
+    if (!Number.isNaN(d)) tsCandidates.push(d);
+  }
+  if (out.sources.nightProxy.ok) {
+    const d = new Date(out.sources.nightProxy.lastTs).getTime();
+    if (!Number.isNaN(d)) tsCandidates.push(d);
+  }
+
+  const bestTs = tsCandidates.length ? Math.max(...tsCandidates) : null;
+  out.signalDate = bestTs ? fmtTaipeiDate(bestTs) : null;
+
+  // stale if no data or older than 36 hours
+  out.stale = !bestTs ? true : now - bestTs > 36 * 3600 * 1000;
+
+  // Signal
+  if (out.sources.usMarket.ok && out.sources.nightProxy.ok) {
+    const sig = buildSignal(out.sources.usMarket.changePct, out.sources.nightProxy.changePct);
+    out.signal = sig.signal;
+    out.label = sig.label;
+    out.message = sig.message;
+  } else {
+    out.signal = "unknown";
+    out.label = "⚪️ 資料延遲";
+    out.message =
+      "盤勢資料來源尚未更新或抓取失敗（可能是資料延遲或網路問題）。請稍後再試。";
+  }
+
+  // Ensure folder exists
+  fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
+  fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 2), "utf8");
+
+  console.log(`[OK] wrote ${OUT_FILE}`);
+  console.log(`signalDate=${out.signalDate} stale=${out.stale}`);
 }
 
 main().catch((e) => {
-  console.error("❌ generate_today failed:", e);
+  console.error("[FAIL]", e);
   process.exit(1);
 });
