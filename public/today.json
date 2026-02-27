@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-02-27 00:08:25",
+  "generatedAt": "2026-02-27 23:07:12",
   "asOfDataDate": null,
   "topN": 3,
   "picks": [
@@ -11,7 +11,7 @@
       "ma5": 40.32999954223633,
       "ma20": 35.130000019073485,
       "rsi14": 78.81349258602911,
-      "volRatio": 3.9624067216580428,
+      "volRatio": 3.9546216519055815,
       "atr14": 2.3293624127541226,
       "plan": {
         "entryLow": 46.32,
@@ -21,7 +21,7 @@
         "tp2": 51.44
       },
       "asOfDataDate": "2026-02-26",
-      "score": 98.6249,
+      "score": 98.5471,
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
@@ -29,15 +29,53 @@
         "windowDays": 20,
         "asOfDate": "2026-02-26",
         "latestDate": "20260226",
-        "sumTotal": 27007,
+        "sumTotal": 26060,
         "sumForeign": 0,
         "sumTrust": 0,
-        "sumDealer": 17,
+        "sumDealer": 28,
         "buyStreak": 0,
         "latestTotalNet": -703,
         "latestForeignNet": 0,
         "latestTrustNet": 0,
         "latestDealerNet": -53,
+        "unit": "張",
+        "source": "TWSE T86 (json)"
+      }
+    },
+    {
+      "symbol": "6230",
+      "name": "尼得科超眾",
+      "lastClose": 157,
+      "ma5": 134.8,
+      "ma20": 124.95,
+      "rsi14": 76.52579674555736,
+      "volRatio": 5.425054878494631,
+      "atr14": 6.540894671023545,
+      "plan": {
+        "entryLow": 154.38,
+        "entryHigh": 158.31,
+        "stop": 149.15,
+        "tp1": 163.54,
+        "tp2": 168.77
+      },
+      "asOfDataDate": "2026-02-26",
+      "score": 95.5511,
+      "passed": true,
+      "tradeStyle": "基準版(穩定)",
+      "reason": "主推",
+      "inst": {
+        "windowDays": 20,
+        "asOfDate": "2026-02-26",
+        "latestDate": "20260226",
+        "sumTotal": 123,
+        "sumForeign": 0,
+        "sumTrust": 0,
+        "sumDealer": 6,
+        "buyStreak": 0,
+        "latestTotalNet": -12,
+        "latestForeignNet": 0,
+        "latestTrustNet": 0,
+        "latestDealerNet": 1,
         "unit": "張",
         "source": "TWSE T86 (json)"
       }
@@ -49,7 +87,7 @@
       "ma5": 428.5,
       "ma20": 415.15,
       "rsi14": 55.44132735881126,
-      "volRatio": 9.99155780493052,
+      "volRatio": 9.97489320426957,
       "atr14": 12.974025596011169,
       "plan": {
         "entryLow": 417.81,
@@ -59,7 +97,7 @@
         "tp2": 446.35
       },
       "asOfDataDate": "2026-02-26",
-      "score": 93.6973,
+      "score": 93.5307,
       "passed": true,
       "tradeStyle": "基準版(穩定)",
       "reason": "主推",
@@ -67,10 +105,10 @@
         "windowDays": 20,
         "asOfDate": "2026-02-26",
         "latestDate": "20260226",
-        "sumTotal": -412,
+        "sumTotal": -225,
         "sumForeign": 0,
-        "sumTrust": 39,
-        "sumDealer": -157,
+        "sumTrust": 64,
+        "sumDealer": -177,
         "buyStreak": 0,
         "latestTotalNet": -71,
         "latestForeignNet": 0,
@@ -79,49 +117,11 @@
         "unit": "張",
         "source": "TWSE T86 (json)"
       }
-    },
-    {
-      "symbol": "8046",
-      "name": "南電",
-      "lastClose": 555,
-      "ma5": 496.9,
-      "ma20": 414.825,
-      "rsi14": 81.43872280313701,
-      "volRatio": 2.567526167367137,
-      "atr14": 29.784998977134972,
-      "plan": {
-        "entryLow": 543.09,
-        "entryHigh": 560.96,
-        "stop": 519.26,
-        "tp1": 584.78,
-        "tp2": 608.61
-      },
-      "asOfDataDate": "2026-02-26",
-      "score": 83.258,
-      "passed": true,
-      "tradeStyle": "基準版(穩定)",
-      "reason": "主推",
-      "inst": {
-        "windowDays": 20,
-        "asOfDate": "2026-02-26",
-        "latestDate": "20260226",
-        "sumTotal": 6117,
-        "sumForeign": 0,
-        "sumTrust": 11551,
-        "sumDealer": -585,
-        "buyStreak": 0,
-        "latestTotalNet": -138,
-        "latestForeignNet": 0,
-        "latestTrustNet": 2947,
-        "latestDealerNet": -466,
-        "unit": "張",
-        "source": "TWSE T86 (json)"
-      }
     }
   ],
   "meta": {
     "pool": {
-      "size": 570,
+      "size": 581,
       "POOL_SIZE": 600,
       "MIN_LIQ_SHARES": 500000,
       "MIN_PRICE": 10
