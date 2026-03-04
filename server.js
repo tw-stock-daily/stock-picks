@@ -1,6 +1,12 @@
 // server.js (TOP3 + 補齊TOP3 + 價格區間 + 中文名 + 產業 + 600股票池(成交量前600)
 //          + 兩段式FinMind加權 + 負分不推薦 + 排除創新板/創新版)
 //
+// ✅ v2026-02 投信優先法人強化版：
+// - 法人通過條件改為「投信優先」
+// - 新增 trustStreak / foreignStreak / dealerStreak
+// - 新增 trustRatio（投信買超佔成交量比）並加分
+// - 法人分數改為加權：Trust 1.5, Foreign 1.0, Dealer 0.5
+//
 // 安裝套件：
 //   npm i express axios node-cache cors
 // （可選）若你想用 .env：npm i dotenv
@@ -46,6 +52,17 @@ const MIN_PICK_SCORE = 0;           // ★負分不推薦：score 必須 > 0 才
 // RSI 條件（你要求上限 82）
 const RSI_MIN = 50;
 const RSI_MAX = 82;
+
+// === 法人加權（投信優先）
+const INST_W_TRUST = 1.5;
+const INST_W_FOREIGN = 1.0;
+const INST_W_DEALER = 0.5;
+
+// === 投信波段特徵（可微調）
+const TRUST_STREAK_MIN = 3;         // 投信連買至少 3 天
+const TRUST_RATIO_L1 = 0.03;        // 投信買超/成交量 > 3% 加分
+const TRUST_RATIO_L2 = 0.05;        // > 5% 強加分
+const FOREIGN_SELL_PENALTY = -1000; // 外資總和 <= -1000 張視為砍盤（扣分/通過更嚴）
 
 // ============== helpers ==============
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -334,7 +351,7 @@ async function fetchYahoo(symbol, range = "6mo", interval = "1d") {
     high: highs[i],
     low: lows[i],
     close: closes[i],
-    volume: vols[i],
+    volume: vols[i], // 股數
   })).filter(b => b.close > 0);
 
   const out = { symbol, name: metaName, bars };
@@ -365,6 +382,7 @@ function parseT86Row(row) {
   return {
     symbol,
     name: String(row?.[1] || "").trim(),
+    // 單位：張
     foreignNet: toNum(row?.[4]),
     trustNet: toNum(row?.[7]),
     dealerNet: toNum(row?.[10]),
@@ -399,7 +417,16 @@ async function getRecentTradingDates(n, endDate = new Date()) {
     d.setDate(d.getDate() - 1);
     await sleep(30);
   }
-  return dates;
+  return dates; // newest -> older
+}
+
+function calcStreakNewestFirst(arr) {
+  let s = 0;
+  for (const v of arr) {
+    if (v > 0) s++;
+    else break;
+  }
+  return s;
 }
 
 async function getInstitutionStats(symbol, windowDays = 10, endDate = new Date()) {
@@ -426,9 +453,17 @@ async function getInstitutionStats(symbol, windowDays = 10, endDate = new Date()
   const sumDealer  = series.reduce((a, x) => a + x.dealerNet, 0);
   const sumTotal   = sumForeign + sumTrust + sumDealer;
 
-  const totalNetArr = series.map(x => x.foreignNet + x.trustNet + x.dealerNet);
-  let buyStreak = 0; for (const v of totalNetArr) { if (v > 0) buyStreak++; else break; }
-  let sellStreak = 0; for (const v of totalNetArr) { if (v < 0) sellStreak++; else break; }
+  const foreignArr = series.map(x => x.foreignNet);
+  const trustArr   = series.map(x => x.trustNet);
+  const dealerArr  = series.map(x => x.dealerNet);
+  const totalArr   = series.map(x => x.foreignNet + x.trustNet + x.dealerNet);
+
+  const foreignStreak = calcStreakNewestFirst(foreignArr);
+  const trustStreak   = calcStreakNewestFirst(trustArr);
+  const dealerStreak  = calcStreakNewestFirst(dealerArr);
+
+  let buyStreak = 0; for (const v of totalArr) { if (v > 0) buyStreak++; else break; }
+  let sellStreak = 0; for (const v of totalArr) { if (v < 0) sellStreak++; else break; }
 
   return {
     windowDays,
@@ -437,7 +472,11 @@ async function getInstitutionStats(symbol, windowDays = 10, endDate = new Date()
     nameFromT86,
     sumForeign, sumTrust, sumDealer, sumTotal,
     buyStreak, sellStreak,
-    latestTotalNet: totalNetArr[0] || 0,
+    foreignStreak, trustStreak, dealerStreak,
+    latestTotalNet: totalArr[0] || 0,
+    latestForeignNet: foreignArr[0] || 0,
+    latestTrustNet: trustArr[0] || 0,
+    latestDealerNet: dealerArr[0] || 0,
   };
 }
 
@@ -563,7 +602,7 @@ function scoreStock(bars, inst, finmind = {}) {
   const closes = bars.map(b => b.close);
   const highs  = bars.map(b => b.high);
   const lows   = bars.map(b => b.low);
-  const vols   = bars.map(b => b.volume);
+  const vols   = bars.map(b => b.volume); // 股數
 
   const ma5  = sma(closes, 5);
   const ma20 = sma(closes, 20);
@@ -582,7 +621,13 @@ function scoreStock(bars, inst, finmind = {}) {
   const okTrend = !!(lastMA20 && lastMA5 && lastClose > lastMA20 && lastMA5 > lastMA20);
   const okRSI   = lastRSI == null ? true : (lastRSI >= RSI_MIN && lastRSI <= RSI_MAX);
   const okVol   = volRatio >= 1.1;
-  const okInst  = inst.sumTotal > 0 && inst.buyStreak >= 3 && inst.latestTotalNet > 0;
+
+  // ✅ 投信優先：通過條件不再以 sumTotal 為主
+  // 主要看：投信窗口合計 >0、投信連買 >=3、最新一天投信淨買 >0
+  // 並避開：外資窗口合計大賣
+  const okTrust = (inst.sumTrust > 0) && (inst.trustStreak >= TRUST_STREAK_MIN) && (inst.latestTrustNet > 0);
+  const okForeignDump = inst.sumForeign <= FOREIGN_SELL_PENALTY; // true 表示外資砍盤
+  const okInst = okTrust && !okForeignDump;
 
   const passed = okTrend && okRSI && okVol && okInst;
 
@@ -590,9 +635,37 @@ function scoreStock(bars, inst, finmind = {}) {
   if (!okTrend) reasons.push("均線不強");
   if (!okRSI) reasons.push("RSI不佳");
   if (!okVol) reasons.push("量能不足");
-  if (!okInst) reasons.push("法人不穩");
+  if (!okInst) {
+    if (!okTrust) reasons.push("投信不夠強");
+    if (okForeignDump) reasons.push("外資砍盤");
+  }
 
-  const instScore = Math.log10(Math.max(1, Math.abs(inst.sumTotal))) * (inst.sumTotal > 0 ? 1 : -1);
+  // ✅ 投信優先法人分數（加權 + 連買/占量比 bonus）
+  const weightedNet =
+    inst.sumTrust * INST_W_TRUST +
+    inst.sumForeign * INST_W_FOREIGN +
+    inst.sumDealer * INST_W_DEALER;
+
+  // 基底：用 log 壓縮張數量級（避免大股永遠碾壓）
+  let instScore = Math.log10(Math.max(1, Math.abs(weightedNet))) * (weightedNet > 0 ? 1 : -1);
+
+  // 投信連買 bonus（最多加到約 +2）
+  if (inst.trustStreak >= 3) instScore += Math.min(2.0, inst.trustStreak * 0.4);
+
+  // 投信主導籌碼：trustRatio = (投信買超股數)/(當日成交量股數)
+  // inst.sumTrust 單位張 => *1000 轉股
+  const lastVolShares = Math.max(1, vols[i] || 0);
+  const trustRatio = (inst.sumTrust * 1000) / lastVolShares; // 窗口合計 vs 當日量（簡化但有效）
+  if (trustRatio >= TRUST_RATIO_L2) instScore += 1.0;
+  else if (trustRatio >= TRUST_RATIO_L1) instScore += 0.5;
+
+  // 外資砍盤扣分 / 未砍盤小加分
+  if (inst.sumForeign <= FOREIGN_SELL_PENALTY) instScore -= 1.0;
+  else if (inst.sumForeign > -1000) instScore += 0.3;
+
+  // 若投信+外資同買（最強組合）再加一點
+  if (inst.sumTrust > 0 && inst.sumForeign > 0) instScore += 0.4;
+
   const trendScore = lastMA20 ? (lastClose / lastMA20 - 1) * 100 : 0;
   const volScore = (volRatio - 1) * 10;
 
@@ -601,6 +674,7 @@ function scoreStock(bars, inst, finmind = {}) {
   if (finmind?.daytrade?.hot) finAdj -= 2.0;
   if (finmind?.daytrade?.ratio != null && finmind.daytrade.ratio < 20) finAdj += 0.6;
 
+  // 原權重保留，你只要法人分數換成投信優先版即可
   const score = instScore * 3.2 + trendScore * 2.2 + volScore + finAdj;
 
   const atrUse = (lastATR && lastATR > 0) ? lastATR : (lastClose * 0.03);
@@ -613,6 +687,9 @@ function scoreStock(bars, inst, finmind = {}) {
   const badges = [];
   if (finmind?.margin?.mpHot) badges.push("融資偏熱");
   if (finmind?.daytrade?.hot) badges.push("當沖偏高");
+  if (inst.trustStreak >= 3) badges.push(`投信連買${inst.trustStreak}日`);
+  if (trustRatio >= TRUST_RATIO_L2) badges.push("投信主導(>5%)");
+  else if (trustRatio >= TRUST_RATIO_L1) badges.push("投信偏強(>3%)");
 
   return {
     passed,
@@ -624,15 +701,30 @@ function scoreStock(bars, inst, finmind = {}) {
       rsi14: lastRSI,
       volRatio,
       atr14: atrUse,
+
+      // 法人輸出（新增）
+      instWeightedNet: weightedNet,
+      instScore,
       instSumTotal: inst.sumTotal,
+      instSumForeign: inst.sumForeign,
+      instSumTrust: inst.sumTrust,
+      instSumDealer: inst.sumDealer,
       instBuyStreak: inst.buyStreak,
+      instTrustStreak: inst.trustStreak,
+      instForeignStreak: inst.foreignStreak,
+      instDealerStreak: inst.dealerStreak,
       instLatestTotalNet: inst.latestTotalNet,
+      instLatestTrustNet: inst.latestTrustNet,
+      instTrustRatio: trustRatio,
+
       plan: { entryLow, entryHigh, stop, tp1, tp2 }
     },
     finmindBadges: badges,
     debug: {
       reasons: reasons.length ? reasons.join(" / ") : "PASS",
       okTrend, okRSI, okVol, okInst,
+      okTrust,
+      okForeignDump,
       finAdj
     }
   };
