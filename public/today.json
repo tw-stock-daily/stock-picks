@@ -1,6 +1,6 @@
 {
   "market": "TW",
-  "generatedAt": "2026-03-05T14:53:14.789Z",
+  "generatedAt": "2026-03-05T15:38:19.891Z",
   "topN": 3,
   "picks": [
     {
@@ -181,7 +181,7 @@
     },
     "dataSource": "Yahoo(tech) + TWSE(T86 inst json)"
   },
-  "generatedAtTaipei": "2026-03-05 22:53:14",
+  "generatedAtTaipei": "2026-03-05 23:38:19",
   "historyKey": "2026-03-05",
   "picksCount": 3,
   "note": "C方案：技術面為主 + 法人最低門檻（擋掉投信明顯撤退/外資大砍），並以投信優先加權做微調排序。"
