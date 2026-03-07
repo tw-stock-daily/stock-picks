@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-06T23:00:39.922Z",
-  "asOfLocal": "2026-03-07 07:00:39",
-  "signalDate": "2026-03-07",
+  "generatedAt": "2026-03-07T22:34:49.154Z",
+  "asOfLocal": "2026-03-08 06:34:49",
+  "signalDate": "2026-03-06",
   "stale": false,
   "signal": "caution",
   "label": "🟡 震盪",
@@ -12,8 +12,8 @@
       "prev": 6830.7099609375,
       "change": -90.68994140625,
       "changePct": -1.327679581256924,
-      "lastDate": "2026-03-07",
-      "lastTs": "2026-03-07T06:22:18+08:00",
+      "lastDate": "2026-03-06",
+      "lastTs": "2026-03-06T22:30:00+08:00",
       "ok": true,
       "error": null
     },
@@ -25,7 +25,7 @@
       "change": 342.78125,
       "changePct": 0.6201036337386069,
       "lastDate": "2026-03-06",
-      "lastTs": "2026-03-06T14:45:03+08:00",
+      "lastTs": "2026-03-06T08:00:00+08:00",
       "note": null,
       "ok": true,
       "error": null
