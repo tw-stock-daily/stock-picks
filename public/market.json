@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-14T22:37:47.944Z",
-  "asOfLocal": "2026-03-15 06:37:47",
+  "generatedAt": "2026-03-15T22:39:56.891Z",
+  "asOfLocal": "2026-03-16 06:39:56",
   "signalDate": "2026-03-14",
-  "stale": false,
+  "stale": true,
   "signal": "ok",
   "label": "🟩 偏多(溫和)",
   "sources": {
