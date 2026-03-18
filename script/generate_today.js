@@ -2,10 +2,10 @@
 
 /**
  * script/generate_today.js
- * 起漲版輸出：
- * - 呼叫 lib/pickStocks.js（起漲版核心）
- * - 產檔前再做「法人最低門檻 + 小幅加權重排」
- * - 寫出 public/today.json 與 public/history/YYYY-MM-DD.json
+ * 起漲版 v2 輸出器
+ * - 呼叫 lib/pickStocks.js
+ * - 產檔前做法人最低門檻 + 小幅加權重排
+ * - 寫出 public/today.json / public/history/YYYY-MM-DD.json
  */
 
 const fs = require("fs");
@@ -82,7 +82,6 @@ function resolvePickStocks() {
   );
 }
 
-// ---------- helpers ----------
 function looksLikePickItem(x) {
   return x && typeof x === "object" && typeof x.symbol === "string" && ("score" in x);
 }
@@ -103,7 +102,7 @@ function extractCandidateArray(result) {
   return best ? best.filter(looksLikePickItem) : null;
 }
 
-// ---------- 起漲版：法人最低門檻 ----------
+// ---------- 法人最低門檻 ----------
 function instFilter(inst, level) {
   if (!inst) return { pass: true, reason: "no inst" };
 
@@ -134,7 +133,7 @@ function instFilter(inst, level) {
   return { pass: true, reason: "pass(level3)" };
 }
 
-// ---------- 起漲版：法人小幅加權（只是微調排序） ----------
+// ---------- 法人小幅加權 ----------
 function calcInstAdj(inst) {
   if (!inst) return { instAdj: 0, meta: { note: "no inst" } };
 
@@ -264,8 +263,7 @@ async function main() {
     const out = { ...p };
     const ns = num(out._newScore, num(out.score, 0));
     out.score = Number(ns.toFixed(3));
-
-    out.tradeStyle = "起漲版";
+    out.tradeStyle = "起漲版v2";
     if (!out.reason) out.reason = idx === 0 ? "主推" : "補位";
     return out;
   });
@@ -281,7 +279,7 @@ async function main() {
     historyKey,
     picks: top3,
     picksCount: top3.length,
-    note: "起漲版：提前抓轉強、近5日突破、避免後段爆量股，並套用法人最低門檻與小幅加權重排。",
+    note: "起漲版v2：過熱股硬淘汰（RSI/量比/乖離/近3日漲幅），再套用法人最低門檻與小幅加權重排。",
   };
 
   const outToday = path.join(process.cwd(), "public", "today.json");
