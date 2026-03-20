@@ -2,13 +2,12 @@
 
 /**
  * script/generate_today.js
- * 起漲版 v2 輸出器（含推薦理由）
+ * 起漲版 v2 輸出器（含投顧風格推薦理由）
  */
 
 const fs = require("fs");
 const path = require("path");
 
-// ---------- Time helpers (Asia/Taipei) ----------
 function fmtTaipei(dt = new Date()) {
   const parts = new Intl.DateTimeFormat("sv-SE", {
     timeZone: "Asia/Taipei",
@@ -43,7 +42,6 @@ function writeJson(file, obj) {
   fs.writeFileSync(file, JSON.stringify(obj, null, 2), "utf8");
 }
 
-// ---------- Safe number ----------
 function num(x, def = 0) {
   const n = Number(x);
   return Number.isFinite(n) ? n : def;
@@ -52,7 +50,6 @@ function clamp(x, lo, hi) {
   return Math.max(lo, Math.min(hi, x));
 }
 
-// ---------- resolve pickStocks ----------
 function resolvePickStocks() {
   const candidates = [
     "../pickStocks",
@@ -99,7 +96,6 @@ function extractCandidateArray(result) {
   return best ? best.filter(looksLikePickItem) : null;
 }
 
-// ---------- 法人最低門檻 ----------
 function instFilter(inst, level) {
   if (!inst) return { pass: true, reason: "no inst" };
 
@@ -130,7 +126,6 @@ function instFilter(inst, level) {
   return { pass: true, reason: "pass(level3)" };
 }
 
-// ---------- 法人小幅加權 ----------
 function calcInstAdj(inst) {
   if (!inst) return { instAdj: 0, meta: { note: "no inst" } };
 
@@ -184,7 +179,6 @@ function calcInstAdj(inst) {
   };
 }
 
-// ---------- main ----------
 async function main() {
   const pickStocks = resolvePickStocks();
   const result = await pickStocks();
@@ -276,7 +270,7 @@ async function main() {
     historyKey,
     picks: top3,
     picksCount: top3.length,
-    note: "起漲版v2：過熱股硬淘汰（RSI/量比/乖離/近3日漲幅），並新增推薦理由。",
+    note: "起漲版v2：過熱股硬淘汰，並加入投顧風格推薦理由。",
   };
 
   const outToday = path.join(process.cwd(), "public", "today.json");
