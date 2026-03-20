@@ -1,0 +1,619 @@
+{
+  "market": "TW",
+  "generatedAt": "2026-02-10 23:30:51",
+  "topN": 3,
+  "picks": [
+    {
+      "symbol": "3550",
+      "name": "聯穎",
+      "score": 93.6468,
+      "passed": true,
+      "reason": "主推",
+      "tradeStyle": "波段",
+      "lastClose": 20.35,
+      "ma5": 18.66,
+      "ma20": 16.58,
+      "rsi14": 75.31,
+      "volRatio": 5.82,
+      "plan": {
+        "entryLow": 19.61,
+        "entryHigh": 20.1,
+        "stop": 18.63,
+        "tp1": 21.58,
+        "tp2": 22.56
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -136,
+        "sumForeign": -104,
+        "sumTrust": 0,
+        "sumDealer": -32,
+        "buyStreak": 0,
+        "latestTotalNet": -243,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "3167",
+      "name": "大量",
+      "score": 72.0083,
+      "passed": true,
+      "reason": "主推",
+      "tradeStyle": "波段",
+      "lastClose": 275.5,
+      "ma5": 235.4,
+      "ma20": 226.55,
+      "rsi14": 70,
+      "volRatio": 3.88,
+      "plan": {
+        "entryLow": 266.73,
+        "entryHigh": 272.58,
+        "stop": 255.04,
+        "tp1": 290.11,
+        "tp2": 301.81
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 10355,
+        "sumForeign": 10058,
+        "sumTrust": 89,
+        "sumDealer": 208,
+        "buyStreak": 3,
+        "latestTotalNet": 8069,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "7610",
+      "name": "聯友金屬-創",
+      "score": 67.2074,
+      "passed": true,
+      "reason": "主推",
+      "tradeStyle": "波段",
+      "lastClose": 265,
+      "ma5": 227.5,
+      "ma20": 204.58,
+      "rsi14": 78.54,
+      "volRatio": 1.81,
+      "plan": {
+        "entryLow": 255.84,
+        "entryHigh": 261.95,
+        "stop": 243.64,
+        "tp1": 280.26,
+        "tp2": 292.47
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 694,
+        "sumForeign": 698,
+        "sumTrust": 0,
+        "sumDealer": -4,
+        "buyStreak": 4,
+        "latestTotalNet": 284,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "3550",
+      "name": "聯穎",
+      "score": 93.6468,
+      "passed": true,
+      "reason": "價格帶：100 以內",
+      "tradeStyle": "波段",
+      "lastClose": 20.35,
+      "ma5": 18.66,
+      "ma20": 16.58,
+      "rsi14": 75.31,
+      "volRatio": 5.82,
+      "plan": {
+        "entryLow": 19.61,
+        "entryHigh": 20.1,
+        "stop": 18.63,
+        "tp1": 21.58,
+        "tp2": 22.56
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -136,
+        "sumForeign": -104,
+        "sumTrust": 0,
+        "sumDealer": -32,
+        "buyStreak": 0,
+        "latestTotalNet": -243,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "1466",
+      "name": "聚隆",
+      "score": 64.879,
+      "passed": false,
+      "reason": "價格帶：100 以內",
+      "tradeStyle": "波段",
+      "lastClose": 17.7,
+      "ma5": 16.29,
+      "ma20": 14.94,
+      "rsi14": 83.04,
+      "volRatio": 3.79,
+      "plan": {
+        "entryLow": 17.33,
+        "entryHigh": 17.58,
+        "stop": 16.84,
+        "tp1": 18.32,
+        "tp2": 18.81
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -78,
+        "sumForeign": -207,
+        "sumTrust": 0,
+        "sumDealer": 129,
+        "buyStreak": 1,
+        "latestTotalNet": 63,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "3209",
+      "name": "全科",
+      "score": 64.3689,
+      "passed": true,
+      "reason": "價格帶：100 以內",
+      "tradeStyle": "波段",
+      "lastClose": 37.3,
+      "ma5": 35.78,
+      "ma20": 34.04,
+      "rsi14": 81.95,
+      "volRatio": 5.52,
+      "plan": {
+        "entryLow": 36.78,
+        "entryHigh": 37.13,
+        "stop": 36.09,
+        "tp1": 38.16,
+        "tp2": 38.85
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 3860,
+        "sumForeign": 3844,
+        "sumTrust": -32,
+        "sumDealer": 48,
+        "buyStreak": 1,
+        "latestTotalNet": 2442,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "3167",
+      "name": "大量",
+      "score": 72.0083,
+      "passed": true,
+      "reason": "價格帶：100 ~ 300",
+      "tradeStyle": "波段",
+      "lastClose": 275.5,
+      "ma5": 235.4,
+      "ma20": 226.55,
+      "rsi14": 70,
+      "volRatio": 3.88,
+      "plan": {
+        "entryLow": 266.73,
+        "entryHigh": 272.58,
+        "stop": 255.04,
+        "tp1": 290.11,
+        "tp2": 301.81
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 10355,
+        "sumForeign": 10058,
+        "sumTrust": 89,
+        "sumDealer": 208,
+        "buyStreak": 3,
+        "latestTotalNet": 8069,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "7610",
+      "name": "聯友金屬-創",
+      "score": 67.2074,
+      "passed": true,
+      "reason": "價格帶：100 ~ 300",
+      "tradeStyle": "波段",
+      "lastClose": 265,
+      "ma5": 227.5,
+      "ma20": 204.58,
+      "rsi14": 78.54,
+      "volRatio": 1.81,
+      "plan": {
+        "entryLow": 255.84,
+        "entryHigh": 261.95,
+        "stop": 243.64,
+        "tp1": 280.26,
+        "tp2": 292.47
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 694,
+        "sumForeign": 698,
+        "sumTrust": 0,
+        "sumDealer": -4,
+        "buyStreak": 4,
+        "latestTotalNet": 284,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "6426",
+      "name": "統新",
+      "score": 59.9991,
+      "passed": false,
+      "reason": "價格帶：100 ~ 300",
+      "tradeStyle": "波段",
+      "lastClose": 141,
+      "ma5": 127.9,
+      "ma20": 106.92,
+      "rsi14": 75.07,
+      "volRatio": 0.63,
+      "plan": {
+        "entryLow": 136.21,
+        "entryHigh": 139.4,
+        "stop": 129.82,
+        "tp1": 148.99,
+        "tp2": 155.38
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 2219,
+        "sumForeign": 1573,
+        "sumTrust": 0,
+        "sumDealer": 646,
+        "buyStreak": 4,
+        "latestTotalNet": 218,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "5234",
+      "name": "達興材料",
+      "score": 41.0741,
+      "passed": true,
+      "reason": "價格帶：300 ~ 600",
+      "tradeStyle": "波段",
+      "lastClose": 381,
+      "ma5": 357.6,
+      "ma20": 346.25,
+      "rsi14": 67.82,
+      "volRatio": 3.1,
+      "plan": {
+        "entryLow": 371.06,
+        "entryHigh": 377.69,
+        "stop": 357.81,
+        "tp1": 397.56,
+        "tp2": 410.81
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 1310,
+        "sumForeign": 828,
+        "sumTrust": 252,
+        "sumDealer": 230,
+        "buyStreak": 2,
+        "latestTotalNet": 1183,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "8046",
+      "name": "南電",
+      "score": 37.4306,
+      "passed": true,
+      "reason": "價格帶：300 ~ 600",
+      "tradeStyle": "波段",
+      "lastClose": 409.5,
+      "ma5": 402.5,
+      "ma20": 364.3,
+      "rsi14": 65.34,
+      "volRatio": 2.26,
+      "plan": {
+        "entryLow": 394.47,
+        "entryHigh": 404.49,
+        "stop": 374.43,
+        "tp1": 434.55,
+        "tp2": 454.59
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": -5953,
+        "sumForeign": -5714,
+        "sumTrust": 586,
+        "sumDealer": -826,
+        "buyStreak": 0,
+        "latestTotalNet": -7680,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "3711",
+      "name": "日月光投控",
+      "score": 30.3436,
+      "passed": true,
+      "reason": "價格帶：300 ~ 600",
+      "tradeStyle": "波段",
+      "lastClose": 344,
+      "ma5": 312.4,
+      "ma20": 304.18,
+      "rsi14": 70.7,
+      "volRatio": 1.42,
+      "plan": {
+        "entryLow": 335.34,
+        "entryHigh": 341.11,
+        "stop": 323.78,
+        "tp1": 358.44,
+        "tp2": 369.99
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 23284,
+        "sumForeign": 23552,
+        "sumTrust": 325,
+        "sumDealer": -593,
+        "buyStreak": 3,
+        "latestTotalNet": 3798,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "8996",
+      "name": "高力",
+      "score": 53.5946,
+      "passed": true,
+      "reason": "價格帶：600 ~ 1000",
+      "tradeStyle": "波段",
+      "lastClose": 931,
+      "ma5": 854.8,
+      "ma20": 766.4,
+      "rsi14": 74.23,
+      "volRatio": 2.06,
+      "plan": {
+        "entryLow": 900.94,
+        "entryHigh": 920.98,
+        "stop": 860.86,
+        "tp1": 981.1,
+        "tp2": 1021.18
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 1081,
+        "sumForeign": -356,
+        "sumTrust": 1632,
+        "sumDealer": -195,
+        "buyStreak": 3,
+        "latestTotalNet": 720,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "2368",
+      "name": "金像電",
+      "score": 42.6588,
+      "passed": true,
+      "reason": "價格帶：600 ~ 1000",
+      "tradeStyle": "波段",
+      "lastClose": 846,
+      "ma5": 789,
+      "ma20": 700.8,
+      "rsi14": 70.4,
+      "volRatio": 1.12,
+      "plan": {
+        "entryLow": 821.36,
+        "entryHigh": 837.79,
+        "stop": 788.51,
+        "tp1": 887.06,
+        "tp2": 919.91
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 10804,
+        "sumForeign": 9075,
+        "sumTrust": 2454,
+        "sumDealer": -725,
+        "buyStreak": 3,
+        "latestTotalNet": 1252,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "6446",
+      "name": "藥華藥",
+      "score": 10.1561,
+      "passed": false,
+      "reason": "價格帶：600 ~ 1000",
+      "tradeStyle": "波段",
+      "lastClose": 728,
+      "ma5": 735.6,
+      "ma20": 665.9,
+      "rsi14": 66.19,
+      "volRatio": 0.15,
+      "plan": {
+        "entryLow": 711.17,
+        "entryHigh": 722.39,
+        "stop": 688.73,
+        "tp1": 756.05,
+        "tp2": 778.48
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 3918,
+        "sumForeign": 3119,
+        "sumTrust": 874,
+        "sumDealer": -75,
+        "buyStreak": 0,
+        "latestTotalNet": -39,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "6442",
+      "name": "光聖",
+      "score": 51.6968,
+      "passed": false,
+      "reason": "價格帶：1000 以上",
+      "tradeStyle": "波段",
+      "lastClose": 1985,
+      "ma5": 1829,
+      "ma20": 1541.75,
+      "rsi14": 71.17,
+      "volRatio": 0.42,
+      "plan": {
+        "entryLow": 1917.23,
+        "entryHigh": 1962.41,
+        "stop": 1826.87,
+        "tp1": 2097.95,
+        "tp2": 2188.31
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 2963,
+        "sumForeign": 3224,
+        "sumTrust": -146,
+        "sumDealer": -115,
+        "buyStreak": 3,
+        "latestTotalNet": 278,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "3653",
+      "name": "健策",
+      "score": 44.4653,
+      "passed": true,
+      "reason": "價格帶：1000 以上",
+      "tradeStyle": "波段",
+      "lastClose": 3350,
+      "ma5": 3115,
+      "ma20": 2778.25,
+      "rsi14": 70.67,
+      "volRatio": 1.33,
+      "plan": {
+        "entryLow": 3256.76,
+        "entryHigh": 3318.92,
+        "stop": 3132.45,
+        "tp1": 3505.4,
+        "tp2": 3629.71
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 2580,
+        "sumForeign": 2795,
+        "sumTrust": 35,
+        "sumDealer": -249,
+        "buyStreak": 3,
+        "latestTotalNet": 545,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    },
+    {
+      "symbol": "2345",
+      "name": "智邦",
+      "score": 43.9915,
+      "passed": true,
+      "reason": "價格帶：1000 以上",
+      "tradeStyle": "波段",
+      "lastClose": 1390,
+      "ma5": 1239,
+      "ma20": 1189.5,
+      "rsi14": 69.32,
+      "volRatio": 2.03,
+      "plan": {
+        "entryLow": 1349.34,
+        "entryHigh": 1376.45,
+        "stop": 1295.12,
+        "tp1": 1457.77,
+        "tp2": 1511.99
+      },
+      "inst": {
+        "windowDays": 10,
+        "sumTotal": 3509,
+        "sumForeign": 2693,
+        "sumTrust": 729,
+        "sumDealer": 86,
+        "buyStreak": 3,
+        "latestTotalNet": 1870,
+        "latestDate": "2026-02-10",
+        "unit": "lots"
+      },
+      "dataDate": "2026-02-10"
+    }
+  ],
+  "meta": {
+    "dataDate": "2026-02-10",
+    "pool": {
+      "size": 504,
+      "POOL_SIZE": 600,
+      "MIN_LIQ_SHARES": 500000,
+      "MIN_PRICE": 10
+    },
+    "priceBuckets": [
+      {
+        "key": "lt100",
+        "label": "100 以內",
+        "take": 3
+      },
+      {
+        "key": "100_300",
+        "label": "100 ~ 300",
+        "take": 3
+      },
+      {
+        "key": "300_600",
+        "label": "300 ~ 600",
+        "take": 3
+      },
+      {
+        "key": "600_1000",
+        "label": "600 ~ 1000",
+        "take": 3
+      },
+      {
+        "key": "gt1000",
+        "label": "1000 以上",
+        "take": 3
+      }
+    ]
+  }
+}

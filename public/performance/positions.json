@@ -1,0 +1,19 @@
+{
+  "generatedAt": "—",
+  "asOfDataDate": "—",
+  "rules": {
+    "maxHoldDays": 28,
+    "returnMode": "last+max",
+    "tpEnabled": true,
+    "slRecordOnly": true,
+    "mergeOnRepeat": true,
+    "daysHeld": "tradingDays",
+    "dataDateSource": "^TWII"
+  },
+  "open": [],
+  "closed": [],
+  "summary": {
+    "openCount": 0,
+    "expiredToday": 0
+  }
+}

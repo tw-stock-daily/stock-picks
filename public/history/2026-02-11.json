@@ -1,0 +1,49 @@
+{
+  "market": "TW",
+  "generatedAt": "2026-02-11 23:04:59",
+  "topN": 3,
+  "picks": [
+    {
+      "symbol": "6202",
+      "name": "盛群",
+      "score": 86.2301,
+      "passed": true,
+      "lastClose": 56.5,
+      "near120dHigh": 56.5,
+      "near120dDistPct": 0,
+      "reason": "主推"
+    },
+    {
+      "symbol": "2489",
+      "name": "瑞軒",
+      "score": 82.4452,
+      "passed": true,
+      "lastClose": 27.1,
+      "near120dHigh": 27.1,
+      "near120dDistPct": 0,
+      "reason": "主推"
+    },
+    {
+      "symbol": "7610",
+      "name": "聯友金屬-創",
+      "score": 69.1475,
+      "passed": true,
+      "lastClose": 274,
+      "near120dHigh": 274,
+      "near120dDistPct": 0,
+      "reason": "主推"
+    }
+  ],
+  "meta": {
+    "pool": {
+      "size": 491,
+      "POOL_SIZE": 600,
+      "MIN_LIQ_SHARES": 500000,
+      "MIN_PRICE": 10
+    },
+    "filters": {
+      "near120dHighPct": 0.05,
+      "lookbackHighDays": 120
+    }
+  }
+}
