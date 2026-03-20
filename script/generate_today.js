@@ -2,10 +2,7 @@
 
 /**
  * script/generate_today.js
- * 起漲版 v2 輸出器
- * - 呼叫 lib/pickStocks.js
- * - 產檔前做法人最低門檻 + 小幅加權重排
- * - 寫出 public/today.json / public/history/YYYY-MM-DD.json
+ * 起漲版 v2 輸出器（含推薦理由）
  */
 
 const fs = require("fs");
@@ -279,7 +276,7 @@ async function main() {
     historyKey,
     picks: top3,
     picksCount: top3.length,
-    note: "起漲版v2：過熱股硬淘汰（RSI/量比/乖離/近3日漲幅），再套用法人最低門檻與小幅加權重排。",
+    note: "起漲版v2：過熱股硬淘汰（RSI/量比/乖離/近3日漲幅），並新增推薦理由。",
   };
 
   const outToday = path.join(process.cwd(), "public", "today.json");
