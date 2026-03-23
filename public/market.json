@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-03-23T09:36:14.349Z",
-  "asOfLocal": "2026-03-23 17:36:14",
-  "signalDate": "2026-03-23",
+  "generatedAt": "2026-03-23T22:46:52.284Z",
+  "asOfLocal": "2026-03-24 06:46:52",
+  "signalDate": "2026-03-24",
   "stale": false,
   "signal": "caution",
   "label": "🟡 震盪",
   "sources": {
     "usMarket": {
       "symbol": "^GSPC",
-      "last": 6506.47998046875,
+      "last": 6581,
       "prev": 6506.47998046875,
-      "change": 0,
-      "changePct": 0,
-      "lastDate": "2026-03-21",
-      "lastTs": "2026-03-21T05:05:20+08:00",
+      "change": 74.52001953125,
+      "changePct": 1.1453200463990563,
+      "lastDate": "2026-03-24",
+      "lastTs": "2026-03-24T05:11:38+08:00",
       "ok": true,
       "error": null
     },
