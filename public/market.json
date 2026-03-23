@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-22T22:37:48.856Z",
-  "asOfLocal": "2026-03-23 06:37:48",
-  "signalDate": "2026-03-21",
-  "stale": true,
-  "signal": "ok",
-  "label": "🟩 偏多(溫和)",
+  "generatedAt": "2026-03-23T09:36:14.349Z",
+  "asOfLocal": "2026-03-23 17:36:14",
+  "signalDate": "2026-03-23",
+  "stale": false,
+  "signal": "caution",
+  "label": "🟡 震盪",
   "sources": {
     "usMarket": {
       "symbol": "^GSPC",
@@ -19,18 +19,18 @@
     },
     "nightProxy": {
       "symbol": "^N225",
-      "direction": "up",
-      "last": 53372.53125,
+      "direction": "down",
+      "last": 51515.48828125,
       "prev": 53372.53125,
-      "change": 0,
-      "changePct": 0,
-      "lastDate": "2026-03-19",
-      "lastTs": "2026-03-19T14:45:03+08:00",
+      "change": -1857.04296875,
+      "changePct": -3.479398344537013,
+      "lastDate": "2026-03-23",
+      "lastTs": "2026-03-23T14:45:03+08:00",
       "note": null,
       "ok": true,
       "error": null
     }
   },
-  "message": "美股與夜盤同向小漲，偏多但力道溫和：可分批布局，避免追價。",
+  "message": "美股與夜盤訊號不一致（美股上漲 / 夜盤下跌），今日盤勢可能震盪：建議分批、降低槓桿與部位。",
   "note": "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。"
 }
