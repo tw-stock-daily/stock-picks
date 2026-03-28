@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-27T22:47:31.783Z",
-  "asOfLocal": "2026-03-28 06:47:31",
+  "generatedAt": "2026-03-28T22:41:22.888Z",
+  "asOfLocal": "2026-03-29 06:41:22",
   "signalDate": "2026-03-27",
   "stale": false,
   "signal": "bad",
@@ -20,12 +20,12 @@
     "nightProxy": {
       "symbol": "^N225",
       "direction": "down",
-      "last": 53603.6484375,
-      "prev": 53749.62109375,
-      "change": -145.97265625,
-      "changePct": -0.27157894935741916,
-      "lastDate": "2026-03-26",
-      "lastTs": "2026-03-26T08:00:00+08:00",
+      "last": 53373.0703125,
+      "prev": 53603.6484375,
+      "change": -230.578125,
+      "changePct": -0.43015378938029963,
+      "lastDate": "2026-03-27",
+      "lastTs": "2026-03-27T08:00:00+08:00",
       "note": null,
       "ok": true,
       "error": null
