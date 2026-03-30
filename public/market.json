@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-29T22:45:20.806Z",
-  "asOfLocal": "2026-03-30 06:45:20",
-  "signalDate": "2026-03-27",
-  "stale": true,
+  "generatedAt": "2026-03-30T09:54:21.838Z",
+  "asOfLocal": "2026-03-30 17:54:21",
+  "signalDate": "2026-03-30",
+  "stale": false,
   "signal": "bad",
   "label": "🔴 偏空",
   "sources": {
@@ -20,12 +20,12 @@
     "nightProxy": {
       "symbol": "^N225",
       "direction": "down",
-      "last": 53373.0703125,
-      "prev": 53603.6484375,
-      "change": -230.578125,
-      "changePct": -0.43015378938029963,
-      "lastDate": "2026-03-27",
-      "lastTs": "2026-03-27T08:00:00+08:00",
+      "last": 51885.8515625,
+      "prev": 53373.0703125,
+      "change": -1487.21875,
+      "changePct": -2.7864590537743386,
+      "lastDate": "2026-03-30",
+      "lastTs": "2026-03-30T08:00:00+08:00",
       "note": null,
       "ok": true,
       "error": null
