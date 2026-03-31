@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-30T22:50:44.333Z",
-  "asOfLocal": "2026-03-31 06:50:44",
-  "signalDate": "2026-03-30",
+  "generatedAt": "2026-03-31T09:38:45.824Z",
+  "asOfLocal": "2026-03-31 17:38:45",
+  "signalDate": "2026-03-31",
   "stale": false,
-  "signal": "warn",
-  "label": "🟠 偏空(溫和)",
+  "signal": "bad",
+  "label": "🔴 偏空",
   "sources": {
     "usMarket": {
       "symbol": "^GSPC",
@@ -20,17 +20,17 @@
     "nightProxy": {
       "symbol": "^N225",
       "direction": "down",
-      "last": 53373.0703125,
-      "prev": 53603.6484375,
-      "change": -230.578125,
-      "changePct": -0.43015378938029963,
-      "lastDate": "2026-03-27",
-      "lastTs": "2026-03-27T08:00:00+08:00",
+      "last": 51063.71875,
+      "prev": 51885.8515625,
+      "change": -822.1328125,
+      "changePct": -1.5845028803462649,
+      "lastDate": "2026-03-31",
+      "lastTs": "2026-03-31T08:00:00+08:00",
       "note": null,
       "ok": true,
       "error": null
     }
   },
-  "message": "美股與夜盤同向小跌，偏空但力道溫和：建議降低曝險，分批觀望。",
+  "message": "美股與夜盤同向下跌，偏空盤勢：建議保守、降低部位或等待。",
   "note": "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。"
 }
