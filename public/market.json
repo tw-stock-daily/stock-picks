@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-12T22:48:50.713Z",
-  "asOfLocal": "2026-04-13 06:48:50",
-  "signalDate": "2026-04-10",
-  "stale": true,
-  "signal": "caution",
-  "label": "🟡 震盪",
+  "generatedAt": "2026-04-13T10:12:17.445Z",
+  "asOfLocal": "2026-04-13 18:12:17",
+  "signalDate": "2026-04-13",
+  "stale": false,
+  "signal": "warn",
+  "label": "🟠 偏空(溫和)",
   "sources": {
     "usMarket": {
       "symbol": "^GSPC",
@@ -19,18 +19,18 @@
     },
     "nightProxy": {
       "symbol": "^N225",
-      "direction": "up",
-      "last": 56924.109375,
-      "prev": 55895.3203125,
-      "change": 1028.7890625,
-      "changePct": 1.8405638553428767,
-      "lastDate": "2026-04-10",
-      "lastTs": "2026-04-10T08:00:00+08:00",
+      "direction": "down",
+      "last": 56502.76953125,
+      "prev": 56924.109375,
+      "change": -421.33984375,
+      "changePct": -0.7401781922916559,
+      "lastDate": "2026-04-13",
+      "lastTs": "2026-04-13T08:00:00+08:00",
       "note": null,
       "ok": true,
       "error": null
     }
   },
-  "message": "美股與夜盤訊號不一致（美股下跌 / 夜盤上漲），今日盤勢可能震盪：建議分批、降低槓桿與部位。",
+  "message": "美股與夜盤同向小跌，偏空但力道溫和：建議降低曝險，分批觀望。",
   "note": "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。"
 }
