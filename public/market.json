@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-18T22:48:59.173Z",
-  "asOfLocal": "2026-04-19 06:48:59",
+  "generatedAt": "2026-04-19T22:50:20.737Z",
+  "asOfLocal": "2026-04-20 06:50:20",
   "signalDate": "2026-04-17",
-  "stale": false,
+  "stale": true,
   "signal": "caution",
   "label": "🟡 震盪",
   "sources": {
