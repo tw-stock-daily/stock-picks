@@ -1,6 +1,6 @@
 /**
  * 生成 public/today.json
- * v3.7 精準主流版
+ * v3.7T 精準主流版
  */
 
 const fs = require("fs");
@@ -36,8 +36,8 @@ async function main() {
   const generatedAt = isoTaipei();
 
   const payload = {
-    version: "v3.7",
-    tradeStyle: "強評分v3.7",
+    version: "v3.7T",
+    tradeStyle: "主流科技v3.7",
     generatedAt,
     asOfLocal: generatedAt,
     date: today,
