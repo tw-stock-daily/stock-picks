@@ -1,6 +1,6 @@
 /**
  * 生成 public/today.json
- * v3.6 題材驅動版
+ * v3.6P 精準主流版
  */
 
 const fs = require("fs");
@@ -36,8 +36,8 @@ async function main() {
   const generatedAt = isoTaipei();
 
   const payload = {
-    version: "v3.6",
-    tradeStyle: "題材驅動v3.6",
+    version: "v3.6P",
+    tradeStyle: "精準主流v3.6P",
     generatedAt,
     asOfLocal: generatedAt,
     date: today,
@@ -62,6 +62,7 @@ async function main() {
       rsi14: x.rsi14,
       volRatio: x.volRatio,
       ma5: x.ma5,
+      ma10: x.ma10,
       ma20: x.ma20,
       atr14: x.atr14,
       macdDif: x.macdDif,
@@ -100,8 +101,11 @@ async function main() {
 
   console.log(`✅ generated: ${todayPath}`);
   console.log(`✅ history:   ${historyPath}`);
+  console.log(`✅ version:   ${payload.version}`);
+  console.log(`✅ tradeStyle:${payload.tradeStyle}`);
   console.log(`✅ hotThemes: ${(payload.hotThemes || []).map(x => x.theme).join(", ")}`);
-  console.log(`✅ picks:     ${(payload.picks || []).map(x => `${x.symbol}-${x.name}`).join(", ")}`);
+  console.log(`✅ picks:     ${(payload.picks || []).map(x => `${x.symbol}-${x.name}`).join(", ") || "(none)"}`);
+  console.log(`✅ candidates:${payload.candidatesCount}`);
 }
 
 main().catch(err => {
