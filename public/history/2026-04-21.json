@@ -1,14 +1,14 @@
 {
   "version": "v3.7T2",
   "tradeStyle": "主流科技v3.7T2",
-  "generatedAt": "2026-04-21T21:46:09+08:00",
-  "asOfLocal": "2026-04-21T21:46:09+08:00",
+  "generatedAt": "2026-04-21T22:48:45+08:00",
+  "asOfLocal": "2026-04-21T22:48:45+08:00",
   "date": "2026-04-21",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "CPO/光通訊",
-      "score": 30.45,
+      "score": 29.65,
       "news": [
         {
           "title": "台股跳空大漲735點 記憶體大復活 矽光子亮到不行 - Yahoo股市",
@@ -33,7 +33,7 @@
     {
       "rank": 2,
       "theme": "半導體",
-      "score": 22.55,
+      "score": 27.15,
       "news": [
         {
           "title": "台股跳空大漲735點 記憶體大復活 矽光子亮到不行 - Yahoo股市",
@@ -58,7 +58,7 @@
     {
       "rank": 3,
       "theme": "AI伺服器",
-      "score": 12.1,
+      "score": 11.4,
       "news": [
         {
           "title": "AI伺服器貢獻過半　奇鋐大砸150億擴產搶CSP肥單 - NOWnews今日新聞",
@@ -76,14 +76,14 @@
           "title": "目標價上看1150元！外資點「伺服器＋重電大廠」成「準千金股」！這檔EPS預估44.41元、有望直衝1000元資金瘋搶 - FTNN 新聞網",
           "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9aM1dneXlsV041TDBpWUs3M01JXy1JMVg0TDVmR2xUNnhfR3J1U25pTElZOHF3dk9vYVJEdVpxZlNBMEQxcWFua2JQUQ?oc=5",
           "pubDate": "Tue, 21 Apr 2026 02:00:00 GMT",
-          "score": 1.6
+          "score": 1.35
         }
       ]
     },
     {
       "rank": 4,
       "theme": "機器人/自動化",
-      "score": 8.25,
+      "score": 8.8,
       "news": [
         {
           "title": "認識機器人產業，機器人發展史及未來展望 - tejwin.com",
@@ -158,13 +158,13 @@
         "tp2": 2330.5
       },
       "inst": {
-        "windowDays": 8,
+        "windowDays": 7,
         "asOfDate": "2026-04-21",
         "latestDate": "20260421",
-        "sumTotal": 19461,
+        "sumTotal": 21177,
         "sumForeign": 0,
-        "sumTrust": 3497,
-        "sumDealer": 1558,
+        "sumTrust": 3774,
+        "sumDealer": 1556,
         "buyStreak": 6,
         "trustBuyStreak": 6,
         "latestTotalNet": 5643,
@@ -220,13 +220,13 @@
         "tp2": 4686.69
       },
       "inst": {
-        "windowDays": 8,
+        "windowDays": 7,
         "asOfDate": "2026-04-21",
         "latestDate": "20260421",
-        "sumTotal": 1515,
+        "sumTotal": 1582,
         "sumForeign": 0,
-        "sumTrust": 1444,
-        "sumDealer": 11,
+        "sumTrust": 1448,
+        "sumDealer": -47,
         "buyStreak": 3,
         "trustBuyStreak": 3,
         "latestTotalNet": 625,
@@ -281,18 +281,18 @@
         "tp2": 23.35
       },
       "inst": {
-        "windowDays": 8,
+        "windowDays": 7,
         "asOfDate": "2026-04-21",
         "latestDate": "20260421",
-        "sumTotal": 1912,
+        "sumTotal": 3017,
         "sumForeign": 0,
-        "sumTrust": 41,
-        "sumDealer": 341,
-        "buyStreak": 0,
-        "trustBuyStreak": 1,
-        "latestTotalNet": 0,
+        "sumTrust": 0,
+        "sumDealer": 386,
+        "buyStreak": 1,
+        "trustBuyStreak": 0,
+        "latestTotalNet": 926,
         "latestForeignNet": 0,
-        "latestTrustNet": 41,
+        "latestTrustNet": 0,
         "latestDealerNet": 126,
         "unit": "張",
         "source": "TWSE T86 (json)"
