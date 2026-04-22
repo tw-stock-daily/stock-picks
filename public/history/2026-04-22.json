@@ -1,15 +1,15 @@
 {
   "version": "v3.8.2",
   "tradeStyle": "精準優化v3.8.2",
-  "generatedAt": "2026-04-22T23:22:25+08:00",
-  "asOfLocal": "2026-04-22T23:22:25+08:00",
+  "generatedAt": "2026-04-22T23:31:30+08:00",
+  "asOfLocal": "2026-04-22T23:31:30+08:00",
   "date": "2026-04-22",
   "marketState": "strong",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "CPO/光通訊",
-      "score": 23.45,
+      "score": 23.7,
       "news": [
         {
           "title": "今日漲停跌停股｜記憶體、PCB 基板、矽光子三族群領漲，南亞科、聯茂、聯亞爆量漲停，天然氣族群昨漲今跌 0310 - sinotrade.com.tw",
@@ -34,7 +34,7 @@
     {
       "rank": 2,
       "theme": "半導體",
-      "score": 23.05,
+      "score": 23.3,
       "news": [
         {
           "title": "2026年5月台股財經行事曆｜法人說明會、除息日程攻略，掌握 AI 與半導體新賽道！ - sinotrade.com.tw",
@@ -59,7 +59,7 @@
     {
       "rank": 3,
       "theme": "AI伺服器",
-      "score": 14.6,
+      "score": 16.25,
       "news": [
         {
           "title": "AI伺服器代工王！　知情人士：「肉鬆店」明年會翻倍 - ETtoday財經雲",
@@ -137,9 +137,9 @@
       "rank": 1,
       "symbol": "2464",
       "name": "盟立",
-      "score": 146.316,
+      "score": 145.536,
       "baseScore": 132.136,
-      "instScore": 1.3,
+      "instScore": 0,
       "themeScore": 4,
       "lastClose": 94,
       "rsi14": 76.47,
@@ -163,21 +163,21 @@
         "tp2": 106.98
       },
       "inst": {
-        "windowDays": 1,
+        "windowDays": 0,
         "asOfDate": "2026-04-22",
-        "latestDate": "20260422",
-        "sumTotal": 7427,
+        "latestDate": null,
+        "sumTotal": 0,
         "sumForeign": 0,
         "sumTrust": 0,
-        "sumDealer": 246,
-        "buyStreak": 1,
+        "sumDealer": 0,
+        "buyStreak": 0,
         "trustBuyStreak": 0,
-        "latestTotalNet": 7427,
+        "latestTotalNet": 0,
         "latestForeignNet": 0,
         "latestTrustNet": 0,
-        "latestDealerNet": 246,
+        "latestDealerNet": 0,
         "unit": "張",
-        "source": "TWSE T86 (latest available)"
+        "source": "TWSE T86 (fallback)"
       },
       "stockTags": [
         "半導體",
@@ -196,16 +196,16 @@
       "theme": "半導體",
       "marketState": "strong",
       "asOfDataDate": "2026-04-22",
-      "reason": "主推｜20日突破 / 爆量 / MACD多方 / 強於大盤 / 主流:半導體 / 三大法人偏多",
+      "reason": "主推｜20日突破 / 爆量 / MACD多方 / 強於大盤 / 主流:半導體",
       "tradeStyle": "精準優化v3.8.2"
     },
     {
       "rank": 2,
       "symbol": "2303",
       "name": "聯電",
-      "score": 130.411,
+      "score": 129.031,
       "baseScore": 115.631,
-      "instScore": 2.3,
+      "instScore": 0,
       "themeScore": 4,
       "lastClose": 78.6,
       "rsi14": 75.62,
@@ -229,21 +229,21 @@
         "tp2": 88.84
       },
       "inst": {
-        "windowDays": 1,
+        "windowDays": 0,
         "asOfDate": "2026-04-22",
-        "latestDate": "20260421",
-        "sumTotal": 10008,
+        "latestDate": null,
+        "sumTotal": 0,
         "sumForeign": 0,
-        "sumTrust": 10,
-        "sumDealer": 775,
-        "buyStreak": 1,
-        "trustBuyStreak": 1,
-        "latestTotalNet": 10008,
+        "sumTrust": 0,
+        "sumDealer": 0,
+        "buyStreak": 0,
+        "trustBuyStreak": 0,
+        "latestTotalNet": 0,
         "latestForeignNet": 0,
-        "latestTrustNet": 10,
-        "latestDealerNet": 775,
+        "latestTrustNet": 0,
+        "latestDealerNet": 0,
         "unit": "張",
-        "source": "TWSE T86 (latest available)"
+        "source": "TWSE T86 (fallback)"
       },
       "stockTags": [
         "半導體",
@@ -262,16 +262,16 @@
       "theme": "半導體",
       "marketState": "strong",
       "asOfDataDate": "2026-04-22",
-      "reason": "補位｜量增 / MACD多方 / 強於大盤 / 主流:半導體 / 投信買超",
+      "reason": "補位｜量增 / MACD多方 / 強於大盤 / 主流:半導體",
       "tradeStyle": "精準優化v3.8.2"
     },
     {
       "rank": 3,
       "symbol": "2312",
       "name": "金寶",
-      "score": 124.727,
+      "score": 123.947,
       "baseScore": 125.947,
-      "instScore": 1.3,
+      "instScore": 0,
       "themeScore": 0,
       "lastClose": 29.85,
       "rsi14": 73.47,
@@ -295,21 +295,21 @@
         "tp2": 33.56
       },
       "inst": {
-        "windowDays": 1,
+        "windowDays": 0,
         "asOfDate": "2026-04-22",
-        "latestDate": "20260422",
-        "sumTotal": 2546,
+        "latestDate": null,
+        "sumTotal": 0,
         "sumForeign": 0,
         "sumTrust": 0,
-        "sumDealer": 2130,
-        "buyStreak": 1,
+        "sumDealer": 0,
+        "buyStreak": 0,
         "trustBuyStreak": 0,
-        "latestTotalNet": 2546,
+        "latestTotalNet": 0,
         "latestForeignNet": 0,
         "latestTrustNet": 0,
-        "latestDealerNet": 2130,
+        "latestDealerNet": 0,
         "unit": "張",
-        "source": "TWSE T86 (latest available)"
+        "source": "TWSE T86 (fallback)"
       },
       "stockTags": [],
       "industryRoots": [],
@@ -319,9 +319,9 @@
       "theme": null,
       "marketState": "strong",
       "asOfDataDate": "2026-04-22",
-      "reason": "補位｜20日突破 / 爆量 / MACD多方 / 強於大盤 / 三大法人偏多",
+      "reason": "補位｜20日突破 / 爆量 / MACD多方 / 強於大盤",
       "tradeStyle": "精準優化v3.8.2"
     }
   ],
-  "candidatesCount": 143
+  "candidatesCount": 259
 }
