@@ -1,6 +1,6 @@
 /**
  * 生成 public/today.json
- * v3.7T2 主流科技版（放寬震盪盤）
+ * v3.8 精準優化版
  */
 
 const fs = require("fs");
@@ -36,11 +36,12 @@ async function main() {
   const generatedAt = isoTaipei();
 
   const payload = {
-    version: "v3.7T2",
-    tradeStyle: "主流科技v3.7T2",
+    version: "v3.8",
+    tradeStyle: "精準優化v3.8",
     generatedAt,
     asOfLocal: generatedAt,
     date: today,
+    marketState: result.marketState || "neutral",
 
     hotThemes: (result.hotThemes || []).map((x, idx) => ({
       rank: idx + 1,
@@ -69,6 +70,11 @@ async function main() {
       macdDea: x.macdDea,
       macdHist: x.macdHist,
 
+      rs5: x.rs5,
+      rs10: x.rs10,
+      rsScore: x.rsScore,
+      falseBreakoutLike: x.falseBreakoutLike,
+
       plan: x.plan,
       inst: x.inst,
 
@@ -79,6 +85,7 @@ async function main() {
       matchedThemeReasons: x.matchedThemeReasons || [],
       theme: x.theme || null,
 
+      marketState: x.marketState || result.marketState || "neutral",
       asOfDataDate: x.asOfDataDate,
       reason: x.reason,
       tradeStyle: x.tradeStyle
@@ -103,6 +110,7 @@ async function main() {
   console.log(`✅ history:   ${historyPath}`);
   console.log(`✅ version:   ${payload.version}`);
   console.log(`✅ tradeStyle:${payload.tradeStyle}`);
+  console.log(`✅ marketState:${payload.marketState}`);
   console.log(`✅ hotThemes: ${(payload.hotThemes || []).map(x => x.theme).join(", ")}`);
   console.log(`✅ picks:     ${(payload.picks || []).map(x => `${x.symbol}-${x.name}`).join(", ") || "(none)"}`);
   console.log(`✅ candidates:${payload.candidatesCount}`);
