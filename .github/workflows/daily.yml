@@ -21,6 +21,7 @@ jobs:
       - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Setup Node
@@ -33,14 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync to origin/main BEFORE generate
-        run: |
-          set -e
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-          git clean -fdx
-
+      
       - name: Install deps
         run: |
           set -e
