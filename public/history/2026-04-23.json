@@ -1,15 +1,15 @@
 {
-  "version": "v3.8.2",
-  "tradeStyle": "精準優化v3.8.2",
-  "generatedAt": "2026-04-23T23:15:59+08:00",
-  "asOfLocal": "2026-04-23T23:15:59+08:00",
+  "version": "v3.9",
+  "tradeStyle": "資金流強勢版v3.9",
+  "generatedAt": "2026-04-23T23:25:00+08:00",
+  "asOfLocal": "2026-04-23T23:25:00+08:00",
   "date": "2026-04-23",
   "marketState": "strong",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "CPO/光通訊",
-      "score": 25.2,
+      "score": 24.8,
       "news": [
         {
           "title": "【即時新聞】康和證今日簽訂輔導合約推動英華智上市，布局AI伺服器與高速傳輸新藍海 - CMoney投資網誌",
@@ -34,7 +34,7 @@
     {
       "rank": 2,
       "theme": "半導體",
-      "score": 23.45,
+      "score": 22.9,
       "news": [
         {
           "title": "2026年5月台股財經行事曆｜法人說明會、除息日程攻略，掌握 AI 與半導體新賽道！ - sinotrade.com.tw",
@@ -84,7 +84,7 @@
     {
       "rank": 4,
       "theme": "機器人/自動化",
-      "score": 5.5,
+      "score": 7.15,
       "news": [
         {
           "title": "認識機器人產業，機器人發展史及未來展望 - tejwin.com",
@@ -109,7 +109,7 @@
     {
       "rank": 5,
       "theme": "車用電子",
-      "score": 3.85,
+      "score": 4.4,
       "news": [
         {
           "title": "歐特明參加東京車用電子展 視覺 AI 助力 ADAS 與自動駕駛 - 自由財經",
@@ -118,16 +118,16 @@
           "score": 1.1
         },
         {
+          "title": "敦吉啖AI與車用檢測市場 今年獲利樂觀看 - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nbUZkbGNIQjNXWTVNcFlSNmlRcjFSTjhDTkZZelZTcmZrd0pmeXlSc1FMajhyUVpxRnN3bGVMb3h1QkdidVBfZmdRZDF3ckJpSVIyLVBn?oc=5",
+          "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
+          "score": 0.55
+        },
+        {
           "title": "營收連創新高！毅嘉(2402)東南亞新廠投產時程與效益解析，光通訊+車用電子能否撐起高成長？ - 優分析UAnalyze",
           "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBabEFpdjNYUWZOTzQxRjdhbi1oRTh2Z1JRRndnTjY4NjZ5V2c2cUxQR1FneXRXOUQtSXRpaWgyaFRTVDZfdmk1MTZGbGxidUp0WVF3V2Z3?oc=5",
           "pubDate": "Mon, 04 Aug 2025 07:00:00 GMT",
           "score": 0.55
-        },
-        {
-          "title": "車載鏡頭＋AI邊緣運算大升級！特斯拉Robotaxi商機2台廠吃得到-Money錢 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE0zcWxSY2FGRGFFRlgzU21DNG1xWF9UTTl0ODZYRHhZVnJnV1Y3VnVaYUx6bVZvNUQ5TXpRdzNaUEVDU1N3WkV3aGVRSzE4LXoyOWt6TDRlSWxuUEpvWGE2OUNlZUtHSGNhOWtRY1hTRTF5UTFXRzdMNTgtb0E?oc=5",
-          "pubDate": "Mon, 18 Aug 2025 07:00:00 GMT",
-          "score": 1.1
         }
       ]
     }
@@ -137,9 +137,9 @@
       "rank": 1,
       "symbol": "2454",
       "name": "聯發科",
-      "score": 143.039,
+      "score": 149.669,
       "baseScore": 127.039,
-      "instScore": 0,
+      "instScore": 7.8,
       "themeScore": 4,
       "lastClose": 2215,
       "rsi14": 75.16,
@@ -163,23 +163,29 @@
         "tp2": 2493.44
       },
       "inst": {
-        "windowDays": 0,
+        "windowDays": 5,
         "asOfDate": "2026-04-23",
-        "latestDate": null,
-        "usedDates": [],
-        "sumTotal": 0,
+        "latestDate": "20260423",
+        "usedDates": [
+          "20260423",
+          "20260421",
+          "20260420",
+          "20260419",
+          "20260417"
+        ],
+        "sumTotal": 14722,
         "sumForeign": 0,
-        "sumTrust": 0,
-        "sumDealer": 0,
-        "buyStreak": 0,
+        "sumTrust": 3102,
+        "sumDealer": 607,
+        "buyStreak": 5,
         "foreignBuyStreak": 0,
-        "trustBuyStreak": 0,
-        "latestTotalNet": 0,
+        "trustBuyStreak": 5,
+        "latestTotalNet": 1574,
         "latestForeignNet": 0,
-        "latestTrustNet": 0,
-        "latestDealerNet": 0,
+        "latestTrustNet": 595,
+        "latestDealerNet": 232,
         "unit": "張",
-        "source": "TWSE T86 (fallback)"
+        "source": "TWSE T86 (5 latest available days)"
       },
       "stockTags": [
         "半導體",
@@ -199,75 +205,16 @@
       "theme": "半導體",
       "marketState": "strong",
       "asOfDataDate": "2026-04-23",
-      "reason": "主推｜主力爆量 / MACD多方 / 強於大盤 / 主流:半導體",
+      "reason": "主推｜主力爆量 / MACD多方 / 強於大盤 / 主流:半導體 / 投信加碼",
       "tradeStyle": "資金流強勢版v3.9"
     },
     {
       "rank": 2,
-      "symbol": "3518",
-      "name": "柏騰",
-      "score": 141.196,
-      "baseScore": 143.396,
-      "instScore": 0,
-      "themeScore": 0,
-      "lastClose": 30.6,
-      "rsi14": 73.22,
-      "volRatio": 1.46,
-      "ma5": 30.22,
-      "ma10": 26.5,
-      "ma20": 23.71,
-      "atr14": 1.69,
-      "macdDif": 2.4752,
-      "macdDea": 1.3345,
-      "macdHist": 1.1407,
-      "rs5": 0.1523,
-      "rs10": 0.4443,
-      "rsScore": 97.661,
-      "falseBreakoutLike": false,
-      "plan": {
-        "entryLow": 30.18,
-        "entryHigh": 30.94,
-        "stop": 28.24,
-        "tp1": 33.64,
-        "tp2": 35.33
-      },
-      "inst": {
-        "windowDays": 0,
-        "asOfDate": "2026-04-23",
-        "latestDate": null,
-        "usedDates": [],
-        "sumTotal": 0,
-        "sumForeign": 0,
-        "sumTrust": 0,
-        "sumDealer": 0,
-        "buyStreak": 0,
-        "foreignBuyStreak": 0,
-        "trustBuyStreak": 0,
-        "latestTotalNet": 0,
-        "latestForeignNet": 0,
-        "latestTrustNet": 0,
-        "latestDealerNet": 0,
-        "unit": "張",
-        "source": "TWSE T86 (fallback)"
-      },
-      "stockTags": [],
-      "industryRoots": [],
-      "industryRoles": [],
-      "matchedThemes": [],
-      "matchedThemeReasons": [],
-      "theme": null,
-      "marketState": "strong",
-      "asOfDataDate": "2026-04-23",
-      "reason": "補位｜量能放大 / MACD多方 / 強於大盤",
-      "tradeStyle": "資金流強勢版v3.9"
-    },
-    {
-      "rank": 3,
       "symbol": "3189",
       "name": "景碩",
-      "score": 133.127,
+      "score": 136.527,
       "baseScore": 116.752,
-      "instScore": 0,
+      "instScore": 4,
       "themeScore": 4.5,
       "lastClose": 479,
       "rsi14": 72.74,
@@ -291,23 +238,29 @@
         "tp2": 565.59
       },
       "inst": {
-        "windowDays": 0,
+        "windowDays": 5,
         "asOfDate": "2026-04-23",
-        "latestDate": null,
-        "usedDates": [],
-        "sumTotal": 0,
+        "latestDate": "20260423",
+        "usedDates": [
+          "20260423",
+          "20260421",
+          "20260420",
+          "20260419",
+          "20260417"
+        ],
+        "sumTotal": 4901,
         "sumForeign": 0,
-        "sumTrust": 0,
-        "sumDealer": 0,
+        "sumTrust": 730,
+        "sumDealer": -71,
         "buyStreak": 0,
         "foreignBuyStreak": 0,
         "trustBuyStreak": 0,
-        "latestTotalNet": 0,
+        "latestTotalNet": -640,
         "latestForeignNet": 0,
-        "latestTrustNet": 0,
-        "latestDealerNet": 0,
+        "latestTrustNet": -181,
+        "latestDealerNet": -607,
         "unit": "張",
-        "source": "TWSE T86 (fallback)"
+        "source": "TWSE T86 (5 latest available days)"
       },
       "stockTags": [
         "AI伺服器",
@@ -327,9 +280,74 @@
       "theme": "AI伺服器",
       "marketState": "strong",
       "asOfDataDate": "2026-04-23",
-      "reason": "補位｜主力爆量 / MACD多方 / 強於大盤 / 主流:AI伺服器",
+      "reason": "補位｜主力爆量 / MACD多方 / 強於大盤 / 主流:AI伺服器 / 投信加碼",
+      "tradeStyle": "資金流強勢版v3.9"
+    },
+    {
+      "rank": 3,
+      "symbol": "7711",
+      "name": "永擎",
+      "score": 129.634,
+      "baseScore": 131.834,
+      "instScore": 0,
+      "themeScore": 0,
+      "lastClose": 372,
+      "rsi14": 78.18,
+      "volRatio": 4.56,
+      "ma5": 325.1,
+      "ma10": 311.65,
+      "ma20": 292.88,
+      "atr14": 16.63,
+      "macdDif": 23.5104,
+      "macdDea": 17.7588,
+      "macdHist": 5.7516,
+      "rs5": 0.204,
+      "rs10": 0.235,
+      "rsScore": 78.696,
+      "falseBreakoutLike": false,
+      "plan": {
+        "entryLow": 367.84,
+        "entryHigh": 375.33,
+        "stop": 348.72,
+        "tp1": 401.93,
+        "tp2": 418.55
+      },
+      "inst": {
+        "windowDays": 5,
+        "asOfDate": "2026-04-23",
+        "latestDate": "20260423",
+        "usedDates": [
+          "20260423",
+          "20260421",
+          "20260420",
+          "20260417",
+          "20260416"
+        ],
+        "sumTotal": 424,
+        "sumForeign": 0,
+        "sumTrust": 0,
+        "sumDealer": 60,
+        "buyStreak": 3,
+        "foreignBuyStreak": 0,
+        "trustBuyStreak": 0,
+        "latestTotalNet": 271,
+        "latestForeignNet": 0,
+        "latestTrustNet": 0,
+        "latestDealerNet": 56,
+        "unit": "張",
+        "source": "TWSE T86 (5 latest available days)"
+      },
+      "stockTags": [],
+      "industryRoots": [],
+      "industryRoles": [],
+      "matchedThemes": [],
+      "matchedThemeReasons": [],
+      "theme": null,
+      "marketState": "strong",
+      "asOfDataDate": "2026-04-23",
+      "reason": "補位｜20日強勢突破 / 主力爆量 / MACD多方 / 強於大盤",
       "tradeStyle": "資金流強勢版v3.9"
     }
   ],
-  "candidatesCount": 273
+  "candidatesCount": 166
 }
