@@ -20,7 +20,6 @@ body { font-family: Arial; background:#f5f6f8; margin:0; }
 .title { font-size:22px; font-weight:bold; margin-bottom:10px; }
 
 .stat-row { margin-bottom:6px; font-size:15px; }
-.stat { font-size:20px; font-weight:bold; }
 
 .pick {
   border:1px solid #eee;
@@ -82,7 +81,7 @@ async function fetchJson(url){
   return await r.json();
 }
 
-/* ====== 統計（支援新舊版本）====== */
+/* ====== 統計（支援新舊格式）====== */
 async function loadStats(){
   try{
     const s = await fetchJson(STATS_URL);
@@ -118,7 +117,7 @@ async function loadStats(){
   }
 }
 
-/* ====== 今日推薦（含 TP1 / TP2）====== */
+/* ====== 今日推薦（支援 plan / 直接欄位）====== */
 async function loadToday(){
   try{
     const t = await fetchJson(TODAY_URL);
@@ -138,9 +137,9 @@ async function loadToday(){
 
         <div class="plan">
           <div>收盤價：${p.lastClose ?? "--"}</div>
-          <div>TP1：${p.plan?.tp1 ?? "--"}</div>
-          <div>TP2：${p.plan?.tp2 ?? "--"}</div>
-          <div>停損：${p.plan?.stop ?? "--"}</div>
+          <div>TP1：${p.plan?.tp1 ?? p.tp1 ?? "--"}</div>
+          <div>TP2：${p.plan?.tp2 ?? p.tp2 ?? "--"}</div>
+          <div>停損：${p.plan?.stop ?? p.stop ?? "--"}</div>
         </div>
       </div>
     `).join("");
