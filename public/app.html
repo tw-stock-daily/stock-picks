@@ -7,25 +7,28 @@
 
 <style>
 :root{
-  --bg:#06111f;
+  --bg:#050b16;
   --panel:#0b1b2d;
   --panel2:#10243a;
   --line:#28445f;
   --text:#f8fafc;
-  --muted:#9fb2c7;
+  --muted:#a8b7c9;
   --gold:#f6c453;
+  --gold2:#f59e0b;
   --blue:#38bdf8;
   --green:#4ade80;
   --purple:#c084fc;
   --red:#fb7185;
-  --shadow:0 18px 45px rgba(0,0,0,.35);
+  --shadow:0 18px 45px rgba(0,0,0,.38);
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
   background:
     radial-gradient(circle at top right, rgba(56,189,248,.22), transparent 35%),
+    radial-gradient(circle at top left, rgba(246,196,83,.14), transparent 32%),
     linear-gradient(180deg,#06111f,#020617);
   color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
@@ -35,16 +38,15 @@ body{
 .app{
   max-width:980px;
   margin:0 auto;
-  padding:18px 14px 42px;
+  padding:18px 14px 44px;
 }
 
 .hero{
-  padding:28px 22px;
-  border:1px solid rgba(246,196,83,.35);
-  border-radius:26px;
+  padding:30px 22px;
+  border:1px solid rgba(246,196,83,.38);
+  border-radius:28px;
   background:
-    linear-gradient(135deg,rgba(15,35,58,.98),rgba(3,10,22,.96)),
-    radial-gradient(circle at top right,rgba(56,189,248,.25),transparent 30%);
+    linear-gradient(135deg,rgba(15,35,58,.98),rgba(3,10,22,.96));
   box-shadow:var(--shadow);
   margin-bottom:16px;
 }
@@ -59,15 +61,14 @@ body{
 .logo{
   font-size:38px;
   font-weight:950;
-  letter-spacing:1px;
   color:var(--gold);
   line-height:1.15;
 }
 
 .subtitle{
   margin-top:10px;
-  font-size:22px;
-  font-weight:800;
+  font-size:23px;
+  font-weight:850;
 }
 
 .desc{
@@ -96,7 +97,7 @@ body{
 }
 
 .section-title{
-  font-size:24px;
+  font-size:25px;
   font-weight:950;
   margin-bottom:14px;
   display:flex;
@@ -154,15 +155,15 @@ body{
 }
 
 .refresh-btn{
-  border:1px solid rgba(246,196,83,.55);
+  border:1px solid rgba(246,196,83,.65);
   color:#111827;
   background:linear-gradient(135deg,#facc15,#f59e0b);
   font-size:18px;
   font-weight:950;
-  padding:12px 16px;
+  padding:13px 17px;
   border-radius:14px;
   cursor:pointer;
-  box-shadow:0 8px 20px rgba(250,204,21,.18);
+  box-shadow:0 8px 20px rgba(250,204,21,.20);
 }
 
 .refresh-btn.secondary{
@@ -185,14 +186,31 @@ body{
   border:1px solid rgba(148,163,184,.28);
   border-radius:24px;
   padding:18px;
-  background:
-    linear-gradient(135deg,rgba(16,36,58,.96),rgba(6,17,31,.96));
+  background:linear-gradient(135deg,rgba(16,36,58,.96),rgba(6,17,31,.96));
   box-shadow:0 14px 35px rgba(0,0,0,.26);
 }
 
 .pick.main{
-  border-color:rgba(246,196,83,.65);
-  box-shadow:0 0 0 1px rgba(246,196,83,.16),0 18px 45px rgba(0,0,0,.36);
+  border:2px solid rgba(246,196,83,.85);
+  background:
+    radial-gradient(circle at top right,rgba(246,196,83,.15),transparent 34%),
+    linear-gradient(135deg,rgba(30,44,70,.98),rgba(8,20,36,.98));
+  box-shadow:
+    0 0 0 1px rgba(246,196,83,.18),
+    0 20px 50px rgba(0,0,0,.45);
+}
+
+.main-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:linear-gradient(135deg,#facc15,#f59e0b);
+  color:#111827;
+  padding:9px 14px;
+  border-radius:999px;
+  font-size:19px;
+  font-weight:950;
+  margin-bottom:14px;
 }
 
 .pick-head{
@@ -202,18 +220,23 @@ body{
   align-items:flex-start;
 }
 
+.stock-line{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
 .rank{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-width:54px;
-  height:54px;
+  min-width:56px;
+  height:56px;
   border-radius:50%;
   background:linear-gradient(135deg,#facc15,#b45309);
   color:white;
   font-weight:950;
-  font-size:26px;
-  margin-right:12px;
+  font-size:27px;
   box-shadow:0 8px 20px rgba(250,204,21,.25);
 }
 
@@ -221,14 +244,8 @@ body{
   background:linear-gradient(135deg,#64748b,#334155);
 }
 
-.stock-line{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
 .stock-name{
-  font-size:28px;
+  font-size:30px;
   font-weight:950;
   line-height:1.2;
 }
@@ -240,7 +257,7 @@ body{
 }
 
 .score{
-  background:rgba(15,23,42,.6);
+  background:rgba(15,23,42,.62);
   border:1px solid rgba(148,163,184,.25);
   border-radius:16px;
   padding:10px 12px;
@@ -256,8 +273,70 @@ body{
 }
 
 .score b{
-  font-size:24px;
+  font-size:25px;
   color:var(--blue);
+}
+
+.decision{
+  margin-top:16px;
+  padding:16px;
+  border-radius:18px;
+  border:1px solid rgba(246,196,83,.35);
+  background:rgba(246,196,83,.09);
+}
+
+.decision-title{
+  color:var(--gold);
+  font-size:20px;
+  font-weight:950;
+  margin-bottom:8px;
+}
+
+.decision-text{
+  font-size:20px;
+  font-weight:850;
+  line-height:1.55;
+  color:#fff7ed;
+}
+
+.entry-zone{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+
+@media(min-width:760px){
+  .entry-zone{
+    grid-template-columns:1.1fr .9fr;
+  }
+}
+
+.entry-card{
+  background:linear-gradient(135deg,rgba(74,222,128,.14),rgba(56,189,248,.10));
+  border:1px solid rgba(74,222,128,.35);
+  border-radius:18px;
+  padding:16px;
+}
+
+.entry-label{
+  color:#bbf7d0;
+  font-size:17px;
+  font-weight:850;
+  margin-bottom:8px;
+}
+
+.entry-value{
+  font-size:30px;
+  font-weight:950;
+  color:var(--green);
+}
+
+.strategy-card{
+  background:rgba(2,6,23,.35);
+  border:1px solid rgba(148,163,184,.22);
+  border-radius:18px;
+  padding:16px;
 }
 
 .tags{
@@ -322,7 +401,7 @@ body{
 }
 
 .price-value{
-  font-size:25px;
+  font-size:26px;
   font-weight:950;
 }
 
@@ -477,23 +556,66 @@ function cleanArray(arr){
 function getPlan(p){
   return {
     close: p.lastClose ?? p.close ?? "--",
+    entryLow: p.plan?.entryLow ?? p.entryLow ?? p.lastClose ?? "--",
+    entryHigh: p.plan?.entryHigh ?? p.entryHigh ?? p.lastClose ?? "--",
     tp1: p.plan?.tp1 ?? p.tp1 ?? "--",
     tp2: p.plan?.tp2 ?? p.tp2 ?? "--",
     stop: p.plan?.stop ?? p.stop ?? "--"
   };
 }
 
+function firstDecisionText(p){
+  const reason = String(p.reason || "").replace("主推｜","").replace("補位｜","");
+  const first = reason.split(/[。／/]/)[0]?.trim();
+  if(first) return `資金流訊號偏強，${first}`;
+  return "資金流、量能與趨勢同步轉強，列為今日優先觀察標的。";
+}
+
 function rankText(rank, alt){
-  if(alt) return `備選 ${rank}`;
+  if(alt) return `備${rank}`;
   if(rank === 1) return "1";
   if(rank === 2) return "2";
   if(rank === 3) return "3";
   return String(rank);
 }
 
+function renderMainDecision(p, plan){
+  return `
+    <div class="decision">
+      <div class="decision-title">🎯 今日決策重點</div>
+      <div class="decision-text">${firstDecisionText(p)}</div>
+    </div>
+
+    <div class="entry-zone">
+      <div class="entry-card">
+        <div class="entry-label">建議進場區</div>
+        <div class="entry-value">${num(plan.entryLow,2)} ～ ${num(plan.entryHigh,2)}</div>
+      </div>
+      <div class="strategy-card">
+        <div class="price-grid" style="margin-top:0; grid-template-columns:repeat(3,1fr);">
+          <div>
+            <div class="price-label">目標一</div>
+            <div class="price-value tp1">${num(plan.tp1,2)}</div>
+          </div>
+          <div>
+            <div class="price-label">目標二</div>
+            <div class="price-value tp2">${num(plan.tp2,2)}</div>
+          </div>
+          <div>
+            <div class="price-label">風控</div>
+            <div class="price-value stop">${num(plan.stop,2)}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderPick(p, index, alt=false){
   const rank = p.rank ?? (alt ? index + 4 : index + 1);
+  const isMain = rank === 1 && !alt;
   const plan = getPlan(p);
+
   const tags = [
     ...(cleanArray(p.matchedThemes).slice(0,2)),
     ...(cleanArray(p.stockTags).slice(0,2))
@@ -506,7 +628,9 @@ function renderPick(p, index, alt=false){
   const inst = p.inst || {};
 
   return `
-    <article class="pick ${rank===1 && !alt ? "main" : ""}">
+    <article class="pick ${isMain ? "main" : ""}">
+      ${isMain ? `<div class="main-badge">🥇 今日主推｜系統最高分</div>` : ""}
+
       <div class="pick-head">
         <div>
           <div class="stock-line">
@@ -523,9 +647,11 @@ function renderPick(p, index, alt=false){
         </div>
       </div>
 
+      ${isMain ? renderMainDecision(p, plan) : ""}
+
       <div class="tags">${tagHtml}</div>
 
-      <div class="reason">${p.reason || "資金流、量能與趨勢符合強勢股條件。"}</div>
+      ${!isMain ? `<div class="reason">${p.reason || "資金流、量能與趨勢符合強勢股條件。"}</div>` : ""}
 
       <div class="price-grid">
         <div class="price-card">
@@ -594,7 +720,7 @@ function renderPicks(){
     showingAlternates ? "refresh-btn secondary" : "refresh-btn";
 
   if(!list.length){
-    box.innerHTML = `<div class="empty">${showingAlternates ? "今日沒有備選股資料，請確認 generate_today.js 是否已更新。" : "今日沒有推薦資料。"}</div>`;
+    box.innerHTML = `<div class="empty">${showingAlternates ? "今日沒有備選股資料。" : "今日沒有推薦資料。"}</div>`;
     return;
   }
 
