@@ -34,49 +34,57 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd
+
       - name: Install deps
         run: |
-          set -e
           npm install --no-audit --no-fund
 
-      - name: Generate JSON
+      - name: Generate market
+        run: |
+          node script/generate_market.js
+
+      - name: Generate today
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: |
-          set -e
-          npm run generate
+          node script/generate_today.js
 
-      - name: Debug list output
+      - name: Generate stats
         run: |
-          set -e
-          echo "=== DEBUG: list public/ and history ==="
+          node script/stats_winrate.js
+
+      - name: Debug output
+        run: |
+          echo "=== public ==="
           ls -al public || true
+          echo "=== history ==="
           ls -al public/history || true
-          echo "=== DEBUG: git status ==="
+          echo "=== git status ==="
           git status --porcelain
 
-      - name: Commit & Push (safe rebase + retry)
+      - name: Commit and push
         run: |
-          set -e
-          git add public/today.json public/history/*.json || true
+          git add public/market.json public/today.json public/stats.json public/history/*.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: update json ($(date -u +'%Y-%m-%d %H:%M:%S') UTC)"
+          git commit -m "chore: auto update daily json"
 
           for i in 1 2 3; do
-            git fetch origin main
-            git rebase origin/main || (git rebase --abort && exit 1)
-
+            git pull --rebase origin main || true
             if git push origin main; then
               echo "Push success."
               exit 0
             fi
-
-            echo "Push failed (likely non-fast-forward). Retry in 3s..."
+            echo "Push failed, retrying..."
             sleep 3
           done
 
