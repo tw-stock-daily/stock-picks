@@ -1,689 +1,159 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台股精選</title>
 
-  <title>台股精選</title>
+<style>
+body { font-family: Arial; background:#f5f6f8; margin:0; }
+.app { max-width:900px; margin:auto; padding:20px; }
 
-  <style>
-    :root {
-      --bg: #f5f6f8;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-      --green: #16a34a;
-      --red: #dc2626;
-      --yellow: #ca8a04;
-      --blue: #2563eb;
-      --dark: #0f172a;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      --radius: 18px;
-    }
+.card {
+  background:#fff;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
 
-    * {
-      box-sizing: border-box;
-    }
+.title { font-size:22px; font-weight:bold; margin-bottom:10px; }
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+.stat-row { margin-bottom:6px; font-size:15px; }
+.stat { font-size:20px; font-weight:bold; }
 
-    .app {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 18px 14px 40px;
-    }
+.pick {
+  border:1px solid #eee;
+  padding:14px;
+  border-radius:14px;
+  margin-bottom:12px;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      border-radius: 24px;
-      padding: 22px 20px;
-      box-shadow: var(--shadow);
-      margin-bottom: 16px;
-    }
+.pick-title {
+  font-size:18px;
+  font-weight:bold;
+}
 
-    .hero h1 {
-      margin: 0 0 8px;
-      font-size: 26px;
-      letter-spacing: 0.5px;
-    }
+.gray { color:#666; }
 
-    .hero p {
-      margin: 0;
-      color: #cbd5e1;
-      font-size: 14px;
-      line-height: 1.6;
-    }
+.plan {
+  margin-top:10px;
+  background:#fafafa;
+  padding:10px;
+  border-radius:10px;
+}
 
-    .top-row {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    @media (min-width: 760px) {
-      .top-row {
-        grid-template-columns: 1.2fr 0.8fr;
-      }
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(229, 231, 235, 0.8);
-      padding: 16px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin: 0 0 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .sub {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .signal {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 800;
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 14px;
-      background: #f1f5f9;
-    }
-
-    .signal.good {
-      color: var(--green);
-      background: #dcfce7;
-    }
-
-    .signal.warn {
-      color: var(--yellow);
-      background: #fef9c3;
-    }
-
-    .signal.bad {
-      color: var(--red);
-      background: #fee2e2;
-    }
-
-    .market-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .market-item {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 10px 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .market-name {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .market-value {
-      font-size: 15px;
-      font-weight: 800;
-      text-align: right;
-    }
-
-    .up {
-      color: var(--green);
-    }
-
-    .down {
-      color: var(--red);
-    }
-
-    .flat {
-      color: var(--muted);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    @media (min-width: 760px) {
-      .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .stat {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px;
-      background: #fafafa;
-    }
-
-    .stat-label {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 6px;
-    }
-
-    .stat-value {
-      font-size: 20px;
-      font-weight: 900;
-    }
-
-    .picks {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .pick-card {
-      background: var(--card);
-      border-radius: 22px;
-      border: 1px solid rgba(229, 231, 235, 0.95);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      overflow: hidden;
-    }
-
-    .pick-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .rank {
-      font-size: 14px;
-      font-weight: 900;
-      color: white;
-      background: var(--dark);
-      border-radius: 999px;
-      padding: 6px 10px;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-
-    .stock-title {
-      font-size: 23px;
-      font-weight: 950;
-      margin: 0;
-      letter-spacing: 0.3px;
-    }
-
-    .stock-code {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 3px;
-    }
-
-    .score {
-      min-width: 72px;
-      text-align: center;
-      border-radius: 16px;
-      padding: 10px 8px;
-      background: #eff6ff;
-      color: var(--blue);
-      font-weight: 900;
-    }
-
-    .score small {
-      display: block;
-      font-size: 11px;
-      color: #64748b;
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
-
-    .reason {
-      background: #f8fafc;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px;
-      font-size: 14px;
-      line-height: 1.6;
-      margin: 12px 0;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0 14px;
-    }
-
-    .tag {
-      border-radius: 999px;
-      padding: 6px 10px;
-      background: #f1f5f9;
-      color: #334155;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .tag.hot {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
-      margin-top: 12px;
-    }
-
-    @media (min-width: 760px) {
-      .info-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .info {
-      border: 1px solid var(--line);
-      border-radius: 13px;
-      padding: 10px;
-    }
-
-    .info .label {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 4px;
-    }
-
-    .info .value {
-      font-weight: 850;
-      font-size: 15px;
-    }
-
-    .inst-box {
-      margin-top: 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      padding: 12px;
-      background: #fff;
-    }
-
-    .inst-title {
-      font-size: 14px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .inst-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-
-    .inst-cell {
-      background: #f8fafc;
-      border-radius: 12px;
-      padding: 8px;
-      text-align: center;
-    }
-
-    .inst-cell .label {
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .inst-cell .value {
-      font-size: 14px;
-      font-weight: 850;
-    }
-
-    .footer {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .empty {
-      text-align: center;
-      color: var(--muted);
-      padding: 30px 10px;
-      background: var(--card);
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-    }
-
-    .error {
-      color: var(--red);
-      font-weight: 800;
-    }
-  </style>
+.plan div {
+  margin-bottom:4px;
+}
+</style>
 </head>
 
 <body>
-  <main class="app">
-    <section class="hero">
-      <h1>台股精選</h1>
-      <p>每日精選 3 檔市場強勢股，聚焦資金流、成交量、法人動向與主流題材。</p>
-    </section>
+<div class="app">
 
-    <section class="top-row">
-      <div class="card">
-        <div class="section-title">
-          <span>今日盤勢燈號</span>
-          <span id="marketSignal" class="signal warn">載入中</span>
-        </div>
-        <div id="marketText" class="sub">正在讀取美股與台指期資訊...</div>
+<!-- ====== 統計 ====== -->
+<div class="card">
+  <div class="title">📊 績效統計</div>
+  <div class="stat-row">樣本數：<span id="statSamples">--</span></div>
+  <div class="stat-row">TP1 (+3%)：<span id="statTp1">--</span></div>
+  <div class="stat-row">TP2 (+5%)：<span id="statTp2">--</span></div>
+  <div class="stat-row">每日命中：<span id="statDaily">--</span></div>
+</div>
 
-        <div class="market-grid">
-          <div class="market-item">
-            <div>
-              <div class="market-name">S&P 500</div>
-              <div class="sub">美股主要參考</div>
-            </div>
-            <div id="sp500Value" class="market-value flat">--</div>
-          </div>
+<!-- ====== 今日推薦 ====== -->
+<div class="card">
+  <div class="title">📈 今日推薦</div>
+  <div id="picks">載入中...</div>
+</div>
 
-          <div class="market-item">
-            <div>
-              <div class="market-name">台指期近一</div>
-              <div class="sub">夜盤 / 期貨參考</div>
-            </div>
-            <div id="twFutureValue" class="market-value flat">--</div>
-          </div>
+</div>
+
+<script>
+const TODAY_URL = "./today.json";
+const STATS_URL = "./stats.json";
+
+function pct(n){
+  return (n*100).toFixed(2) + "%";
+}
+
+async function fetchJson(url){
+  const r = await fetch(url + "?t=" + Date.now());
+  return await r.json();
+}
+
+/* ====== 統計（支援新舊版本）====== */
+async function loadStats(){
+  try{
+    const s = await fetchJson(STATS_URL);
+
+    const samples =
+      s.totalSamples ??
+      s.total_samples ??
+      "--";
+
+    const tp1 =
+      s.tp1?.hitRate ??
+      s.d5_tp1_rate ??
+      null;
+
+    const tp2 =
+      s.tp2?.hitRate ??
+      s.d5_tp2_rate ??
+      null;
+
+    const daily =
+      s.dailyHit?.tp2?.hitRate ??
+      s.dailyHit?.tp1?.hitRate ??
+      s.daily_hit_rate ??
+      null;
+
+    document.getElementById("statSamples").textContent = samples;
+    document.getElementById("statTp1").textContent = tp1!=null ? pct(tp1) : "--";
+    document.getElementById("statTp2").textContent = tp2!=null ? pct(tp2) : "--";
+    document.getElementById("statDaily").textContent = daily!=null ? pct(daily) : "--";
+
+  }catch(e){
+    console.log("stats error", e);
+  }
+}
+
+/* ====== 今日推薦（含 TP1 / TP2）====== */
+async function loadToday(){
+  try{
+    const t = await fetchJson(TODAY_URL);
+    const picks = t.picks || [];
+
+    const box = document.getElementById("picks");
+
+    if(!picks.length){
+      box.innerHTML = "沒有資料";
+      return;
+    }
+
+    box.innerHTML = picks.map(p=>`
+      <div class="pick">
+        <div class="pick-title">${p.name} (${p.symbol})</div>
+        <div class="gray">${p.reason || ""}</div>
+
+        <div class="plan">
+          <div>收盤價：${p.lastClose ?? "--"}</div>
+          <div>TP1：${p.plan?.tp1 ?? "--"}</div>
+          <div>TP2：${p.plan?.tp2 ?? "--"}</div>
+          <div>停損：${p.plan?.stop ?? "--"}</div>
         </div>
       </div>
+    `).join("");
 
-      <div class="card">
-        <div class="section-title">
-          <span>近兩個月績效</span>
-        </div>
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-label">樣本數</div>
-            <div id="statSamples" class="stat-value">--</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">TP1 +3%</div>
-            <div id="statTp1" class="stat-value">--</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">TP2 +5%</div>
-            <div id="statTp2" class="stat-value">--</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">每日命中</div>
-            <div id="statDaily" class="stat-value">--</div>
-          </div>
-        </div>
-        <div class="sub" style="margin-top:10px;">
-          統計為歷史資料回測，不代表未來報酬。
-        </div>
-      </div>
-    </section>
+  }catch(e){
+    document.getElementById("picks").innerHTML = "載入失敗";
+  }
+}
 
-    <section style="margin-top:18px;">
-      <div class="section-title">
-        <span>今日推薦個股</span>
-        <span id="updateTime" class="sub">--</span>
-      </div>
+/* 初始化 */
+loadStats();
+loadToday();
+</script>
 
-      <div id="picks" class="picks">
-        <div class="empty">正在載入今日推薦...</div>
-      </div>
-    </section>
-
-    <div class="footer">
-      本系統為量化資料分析與研究工具，不構成投資建議。投資有風險，請自行判斷。
-    </div>
-  </main>
-
-  <script>
-    const TODAY_URL = "./today.json";
-    const MARKET_URL = "./market.json";
-    const STATS_URL = "./stats.json";
-
-    function pct(n) {
-      const num = Number(n || 0);
-      return `${(num * 100).toFixed(2)}%`;
-    }
-
-    function signedPct(n) {
-      const num = Number(n || 0);
-      const sign = num > 0 ? "+" : "";
-      return `${sign}${(num * 100).toFixed(2)}%`;
-    }
-
-    function money(n) {
-      const num = Number(n || 0);
-      if (!Number.isFinite(num)) return "--";
-      return num.toLocaleString("zh-TW", {
-        minimumFractionDigits: num >= 1000 ? 0 : 2,
-        maximumFractionDigits: num >= 1000 ? 0 : 2
-      });
-    }
-
-    function val(n, digits = 2) {
-      const num = Number(n || 0);
-      if (!Number.isFinite(num)) return "--";
-      return num.toFixed(digits);
-    }
-
-    function cssByPct(n) {
-      const num = Number(n || 0);
-      if (num > 0) return "up";
-      if (num < 0) return "down";
-      return "flat";
-    }
-
-    function rankLabel(rank) {
-      if (rank === 1) return "🥇 主推";
-      if (rank === 2) return "🥈 次強";
-      if (rank === 3) return "🥉 潛力";
-      return `#${rank}`;
-    }
-
-    function cleanArray(arr) {
-      return Array.isArray(arr)
-        ? arr.filter(x => x && String(x).trim() && String(x).trim() !== "尚未提供")
-        : [];
-    }
-
-    async function fetchJson(url) {
-      const r = await fetch(`${url}?t=${Date.now()}`, { cache: "no-store" });
-      if (!r.ok) throw new Error(`${url} ${r.status}`);
-      return await r.json();
-    }
-
-    async function loadMarket() {
-      try {
-        const market = await fetchJson(MARKET_URL);
-
-        const signal = market.signal || {};
-        const el = document.getElementById("marketSignal");
-        el.textContent = signal.label || "🟡 震盪";
-        el.className = `signal ${signal.state || "warn"}`;
-
-        document.getElementById("marketText").textContent =
-          signal.text || "外部市場訊號中性。";
-
-        const sp500 = market.us?.sp500;
-        const twFuture = market.taiwan?.nightFuture;
-
-        if (sp500) {
-          const c = cssByPct(sp500.changePct);
-          document.getElementById("sp500Value").className = `market-value ${c}`;
-          document.getElementById("sp500Value").textContent =
-            `${money(sp500.price)} / ${signedPct(sp500.changePct)}`;
-        }
-
-        if (twFuture) {
-          const c = cssByPct(twFuture.changePct);
-          document.getElementById("twFutureValue").className = `market-value ${c}`;
-          document.getElementById("twFutureValue").textContent =
-            `${money(twFuture.price)} / ${signedPct(twFuture.changePct)}`;
-        }
-      } catch (err) {
-        document.getElementById("marketSignal").textContent = "讀取失敗";
-        document.getElementById("marketText").innerHTML =
-          `<span class="error">market.json 載入失敗</span>`;
-      }
-    }
-
-    async function loadStats() {
-      try {
-        const stats = await fetchJson(STATS_URL);
-
-        document.getElementById("statSamples").textContent =
-          stats.totalSamples ?? "--";
-
-        document.getElementById("statTp1").textContent =
-          stats.tp1?.hitRate != null ? pct(stats.tp1.hitRate) : "--";
-
-        document.getElementById("statTp2").textContent =
-          stats.tp2?.hitRate != null ? pct(stats.tp2.hitRate) : "--";
-
-        document.getElementById("statDaily").textContent =
-          stats.dailyHit?.tp2?.hitRate != null
-            ? pct(stats.dailyHit.tp2.hitRate)
-            : "--";
-      } catch {
-        document.getElementById("statSamples").textContent = "--";
-      }
-    }
-
-    function renderPick(pick, index) {
-      const rank = pick.rank || index + 1;
-      const tags = [
-        ...(cleanArray(pick.matchedThemes).slice(0, 3)),
-        ...(cleanArray(pick.stockTags).slice(0, 3))
-      ];
-
-      const inst = pick.inst || {};
-
-      const tagHtml = tags.length
-        ? tags.map((t, i) => `<span class="tag ${i === 0 ? "hot" : ""}">${t}</span>`).join("")
-        : `<span class="tag">資金流觀察</span>`;
-
-      return `
-        <article class="pick-card">
-          <div class="pick-head">
-            <div>
-              <div class="rank">${rankLabel(rank)}</div>
-              <h2 class="stock-title">${pick.name || "--"}</h2>
-              <div class="stock-code">${pick.symbol || "--"}｜${pick.tradeStyle || "資金流強勢版"}</div>
-            </div>
-            <div class="score">
-              <small>綜合分數</small>
-              ${val(pick.score, 1)}
-            </div>
-          </div>
-
-          <div class="reason">
-            ${pick.reason || "今日資金流與技術面符合強勢股條件。"}
-          </div>
-
-          <div class="tags">
-            ${tagHtml}
-          </div>
-
-          <div class="info-grid">
-            <div class="info">
-              <div class="label">收盤價</div>
-              <div class="value">${money(pick.lastClose)}</div>
-            </div>
-            <div class="info">
-              <div class="label">量比</div>
-              <div class="value">${val(pick.volRatio, 2)}</div>
-            </div>
-            <div class="info">
-              <div class="label">MA5 / MA20</div>
-              <div class="value">${money(pick.ma5)} / ${money(pick.ma20)}</div>
-            </div>
-            <div class="info">
-              <div class="label">MACD柱</div>
-              <div class="value">${val(pick.macdHist, 4)}</div>
-            </div>
-          </div>
-
-          <div class="inst-box">
-            <div class="inst-title">三大法人近 5 日累計（張）</div>
-            <div class="inst-row">
-              <div class="inst-cell">
-                <div class="label">外資</div>
-                <div class="value ${Number(inst.sumForeign || 0) >= 0 ? "up" : "down"}">${money(inst.sumForeign)}</div>
-              </div>
-              <div class="inst-cell">
-                <div class="label">投信</div>
-                <div class="value ${Number(inst.sumTrust || 0) >= 0 ? "up" : "down"}">${money(inst.sumTrust)}</div>
-              </div>
-              <div class="inst-cell">
-                <div class="label">自營</div>
-                <div class="value ${Number(inst.sumDealer || 0) >= 0 ? "up" : "down"}">${money(inst.sumDealer)}</div>
-              </div>
-              <div class="inst-cell">
-                <div class="label">合計</div>
-                <div class="value ${Number(inst.sumTotal || 0) >= 0 ? "up" : "down"}">${money(inst.sumTotal)}</div>
-              </div>
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    async function loadToday() {
-      try {
-        const today = await fetchJson(TODAY_URL);
-        const picks = Array.isArray(today.picks) ? today.picks : [];
-
-        document.getElementById("updateTime").textContent =
-          today.asOfLocal || today.generatedAt || "--";
-
-        const box = document.getElementById("picks");
-
-        if (!picks.length) {
-          box.innerHTML = `<div class="empty">今日沒有符合條件的推薦個股。</div>`;
-          return;
-        }
-
-        box.innerHTML = picks.map(renderPick).join("");
-      } catch (err) {
-        document.getElementById("picks").innerHTML =
-          `<div class="empty error">today.json 載入失敗，請確認檔案是否已產生。</div>`;
-      }
-    }
-
-    async function init() {
-      await Promise.all([
-        loadMarket(),
-        loadStats(),
-        loadToday()
-      ]);
-    }
-
-    init();
-  </script>
 </body>
 </html>
