@@ -1,40 +1,15 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-04-26T22:05:29+08:00",
-  "asOfLocal": "2026-04-26T22:05:29+08:00",
+  "generatedAt": "2026-04-26T23:53:01+08:00",
+  "asOfLocal": "2026-04-26T23:53:01+08:00",
   "date": "2026-04-26",
   "marketState": "strong",
   "hotThemes": [
     {
       "rank": 1,
-      "theme": "半導體",
-      "score": 24.3,
-      "news": [
-        {
-          "title": "2026年5月台股財經行事曆｜法人說明會、除息日程攻略，掌握 AI 與半導體新賽道！ - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxNMk9TSmJPUGZNTTFzeWxHOVBhR2JqLUhqVmpreXk4cU9IZ2ZjZlBFNm1mcERqbHlPQXBYU2hMV0tDSFB5OTI4Z3ByV3R0UXlYRXozZ21xWm1kYkJGa3ZFal9vN0dOenFycy1pdEl6OEFJV2JKcUYyOU5MWjROLU9tUWY3ZFV0eWhBeXVpS0RUTW9PMldScnhad3NGVHFHRldkdndjcVNmNUM5SENPSk1HZXktOWVpMGhjUzNScXJ3b0Y3TkZsRjdVRGk0YTFzcTVXNUxrLTdnWWpWVEpINzZ2emVTWm9Gb0l1UUhualFGcGpfU015ZGN4UUlhWHVzU0VjblZkbmloR2VHRXFZVWhtQjZ0LVRRQnpVMVAzOHVGdzNYT29QQXl2ZmVSUU9qS0NaZ0FrM180cU5LYkhSLVVnMXlYZTRlWWhxNHFuVU1Ea25OTktmNlhfRE9EMXNOSDdEd21OdVJ3SVAydnZuTHVOOURxM3Nfc3hTb29nRGRYY2Z0ZXlvd1FBMFRzTGc0ZGNWRHhXX0xCNy1sMXFmcUJsRXRXaHBLc3BNWFRiOGF1ejN1OHd4aGw1RGdPVkx0VUNoUjZNM1ZfdXp4Nk9kUGFXZUhTU3d3cUc4Um1zT0lwRDhzakFWRGQ5eA?oc=5",
-          "pubDate": "Fri, 24 Apr 2026 07:00:00 GMT",
-          "score": 1
-        },
-        {
-          "title": "蘇元和觀點》台股衝戰4萬點記憶體卻躺平？真相：山頂的人太多了| 財經 - Newtalk新聞",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yWFZ2Y0pCVnJXSVBpUEFkVl9ub1hrZkRJMkVXeUNDMnBzT0lURGlLeEo0bDV0cklUU09odnkwSkE0UzNqeFpTMElwSnpSUm84a2ZIcTlNcjZfX00?oc=5",
-          "pubDate": "Sun, 26 Apr 2026 03:03:10 GMT",
-          "score": 1.6
-        },
-        {
-          "title": "「台積電條款」讓神山更神！台股噴38932點放新高煙火秀｜Yahoo財經掃描 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxQSFZreUhkZzlTdVdLQmo2blBwZDYwTjhqUFJXX0Y5WTlfUTd3V2ROalQySDVVTDZJNHpOZVR5ZUpOUHZidWU4ODd4U0t3bU9ZSFRrcmNRcXpYMlYybll0aUJxSnhNUHFXSUVETDU2YWtxWU9nT1hnQmhlNjduOGVpa01tUUJzTjZxNF9aYU9hOTF3VGtRUGZTZHJSMWt6NjEyQ0NDTm9jZzNrNkpQcVRxa2J3QnhtVXdsWXdMVWRhbGZyNXBKSkZiN2M5MHgySmtDOTlKTkJOZkJCU2hzZTVoRzQ5d29JRkpyQ1dCQW1RTWN4T1RCU1N5YnJLbFByNmdyS1Y1U3JEb2xwcUVld0oxOWExMlIzendTdkhtTFk5TUd2VlNBRHpYbFZzOWU1bWlvdE5SZVFYYzlSdW01d1NQTUlYcGdEVGdyQ2hERlh1NnJyUUp0UFNLM2lZb0RWYmRmRmJJa3RQSlFsS01VdmFlNmo5ekFLdmxjVS0yT2pDVVdjY3FRRkVvdVZfLXJrUFpCWERRenVHSVR2dFFIWHBMbl9TRHNuWVNPbHZjNklPbGhFTmxLUDl6aw?oc=5",
-          "pubDate": "Fri, 24 Apr 2026 09:11:09 GMT",
-          "score": 1
-        }
-      ]
-    },
-    {
-      "rank": 2,
       "theme": "CPO/光通訊",
-      "score": 23.55,
+      "score": 24.2,
       "news": [
         {
           "title": "低軌衛星接棒AI伺服器大成長 從Micro LED與CPO族群找主升段強股 | 個人理財 | 理財 - 經濟日報",
@@ -57,9 +32,34 @@
       ]
     },
     {
+      "rank": 2,
+      "theme": "半導體",
+      "score": 23.9,
+      "news": [
+        {
+          "title": "2026年5月台股財經行事曆｜法人說明會、除息日程攻略，掌握 AI 與半導體新賽道！ - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxNMk9TSmJPUGZNTTFzeWxHOVBhR2JqLUhqVmpreXk4cU9IZ2ZjZlBFNm1mcERqbHlPQXBYU2hMV0tDSFB5OTI4Z3ByV3R0UXlYRXozZ21xWm1kYkJGa3ZFal9vN0dOenFycy1pdEl6OEFJV2JKcUYyOU5MWjROLU9tUWY3ZFV0eWhBeXVpS0RUTW9PMldScnhad3NGVHFHRldkdndjcVNmNUM5SENPSk1HZXktOWVpMGhjUzNScXJ3b0Y3TkZsRjdVRGk0YTFzcTVXNUxrLTdnWWpWVEpINzZ2emVTWm9Gb0l1UUhualFGcGpfU015ZGN4UUlhWHVzU0VjblZkbmloR2VHRXFZVWhtQjZ0LVRRQnpVMVAzOHVGdzNYT29QQXl2ZmVSUU9qS0NaZ0FrM180cU5LYkhSLVVnMXlYZTRlWWhxNHFuVU1Ea25OTktmNlhfRE9EMXNOSDdEd21OdVJ3SVAydnZuTHVOOURxM3Nfc3hTb29nRGRYY2Z0ZXlvd1FBMFRzTGc0ZGNWRHhXX0xCNy1sMXFmcUJsRXRXaHBLc3BNWFRiOGF1ejN1OHd4aGw1RGdPVkx0VUNoUjZNM1ZfdXp4Nk9kUGFXZUhTU3d3cUc4Um1zT0lwRDhzakFWRGQ5eA?oc=5",
+          "pubDate": "Fri, 24 Apr 2026 07:00:00 GMT",
+          "score": 1
+        },
+        {
+          "title": "蘇元和觀點》台股衝戰4萬點記憶體卻躺平？真相：山頂的人太多了| 財經 - Newtalk新聞",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yWFZ2Y0pCVnJXSVBpUEFkVl9ub1hrZkRJMkVXeUNDMnBzT0lURGlLeEo0bDV0cklUU09odnkwSkE0UzNqeFpTMElwSnpSUm84a2ZIcTlNcjZfX00?oc=5",
+          "pubDate": "Sun, 26 Apr 2026 03:03:10 GMT",
+          "score": 1.35
+        },
+        {
+          "title": "「台積電條款」讓神山更神！台股噴38932點放新高煙火秀｜Yahoo財經掃描 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxQSFZreUhkZzlTdVdLQmo2blBwZDYwTjhqUFJXX0Y5WTlfUTd3V2ROalQySDVVTDZJNHpOZVR5ZUpOUHZidWU4ODd4U0t3bU9ZSFRrcmNRcXpYMlYybll0aUJxSnhNUHFXSUVETDU2YWtxWU9nT1hnQmhlNjduOGVpa01tUUJzTjZxNF9aYU9hOTF3VGtRUGZTZHJSMWt6NjEyQ0NDTm9jZzNrNkpQcVRxa2J3QnhtVXdsWXdMVWRhbGZyNXBKSkZiN2M5MHgySmtDOTlKTkJOZkJCU2hzZTVoRzQ5d29JRkpyQ1dCQW1RTWN4T1RCU1N5YnJLbFByNmdyS1Y1U3JEb2xwcUVld0oxOWExMlIzendTdkhtTFk5TUd2VlNBRHpYbFZzOWU1bWlvdE5SZVFYYzlSdW01d1NQTUlYcGdEVGdyQ2hERlh1NnJyUUp0UFNLM2lZb0RWYmRmRmJJa3RQSlFsS01VdmFlNmo5ekFLdmxjVS0yT2pDVVdjY3FRRkVvdVZfLXJrUFpCWERRenVHSVR2dFFIWHBMbl9TRHNuWVNPbHZjNklPbGhFTmxLUDl6aw?oc=5",
+          "pubDate": "Fri, 24 Apr 2026 09:11:09 GMT",
+          "score": 1
+        }
+      ]
+    },
+    {
       "rank": 3,
       "theme": "AI伺服器",
-      "score": 21.1,
+      "score": 20.7,
       "news": [
         {
           "title": "【本週評析與展望】AI 伺服器帶動 CPU 價值重估，特斯拉法說帶動機器人長線啟航，下週緊盯航運與 BBU 法說！ - sinotrade.com.tw",
@@ -77,7 +77,7 @@
           "title": "遭爆砍單14億美元！美系伺服器大廠陷營運風暴 台廠「這家」有望吃下肥單 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMivwNBVV95cUxNZ0xLY0Flb3Y2a0xJMnBqeWIwNmdOY0VMU25ZUGdCVWJpOVRlRGtnaWs5STFyeGpnYjYzT2dmZ01NZFI2NjYxRkNYSDJ5V0czOTZpcmJsazBSeGFyWHc4OVJNU29vTVNldFM5TVdkXzl1Vmd4elFMUlM2R0VMY2E0OE1nb2cyd0daTHZtOFg2akUtMUlHanVTb2ZQaE05YjlfaHlqdEJ5ZlY3eHh5emJQWG9ubW9HajZCV3FSTlJoWEFTTll0RGNtV3FLRlZUUXNhQlJHTXh4SV91bjdzN2swN0lEcFhTT21QQ3RhNUwtZjJNcFA3U2hyX2N4NWFmOUZMbWFBZ0JYdmZaYmJBN1g0V2dqZlVfd3ZaeU84Sjh0OXhfUmNaQW14NlRIaHQ1T1dPYmV6MWtwQXh6Vk1iWlJQVEdWMWs5ODJONnY0MDNWZF8ybFkwMVZSREhWWGZwOXY5SDlVaWx5M1RJQW1JUDQ5VGdJVXJEemR0WWQ0b1FjWlR0NXk2dUhsdjFVQWhsYkcwS3MtMkJOel9Lcy01dDMwSTZYUzYzR0JkNDhOb2lmbGdjaEJnTlczS3JUb0ZQUlk?oc=5",
           "pubDate": "Sat, 25 Apr 2026 14:30:00 GMT",
-          "score": 1.35
+          "score": 1.15
         }
       ]
     },
@@ -599,5 +599,5 @@
       "isAlternate": true
     }
   ],
-  "candidatesCount": 76
+  "candidatesCount": 77
 }
