@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-04-26T15:53:12.185Z",
-  "range": "2026-02-05 ~ 2026-04-26",
-  "totalHistoryFiles": 68,
-  "validPickDays": 67,
-  "totalSamples": 222,
+  "generatedAt": "2026-04-26T16:12:12.431Z",
+  "range": "2026-02-05 ~ 2026-04-27",
+  "totalHistoryFiles": 69,
+  "validPickDays": 68,
+  "totalSamples": 225,
   "d1": {
     "samples": 213,
     "wins": 86,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 67,
+      "days": 68,
       "hitDays": 58,
-      "hitRate": 0.8656716417910447
+      "hitRate": 0.8529411764705882
     },
     "tp2": {
-      "days": 67,
+      "days": 68,
       "hitDays": 58,
-      "hitRate": 0.8656716417910447
+      "hitRate": 0.8529411764705882
     }
   },
   "details": [
@@ -4027,6 +4027,60 @@
     },
     {
       "date": "2026-04-26",
+      "pickDate": "2026-04-24",
+      "symbol": "3035",
+      "name": "智原",
+      "entry": 185,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 190.55,
+      "tp2Price": 194.25,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-04-27",
+      "pickDate": "2026-04-24",
+      "symbol": "6669",
+      "name": "緯穎",
+      "entry": 4635,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 4774.05,
+      "tp2Price": 4866.75,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-04-27",
+      "pickDate": "2026-04-24",
+      "symbol": "2464",
+      "name": "盟立",
+      "entry": 91.7,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 94.45,
+      "tp2Price": 96.29,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-04-27",
       "pickDate": "2026-04-24",
       "symbol": "3035",
       "name": "智原",
