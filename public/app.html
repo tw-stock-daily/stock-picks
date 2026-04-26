@@ -7,33 +7,99 @@
 
 <style>
 :root{
-  --bg:#050b16; --panel:#0b1b2d; --line:#28445f;
-  --text:#f8fafc; --muted:#a8b7c9;
-  --gold:#f6c453; --blue:#38bdf8;
-  --green:#4ade80; --purple:#c084fc; --red:#fb7185; --yellow:#facc15;
+  --bg:#06111f;
+  --panel:#0b1b2d;
+  --line:#28445f;
+  --text:#f8fafc;
+  --muted:#9fb2c7;
+  --gold:#f6c453;
+  --blue:#38bdf8;
+  --green:#4ade80;
+  --purple:#c084fc;
+  --red:#fb7185;
 }
-*{box-sizing:border-box}
+
 body{
   margin:0;
   background:linear-gradient(180deg,#06111f,#020617);
   color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  font-size:20px;
 }
+
 .app{max-width:900px;margin:auto;padding:16px}
-.panel{background:var(--panel);border-radius:18px;padding:16px;margin-bottom:14px}
-.title{font-size:26px;font-weight:900;margin-bottom:10px;color:var(--gold)}
 
-.pick{border:1px solid #334155;border-radius:16px;padding:14px;margin-bottom:12px}
-.pick.main{border:2px solid var(--gold)}
+.panel{
+  background:var(--panel);
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:16px;
+}
 
-.price{font-size:20px;font-weight:900}
+.title{
+  font-size:28px;
+  font-weight:900;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.small{color:var(--muted);font-size:16px}
+
+.pick{
+  border:1px solid #334155;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:14px;
+}
+
+.pick.main{
+  border:2px solid var(--gold);
+}
+
+.stock-name{
+  font-size:34px;
+  font-weight:900;
+}
+
+.stock-code{
+  font-size:24px;
+  color:#cbd5f5;
+}
+
+.score{
+  font-size:22px;
+  color:var(--blue);
+}
+
+.price{
+  font-size:30px;
+  font-weight:900;
+}
+
 .tp1{color:var(--green)}
 .tp2{color:var(--purple)}
 .stop{color:var(--red)}
 
-.btn{padding:10px 14px;border-radius:10px;background:var(--gold);color:#000;font-weight:900;border:none;cursor:pointer}
+.entry{
+  font-size:34px;
+  font-weight:900;
+  color:var(--green);
+}
 
-.small{color:var(--muted);font-size:14px}
+.btn{
+  padding:12px 16px;
+  border-radius:12px;
+  background:var(--gold);
+  border:none;
+  font-size:20px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.market{
+  font-size:20px;
+  line-height:1.6;
+}
 </style>
 </head>
 
@@ -48,8 +114,8 @@ body{
 
 <div class="panel">
   <div class="title">🌙 盤勢分析</div>
-  <div id="marketText">載入中...</div>
-  <div id="marketNumbers"></div>
+  <div id="marketText" class="market"></div>
+  <div id="marketNum" class="market"></div>
 </div>
 
 <div class="panel">
@@ -82,44 +148,54 @@ function renderHoliday(){
 
 function renderMarket(m){
   document.getElementById("marketText").innerText=m.signal?.text||"";
-  document.getElementById("marketNumbers").innerHTML=`
-    S&P500: ${m.us?.sp500?.changePct||"--"}<br>
-    NASDAQ: ${m.us?.nasdaq?.changePct||"--"}<br>
-    台指期: ${m.taiwan?.nightFuture?.changePct||"--"}
+  document.getElementById("marketNum").innerHTML=`
+    S&P500：${m.us?.sp500?.changePct||"--"}<br>
+    NASDAQ：${m.us?.nasdaq?.changePct||"--"}<br>
+    台指期：${m.taiwan?.nightFuture?.changePct||"--"}
   `;
 }
 
-function mainDecision(p){
+function mainCard(p){
   return `
-  <div style="margin:10px 0">
-    <b>🎯 今日操作</b><br>
-    建議買進區：${num(p.plan.entryLow)} ~ ${num(p.plan.entryHigh)}<br>
-    第一目標價（短線）：<span class="tp1">${num(p.plan.tp1)}</span><br>
-    第二目標價（波段）：<span class="tp2">${num(p.plan.tp2)}</span><br>
-    停損價：<span class="stop">${num(p.plan.stop)}</span><br>
-    <div class="small">先在第一目標出場，剩餘續抱</div>
-  </div>
+    <div class="pick main">
+      <div class="stock-name">${p.name}</div>
+      <div class="stock-code">${p.symbol}</div>
+      <div class="score">分數：${p.score}</div>
+
+      <div style="margin-top:10px">
+        <b>🎯 今日操作</b><br>
+        建議買進區：<div class="entry">${num(p.plan.entryLow)} ~ ${num(p.plan.entryHigh)}</div>
+
+        第一目標價：<span class="price tp1">${num(p.plan.tp1)}</span><br>
+        第二目標價：<span class="price tp2">${num(p.plan.tp2)}</span><br>
+        停損價：<span class="price stop">${num(p.plan.stop)}</span><br>
+
+        <div class="small">先在第一目標出場，其餘續抱</div>
+      </div>
+    </div>
   `;
 }
 
-function renderPick(p,i){
-  const isMain=i==0&&!alt;
+function normalCard(p){
   return `
-  <div class="pick ${isMain?"main":""}">
-    <b>${p.name} (${p.symbol})</b><br>
-    分數：${p.score}<br>
-    ${isMain?mainDecision(p):`
-      第一目標價：<span class="tp1">${num(p.tp1)}</span><br>
-      第二目標價：<span class="tp2">${num(p.tp2)}</span><br>
-      停損價：<span class="stop">${num(p.stop)}</span>
-    `}
-  </div>
+    <div class="pick">
+      <div class="stock-name">${p.name}</div>
+      <div class="stock-code">${p.symbol}</div>
+
+      第一目標價：<span class="price tp1">${num(p.tp1)}</span><br>
+      第二目標價：<span class="price tp2">${num(p.tp2)}</span><br>
+      停損價：<span class="price stop">${num(p.stop)}</span>
+    </div>
   `;
 }
 
 function render(){
   const list=alt?data.alternates:data.picks;
-  document.getElementById("picks").innerHTML=list.map(renderPick).join("");
+  let html="";
+  list.forEach((p,i)=>{
+    html+= (i===0&&!alt)?mainCard(p):normalCard(p);
+  });
+  document.getElementById("picks").innerHTML=html;
   document.getElementById("pickTitle").innerText=alt?"備選股":"今日主推";
 }
 
