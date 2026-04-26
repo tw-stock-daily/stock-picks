@@ -2,8 +2,12 @@ name: daily-json
 
 on:
   schedule:
-    # 台灣時間 21:00 = UTC 13:00
+    # 台灣時間 08:30 = UTC 00:30，只更新盤勢
+    - cron: "30 0 * * *"
+
+    # 台灣時間 21:00 = UTC 13:00，更新選股 + 勝率
     - cron: "0 13 * * *"
+
   workflow_dispatch:
 
 concurrency:
@@ -34,38 +38,25 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync latest main
-        run: |
-          git fetch origin main
-          git reset --hard origin/main
-          git clean -fd
-
       - name: Install deps
-        run: |
-          npm install --no-audit --no-fund
+        run: npm install --no-audit --no-fund
 
-      - name: Generate market
-        run: |
-          node script/generate_market.js
+      # 早上 08:30 跑盤勢
+      - name: Generate morning market
+        if: github.event.schedule == '30 0 * * *' || github.event_name == 'workflow_dispatch'
+        run: node script/generate_market.js
 
-      - name: Generate today
+      # 晚上 21:00 跑選股
+      - name: Generate night picks
+        if: github.event.schedule == '0 13 * * *' || github.event_name == 'workflow_dispatch'
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
-        run: |
-          node script/generate_today.js
+        run: node script/generate_today.js
 
-      - name: Generate stats
-        run: |
-          node script/stats_winrate.js
-
-      - name: Debug output
-        run: |
-          echo "=== public ==="
-          ls -al public || true
-          echo "=== history ==="
-          ls -al public/history || true
-          echo "=== git status ==="
-          git status --porcelain
+      # 晚上 21:00 跑勝率
+      - name: Generate night stats
+        if: github.event.schedule == '0 13 * * *' || github.event_name == 'workflow_dispatch'
+        run: node script/stats_winrate.js
 
       - name: Commit and push
         run: |
@@ -76,7 +67,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: auto update daily json"
+          git commit -m "chore: auto update json"
 
           for i in 1 2 3; do
             git pull --rebase origin main || true
