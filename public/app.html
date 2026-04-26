@@ -1,108 +1,148 @@
-<!-- 只列出你需要替換的關鍵區塊，已整合你目前版本 -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>台股精選</title>
 
-<!-- ====== 主推策略區（已白話化）====== -->
+<style>
+:root{
+  --bg:#050b16; --panel:#0b1b2d; --line:#28445f;
+  --text:#f8fafc; --muted:#a8b7c9;
+  --gold:#f6c453; --blue:#38bdf8;
+  --green:#4ade80; --purple:#c084fc; --red:#fb7185; --yellow:#facc15;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#06111f,#020617);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+.app{max-width:900px;margin:auto;padding:16px}
+.panel{background:var(--panel);border-radius:18px;padding:16px;margin-bottom:14px}
+.title{font-size:26px;font-weight:900;margin-bottom:10px;color:var(--gold)}
+
+.pick{border:1px solid #334155;border-radius:16px;padding:14px;margin-bottom:12px}
+.pick.main{border:2px solid var(--gold)}
+
+.price{font-size:20px;font-weight:900}
+.tp1{color:var(--green)}
+.tp2{color:var(--purple)}
+.stop{color:var(--red)}
+
+.btn{padding:10px 14px;border-radius:10px;background:var(--gold);color:#000;font-weight:900;border:none;cursor:pointer}
+
+.small{color:var(--muted);font-size:14px}
+</style>
+</head>
+
+<body>
+<div class="app">
+
+<div class="panel">
+  <div class="title">📈 台股精選</div>
+  <div id="dateText" class="small"></div>
+  <div id="holidayNote" class="small"></div>
+</div>
+
+<div class="panel">
+  <div class="title">🌙 盤勢分析</div>
+  <div id="marketText">載入中...</div>
+  <div id="marketNumbers"></div>
+</div>
+
+<div class="panel">
+  <div class="title" id="pickTitle">👑 今日主推</div>
+  <button class="btn" id="toggleBtn">🔄 重新整理</button>
+  <div id="picks"></div>
+</div>
+
+</div>
+
 <script>
-function renderMainDecision(p,plan){
-  return `
-    <div class="decision">
-      <div class="decision-title">🎯 今日操作重點</div>
-      <div class="decision-text">${firstDecisionText(p)}</div>
-    </div>
+const TODAY_URL="./today.json";
+const MARKET_URL="./market.json";
 
-    <div class="entry-zone">
-      <div class="entry-card">
-        <div class="entry-label">建議買進區</div>
-        <div class="entry-value">${num(plan.entryLow,2)} ～ ${num(plan.entryHigh,2)}</div>
-      </div>
+let data=null;
+let alt=false;
 
-      <div class="strategy-card">
-        <div class="price-grid" style="margin-top:0; grid-template-columns:repeat(3,1fr);">
-          
-          <div>
-            <div class="price-label">第一目標價（短線）</div>
-            <div class="price-value tp1">${num(plan.tp1,2)}</div>
-          </div>
+function num(n){return Number(n).toFixed(2)}
 
-          <div>
-            <div class="price-label">第二目標價（波段）</div>
-            <div class="price-value tp2">${num(plan.tp2,2)}</div>
-          </div>
+function isWeekend(date){
+  const d=new Date(date);
+  return d.getDay()==0||d.getDay()==6;
+}
 
-          <div>
-            <div class="price-label">停損價</div>
-            <div class="price-value stop">${num(plan.stop,2)}</div>
-          </div>
+function renderHoliday(){
+  if(isWeekend(data.date)){
+    document.getElementById("holidayNote").innerText="今日為假日，資料沿用前一交易日";
+  }
+}
 
-        </div>
-
-        <div style="margin-top:12px; font-size:16px; color:#fde68a;">
-          建議：先在第一目標價分批出場，其餘視強度續抱至第二目標價
-        </div>
-
-      </div>
-    </div>
+function renderMarket(m){
+  document.getElementById("marketText").innerText=m.signal?.text||"";
+  document.getElementById("marketNumbers").innerHTML=`
+    S&P500: ${m.us?.sp500?.changePct||"--"}<br>
+    NASDAQ: ${m.us?.nasdaq?.changePct||"--"}<br>
+    台指期: ${m.taiwan?.nightFuture?.changePct||"--"}
   `;
 }
-</script>
 
-<!-- ====== 一般卡片區（同步白話）====== -->
-<script>
-function renderPick(p,index,alt=false){
-  const rank=p.rank??(alt?index+4:index+1);
-  const isMain=rank===1&&!alt;
-  const plan=getPlan(p);
-
+function mainDecision(p){
   return `
-    <article class="pick ${isMain?"main":""}">
-      ${isMain?`<div class="main-badge">🥇 今日主推｜系統最高分</div>`:""}
-
-      <div class="pick-head">
-        <div class="stock-line">
-          <div class="rank ${alt?"alt":""}">${rank}</div>
-          <div>
-            <div class="stock-name">${p.name||"--"}</div>
-            <div class="stock-code">${p.symbol||"--"}</div>
-          </div>
-        </div>
-        <div class="score">
-          <small>分數</small>
-          <b>${num(p.score,1)}</b>
-        </div>
-      </div>
-
-      ${isMain ? renderMainDecision(p,plan) : ""}
-
-      ${!isMain ? `
-        <div class="price-grid">
-
-          <div class="price-card">
-            <div class="price-label">收盤價</div>
-            <div class="price-value close">${num(plan.close,2)}</div>
-          </div>
-
-          <div class="price-card">
-            <div class="price-label">第一目標價</div>
-            <div class="price-value tp1">${num(plan.tp1,2)}</div>
-          </div>
-
-          <div class="price-card">
-            <div class="price-label">第二目標價</div>
-            <div class="price-value tp2">${num(plan.tp2,2)}</div>
-          </div>
-
-          <div class="price-card">
-            <div class="price-label">停損價</div>
-            <div class="price-value stop">${num(plan.stop,2)}</div>
-          </div>
-
-        </div>
-
-        <div style="margin-top:10px; font-size:15px; color:#9fb2c7;">
-          短線先看第一目標價，強勢續抱至第二目標價
-        </div>
-      ` : ""}
-
-    </article>
+  <div style="margin:10px 0">
+    <b>🎯 今日操作</b><br>
+    建議買進區：${num(p.plan.entryLow)} ~ ${num(p.plan.entryHigh)}<br>
+    第一目標價（短線）：<span class="tp1">${num(p.plan.tp1)}</span><br>
+    第二目標價（波段）：<span class="tp2">${num(p.plan.tp2)}</span><br>
+    停損價：<span class="stop">${num(p.plan.stop)}</span><br>
+    <div class="small">先在第一目標出場，剩餘續抱</div>
+  </div>
   `;
 }
+
+function renderPick(p,i){
+  const isMain=i==0&&!alt;
+  return `
+  <div class="pick ${isMain?"main":""}">
+    <b>${p.name} (${p.symbol})</b><br>
+    分數：${p.score}<br>
+    ${isMain?mainDecision(p):`
+      第一目標價：<span class="tp1">${num(p.tp1)}</span><br>
+      第二目標價：<span class="tp2">${num(p.tp2)}</span><br>
+      停損價：<span class="stop">${num(p.stop)}</span>
+    `}
+  </div>
+  `;
+}
+
+function render(){
+  const list=alt?data.alternates:data.picks;
+  document.getElementById("picks").innerHTML=list.map(renderPick).join("");
+  document.getElementById("pickTitle").innerText=alt?"備選股":"今日主推";
+}
+
+async function load(){
+  data=await fetch(TODAY_URL+"?t="+Date.now()).then(r=>r.json());
+  document.getElementById("dateText").innerText=data.date;
+  renderHoliday();
+  render();
+}
+
+async function loadMarket(){
+  const m=await fetch(MARKET_URL+"?t="+Date.now()).then(r=>r.json());
+  renderMarket(m);
+}
+
+document.getElementById("toggleBtn").onclick=()=>{
+  alt=!alt;
+  render();
+};
+
+load();
+loadMarket();
 </script>
+
+</body>
+</html>
