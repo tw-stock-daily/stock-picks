@@ -5,7 +5,7 @@ on:
     # 台灣時間 08:30 = UTC 00:30，只更新盤勢
     - cron: "30 0 * * *"
 
-    # 台灣時間 21:00 = UTC 13:00，更新選股 + 勝率
+    # 台灣時間 21:00 = UTC 13:00，更新盤勢 + 選股 + 勝率
     - cron: "0 13 * * *"
 
   workflow_dispatch:
@@ -41,22 +41,47 @@ jobs:
       - name: Install deps
         run: npm install --no-audit --no-fund
 
-      # 早上 08:30 跑盤勢
-      - name: Generate morning market
-        if: github.event.schedule == '30 0 * * *' || github.event_name == 'workflow_dispatch'
+      - name: Decide run mode
+        run: |
+          TAIPEI_HOUR=$(TZ=Asia/Taipei date +%H)
+          echo "Taipei hour: $TAIPEI_HOUR"
+          echo "Event name: ${{ github.event_name }}"
+
+          echo "RUN_MARKET=true" >> $GITHUB_ENV
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "RUN_PICKS=true" >> $GITHUB_ENV
+            echo "Manual run: market + picks + stats"
+          elif [ "$TAIPEI_HOUR" -ge 20 ] || [ "$TAIPEI_HOUR" -le 1 ]; then
+            echo "RUN_PICKS=true" >> $GITHUB_ENV
+            echo "Night run: market + picks + stats"
+          else
+            echo "RUN_PICKS=false" >> $GITHUB_ENV
+            echo "Morning run: market only"
+          fi
+
+      - name: Generate market
+        if: env.RUN_MARKET == 'true'
         run: node script/generate_market.js
 
-      # 晚上 21:00 跑選股
-      - name: Generate night picks
-        if: github.event.schedule == '0 13 * * *' || github.event_name == 'workflow_dispatch'
+      - name: Generate today picks
+        if: env.RUN_PICKS == 'true'
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: node script/generate_today.js
 
-      # 晚上 21:00 跑勝率
-      - name: Generate night stats
-        if: github.event.schedule == '0 13 * * *' || github.event_name == 'workflow_dispatch'
+      - name: Generate stats
+        if: env.RUN_PICKS == 'true'
         run: node script/stats_winrate.js
+
+      - name: Debug output
+        run: |
+          echo "=== git status ==="
+          git status --porcelain
+          echo "=== public files ==="
+          ls -al public || true
+          echo "=== history ==="
+          ls -al public/history || true
 
       - name: Commit and push
         run: |
