@@ -1,28 +1,28 @@
 {
   "version": "market-v3.9.1",
-  "generatedAt": "2026-04-27T21:58:51+08:00",
+  "generatedAt": "2026-04-27T23:08:48+08:00",
   "signal": {
-    "state": "good",
-    "label": "🟢 偏多",
-    "text": "美股與台指期訊號偏多，短線有利強勢股表現。"
+    "state": "warn",
+    "label": "🟡 震盪",
+    "text": "外部市場訊號中性，留意強勢股能否續航。"
   },
   "us": {
     "sp500": {
       "symbol": "^GSPC",
       "name": "S&P 500",
-      "price": 7166.15,
+      "price": 7155.03,
       "previousClose": 7109.14,
-      "change": 57.01,
-      "changePct": 0.008,
+      "change": 45.89,
+      "changePct": 0.0065,
       "source": "Yahoo Finance chart"
     },
     "nasdaq": {
       "symbol": "^IXIC",
       "name": "NASDAQ Composite",
-      "price": 24795.06,
+      "price": 24770.18,
       "previousClose": 24404.39,
-      "change": 390.67,
-      "changePct": 0.016,
+      "change": 365.79,
+      "changePct": 0.015,
       "source": "Yahoo Finance chart"
     }
   },
@@ -30,7 +30,7 @@
     "nightFuture": {
       "symbol": "WTX&",
       "name": "台指期近一",
-      "price": 39743,
+      "price": 39601,
       "change": 0,
       "changePct": 0,
       "source": "Yahoo Taiwan WTX& page"
