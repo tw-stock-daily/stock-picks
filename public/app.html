@@ -1,308 +1,121 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>台股精選</title>
 
 <style>
-:root{
-  --bg:#050b16;
-  --card:#0b1b2d;
-  --line:#334862;
-  --gold:#f7c64b;
-  --green:#4ade80;
-  --purple:#c084fc;
-  --red:#fb7185;
-  --text:#f8fafc;
-  --muted:#aab8ca;
-  --blue:#38bdf8;
-}
-
-*{
-  box-sizing:border-box;
-  -webkit-text-size-adjust:100%;
-  text-size-adjust:100%;
-}
-
-html,body{
-  width:100%;
-  overflow-x:hidden;
-}
-
 body{
   margin:0;
-  background:linear-gradient(180deg,#071426,#020617);
-  color:var(--text);
-  font-family:"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
-  font-size:clamp(16px,2.5vw,20px);
+  background:#061222;
+  color:#fff;
+  font-family:"Noto Sans TC","Microsoft JhengHei";
 }
 
 .app{
-  width:100%;
-  max-width:920px;
-  margin:0 auto;
-  padding:14px;
-  overflow-x:hidden;
+  max-width:900px;
+  margin:auto;
+  padding:16px;
 }
 
 .card{
-  width:100%;
-  background:linear-gradient(145deg,#0f2238,#071426);
-  border:1px solid var(--line);
-  border-radius:22px;
+  background:#0b1f35;
+  border-radius:18px;
   padding:18px;
-  margin-bottom:16px;
-  overflow:hidden;
+  margin-bottom:18px;
+  border:1px solid #2b3f5a;
 }
 
 .title{
-  font-size:clamp(26px,6vw,34px);
+  color:#f6c453;
+  font-size:28px;
   font-weight:900;
-  color:var(--gold);
-  margin-bottom:12px;
-  line-height:1.25;
-}
-
-.subtext{
-  color:var(--muted);
-  font-size:clamp(16px,3.8vw,20px);
-  line-height:1.5;
   margin-bottom:12px;
 }
 
-.market-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+.text{
+  color:#cbd5e1;
+  line-height:1.6;
+  margin-bottom:12px;
 }
 
-.market-box{
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:12px 8px;
-  text-align:center;
-  min-width:0;
+/* 🔥 盤勢改直式 */
+.market-item{
+  margin-bottom:10px;
+  font-size:20px;
 }
 
-.market-label{
-  font-size:clamp(14px,3.4vw,18px);
-  font-weight:900;
-  margin-bottom:6px;
-  white-space:nowrap;
-}
+.up{color:#4ade80}
+.down{color:#fb7185}
+.muted{color:#94a3b8}
 
-.market-value{
-  font-size:clamp(18px,5vw,28px);
-  font-weight:1000;
-  word-break:break-word;
-  line-height:1.25;
-}
-
-.up{color:var(--green)}
-.down{color:var(--red)}
-.green{color:var(--green)}
-.purple{color:var(--purple)}
-.red{color:var(--red)}
-.muted{color:var(--muted)}
-
-.btn{
-  background:linear-gradient(135deg,#facc15,#f59e0b);
-  border:none;
-  border-radius:14px;
-  padding:12px 16px;
-  font-size:clamp(16px,4vw,20px);
-  font-weight:900;
-  cursor:pointer;
-  margin-bottom:14px;
-}
-
-.news-list{
-  display:grid;
-  gap:12px;
-}
-
-.news-item{
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(2,6,23,.25);
-  padding:14px;
-}
-
-.news-theme{
-  color:var(--gold);
-  font-size:clamp(18px,4.5vw,22px);
-  font-weight:900;
-  margin-bottom:8px;
-}
-
-.news-text{
-  color:#e5eefb;
-  font-size:clamp(15px,3.8vw,19px);
-  line-height:1.55;
-}
-
-.stock-card{
-  width:100%;
-  max-width:100%;
-  overflow:hidden;
-  border:2px solid rgba(247,198,75,.5);
-  border-radius:22px;
-  padding:18px;
+/* 🔥 股票卡 */
+.stock{
+  border:2px solid #f6c453;
+  border-radius:18px;
+  padding:16px;
   margin-bottom:16px;
-  background:linear-gradient(145deg,#10243c,#071426);
 }
 
-.stock-name{
-  font-size:clamp(26px,7vw,38px);
-  font-weight:1000;
-  line-height:1.2;
-  word-break:break-word;
+.name{
+  font-size:32px;
+  font-weight:900;
 }
 
-.stock-code{
-  font-size:clamp(18px,5vw,26px);
-  color:#cbd5f5;
-  margin-top:4px;
+.code{
+  color:#94a3b8;
+  margin-bottom:8px;
 }
 
 .score{
-  font-size:clamp(18px,5vw,26px);
-  margin-top:8px;
-  color:#ffffff;
-}
-
-.tags{
-  margin-top:12px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.tag{
-  font-size:clamp(14px,3.6vw,17px);
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid var(--blue);
-  background:#0b2942;
-  color:#dff6ff;
-  max-width:100%;
-  line-height:1.3;
-}
-
-.targets{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-
-@media(min-width:768px){
-  .targets{
-    grid-template-columns:repeat(4,1fr);
-  }
-}
-
-.target{
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:10px;
-  text-align:center;
-  min-width:0;
-  overflow:hidden;
-}
-
-.target-label{
-  font-size:clamp(14px,3.6vw,18px);
-  font-weight:900;
-  margin-bottom:8px;
-  line-height:1.25;
-}
-
-.target-value{
-  font-size:clamp(19px,5.2vw,27px);
-  font-weight:1000;
-  line-height:1.25;
-  word-break:break-word;
-}
-
-.target.buy .target-value{
-  font-size:clamp(17px,4.8vw,23px);
-}
-
-.inst-box{
-  margin-top:14px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(2,6,23,.25);
-  padding:12px;
-}
-
-.inst-title{
-  color:var(--gold);
-  font-size:clamp(17px,4.4vw,21px);
-  font-weight:900;
   margin-bottom:10px;
 }
 
-.inst-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
+/* 🔥 TAG */
+.tags{
+  margin-bottom:12px;
+}
+.tag{
+  display:inline-block;
+  border:1px solid #38bdf8;
+  border-radius:999px;
+  padding:4px 10px;
+  margin:2px;
+  font-size:14px;
 }
 
-@media(min-width:768px){
-  .inst-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-}
-
-.inst-item{
-  border:1px solid rgba(148,163,184,.25);
-  border-radius:14px;
-  padding:10px;
-  text-align:center;
-  background:rgba(15,34,56,.45);
-  min-width:0;
-}
-
-.inst-label{
-  color:var(--muted);
-  font-size:clamp(14px,3.6vw,17px);
-  font-weight:900;
-  margin-bottom:6px;
-}
-
-.inst-value{
-  font-size:clamp(18px,4.8vw,24px);
-  font-weight:1000;
-  word-break:break-word;
-}
-
-.note{
+/* 🔥 目標價改直式 */
+.plan{
   margin-top:12px;
-  font-size:clamp(15px,3.8vw,19px);
-  line-height:1.5;
-  color:#fde68a;
+}
+
+.plan-item{
+  margin-bottom:12px;
+  line-height:1.6;
+}
+
+.buy{color:#4ade80}
+.tp1{color:#4ade80}
+.tp2{color:#c084fc}
+.stop{color:#fb7185}
+
+/* 🔥 法人 */
+.inst{
+  margin-top:14px;
+  padding-top:10px;
+  border-top:1px solid #2b3f5a;
+}
+
+.inst-title{
+  color:#f6c453;
+  margin-bottom:6px;
 }
 
 .footer{
   text-align:center;
-  font-size:clamp(13px,3.3vw,16px);
-  color:var(--muted);
-  margin-top:20px;
-  line-height:1.5;
-}
-
-@media(max-width:430px){
-  .app{
-    padding:10px;
-  }
-
-  .card{
-    padding:16px;
-    border-radius:20px;
-  }
+  color:#94a3b8;
+  font-size:14px;
 }
 </style>
 </head>
@@ -310,289 +123,148 @@ body{
 <body>
 <div class="app">
 
-  <div class="card">
-    <div class="title">🌙 盤勢分析</div>
-    <div id="marketText" class="subtext">讀取中...</div>
+<!-- 盤勢 -->
+<div class="card">
+  <div class="title">🌙 盤勢分析</div>
+  <div id="marketText" class="text">讀取中...</div>
 
-    <div class="market-grid">
-      <div class="market-box">
-        <div class="market-label">S&P500</div>
-        <div id="sp500" class="market-value">--</div>
-      </div>
-      <div class="market-box">
-        <div class="market-label">NASDAQ</div>
-        <div id="nasdaq" class="market-value">--</div>
-      </div>
-      <div class="market-box">
-        <div class="market-label">台指期</div>
-        <div id="future" class="market-value muted">待早盤更新</div>
-      </div>
-    </div>
-  </div>
+  <div class="market-item">S&P500：<span id="sp500">--</span></div>
+  <div class="market-item">NASDAQ：<span id="nasdaq">--</span></div>
+  <div class="market-item">台指期：<span id="future" class="muted">待早盤更新</span></div>
+</div>
 
-  <div class="card" id="newsCard" style="display:none;">
-    <div class="title">📰 今日題材新聞</div>
-    <div id="newsList" class="news-list"></div>
-  </div>
+<!-- 新聞 -->
+<div class="card" id="newsCard" style="display:none;">
+  <div class="title">📰 今日題材新聞</div>
+  <div id="news"></div>
+</div>
 
-  <div class="card">
-    <div class="title" id="pickTitle">👑 今日精選</div>
-    <button class="btn" onclick="toggle()">🔄 重新整理</button>
-    <div id="modeText" class="subtext">目前顯示正式推薦 1～3 檔，列入勝率統計。</div>
-    <div id="stocks">載入中...</div>
-  </div>
+<!-- 股票 -->
+<div class="card">
+  <div class="title">👑 今日精選</div>
+  <div id="stocks">載入中...</div>
+</div>
 
-  <div class="footer">
-    本內容僅供研究參考，不構成投資建議。投資有風險，請自行評估。
-  </div>
+<div class="footer">本內容僅供研究參考，不構成投資建議</div>
 
 </div>
 
 <script>
-let data = null;
-let alt = false;
-
-function toNum(v){
-  const n = Number(v);
-  return Number.isFinite(n) ? n : null;
-}
-
-function num(v, digits = 2){
-  const n = toNum(v);
-  if(n === null) return "--";
-  return n.toLocaleString("zh-TW", {
-    minimumFractionDigits: digits,
-    maximumFractionDigits: digits
-  });
-}
+let data;
 
 function pct(v){
-  const n = toNum(v);
-  if(n === null) return "--";
-  const sign = n > 0 ? "+" : "";
-  return sign + (n * 100).toFixed(2) + "%";
+  if(v==null)return "--";
+  return (v>0?"+":"")+(v*100).toFixed(2)+"%";
 }
 
-function cssPct(v){
-  const n = toNum(v);
-  if(n > 0) return "up";
-  if(n < 0) return "down";
+function cls(v){
+  if(v>0)return "up";
+  if(v<0)return "down";
   return "";
 }
 
-function getPlan(p){
-  return {
-    entryLow: p.plan?.entryLow ?? p.entryLow ?? p.lastClose,
-    entryHigh: p.plan?.entryHigh ?? p.entryHigh ?? p.lastClose,
-    tp1: p.plan?.tp1 ?? p.tp1,
-    tp2: p.plan?.tp2 ?? p.tp2,
-    stop: p.plan?.stop ?? p.stop
-  };
-}
+/* 盤勢 */
+async function loadMarket(){
+  const m = await fetch("./market.json?t="+Date.now()).then(r=>r.json());
 
-function renderTags(p){
-  const raw = [
-    ...(Array.isArray(p.matchedThemes) ? p.matchedThemes : []),
-    ...(Array.isArray(p.stockTags) ? p.stockTags : [])
-  ];
+  document.getElementById("marketText").innerText =
+    m.signal?.text || "";
 
-  const tags = raw
-    .filter(x => x && String(x).trim() && String(x).trim() !== "尚未提供")
-    .slice(0,4);
+  const sp = m.us?.sp500?.changePct;
+  const nq = m.us?.nasdaq?.changePct;
+  const ft = m.taiwan?.nightFuture?.changePct;
 
-  if(!tags.length){
-    return `<div class="tag">資金流強勢</div>`;
+  let spEl = document.getElementById("sp500");
+  spEl.innerText = pct(sp);
+  spEl.className = cls(sp);
+
+  let nqEl = document.getElementById("nasdaq");
+  nqEl.innerText = pct(nq);
+  nqEl.className = cls(nq);
+
+  let ftEl = document.getElementById("future");
+  if(ft==null || ft===0){
+    ftEl.innerText="待早盤更新";
+  }else{
+    ftEl.innerText=pct(ft);
+    ftEl.className=cls(ft);
   }
-
-  return tags.map(t => `<div class="tag">${t}</div>`).join("");
 }
 
-function renderInst(p){
-  const inst = p.inst || {};
-
-  const foreign = inst.sumForeign ?? inst.foreign ?? inst.foreign5d ?? null;
-  const trust = inst.sumTrust ?? inst.trust ?? inst.trust5d ?? null;
-  const dealer = inst.sumDealer ?? inst.dealer ?? inst.dealer5d ?? null;
-  const total = inst.sumTotal ?? inst.total ?? inst.total5d ?? null;
-
-  function cls(v){
-    const n = toNum(v);
-    if(n === null) return "";
-    return n >= 0 ? "up" : "down";
-  }
-
-  return `
-    <div class="inst-box">
-      <div class="inst-title">三大法人近 5 日</div>
-      <div class="inst-grid">
-        <div class="inst-item">
-          <div class="inst-label">外資</div>
-          <div class="inst-value ${cls(foreign)}">${num(foreign,0)} 張</div>
-        </div>
-        <div class="inst-item">
-          <div class="inst-label">投信</div>
-          <div class="inst-value ${cls(trust)}">${num(trust,0)} 張</div>
-        </div>
-        <div class="inst-item">
-          <div class="inst-label">自營商</div>
-          <div class="inst-value ${cls(dealer)}">${num(dealer,0)} 張</div>
-        </div>
-        <div class="inst-item">
-          <div class="inst-label">合計</div>
-          <div class="inst-value ${cls(total)}">${num(total,0)} 張</div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
+/* 新聞 */
 function renderNews(){
-  const card = document.getElementById("newsCard");
-  const box = document.getElementById("newsList");
+  let box = document.getElementById("news");
+  let items=[];
 
-  const themes = Array.isArray(data?.hotThemes) ? data.hotThemes : [];
-  const items = [];
-
-  themes.forEach(t => {
-    const themeName = t.theme || t.name || "題材";
-    const news = Array.isArray(t.news) ? t.news : [];
-
-    news.slice(0,2).forEach(n => {
-      let text = "";
-
-      if(typeof n === "string"){
-        text = n;
-      }else if(n && typeof n === "object"){
-        text = n.title || n.summary || n.text || n.content || "";
-      }
-
-      if(text && text.trim()){
-        items.push({
-          theme: themeName,
-          text: text.trim()
-        });
-      }
+  (data.hotThemes||[]).forEach(t=>{
+    (t.news||[]).forEach(n=>{
+      items.push(`<div class="text">${n.title||n}</div>`);
     });
   });
 
-  if(!items.length){
-    card.style.display = "none";
-    return;
+  if(items.length){
+    document.getElementById("newsCard").style.display="block";
+    box.innerHTML = items.slice(0,5).join("");
   }
-
-  box.innerHTML = items.slice(0,6).map(x => `
-    <div class="news-item">
-      <div class="news-theme">${x.theme}</div>
-      <div class="news-text">${x.text}</div>
-    </div>
-  `).join("");
-
-  card.style.display = "block";
 }
 
+/* 股票 */
 function renderStock(p){
-  const plan = getPlan(p);
+
+  const plan = p.plan || {};
 
   return `
-    <div class="stock-card">
-      <div class="stock-name">${p.name || "--"}</div>
-      <div class="stock-code">(${p.symbol || "--"})</div>
-      <div class="score">系統分數：${num(p.score, 2)}</div>
+  <div class="stock">
+    <div class="name">${p.name}</div>
+    <div class="code">(${p.symbol})</div>
+    <div class="score">分數：${p.score.toFixed(2)}</div>
 
-      <div class="tags">
-        ${renderTags(p)}
-      </div>
-
-      <div class="targets">
-        <div class="target buy">
-          <div class="target-label green">建議買進區</div>
-          <div class="target-value">${num(plan.entryLow)}<br>～<br>${num(plan.entryHigh)}</div>
-        </div>
-
-        <div class="target">
-          <div class="target-label green">第一目標價<br>短線</div>
-          <div class="target-value green">${num(plan.tp1)}</div>
-        </div>
-
-        <div class="target">
-          <div class="target-label purple">第二目標價<br>波段</div>
-          <div class="target-value purple">${num(plan.tp2)}</div>
-        </div>
-
-        <div class="target">
-          <div class="target-label red">停損價</div>
-          <div class="target-value red">${num(plan.stop)}</div>
-        </div>
-      </div>
-
-      ${renderInst(p)}
-
-      <div class="note">先在第一目標價分批出場，剩餘部位視強度續抱至第二目標價。</div>
+    <div class="tags">
+      ${(p.stockTags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}
     </div>
+
+    <div class="plan">
+      <div class="plan-item buy">
+        建議買進區：<br>
+        ${plan.entryLow?.toFixed(2)} ~ ${plan.entryHigh?.toFixed(2)}
+      </div>
+
+      <div class="plan-item tp1">
+        第一目標價（短線）：<br>
+        ${plan.tp1?.toFixed(2)}
+      </div>
+
+      <div class="plan-item tp2">
+        第二目標價（波段）：<br>
+        ${plan.tp2?.toFixed(2)}
+      </div>
+
+      <div class="plan-item stop">
+        停損價：<br>
+        ${plan.stop?.toFixed(2)}
+      </div>
+    </div>
+
+    <div class="inst">
+      <div class="inst-title">三大法人近5日</div>
+      外資：${p.inst?.sumForeign||0}<br>
+      投信：${p.inst?.sumTrust||0}<br>
+      自營商：${p.inst?.sumDealer||0}
+    </div>
+  </div>
   `;
 }
 
-function render(){
-  const list = alt ? (data.alternates || []) : (data.picks || []);
-
-  document.getElementById("pickTitle").innerText = alt ? "🔄 備選觀察" : "👑 今日精選";
-  document.getElementById("modeText").innerText = alt
-    ? "目前顯示備選觀察股，不列入勝率統計。"
-    : "目前顯示正式推薦 1～3 檔，列入勝率統計。";
-
-  document.getElementById("stocks").innerHTML = list.length
-    ? list.map(renderStock).join("")
-    : "沒有資料";
-}
-
-function toggle(){
-  alt = !alt;
-  render();
-}
-
 async function loadToday(){
-  data = await fetch("./today.json?t=" + Date.now(), {cache:"no-store"}).then(r => r.json());
+  data = await fetch("./today.json?t="+Date.now()).then(r=>r.json());
   renderNews();
-  render();
+
+  document.getElementById("stocks").innerHTML =
+    data.picks.map(renderStock).join("");
 }
 
-async function loadMarket(){
-  try{
-    const m = await fetch("./market.json?t=" + Date.now(), {cache:"no-store"}).then(r => r.json());
-
-    document.getElementById("marketText").innerText = m.signal?.text || "外部市場訊號中性，留意強勢股能否續航。";
-
-    const sp = m.us?.sp500?.changePct;
-    const nq = m.us?.nasdaq?.changePct;
-    const ft = m.taiwan?.nightFuture?.changePct;
-
-    const spEl = document.getElementById("sp500");
-    spEl.innerText = pct(sp);
-    spEl.className = "market-value " + cssPct(sp);
-
-    const nqEl = document.getElementById("nasdaq");
-    nqEl.innerText = pct(nq);
-    nqEl.className = "market-value " + cssPct(nq);
-
-    const ftEl = document.getElementById("future");
-    if(ft == null || ft === 0){
-      ftEl.innerText = "待早盤更新";
-      ftEl.className = "market-value muted";
-    }else{
-      ftEl.innerText = pct(ft);
-      ftEl.className = "market-value " + cssPct(ft);
-    }
-
-  }catch(e){
-    document.getElementById("marketText").innerText = "盤勢資料讀取失敗。";
-    const ftEl = document.getElementById("future");
-    ftEl.innerText = "待早盤更新";
-    ftEl.className = "market-value muted";
-  }
-}
-
-loadToday();
 loadMarket();
+loadToday();
 </script>
 
 </body>
