@@ -98,6 +98,7 @@ body{
 .green{color:var(--green)}
 .purple{color:var(--purple)}
 .red{color:var(--red)}
+.muted{color:var(--muted)}
 
 .btn{
   background:linear-gradient(135deg,#facc15,#f59e0b);
@@ -352,7 +353,7 @@ body{
       </div>
       <div class="market-box">
         <div class="market-label">台指期</div>
-        <div id="future" class="market-value">--</div>
+        <div id="future" class="market-value muted">待早盤更新</div>
       </div>
     </div>
   </div>
@@ -602,11 +603,19 @@ async function loadMarket(){
     nqEl.className = "market-value " + cssPct(nq);
 
     const ftEl = document.getElementById("future");
-    ftEl.innerText = ft == null ? "--" : pct(ft);
-    ftEl.className = "market-value " + cssPct(ft);
+    if(ft == null || ft === 0){
+      ftEl.innerText = "待早盤更新";
+      ftEl.className = "market-value muted";
+    }else{
+      ftEl.innerText = pct(ft);
+      ftEl.className = "market-value " + cssPct(ft);
+    }
 
   }catch(e){
     document.getElementById("marketText").innerText = "盤勢資料讀取失敗。";
+    const ftEl = document.getElementById("future");
+    ftEl.innerText = "待早盤更新";
+    ftEl.className = "market-value muted";
   }
 }
 
