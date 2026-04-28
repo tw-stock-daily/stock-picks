@@ -2,17 +2,13 @@ name: daily-json
 
 on:
   schedule:
-    # 台灣時間 08:30 = UTC 00:30，只更新盤勢
+    # 台灣時間 08:30
     - cron: "30 0 * * *"
 
-    # 台灣時間 21:00 = UTC 13:00，更新盤勢 + 選股 + 勝率
+    # 台灣時間 21:00
     - cron: "0 13 * * *"
 
   workflow_dispatch:
-
-concurrency:
-  group: daily-json
-  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -22,87 +18,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout latest main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Git identity
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - run: npm install --no-audit --no-fund
 
-      - name: Install deps
-        run: npm install --no-audit --no-fund
+      - run: node script/generate_market.js
 
-      - name: Decide run mode
-        run: |
-          TAIPEI_HOUR=$(TZ=Asia/Taipei date +%H)
-          echo "Taipei hour: $TAIPEI_HOUR"
-          echo "Event name: ${{ github.event_name }}"
-
-          echo "RUN_MARKET=true" >> $GITHUB_ENV
-
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "RUN_PICKS=true" >> $GITHUB_ENV
-            echo "Manual run: market + picks + stats"
-          elif [ "$TAIPEI_HOUR" -ge 20 ] || [ "$TAIPEI_HOUR" -le 1 ]; then
-            echo "RUN_PICKS=true" >> $GITHUB_ENV
-            echo "Night run: market + picks + stats"
-          else
-            echo "RUN_PICKS=false" >> $GITHUB_ENV
-            echo "Morning run: market only"
-          fi
-
-      - name: Generate market
-        if: env.RUN_MARKET == 'true'
-        run: node script/generate_market.js
-
-      - name: Generate today picks
-        if: env.RUN_PICKS == 'true'
+      - run: node script/generate_today.js
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
-        run: node script/generate_today.js
 
-      - name: Generate stats
-        if: env.RUN_PICKS == 'true'
-        run: node script/stats_winrate.js
+      - run: node script/stats_winrate.js
 
-      - name: Debug output
-        run: |
-          echo "=== git status ==="
-          git status --porcelain
-          echo "=== public files ==="
-          ls -al public || true
-          echo "=== history ==="
-          ls -al public/history || true
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
 
-      - name: Commit and push
-        run: |
-          git add public/market.json public/today.json public/stats.json public/history/*.json || true
+          git add public/*.json public/history/*.json || true
 
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No changes"
             exit 0
           fi
 
-          git commit -m "chore: auto update json"
-
-          for i in 1 2 3; do
-            git pull --rebase origin main || true
-            if git push origin main; then
-              echo "Push success."
-              exit 0
-            fi
-            echo "Push failed, retrying..."
-            sleep 3
-          done
-
-          echo "Push failed after retries."
-          exit 1
+          git commit -m "auto update data"
+          git pull --rebase origin main || true
+          git push
