@@ -110,6 +110,31 @@ body{
   margin-bottom:14px;
 }
 
+.news-list{
+  display:grid;
+  gap:12px;
+}
+
+.news-item{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(2,6,23,.25);
+  padding:14px;
+}
+
+.news-theme{
+  color:var(--gold);
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.news-text{
+  color:#e5eefb;
+  font-size:19px;
+  line-height:1.55;
+}
+
 .stock-card{
   width:100%;
   max-width:100%;
@@ -197,6 +222,54 @@ body{
   font-size:23px;
 }
 
+.inst-box{
+  margin-top:14px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(2,6,23,.25);
+  padding:12px;
+}
+
+.inst-title{
+  color:var(--gold);
+  font-size:21px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.inst-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+@media(min-width:768px){
+  .inst-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+}
+
+.inst-item{
+  border:1px solid rgba(148,163,184,.25);
+  border-radius:14px;
+  padding:10px;
+  text-align:center;
+  background:rgba(15,34,56,.45);
+}
+
+.inst-label{
+  color:var(--muted);
+  font-size:17px;
+  font-weight:900;
+  margin-bottom:6px;
+}
+
+.inst-value{
+  font-size:24px;
+  font-weight:1000;
+  word-break:break-word;
+}
+
 .note{
   margin-top:12px;
   font-size:19px;
@@ -253,6 +326,10 @@ body{
   .market-value{
     font-size:25px;
   }
+
+  .inst-value{
+    font-size:22px;
+  }
 }
 </style>
 </head>
@@ -278,6 +355,11 @@ body{
         <div id="future" class="market-value">--</div>
       </div>
     </div>
+  </div>
+
+  <div class="card" id="newsCard" style="display:none;">
+    <div class="title">📰 今日題材新聞</div>
+    <div id="newsList" class="news-list"></div>
   </div>
 
   <div class="card">
@@ -352,6 +434,89 @@ function renderTags(p){
   return tags.map(t => `<div class="tag">${t}</div>`).join("");
 }
 
+function renderInst(p){
+  const inst = p.inst || {};
+
+  const foreign = inst.sumForeign ?? inst.foreign ?? inst.foreign5d ?? null;
+  const trust = inst.sumTrust ?? inst.trust ?? inst.trust5d ?? null;
+  const dealer = inst.sumDealer ?? inst.dealer ?? inst.dealer5d ?? null;
+  const total = inst.sumTotal ?? inst.total ?? inst.total5d ?? null;
+
+  function cls(v){
+    const n = toNum(v);
+    if(n === null) return "";
+    return n >= 0 ? "up" : "down";
+  }
+
+  return `
+    <div class="inst-box">
+      <div class="inst-title">三大法人近 5 日</div>
+      <div class="inst-grid">
+        <div class="inst-item">
+          <div class="inst-label">外資</div>
+          <div class="inst-value ${cls(foreign)}">${num(foreign,0)} 張</div>
+        </div>
+        <div class="inst-item">
+          <div class="inst-label">投信</div>
+          <div class="inst-value ${cls(trust)}">${num(trust,0)} 張</div>
+        </div>
+        <div class="inst-item">
+          <div class="inst-label">自營商</div>
+          <div class="inst-value ${cls(dealer)}">${num(dealer,0)} 張</div>
+        </div>
+        <div class="inst-item">
+          <div class="inst-label">合計</div>
+          <div class="inst-value ${cls(total)}">${num(total,0)} 張</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderNews(){
+  const card = document.getElementById("newsCard");
+  const box = document.getElementById("newsList");
+
+  const themes = Array.isArray(data?.hotThemes) ? data.hotThemes : [];
+  const items = [];
+
+  themes.forEach(t => {
+    const themeName = t.theme || t.name || "題材";
+    const news = Array.isArray(t.news) ? t.news : [];
+
+    news.slice(0,2).forEach(n => {
+      let text = "";
+
+      if(typeof n === "string"){
+        text = n;
+      }else if(n && typeof n === "object"){
+        text = n.title || n.summary || n.text || n.content || "";
+      }
+
+      if(text && text.trim()){
+        items.push({
+          theme: themeName,
+          text: text.trim()
+        });
+      }
+    });
+  });
+
+  if(!items.length){
+    card.style.display = "none";
+    return;
+  }
+
+  box.innerHTML = items.slice(0,6).map(x => `
+    <div class="news-item">
+      <div class="news-theme">${x.theme}</div>
+      <div class="news-text">${x.text}</div>
+    </div>
+  `).join("");
+
+  card.style.display = "block";
+}
+
 function renderStock(p){
   const plan = getPlan(p);
 
@@ -387,6 +552,8 @@ function renderStock(p){
         </div>
       </div>
 
+      ${renderInst(p)}
+
       <div class="note">先在第一目標價分批出場，剩餘部位視強度續抱至第二目標價。</div>
     </div>
   `;
@@ -412,6 +579,7 @@ function toggle(){
 
 async function loadToday(){
   data = await fetch("./today.json?t=" + Date.now(), {cache:"no-store"}).then(r => r.json());
+  renderNews();
   render();
 }
 
