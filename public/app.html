@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <title>台股精選</title>
 
 <style>
@@ -19,7 +19,11 @@
   --blue:#38bdf8;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
 
 html,body{
   width:100%;
@@ -31,7 +35,7 @@ body{
   background:linear-gradient(180deg,#071426,#020617);
   color:var(--text);
   font-family:"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
-  font-size:20px;
+  font-size:clamp(16px,2.5vw,20px);
 }
 
 .app{
@@ -53,15 +57,16 @@ body{
 }
 
 .title{
-  font-size:34px;
+  font-size:clamp(26px,6vw,34px);
   font-weight:900;
   color:var(--gold);
   margin-bottom:12px;
+  line-height:1.25;
 }
 
 .subtext{
   color:var(--muted);
-  font-size:20px;
+  font-size:clamp(16px,3.8vw,20px);
   line-height:1.5;
   margin-bottom:12px;
 }
@@ -81,16 +86,17 @@ body{
 }
 
 .market-label{
-  font-size:18px;
+  font-size:clamp(14px,3.4vw,18px);
   font-weight:900;
   margin-bottom:6px;
   white-space:nowrap;
 }
 
 .market-value{
-  font-size:28px;
+  font-size:clamp(18px,5vw,28px);
   font-weight:1000;
   word-break:break-word;
+  line-height:1.25;
 }
 
 .up{color:var(--green)}
@@ -105,7 +111,7 @@ body{
   border:none;
   border-radius:14px;
   padding:12px 16px;
-  font-size:20px;
+  font-size:clamp(16px,4vw,20px);
   font-weight:900;
   cursor:pointer;
   margin-bottom:14px;
@@ -125,14 +131,14 @@ body{
 
 .news-theme{
   color:var(--gold);
-  font-size:22px;
+  font-size:clamp(18px,4.5vw,22px);
   font-weight:900;
   margin-bottom:8px;
 }
 
 .news-text{
   color:#e5eefb;
-  font-size:19px;
+  font-size:clamp(15px,3.8vw,19px);
   line-height:1.55;
 }
 
@@ -148,20 +154,20 @@ body{
 }
 
 .stock-name{
-  font-size:38px;
+  font-size:clamp(26px,7vw,38px);
   font-weight:1000;
   line-height:1.2;
   word-break:break-word;
 }
 
 .stock-code{
-  font-size:26px;
+  font-size:clamp(18px,5vw,26px);
   color:#cbd5f5;
   margin-top:4px;
 }
 
 .score{
-  font-size:26px;
+  font-size:clamp(18px,5vw,26px);
   margin-top:8px;
   color:#ffffff;
 }
@@ -174,13 +180,14 @@ body{
 }
 
 .tag{
-  font-size:17px;
+  font-size:clamp(14px,3.6vw,17px);
   padding:6px 10px;
   border-radius:999px;
   border:1px solid var(--blue);
   background:#0b2942;
   color:#dff6ff;
   max-width:100%;
+  line-height:1.3;
 }
 
 .targets{
@@ -206,21 +213,21 @@ body{
 }
 
 .target-label{
-  font-size:18px;
+  font-size:clamp(14px,3.6vw,18px);
   font-weight:900;
   margin-bottom:8px;
   line-height:1.25;
 }
 
 .target-value{
-  font-size:27px;
+  font-size:clamp(19px,5.2vw,27px);
   font-weight:1000;
   line-height:1.25;
   word-break:break-word;
 }
 
 .target.buy .target-value{
-  font-size:23px;
+  font-size:clamp(17px,4.8vw,23px);
 }
 
 .inst-box{
@@ -233,7 +240,7 @@ body{
 
 .inst-title{
   color:var(--gold);
-  font-size:21px;
+  font-size:clamp(17px,4.4vw,21px);
   font-weight:900;
   margin-bottom:10px;
 }
@@ -256,31 +263,32 @@ body{
   padding:10px;
   text-align:center;
   background:rgba(15,34,56,.45);
+  min-width:0;
 }
 
 .inst-label{
   color:var(--muted);
-  font-size:17px;
+  font-size:clamp(14px,3.6vw,17px);
   font-weight:900;
   margin-bottom:6px;
 }
 
 .inst-value{
-  font-size:24px;
+  font-size:clamp(18px,4.8vw,24px);
   font-weight:1000;
   word-break:break-word;
 }
 
 .note{
   margin-top:12px;
-  font-size:19px;
+  font-size:clamp(15px,3.8vw,19px);
   line-height:1.5;
   color:#fde68a;
 }
 
 .footer{
   text-align:center;
-  font-size:16px;
+  font-size:clamp(13px,3.3vw,16px);
   color:var(--muted);
   margin-top:20px;
   line-height:1.5;
@@ -294,42 +302,6 @@ body{
   .card{
     padding:16px;
     border-radius:20px;
-  }
-
-  .title{
-    font-size:32px;
-  }
-
-  .stock-name{
-    font-size:35px;
-  }
-
-  .stock-code{
-    font-size:24px;
-  }
-
-  .score{
-    font-size:24px;
-  }
-
-  .target-value{
-    font-size:25px;
-  }
-
-  .target.buy .target-value{
-    font-size:22px;
-  }
-
-  .market-label{
-    font-size:16px;
-  }
-
-  .market-value{
-    font-size:25px;
-  }
-
-  .inst-value{
-    font-size:22px;
   }
 }
 </style>
