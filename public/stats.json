@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-04-30T15:12:19.535Z",
-  "range": "2026-02-05 ~ 2026-04-30",
-  "totalHistoryFiles": 72,
-  "validPickDays": 71,
-  "totalSamples": 234,
+  "generatedAt": "2026-05-01T04:34:57.824Z",
+  "range": "2026-02-05 ~ 2026-05-01",
+  "totalHistoryFiles": 73,
+  "validPickDays": 72,
+  "totalSamples": 237,
   "d1": {
     "samples": 231,
     "wins": 97,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 71,
+      "days": 72,
       "hitDays": 64,
-      "hitRate": 0.9014084507042254
+      "hitRate": 0.8888888888888888
     },
     "tp2": {
-      "days": 71,
+      "days": 72,
       "hitDays": 64,
-      "hitRate": 0.9014084507042254
+      "hitRate": 0.8888888888888888
     }
   },
   "details": [
@@ -4243,6 +4243,60 @@
     },
     {
       "date": "2026-04-30",
+      "pickDate": "2026-04-30",
+      "symbol": "4576",
+      "name": "大銀微系統",
+      "entry": 222,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 228.66,
+      "tp2Price": 233.1,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-01",
+      "pickDate": "2026-04-30",
+      "symbol": "3605",
+      "name": "宏致",
+      "entry": 87.1,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 89.71,
+      "tp2Price": 91.45,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-01",
+      "pickDate": "2026-04-30",
+      "symbol": "2465",
+      "name": "麗臺",
+      "entry": 74,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 76.22,
+      "tp2Price": 77.7,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-01",
       "pickDate": "2026-04-30",
       "symbol": "4576",
       "name": "大銀微系統",
