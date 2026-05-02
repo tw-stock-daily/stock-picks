@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-05-01T14:18:15.718Z",
-  "range": "2026-02-05 ~ 2026-05-01",
-  "totalHistoryFiles": 73,
-  "validPickDays": 72,
-  "totalSamples": 237,
+  "generatedAt": "2026-05-02T03:58:08.022Z",
+  "range": "2026-02-05 ~ 2026-05-02",
+  "totalHistoryFiles": 74,
+  "validPickDays": 73,
+  "totalSamples": 240,
   "d1": {
     "samples": 231,
     "wins": 97,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 72,
+      "days": 73,
       "hitDays": 64,
-      "hitRate": 0.8888888888888888
+      "hitRate": 0.8767123287671232
     },
     "tp2": {
-      "days": 72,
+      "days": 73,
       "hitDays": 64,
-      "hitRate": 0.8888888888888888
+      "hitRate": 0.8767123287671232
     }
   },
   "details": [
@@ -4297,6 +4297,60 @@
     },
     {
       "date": "2026-05-01",
+      "pickDate": "2026-04-30",
+      "symbol": "2465",
+      "name": "麗臺",
+      "entry": 74,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 76.22,
+      "tp2Price": 77.7,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-02",
+      "pickDate": "2026-04-30",
+      "symbol": "3605",
+      "name": "宏致",
+      "entry": 87.1,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 89.71,
+      "tp2Price": 91.45,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-02",
+      "pickDate": "2026-04-30",
+      "symbol": "6672",
+      "name": "騰輝電子-KY",
+      "entry": 219,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 225.57,
+      "tp2Price": 229.95,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-02",
       "pickDate": "2026-04-30",
       "symbol": "2465",
       "name": "麗臺",
