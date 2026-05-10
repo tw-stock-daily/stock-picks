@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-05-09T14:17:52.136Z",
-  "range": "2026-02-05 ~ 2026-05-09",
-  "totalHistoryFiles": 81,
-  "validPickDays": 80,
-  "totalSamples": 261,
+  "generatedAt": "2026-05-10T04:30:25.493Z",
+  "range": "2026-02-05 ~ 2026-05-10",
+  "totalHistoryFiles": 82,
+  "validPickDays": 81,
+  "totalSamples": 264,
   "d1": {
     "samples": 255,
     "wins": 114,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 80,
+      "days": 81,
       "hitDays": 72,
-      "hitRate": 0.9
+      "hitRate": 0.8888888888888888
     },
     "tp2": {
-      "days": 80,
+      "days": 81,
       "hitDays": 71,
-      "hitRate": 0.8875
+      "hitRate": 0.8765432098765432
     }
   },
   "details": [
@@ -4729,6 +4729,60 @@
     },
     {
       "date": "2026-05-09",
+      "pickDate": "2026-05-08",
+      "symbol": "6669",
+      "name": "緯穎",
+      "entry": 5200,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 5356,
+      "tp2Price": 5460,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-10",
+      "pickDate": "2026-05-08",
+      "symbol": "3034",
+      "name": "聯詠",
+      "entry": 498,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 512.94,
+      "tp2Price": 522.9,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-10",
+      "pickDate": "2026-05-08",
+      "symbol": "3006",
+      "name": "晶豪科",
+      "entry": 202,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 208.06,
+      "tp2Price": 212.1,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-10",
       "pickDate": "2026-05-08",
       "symbol": "6669",
       "name": "緯穎",
