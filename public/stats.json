@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-05-15T15:19:34.573Z",
-  "range": "2026-02-05 ~ 2026-05-15",
-  "totalHistoryFiles": 87,
-  "validPickDays": 86,
-  "totalSamples": 279,
+  "generatedAt": "2026-05-16T04:08:55.022Z",
+  "range": "2026-02-05 ~ 2026-05-16",
+  "totalHistoryFiles": 88,
+  "validPickDays": 87,
+  "totalSamples": 282,
   "d1": {
     "samples": 276,
     "wins": 127,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 86,
+      "days": 87,
       "hitDays": 79,
-      "hitRate": 0.9186046511627907
+      "hitRate": 0.9080459770114943
     },
     "tp2": {
-      "days": 86,
+      "days": 87,
       "hitDays": 78,
-      "hitRate": 0.9069767441860465
+      "hitRate": 0.896551724137931
     }
   },
   "details": [
@@ -5065,6 +5065,60 @@
       "d5Win": null,
       "tp1Price": 469.17,
       "tp2Price": 478.28,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-16",
+      "pickDate": "2026-05-15",
+      "symbol": "2303",
+      "name": "聯電",
+      "entry": 110,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 113.3,
+      "tp2Price": 115.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-16",
+      "pickDate": "2026-05-15",
+      "symbol": "2344",
+      "name": "華邦電",
+      "entry": 129.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 133.38,
+      "tp2Price": 135.97,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-16",
+      "pickDate": "2026-05-15",
+      "symbol": "2408",
+      "name": "南亞科",
+      "entry": 311.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 320.85,
+      "tp2Price": 327.07,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
