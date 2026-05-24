@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-05-23T14:41:14.319Z",
-  "range": "2026-02-05 ~ 2026-05-23",
-  "totalHistoryFiles": 95,
-  "validPickDays": 94,
-  "totalSamples": 303,
+  "generatedAt": "2026-05-24T04:46:58.571Z",
+  "range": "2026-02-05 ~ 2026-05-24",
+  "totalHistoryFiles": 96,
+  "validPickDays": 95,
+  "totalSamples": 306,
   "d1": {
     "samples": 297,
     "wins": 142,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 94,
+      "days": 95,
       "hitDays": 86,
-      "hitRate": 0.9148936170212766
+      "hitRate": 0.9052631578947369
     },
     "tp2": {
-      "days": 94,
+      "days": 95,
       "hitDays": 85,
-      "hitRate": 0.9042553191489362
+      "hitRate": 0.8947368421052632
     }
   },
   "details": [
@@ -5485,6 +5485,60 @@
     },
     {
       "date": "2026-05-23",
+      "pickDate": "2026-05-22",
+      "symbol": "2455",
+      "name": "全新",
+      "entry": 425,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 437.75,
+      "tp2Price": 446.25,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-24",
+      "pickDate": "2026-05-22",
+      "symbol": "2302",
+      "name": "麗正",
+      "entry": 28.1,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 28.94,
+      "tp2Price": 29.51,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-24",
+      "pickDate": "2026-05-22",
+      "symbol": "3704",
+      "name": "合勤控",
+      "entry": 44,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 45.32,
+      "tp2Price": 46.2,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-24",
       "pickDate": "2026-05-22",
       "symbol": "2455",
       "name": "全新",
