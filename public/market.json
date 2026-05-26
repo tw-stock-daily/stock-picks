@@ -1,6 +1,6 @@
 {
   "version": "market-v3.9.1",
-  "generatedAt": "2026-05-26T12:40:40+08:00",
+  "generatedAt": "2026-05-27T00:43:10+08:00",
   "signal": {
     "state": "good",
     "label": "🟢 偏多",
@@ -10,19 +10,19 @@
     "sp500": {
       "symbol": "^GSPC",
       "name": "S&P 500",
-      "price": 7473.47,
-      "previousClose": 7408.5,
-      "change": 64.97,
-      "changePct": 0.0088,
+      "price": 7511.12,
+      "previousClose": 7403.05,
+      "change": 108.07,
+      "changePct": 0.0146,
       "source": "Yahoo Finance chart"
     },
     "nasdaq": {
       "symbol": "^IXIC",
       "name": "NASDAQ Composite",
-      "price": 26343.97,
-      "previousClose": 26225.14,
-      "change": 118.83,
-      "changePct": 0.0045,
+      "price": 26582.38,
+      "previousClose": 26090.73,
+      "change": 491.65,
+      "changePct": 0.0188,
       "source": "Yahoo Finance chart"
     }
   },
@@ -30,7 +30,7 @@
     "nightFuture": {
       "symbol": "WTX&",
       "name": "台指期近一",
-      "price": 43804,
+      "price": 44327,
       "change": 0,
       "changePct": 0,
       "source": "Yahoo Taiwan WTX& page"
