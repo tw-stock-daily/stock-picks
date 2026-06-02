@@ -1,40 +1,36 @@
 {
-  "version": "market-v3.9.1",
-  "generatedAt": "2026-06-03T01:25:10+08:00",
-  "signal": {
-    "state": "good",
-    "label": "🟢 偏多",
-    "text": "美股與台指期訊號偏多，短線有利強勢股表現。"
-  },
-  "us": {
-    "sp500": {
+  "generatedAt": "2026-06-02T23:57:15.273Z",
+  "asOfLocal": "2026-06-03 07:57:15",
+  "signalDate": "2026-06-02",
+  "stale": false,
+  "signal": "ok",
+  "label": "🟩 偏多(溫和)",
+  "sources": {
+    "usMarket": {
       "symbol": "^GSPC",
-      "name": "S&P 500",
-      "price": 7607.61,
-      "previousClose": 7519.12,
-      "change": 88.49,
-      "changePct": 0.0118,
-      "source": "Yahoo Finance chart"
+      "last": 7609.77978515625,
+      "prev": 7599.9599609375,
+      "change": 9.81982421875,
+      "changePct": 0.1292088941155246,
+      "lastDate": "2026-06-02",
+      "lastTs": "2026-06-02T21:30:00+08:00",
+      "ok": true,
+      "error": null
     },
-    "nasdaq": {
-      "symbol": "^IXIC",
-      "name": "NASDAQ Composite",
-      "price": 27104.32,
-      "previousClose": 26656.18,
-      "change": 448.14,
-      "changePct": 0.0168,
-      "source": "Yahoo Finance chart"
+    "nightProxy": {
+      "symbol": "^N225",
+      "direction": "up",
+      "last": 66934.328125,
+      "prev": 66329.5,
+      "change": 604.828125,
+      "changePct": 0.9118538885412977,
+      "lastDate": "2026-06-01",
+      "lastTs": "2026-06-01T08:00:00+08:00",
+      "note": null,
+      "ok": true,
+      "error": null
     }
   },
-  "taiwan": {
-    "nightFuture": {
-      "symbol": "WTX&",
-      "name": "台指期近一",
-      "price": 46591,
-      "change": 0,
-      "changePct": 0,
-      "source": "Yahoo Taiwan WTX& page"
-    }
-  },
-  "note": "美股以 S&P 500 為主，台期夜盤以 Yahoo 台指期近一 WTX& 為參考。"
+  "message": "美股與夜盤同向小漲，偏多但力道溫和：可分批布局，避免追價。",
+  "note": "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。"
 }
