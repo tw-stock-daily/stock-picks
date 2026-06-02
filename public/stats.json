@@ -1,49 +1,49 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-06-01T18:41:10.067Z",
-  "range": "2026-02-05 ~ 2026-06-02",
-  "totalHistoryFiles": 104,
-  "validPickDays": 103,
-  "totalSamples": 326,
+  "generatedAt": "2026-06-02T17:26:00.222Z",
+  "range": "2026-02-05 ~ 2026-06-03",
+  "totalHistoryFiles": 105,
+  "validPickDays": 104,
+  "totalSamples": 333,
   "d1": {
-    "samples": 323,
-    "wins": 160,
-    "winRate": 0.4953560371517028
+    "samples": 327,
+    "wins": 162,
+    "winRate": 0.4954128440366973
   },
   "d3": {
-    "samples": 311,
-    "wins": 155,
-    "winRate": 0.4983922829581994
+    "samples": 315,
+    "wins": 157,
+    "winRate": 0.4984126984126984
   },
   "d5": {
-    "samples": 305,
-    "wins": 169,
-    "winRate": 0.5540983606557377
+    "samples": 309,
+    "wins": 171,
+    "winRate": 0.5533980582524272
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 323,
-    "hits": 250,
-    "hitRate": 0.7739938080495357
+    "samples": 327,
+    "hits": 254,
+    "hitRate": 0.7767584097859327
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 323,
-    "hits": 214,
-    "hitRate": 0.6625386996904025
+    "samples": 327,
+    "hits": 217,
+    "hitRate": 0.6636085626911316
   },
   "dailyHit": {
     "tp1": {
-      "days": 103,
+      "days": 104,
       "hitDays": 96,
-      "hitRate": 0.9320388349514563
+      "hitRate": 0.9230769230769231
     },
     "tp2": {
-      "days": 103,
-      "hitDays": 94,
-      "hitRate": 0.912621359223301
+      "days": 104,
+      "hitDays": 95,
+      "hitRate": 0.9134615384615384
     }
   },
   "details": [
@@ -3344,6 +3344,24 @@
     {
       "date": "2026-04-13",
       "pickDate": "2026-04-13",
+      "symbol": "3583",
+      "name": "辛耘",
+      "entry": 702,
+      "d1Close": 683,
+      "d3Close": 704,
+      "d5Close": 808,
+      "d1Win": false,
+      "d3Win": true,
+      "d5Win": true,
+      "tp1Price": 723.06,
+      "tp2Price": 737.1,
+      "d5HighMax": 828,
+      "tp1Hit": true,
+      "tp2Hit": true
+    },
+    {
+      "date": "2026-04-13",
+      "pickDate": "2026-04-13",
       "symbol": "2467",
       "name": "志聖",
       "entry": 549,
@@ -3482,6 +3500,24 @@
       "tp1Price": 3924.3,
       "tp2Price": 4000.5,
       "d5HighMax": 4200,
+      "tp1Hit": true,
+      "tp2Hit": true
+    },
+    {
+      "date": "2026-04-16",
+      "pickDate": "2026-04-16",
+      "symbol": "3583",
+      "name": "辛耘",
+      "entry": 704,
+      "d1Close": 760,
+      "d3Close": 770,
+      "d5Close": 893,
+      "d1Win": true,
+      "d3Win": true,
+      "d5Win": true,
+      "tp1Price": 725.12,
+      "tp2Price": 739.2,
+      "d5HighMax": 931,
       "tp1Hit": true,
       "tp2Hit": true
     },
@@ -4820,6 +4856,24 @@
     {
       "date": "2026-05-12",
       "pickDate": "2026-05-12",
+      "symbol": "3583",
+      "name": "辛耘",
+      "entry": 952,
+      "d1Close": 966,
+      "d3Close": 888,
+      "d5Close": 842,
+      "d1Win": true,
+      "d3Win": false,
+      "d5Win": false,
+      "tp1Price": 980.56,
+      "tp2Price": 999.6,
+      "d5HighMax": 1010,
+      "tp1Hit": true,
+      "tp2Hit": true
+    },
+    {
+      "date": "2026-05-12",
+      "pickDate": "2026-05-12",
       "symbol": "6285",
       "name": "啟碁",
       "entry": 282,
@@ -4851,6 +4905,24 @@
       "tp2Price": 701.4,
       "d5HighMax": 680,
       "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-05-13",
+      "pickDate": "2026-05-13",
+      "symbol": "3583",
+      "name": "辛耘",
+      "entry": 966,
+      "d1Close": 929,
+      "d3Close": 900,
+      "d5Close": 826,
+      "d1Win": false,
+      "d3Win": false,
+      "d5Win": false,
+      "tp1Price": 994.98,
+      "tp2Price": 1014.3,
+      "d5HighMax": 1010,
+      "tp1Hit": true,
       "tp2Hit": false
     },
     {
@@ -5911,6 +5983,60 @@
       "d5Win": null,
       "tp1Price": 179.22,
       "tp2Price": 182.7,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-03",
+      "pickDate": "2026-06-01",
+      "symbol": "3231",
+      "name": "緯創",
+      "entry": 174,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 179.22,
+      "tp2Price": 182.7,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-03",
+      "pickDate": "2026-06-01",
+      "symbol": "3321",
+      "name": "同泰",
+      "entry": 19.8,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 20.39,
+      "tp2Price": 20.79,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-03",
+      "pickDate": "2026-06-01",
+      "symbol": "2317",
+      "name": "鴻海",
+      "entry": 293.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 302.31,
+      "tp2Price": 308.18,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
