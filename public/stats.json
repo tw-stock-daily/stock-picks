@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-06-05T15:56:29.609Z",
-  "range": "2026-02-05 ~ 2026-06-05",
-  "totalHistoryFiles": 107,
-  "validPickDays": 106,
-  "totalSamples": 339,
+  "generatedAt": "2026-06-06T04:34:10.060Z",
+  "range": "2026-02-05 ~ 2026-06-06",
+  "totalHistoryFiles": 108,
+  "validPickDays": 107,
+  "totalSamples": 342,
   "d1": {
     "samples": 336,
     "wins": 165,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 106,
+      "days": 107,
       "hitDays": 99,
-      "hitRate": 0.9339622641509434
+      "hitRate": 0.9252336448598131
     },
     "tp2": {
-      "days": 106,
+      "days": 107,
       "hitDays": 98,
-      "hitRate": 0.9245283018867925
+      "hitRate": 0.9158878504672897
     }
   },
   "details": [
@@ -6133,6 +6133,60 @@
     },
     {
       "date": "2026-06-05",
+      "pickDate": "2026-06-05",
+      "symbol": "2461",
+      "name": "光群雷",
+      "entry": 19.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 20.09,
+      "tp2Price": 20.48,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-06",
+      "pickDate": "2026-06-05",
+      "symbol": "5484",
+      "name": "慧友",
+      "entry": 57.9,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 59.64,
+      "tp2Price": 60.8,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-06",
+      "pickDate": "2026-06-05",
+      "symbol": "2357",
+      "name": "華碩",
+      "entry": 900,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 927,
+      "tp2Price": 945,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-06",
       "pickDate": "2026-06-05",
       "symbol": "2461",
       "name": "光群雷",
