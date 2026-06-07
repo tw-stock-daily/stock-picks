@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-06-06T14:43:20.017Z",
-  "range": "2026-02-05 ~ 2026-06-06",
-  "totalHistoryFiles": 108,
-  "validPickDays": 107,
-  "totalSamples": 342,
+  "generatedAt": "2026-06-07T05:04:33.424Z",
+  "range": "2026-02-05 ~ 2026-06-07",
+  "totalHistoryFiles": 109,
+  "validPickDays": 108,
+  "totalSamples": 345,
   "d1": {
     "samples": 336,
     "wins": 165,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 107,
+      "days": 108,
       "hitDays": 99,
-      "hitRate": 0.9252336448598131
+      "hitRate": 0.9166666666666666
     },
     "tp2": {
-      "days": 107,
+      "days": 108,
       "hitDays": 98,
-      "hitRate": 0.9158878504672897
+      "hitRate": 0.9074074074074074
     }
   },
   "details": [
@@ -6199,6 +6199,60 @@
       "d5Win": null,
       "tp1Price": 59.64,
       "tp2Price": 60.8,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-07",
+      "pickDate": "2026-06-05",
+      "symbol": "2357",
+      "name": "華碩",
+      "entry": 900,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 927,
+      "tp2Price": 945,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-07",
+      "pickDate": "2026-06-05",
+      "symbol": "2461",
+      "name": "光群雷",
+      "entry": 19.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 20.09,
+      "tp2Price": 20.48,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-07",
+      "pickDate": "2026-06-05",
+      "symbol": "2882",
+      "name": "國泰金",
+      "entry": 100,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 103,
+      "tp2Price": 105,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
