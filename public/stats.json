@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-06-21T15:12:20.531Z",
-  "range": "2026-02-05 ~ 2026-06-21",
-  "totalHistoryFiles": 123,
-  "validPickDays": 122,
-  "totalSamples": 387,
+  "generatedAt": "2026-06-22T17:41:07.309Z",
+  "range": "2026-02-05 ~ 2026-06-23",
+  "totalHistoryFiles": 124,
+  "validPickDays": 123,
+  "totalSamples": 390,
   "d1": {
     "samples": 378,
     "wins": 178,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 122,
+      "days": 123,
       "hitDays": 112,
-      "hitRate": 0.9180327868852459
+      "hitRate": 0.9105691056910569
     },
     "tp2": {
-      "days": 122,
+      "days": 123,
       "hitDays": 110,
-      "hitRate": 0.9016393442622951
+      "hitRate": 0.8943089430894309
     }
   },
   "details": [
@@ -6997,6 +6997,60 @@
     },
     {
       "date": "2026-06-21",
+      "pickDate": "2026-06-18",
+      "symbol": "6153",
+      "name": "嘉聯益",
+      "entry": 24.45,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 25.18,
+      "tp2Price": 25.67,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-23",
+      "pickDate": "2026-06-18",
+      "symbol": "4958",
+      "name": "臻鼎-KY",
+      "entry": 642,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 661.26,
+      "tp2Price": 674.1,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-23",
+      "pickDate": "2026-06-18",
+      "symbol": "8476",
+      "name": "台境*",
+      "entry": 21.75,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 22.4,
+      "tp2Price": 22.84,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-23",
       "pickDate": "2026-06-18",
       "symbol": "6153",
       "name": "嘉聯益",
