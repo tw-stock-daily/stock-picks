@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-06-27T04:32:13.297Z",
-  "range": "2026-02-05 ~ 2026-06-27",
-  "totalHistoryFiles": 128,
-  "validPickDays": 127,
-  "totalSamples": 402,
+  "generatedAt": "2026-06-28T04:58:41.439Z",
+  "range": "2026-02-05 ~ 2026-06-28",
+  "totalHistoryFiles": 129,
+  "validPickDays": 128,
+  "totalSamples": 405,
   "d1": {
     "samples": 396,
     "wins": 192,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 127,
+      "days": 128,
       "hitDays": 118,
-      "hitRate": 0.9291338582677166
+      "hitRate": 0.921875
     },
     "tp2": {
-      "days": 127,
+      "days": 128,
       "hitDays": 116,
-      "hitRate": 0.9133858267716536
+      "hitRate": 0.90625
     }
   },
   "details": [
@@ -7267,6 +7267,60 @@
     },
     {
       "date": "2026-06-27",
+      "pickDate": "2026-06-26",
+      "symbol": "7795",
+      "name": "長廣",
+      "entry": 460.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 474.31,
+      "tp2Price": 483.53,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-28",
+      "pickDate": "2026-06-26",
+      "symbol": "3189",
+      "name": "景碩",
+      "entry": 797,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 820.91,
+      "tp2Price": 836.85,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-28",
+      "pickDate": "2026-06-26",
+      "symbol": "1718",
+      "name": "中纖",
+      "entry": 11.15,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 11.48,
+      "tp2Price": 11.71,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-06-28",
       "pickDate": "2026-06-26",
       "symbol": "7795",
       "name": "長廣",
