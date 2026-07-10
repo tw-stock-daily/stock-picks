@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-07-09T15:58:10.377Z",
-  "range": "2026-02-05 ~ 2026-07-09",
-  "totalHistoryFiles": 139,
-  "validPickDays": 138,
-  "totalSamples": 435,
+  "generatedAt": "2026-07-10T04:32:03.530Z",
+  "range": "2026-02-05 ~ 2026-07-10",
+  "totalHistoryFiles": 140,
+  "validPickDays": 139,
+  "totalSamples": 438,
   "d1": {
     "samples": 432,
     "wins": 210,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 138,
+      "days": 139,
       "hitDays": 130,
-      "hitRate": 0.9420289855072463
+      "hitRate": 0.935251798561151
     },
     "tp2": {
-      "days": 138,
+      "days": 139,
       "hitDays": 128,
-      "hitRate": 0.927536231884058
+      "hitRate": 0.920863309352518
     }
   },
   "details": [
@@ -7861,6 +7861,60 @@
     },
     {
       "date": "2026-07-09",
+      "pickDate": "2026-07-09",
+      "symbol": "6477",
+      "name": "安集",
+      "entry": 39.85,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 41.05,
+      "tp2Price": 41.84,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-07-10",
+      "pickDate": "2026-07-09",
+      "symbol": "2645",
+      "name": "長榮航太",
+      "entry": 240,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 247.2,
+      "tp2Price": 252,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-07-10",
+      "pickDate": "2026-07-09",
+      "symbol": "3026",
+      "name": "禾伸堂",
+      "entry": 1005,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 1035.15,
+      "tp2Price": 1055.25,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-07-10",
       "pickDate": "2026-07-09",
       "symbol": "6477",
       "name": "安集",
