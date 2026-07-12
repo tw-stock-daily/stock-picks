@@ -1,24 +1,24 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-07-11T03:50:29.390Z",
-  "range": "2026-02-05 ~ 2026-07-11",
-  "totalHistoryFiles": 141,
+  "generatedAt": "2026-07-12T04:06:04.699Z",
+  "range": "2026-02-05 ~ 2026-07-12",
+  "totalHistoryFiles": 142,
   "validPickDays": 139,
   "totalSamples": 438,
   "d1": {
     "samples": 438,
-    "wins": 210,
-    "winRate": 0.4794520547945205
+    "wins": 206,
+    "winRate": 0.4703196347031963
   },
   "d3": {
     "samples": 429,
-    "wins": 210,
-    "winRate": 0.48951048951048953
+    "wins": 206,
+    "winRate": 0.4801864801864802
   },
   "d5": {
     "samples": 426,
-    "wins": 222,
-    "winRate": 0.5211267605633803
+    "wins": 221,
+    "winRate": 0.5187793427230047
   },
   "tp1": {
     "label": "+3% within 5 trading days",
@@ -31,8 +31,8 @@
     "label": "+5% within 5 trading days",
     "pct": 0.05,
     "samples": 438,
-    "hits": 291,
-    "hitRate": 0.6643835616438356
+    "hits": 288,
+    "hitRate": 0.6575342465753424
   },
   "dailyHit": {
     "tp1": {
@@ -179,17 +179,17 @@
       "symbol": "7610",
       "name": "聯友金屬-創",
       "entry": 241,
-      "d1Close": 265,
-      "d3Close": 285.5,
-      "d5Close": 303,
-      "d1Win": true,
-      "d3Win": true,
+      "d1Close": 220.8223114013672,
+      "d3Close": 237.90480041503906,
+      "d5Close": 252.48739624023438,
+      "d1Win": false,
+      "d3Win": false,
       "d5Win": true,
       "tp1Price": 248.23,
       "tp2Price": 253.05,
-      "d5HighMax": 303,
+      "d5HighMax": 252.48739624023438,
       "tp1Hit": true,
-      "tp2Hit": true
+      "tp2Hit": false
     },
     {
       "date": "2026-02-09",
@@ -413,17 +413,17 @@
       "symbol": "7610",
       "name": "聯友金屬-創",
       "entry": 265,
-      "d1Close": 274,
-      "d3Close": 285,
-      "d5Close": 327,
-      "d1Win": true,
-      "d3Win": true,
+      "d1Close": 228.3219451904297,
+      "d3Close": 237.48814392089844,
+      "d5Close": 272.48638916015625,
+      "d1Win": false,
+      "d3Win": false,
       "d5Win": true,
       "tp1Price": 272.95,
       "tp2Price": 278.25,
-      "d5HighMax": 329.5,
+      "d5HighMax": 274.56964111328125,
       "tp1Hit": true,
-      "tp2Hit": true
+      "tp2Hit": false
     },
     {
       "date": "2026-02-10",
@@ -503,17 +503,17 @@
       "symbol": "7610",
       "name": "聯友金屬-創",
       "entry": 265,
-      "d1Close": 274,
-      "d3Close": 285,
-      "d5Close": 327,
-      "d1Win": true,
-      "d3Win": true,
+      "d1Close": 228.3219451904297,
+      "d3Close": 237.48814392089844,
+      "d5Close": 272.48638916015625,
+      "d1Win": false,
+      "d3Win": false,
       "d5Win": true,
       "tp1Price": 272.95,
       "tp2Price": 278.25,
-      "d5HighMax": 329.5,
+      "d5HighMax": 274.56964111328125,
       "tp1Hit": true,
-      "tp2Hit": true
+      "tp2Hit": false
     },
     {
       "date": "2026-02-10",
@@ -737,15 +737,15 @@
       "symbol": "7610",
       "name": "聯友金屬-創",
       "entry": 274,
-      "d1Close": 285.5,
-      "d3Close": 303,
-      "d5Close": 327,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": true,
+      "d1Close": 237.90480041503906,
+      "d3Close": 252.48739624023438,
+      "d5Close": 272.48638916015625,
+      "d1Win": false,
+      "d3Win": false,
+      "d5Win": false,
       "tp1Price": 282.22,
       "tp2Price": 287.7,
-      "d5HighMax": 350,
+      "d5HighMax": 291.652099609375,
       "tp1Hit": true,
       "tp2Hit": true
     },
