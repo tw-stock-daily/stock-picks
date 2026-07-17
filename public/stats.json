@@ -1,8 +1,8 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-07-16T15:04:03.699Z",
-  "range": "2026-02-05 ~ 2026-07-16",
-  "totalHistoryFiles": 146,
+  "generatedAt": "2026-07-17T03:46:19.308Z",
+  "range": "2026-02-05 ~ 2026-07-17",
+  "totalHistoryFiles": 147,
   "validPickDays": 141,
   "totalSamples": 444,
   "d1": {
@@ -7981,7 +7981,7 @@
       "d5Win": null,
       "tp1Price": 64.99,
       "tp2Price": 66.26,
-      "d5HighMax": 80,
+      "d5HighMax": 84,
       "tp1Hit": true,
       "tp2Hit": true
     },
@@ -8035,7 +8035,7 @@
       "d5Win": null,
       "tp1Price": 245.14,
       "tp2Price": 249.9,
-      "d5HighMax": 253.5,
+      "d5HighMax": 254,
       "tp1Hit": true,
       "tp2Hit": true
     }
