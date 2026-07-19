@@ -1,40 +1,65 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-07-19T12:02:47+08:00",
-  "asOfLocal": "2026-07-19T12:02:47+08:00",
+  "generatedAt": "2026-07-19T22:24:26+08:00",
+  "asOfLocal": "2026-07-19T22:24:26+08:00",
   "date": "2026-07-19",
   "marketState": "weak",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 32.2,
+      "score": 30.6,
       "news": [
         {
           "title": "AI伺服器營收占比拚翻倍！「老AI股」6月營收創45個月新高 爆量10萬張問鼎量價雙增王 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMi3wNBVV95cUxNbFRKaV9aekVQYnh1dVp2M3dfZmExWmZfMmJjWVN5MGI4T1hKV2RzTllkT2xxMmo0VFN2VjZsT3ZEdTRrQVBzc211XzFIX3Ayb2ZuY2JrcE1uY0Q2aUluZ29rMTlsWDBkM3gwTXFFeTl4TXFqR1BhUURDZE5KSVBlMDRpbEtsOThWTURwTVNURXVhV1h5ZDlKWlVFbFFJNnRGMVlfT1d5UUZ3ZF82ZU82Y1BRUUpCc0xVYkVnSWpSQTV5eHVRZGpvQmppMVZDdXFMaXJuRncxdlhLYTBPNDd2TW83LTRMUEZEVGc4Z0hXVGZvRm94MlhvZ1RIeFIwOTRzeHo3TFVYQTA2Q1U3THlKRDNmOHZMa29Mbm9IcGN2eGlRX2xKQUwtTHdTTWduZW1QWk1uenJXc1lsb1NnbHBicXp5MUJKQ2o4V3MtTWRJazRJT2hmV3NiTGNWWHY1S3RJRVF6Uk42c1kwUXZpNkU0U2d3MFNicEZGc2syVWxpdUVwak00Rnl3RUo2d01lTllKNUhfNUJGb0F0UFdmUU56VkNTVFNwemlaY0hXNmhwNjFaMUU5UVRPMTZBYmw0MVdQbkdncXZ0Uzh3cnFuUklHSVJ2X3NTS1JKMzJBOWtPcw?oc=5",
           "pubDate": "Sun, 19 Jul 2026 01:12:00 GMT",
+          "score": 2.7
+        },
+        {
+          "title": "2317 鴻海 - ​AI伺服器中游戰場：規格標準化下，台廠七雄的護城河與危機- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBOdnR2U0I1NldObHNmZWpCUXBtT3BaN2VPMEVETU9vZ29ZSWdqVEZsUUcxemJxWk1rWS1WNmRfOGh5NE1UOFBaN0tHQ3BGZVY3UDRlT0g4eGk?oc=5",
+          "pubDate": "Sun, 19 Jul 2026 06:53:13 GMT",
           "score": 3.2
         },
         {
-          "title": "台股血洗2953點！聯電、國巨、南亞跌停該去撿？老手曝AI伺服器資金悄轉移「這族群」...7檔鑽石股有缺口直接噴 - 今周刊",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSnFfU0h0clFrWUwxZW5tOFRFQ2J4YlJzYW50WjJNeHhsUDBZbndxVUpNcGdZT1FFZDJHMmRic1R6N3dESURLUEhwYUVBZWoyd2tBb1FaSHhnYjdYSTVDZlpJN3VEUmxpTzhmUEw5MzhjNEk0czQ3MUtKbVNiWmgxcw?oc=5",
-          "pubDate": "Fri, 17 Jul 2026 02:55:44 GMT",
-          "score": 2
-        },
-        {
-          "title": "廣達除息苦貼息 外資調節 vs AI伺服器新品接棒 後市能否扳回一城？ - 經濟日報",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9pbGstWE9pUlJ5UnduR05uMXBsaVBzc1N2R0VSbVA4TXFWTGJwQ0F4ZV9namZfWngycnUzTHU1b2pTeGtXMU5jZG5WRGFncExOSnN2VXd0V3pxQdIBX0FVX3lxTE1QcWFmbW5WQVpyVDRVWVJJQWJzTjl5d0YtT1VMNDgzc0xwcU5Yc29LMnAyMnVrU0ttV21GUGlOMF9QaVZyYXJKcTBGMmdmU014UEpSUW5vSGsyS2pGMmNv?oc=5",
-          "pubDate": "Sat, 18 Jul 2026 09:00:00 GMT",
-          "score": 2.7
+          "title": "5月獲利暴增213%！「功率半導體封測廠」AI伺服器、工控訂單回補 法人估下半年營收更優 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxPSjlVM19HQnBNekZyM3lXY2pkeVRWd1ZQVG9HaDQ1bjNXWFF3VXRwRWNvX1c3ZUlGbmh1TU5GVm1vekViVTNkOE90cVFwT0hwS2dPNDlIRElZcXhDMldIbmJmbHRZZkREYnY0WWJqSlFCVmUweURkUXhickl0a1k2d0FSZWZ2b01CcHlxUGJIQW1yb3h4XzdhRmI2Vm53QjBRTnhYZjZ5TkkzaDVWeHFxQjRpdWhpZk82NThiczFoVTFGR0pyOS1xQTJVeTZPQ2czTHVVU1JpMWJmMk9NY09TWW5oOG1CbmZ0WVdRV2VNVVN6YmszRkJWalZlcUxHZUNDNms1RHM1anlRbzh6Ny1fc0wzUmVubFJCRGtyX0RBWExvRmI5X0tQaDlIM0tBdDM2SWVEZVRONWgyNDZQalFfN2NuYk9zYlJnUjlQTlZybW1ST1l6aVUtd01tNzhuXzlqa2VjYlg4NTB5LVB1WDFrTVYtczk1QnhJTFl1TkJGOWJiVVVCQjZ4R282VC1vRm1sT0toMFZMZm5oN2I0WWU3OWpibF9uQmZhNTljaHZvMS1GbnltbHRuZkZFZ0c3N2p4TUd3Zk5QeFpyYU5TdXBsWEJjdFhKU01RbGlsRVdfR0pqbFM0Y3R2Vg?oc=5",
+          "pubDate": "Sun, 19 Jul 2026 07:20:00 GMT",
+          "score": 3.2
         }
       ]
     },
     {
       "rank": 2,
+      "theme": "半導體",
+      "score": 22.35,
+      "news": [
+        {
+          "title": "台股「狂殺2953點」能買？她見1檔破底「沒撿」 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNZDZpakRkOE14NjkwdDBobkZnUHRWeW10ZDVXajZXY1pkLTM3NUlyblAzSjM0eWhCRlhDX2pSd3FZZEZCSUhkNFdhbmlobUxselZKUmlqQmpiME4wZ09Ib3NPRklMeVhZSUlodlZZZDB5Rlh3X21XdFZ2bk4wRnZZNElJM1BFdEJMV1hjMU12MV8wSTVEOTdRdDdhcVRQZnFXaWF3aU9aQmxjb3BkV1pCbXU0elJiUmVBeU1QcHNnSDdtTmFmT0p3RTN6TlIzRGJPcURoZkcweW1WUG45SVBDWW5aY005cFBVRlZXazFpVXNaLWpHdUZaTlpyVXRiaHRUTDdQNnZKWnZsbUNpTWlB?oc=5",
+          "pubDate": "Sat, 18 Jul 2026 07:13:18 GMT",
+          "score": 1.15
+        },
+        {
+          "title": "5月獲利暴增213%！「功率半導體封測廠」AI伺服器、工控訂單回補 法人估下半年營收更優 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxPSjlVM19HQnBNekZyM3lXY2pkeVRWd1ZQVG9HaDQ1bjNXWFF3VXRwRWNvX1c3ZUlGbmh1TU5GVm1vekViVTNkOE90cVFwT0hwS2dPNDlIRElZcXhDMldIbmJmbHRZZkREYnY0WWJqSlFCVmUweURkUXhickl0a1k2d0FSZWZ2b01CcHlxUGJIQW1yb3h4XzdhRmI2Vm53QjBRTnhYZjZ5TkkzaDVWeHFxQjRpdWhpZk82NThiczFoVTFGR0pyOS1xQTJVeTZPQ2czTHVVU1JpMWJmMk9NY09TWW5oOG1CbmZ0WVdRV2VNVVN6YmszRkJWalZlcUxHZUNDNms1RHM1anlRbzh6Ny1fc0wzUmVubFJCRGtyX0RBWExvRmI5X0tQaDlIM0tBdDM2SWVEZVRONWgyNDZQalFfN2NuYk9zYlJnUjlQTlZybW1ST1l6aVUtd01tNzhuXzlqa2VjYlg4NTB5LVB1WDFrTVYtczk1QnhJTFl1TkJGOWJiVVVCQjZ4R282VC1vRm1sT0toMFZMZm5oN2I0WWU3OWpibF9uQmZhNTljaHZvMS1GbnltbHRuZkZFZ0c3N2p4TUd3Zk5QeFpyYU5TdXBsWEJjdFhKU01RbGlsRVdfR0pqbFM0Y3R2Vg?oc=5",
+          "pubDate": "Sun, 19 Jul 2026 07:20:00 GMT",
+          "score": 3.2
+        },
+        {
+          "title": "搶占AI伺服器與半導體供應鏈 聯強雙核心業務下半年動能強勁 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xemczb1VUQUVPeWhLaExaNGxVaUtfbHREOHRMejdQeEY3bERiQlk1QVJzUlBMcXRPOGNVRXRoM0FwdzhnSktSbVdtZnA0bFU?oc=5",
+          "pubDate": "Tue, 14 Jul 2026 09:06:25 GMT",
+          "score": 0.55
+        }
+      ]
+    },
+    {
+      "rank": 3,
       "theme": "CPO/光通訊",
-      "score": 20.4,
+      "score": 20.8,
       "news": [
         {
           "title": "GlassBridge 是什麼？康寧光互連熱潮解析：聯亞、上詮、光聖誰是CPO 供應鏈贏家？｜產業熱話｜豐雲學堂2026 年 07 月 - sinotrade.com.tw",
@@ -46,7 +71,7 @@
           "title": "〈焦點股〉光通訊股綠光罩頂 聯鈞等4檔跌停、6檔重摔逾半根停板 - Yahoo 財經",
           "link": "https://news.google.com/rss/articles/CBMikANBVV95cUxPZTNpdV9SNG5RUF8ydTNTMmpNTGRCdV9NdUQ5UldrdWYyQmUtREowSjlaTFZBbmZVZWVUWWtvamdiQUZWRm0yY3VJUVJ6M3JCc29kQjE5VHMzOUE2M05CRVdvRkJkd3FzUTYyOF93WVpnRDRjWDhpVk1UZlNZRmZwemUwQzJZMDByZ2RucnFZVG42RC05Tjd0b1hrT25kMjhLUUt1QUpRVFNnMTNWRnVKLUlLTG9yU1BhTDRKOTgyd01DNE1RVW1NTFZPdU9mU2ZHeThDQzV2MnVYTWJWQnQzWUh5VkZWTFhZV3ItME1BelN5Y3dDVk1lR3RIZXYtdlNNVEJNczEtQlJ6V2NETTRiU1ZYaUliV3YtUVc3VVNqT25YSDY4V2VJUzMyNzczR19ITkh4VWFaYWVDMXlPN0F6aURtZWR6VlN2Q2JISXZxc3loQ1otaTFWVEtnU1RKR2tCRDQya3pXdTkyOF9LVEc4eUI4LU1oTE1wUEh4LWdoVGJTR3RaWmd0Zl9oNXNubkxj?oc=5",
           "pubDate": "Fri, 17 Jul 2026 05:35:38 GMT",
-          "score": 1.15
+          "score": 1
         },
         {
           "title": "〈焦點股〉CPO出貨量恐面臨下調風險 光通訊股7檔慘綠跌停 - news.cnyes.com",
@@ -57,34 +82,9 @@
       ]
     },
     {
-      "rank": 3,
-      "theme": "半導體",
-      "score": 18.1,
-      "news": [
-        {
-          "title": "台股「狂殺2953點」能買？她見1檔破底「沒撿」 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNZDZpakRkOE14NjkwdDBobkZnUHRWeW10ZDVXajZXY1pkLTM3NUlyblAzSjM0eWhCRlhDX2pSd3FZZEZCSUhkNFdhbmlobUxselZKUmlqQmpiME4wZ09Ib3NPRklMeVhZSUlodlZZZDB5Rlh3X21XdFZ2bk4wRnZZNElJM1BFdEJMV1hjMU12MV8wSTVEOTdRdDdhcVRQZnFXaWF3aU9aQmxjb3BkV1pCbXU0elJiUmVBeU1QcHNnSDdtTmFmT0p3RTN6TlIzRGJPcURoZkcweW1WUG45SVBDWW5aY005cFBVRlZXazFpVXNaLWpHdUZaTlpyVXRiaHRUTDdQNnZKWnZsbUNpTWlB?oc=5",
-          "pubDate": "Sat, 18 Jul 2026 07:13:18 GMT",
-          "score": 1.35
-        },
-        {
-          "title": "搶占AI伺服器與半導體供應鏈 聯強雙核心業務下半年動能強勁 - news.cnyes.com",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xemczb1VUQUVPeWhLaExaNGxVaUtfbHREOHRMejdQeEY3bERiQlk1QVJzUlBMcXRPOGNVRXRoM0FwdzhnSktSbVdtZnA0bFU?oc=5",
-          "pubDate": "Tue, 14 Jul 2026 09:06:25 GMT",
-          "score": 0.8
-        },
-        {
-          "title": "AI獨強！魏哲家點名成熟製程「兩大關鍵晶片」吃緊 台灣PMIC、 感測器概念股一次看 - 理財周刊",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1xYnUxM3FkSElXSzB4bE85N2FYbFFYQU1USHEwOW5ScmxxSGs4NTVMNFpLd1VraHh1TUswbHdrUDRFOGhYV19TZGpxQmJfVXdoV2xYekxMTVNJVlM4YTZaV1NIb2p0dUd2bHlCYnlzQQ?oc=5",
-          "pubDate": "Fri, 17 Jul 2026 05:50:14 GMT",
-          "score": 1.15
-        }
-      ]
-    },
-    {
       "rank": 4,
       "theme": "機器人/自動化",
-      "score": 8.8,
+      "score": 9.35,
       "news": [
         {
           "title": "達明AI機器人進駐廣達德國廠！搶攻歐洲車用電子 導入ECU檢測產線 - Yahoo股市",
@@ -109,25 +109,25 @@
     {
       "rank": 5,
       "theme": "PCB/載板",
-      "score": 7.4,
+      "score": 4.9,
       "news": [
         {
           "title": "台股「狂殺2953點」能買？她見1檔破底「沒撿」 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNZDZpakRkOE14NjkwdDBobkZnUHRWeW10ZDVXajZXY1pkLTM3NUlyblAzSjM0eWhCRlhDX2pSd3FZZEZCSUhkNFdhbmlobUxselZKUmlqQmpiME4wZ09Ib3NPRklMeVhZSUlodlZZZDB5Rlh3X21XdFZ2bk4wRnZZNElJM1BFdEJMV1hjMU12MV8wSTVEOTdRdDdhcVRQZnFXaWF3aU9aQmxjb3BkV1pCbXU0elJiUmVBeU1QcHNnSDdtTmFmT0p3RTN6TlIzRGJPcURoZkcweW1WUG45SVBDWW5aY005cFBVRlZXazFpVXNaLWpHdUZaTlpyVXRiaHRUTDdQNnZKWnZsbUNpTWlB?oc=5",
           "pubDate": "Sat, 18 Jul 2026 07:13:18 GMT",
-          "score": 1.35
+          "score": 1.15
         },
         {
           "title": "AI伺服器淪提款機！投信出清「這3檔」1.6萬張 連砍緯創3刀結帳17.91億元 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNNGg2NTBzRGVoR1YzZTRuTjFnckVud1lKZXlxSmU3aU11QS1IblFNVXBvYXk4cDZ5TW5vdGs1M2FGY181RG9WdllDLVpxVlZ3a3JOclpCb1RaNW9OSFlHMlhOM0NFZnVkRHFlRE5fOWg0cGszY2NScE5mUk9FMEtzcmdmMmJQdDE2bjlWdjhNVVAyc2lReW5JM1RUUEVFamMxTjRUMzRBbzd2djRFeUs3cmQ3REZUcnNqUXJ0bjZKQ2E1VjBhNG1rbXI2ODRUbnlyMjJXQUZ1UzlnTEd6dWdKUlo4UTVORGtfTnVHVkh6aWRvLUdpVHFhcGJ4NGY0S0UwdTZUR3ctYjNiaUNDOGkteEhvUktSQzgzci13?oc=5",
           "pubDate": "Fri, 17 Jul 2026 11:30:00 GMT",
-          "score": 1.15
+          "score": 1
         },
         {
-          "title": "ABF載板雙雄與力積電參戰確認！00905成分股69檔大地震 大立光與AI伺服器「兩巨頭」被放生 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMi8ANBVV95cUxOWk9qcjNPM2pzOWVjcEtZaW9FOExmWHBRNThrVUtRWXY2eXo1REF4NGpsOF9obC1GRTZYNzc0akxKMW5fNVMyT00tMkhIdHpwVG5tcEpCTGNjQ3dwSXU1TTNFbHptZTdIM3ZmQ1MzX2Q0X05SNmFDeVVGYjdRX2dzdWRnOWRiOHVicnpvZ3RaQlEwVXo0cDZPMlFIZGMybWdpdkZ6UVdfVTZTcWFnT0oyZG5Uc2xBckU3bzhTZklMeWc4a3hBdDdrcnVvdG9WbEUzcS12aHAzclNWZmliMWxQYTFYUEs0anFKRllVTzRyMzFJaUJQeS1rUnpwbHFaQTRsSXZHMUMtTHcyMnJnR0YtdWd5MDFxaDRHaFdMLVp4eThqV2sxRVFpS3kySUJsQV9jOUFZYXFqUE9KYXo3STZvclA5M2pveVZzZ0tlckFveUpEamlsaE5xT09iSVY5ZmE4bHhDdlJWVXRwNllrQ1BSaGU3dmpCZUIzbnNBZUQ5QlcyVjlwWFhUcGgzYlpjOHkyR0xaMUdvTDZqZXBTWGtqMVZFQUFBY1c5dHotVGRuY0VQcnFIeUc1SWdOYThHOXFSeTVuWnUtT3ZZR0VET3dEWUNmeHdoUzZkb2pFOFAwZVJBZWRkdkxPVDNuSVNmZEJW?oc=5",
-          "pubDate": "Sat, 18 Jul 2026 04:53:44 GMT",
-          "score": 2.7
+          "title": "135檔電子股6月營收創高　IC設計、PCB、記憶體全面噴發 - 鏡週刊Mirror Media",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5UdVIwZmpHNlVRVkNZbFhZNlJxa2lmQXMzc3pkd0JzblBvb2M3S2ZLeXFUcXhrUXZvb0ZlZEhNTE5BclkwdFNXLW9RaUtvMU5NOENtcmt3RVRvV1JpM1hsVVJHNTBLZ9IBa0FVX3lxTFAyNkN6ejdFS2hlMWEwbWFENF9lZ2gxZWJkenVxY0hsMXV3VmhyWFI5NjdXZjh2OU0yWjRyaUNpN2VNMEVlRmRuNUNlN2YyUGxfTGItanRadzNCb1R2T0JEXzN1VENoYXhBQnpN?oc=5",
+          "pubDate": "Mon, 13 Jul 2026 05:30:00 GMT",
+          "score": 0.55
         }
       ]
     }
