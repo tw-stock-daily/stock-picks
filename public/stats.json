@@ -1,37 +1,37 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-07-20T04:13:17.259Z",
+  "generatedAt": "2026-07-20T15:13:39.502Z",
   "range": "2026-02-05 ~ 2026-07-20",
   "totalHistoryFiles": 150,
   "validPickDays": 141,
-  "totalSamples": 444,
+  "totalSamples": 441,
   "d1": {
-    "samples": 444,
-    "wins": 209,
-    "winRate": 0.47072072072072074
+    "samples": 441,
+    "wins": 207,
+    "winRate": 0.46938775510204084
   },
   "d3": {
-    "samples": 444,
+    "samples": 441,
     "wins": 214,
-    "winRate": 0.481981981981982
+    "winRate": 0.4852607709750567
   },
   "d5": {
-    "samples": 441,
+    "samples": 438,
     "wins": 227,
-    "winRate": 0.5147392290249433
+    "winRate": 0.5182648401826484
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 444,
-    "hits": 345,
-    "hitRate": 0.777027027027027
+    "samples": 441,
+    "hits": 343,
+    "hitRate": 0.7777777777777778
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 444,
-    "hits": 296,
+    "samples": 441,
+    "hits": 294,
     "hitRate": 0.6666666666666666
   },
   "dailyHit": {
@@ -42,8 +42,8 @@
     },
     "tp2": {
       "days": 141,
-      "hitDays": 132,
-      "hitRate": 0.9361702127659575
+      "hitDays": 130,
+      "hitRate": 0.9219858156028369
     }
   },
   "details": [
@@ -3560,24 +3560,6 @@
     {
       "date": "2026-04-17",
       "pickDate": "2026-04-17",
-      "symbol": "3450",
-      "name": "聯鈞",
-      "entry": 366,
-      "d1Close": 383,
-      "d3Close": 363.5,
-      "d5Close": 318,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 376.98,
-      "tp2Price": 384.3,
-      "d5HighMax": 397,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-04-17",
-      "pickDate": "2026-04-17",
       "symbol": "3576",
       "name": "聯合再生",
       "entry": 18.3,
@@ -3610,24 +3592,6 @@
       "d5HighMax": 152,
       "tp1Hit": true,
       "tp2Hit": false
-    },
-    {
-      "date": "2026-04-18",
-      "pickDate": "2026-04-17",
-      "symbol": "3450",
-      "name": "聯鈞",
-      "entry": 366,
-      "d1Close": 383,
-      "d3Close": 363.5,
-      "d5Close": 318,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 376.98,
-      "tp2Price": 384.3,
-      "d5HighMax": 397,
-      "tp1Hit": true,
-      "tp2Hit": true
     },
     {
       "date": "2026-04-18",
@@ -7034,24 +6998,6 @@
     {
       "date": "2026-06-23",
       "pickDate": "2026-06-23",
-      "symbol": "3450",
-      "name": "聯鈞",
-      "entry": 612,
-      "d1Close": 581,
-      "d3Close": 530,
-      "d5Close": 532,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 630.36,
-      "tp2Price": 642.6,
-      "d5HighMax": 607,
-      "tp1Hit": false,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-06-23",
-      "pickDate": "2026-06-23",
       "symbol": "3035",
       "name": "智原",
       "entry": 233,
@@ -7939,7 +7885,7 @@
       "entry": 1270,
       "d1Close": 1290,
       "d3Close": 1275,
-      "d5Close": 1150,
+      "d5Close": 1105,
       "d1Win": true,
       "d3Win": true,
       "d5Win": false,
@@ -7957,7 +7903,7 @@
       "entry": 56.1,
       "d1Close": 53.20000076293945,
       "d3Close": 52.79999923706055,
-      "d5Close": 49,
+      "d5Close": 49.29999923706055,
       "d1Win": false,
       "d3Win": false,
       "d5Win": false,
@@ -7975,7 +7921,7 @@
       "entry": 63.1,
       "d1Close": 66.19999694824219,
       "d3Close": 80,
-      "d5Close": 81.0999984741211,
+      "d5Close": 77.69999694824219,
       "d1Win": true,
       "d3Win": true,
       "d5Win": true,
@@ -7992,7 +7938,7 @@
       "name": "威健",
       "entry": 55.6,
       "d1Close": 54.20000076293945,
-      "d3Close": 47.599998474121094,
+      "d3Close": 47.900001525878906,
       "d5Close": null,
       "d1Win": false,
       "d3Win": false,
@@ -8010,7 +7956,7 @@
       "name": "雙鍵",
       "entry": 364.5,
       "d1Close": 328.5,
-      "d3Close": 268,
+      "d3Close": 266.5,
       "d5Close": null,
       "d1Win": false,
       "d3Win": false,
