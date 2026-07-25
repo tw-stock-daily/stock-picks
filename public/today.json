@@ -1,40 +1,40 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-07-25T11:45:54+08:00",
-  "asOfLocal": "2026-07-25T11:45:54+08:00",
+  "generatedAt": "2026-07-25T22:41:06+08:00",
+  "asOfLocal": "2026-07-25T22:41:06+08:00",
   "date": "2026-07-25",
   "marketState": "weak",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 31.9,
+      "score": 37.9,
       "news": [
-        {
-          "title": "〈熱門股〉AI伺服器強推華碩月營收上千億元 除息後外資連17買惦惦吃貨 - news.cnyes.com",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXeHpVSTJob2Q4Mjd6b2pfWkd0cE02WWJ0NVlZTUZYZmpJajdNYjVoX0ZaSjJkZUcycWZLU0J4UUVodzJuZUwyRjVKQlhyQTg?oc=5",
-          "pubDate": "Sat, 25 Jul 2026 01:44:20 GMT",
-          "score": 3.2
-        },
         {
           "title": "AI伺服器氣冷轉向液冷散熱，滲透率突破50%，奇鋐、雙鴻、台達電等6檔供應鏈受惠｜產業熱話｜豐雲學堂2026 年 07 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiowRBVV95cUxPT2ZYTEVMaWF3ZGhxRU1OSk4zNWU3cjdDMUJWTXRDb1dPbzNhR0JTYzVzcTNIOE9vT3Q2TGF3SXFfU3AtTndnOWFSUXhIYjI4VTJSWWhzY3hWWGhHaWN1ZEFZOGJPdW1EYV9iS2V0MDBzTUdnTWtBeGtGYnBXTmRfR0VvU0RpcURtOTB4cDhVSk1CbDZibHkybFRmelJtUWk2T05mRDd5TTR0YXJBREFnMkFHMU9NczlCZ3I5NW8wNU42clg0bF9CNjJCc3gyVXJJS0FMUGd5TzFxWV94TzJFT1NJRnJiT0o2VjdaSGpIU2s1OG1MNG9sYXdMOTR2WlFaamtxN3c4SmVDY2I5ZWNSdnVMT1drM2VaMFVQNEVvQk5pZFJfWW9GWEtZbUhWWGJ6Q1VMTEt4d3VXNFhaSnNlVDYwNVZORUNySGFMRFJxX3hxaHVOZ3dqQkI5bUk1dmtDUTVCM0lSOXNzUFRyNUlXMlV3cUxfci15NHVEMm9oT2RtV3BOZjhuVEpfTUZ5SlFwTW8zWEEyOHhMNFprV3JuRGV2Xy1jZ05VX09QY2ZBU296b0tLVDVrSjhCVmJDSVM5TEFuUlF0YU4yejlBQmZoaVc0d09sTEI1aTE1OG5UNlcwYWhCVG9wRFBKM1drVHdiNEdwM0gxbm16b0JGbWx4WXprRzh1R0xiQVduR0ZrV1R4V1BGUFVWaXdYLWFmSzBHUXBr?oc=5",
           "pubDate": "Sat, 25 Jul 2026 00:15:19 GMT",
-          "score": 3.2
+          "score": 2.7
         },
         {
-          "title": "AI伺服器股整理夠久了？這二檔低本益比迎反彈機會 - 經濟日報",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zM0EtODQ3R1p6YzNIY0xvQmd5WVFtRGE3T0JhWHJPTjNZdFVjVE9aOGdsNHo3SHh6S1pTMjFSLUlzX1d1V2xtaDRBZ2pzd0FsNjlfeE5jU1o3REXSAV9BVV95cUxQbklhZGt2c3lERTEwYmFndXQ0eTFUVGFKT1dXYXlKTTlpczJQdzN4VnAwTll5cDdyVFJrVnJvNWo1LW1HMEpuUFdFcE9NOXM2Wk5zbDdoZTZYNjBoOGgyQQ?oc=5",
-          "pubDate": "Fri, 24 Jul 2026 13:50:09 GMT",
+          "title": "〈熱門股〉AI伺服器強推華碩月營收上千億元 除息後外資連17買惦惦吃貨 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXeHpVSTJob2Q4Mjd6b2pfWkd0cE02WWJ0NVlZTUZYZmpJajdNYjVoX0ZaSjJkZUcycWZLU0J4UUVodzJuZUwyRjVKQlhyQTg?oc=5",
+          "pubDate": "Sat, 25 Jul 2026 01:44:20 GMT",
           "score": 2.7
+        },
+        {
+          "title": "輝達、AMD雙重加持！「AI伺服器大廠」5天狂漲28% 投信加碼1萬張、斥資19.5億元 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxPd0h5R1Y0UHlpNnBULS1IcTB1ZkFIN2FFY0syQXFDQzAwSHpwZm92WDJuUlJyTHhQa3BpMVNiT1hzcW9vbVZPXzB6MnlqZnE5Y1c0MktlNUttckQtd0NYTWdobnlFejhGUFA1aE4wZ1pUVTBGZThyRGMxTVVlNUhSdzVEbzVJTUpRYWJhdDhsekNwUkFTYlU0U3pyUFdnYTVHVldjQ01OV0VTQzVMUGs1V2ppRGk2UjdHWkJqRElLWGVWeWdNWEdsNmlvZTQtYTh3RmQ4UmtUamhHSk5waGZYcEVxc1o5b2k3NGhqV2FFR1N1TWFXenlmTnh2M19DT2NzQjRqNnBDeENUYTM2X1ZTZS1jLW5SaEctSERITW16eXFRUHFBY2dEWkpJZTR4eE51SUw2a09hOUVickxPZEtOM3JudXI5LVVWaDdVc0dEUlByWlhDWVd2ZExPeEQ?oc=5",
+          "pubDate": "Fri, 24 Jul 2026 11:00:00 GMT",
+          "score": 2.3
         }
       ]
     },
     {
       "rank": 2,
       "theme": "CPO/光通訊",
-      "score": 25.9,
+      "score": 25.65,
       "news": [
         {
           "title": "通膨隱憂擊落美科技股！台股 44,000 防線承壓，AI 資本支出與矽光子成資金避風港 - TechNews 科技新報",
@@ -59,32 +59,32 @@
     {
       "rank": 3,
       "theme": "半導體",
-      "score": 19.8,
+      "score": 20.05,
       "news": [
         {
           "title": "台積電神龍擺尾 台股影響三情境 手中持股跌破季線快跑？觀望？看專業分析 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxNS3VqWm9XaS12X09nWTNDVFdyakhyZm5KY04zLWhJZ05wNHFnWElDWjY5em1sWURzWnI4d3FZOFVXMmtLWVJmT0FXanB5a2FYM2Q0VkFHY2RzRWQ1a1Y1UWtMeUdxWEJlbEtsUmxfYjVJZFl5UkpyREtvdnRNM3FlaDhQVWp1TllnOEc4QTlkLWJzYnpIZ0hyeDBKTnd2aHR4bVY3QUdFYUpXa1ZoYVozUTB1SnZiMnB6Ry1oYW5vMWpsb1pPeUoyMGFUYUxQNnByd0c2REk3YTBrQ2VoUDVfY0JIZGE3MkpNR19nNTMwV0hndVdabVBXd09rY1dSaUdGM05yUS0wVGxjUFY0WkVWc3hxQURNSmd2UWp5MURKazhVV0czVS1NQTFNQVY5TTNYRGhEaFpaNmEyRHBBQ2ZpVzF4dE00TUNOUjFZMDl3RFdjVmhBTDVoRm9vaGZZcUxFQ25nWWxMZUItaTlaQWhKLTZiLXM1OU9OSV95cVBxU1RIOEY3N3ZOYTZDNEdoTlpseUhSSEdoSUgxYmJmYU9pM1dFbWIxMFEtTnY4YXJVelJSZGRqZ29JUm9ZNk5Eck0ydmR3Zk9hbmw3bkVIM1B6TmY4SXI?oc=5",
           "pubDate": "Thu, 23 Jul 2026 10:57:39 GMT",
+          "score": 1
+        },
+        {
+          "title": "今日漲停股｜AI伺服器與記憶體族群強勢領軍反彈，緯創、旺宏、華邦電點燃盤面熱潮0722｜豐雲學堂2026 年 07 月 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMilwRBVV95cUxOajVvU3liWWoyblBQRU9iQTdQSndhLXpZV1hKbm8wcHByTklvUHVUWElXRWxrZ0trSndidWJwS3FaUWptQ3Jmd3JhMU5XNV9pWGRraExJcU91TGZ2OHpjMU9qVmJwOGVzSGphNm1EODhnRkR5ZktxNl9hUHN6Q3FEdWQzNTdXTHRPOTFISEJqZTZ2enRUdktWaWVFTDRuTm1vbURGQ054Z1dkbEJJNm9taF9SUnV3dV81YmhhTTE1NGhqb0E1T3dNZFlXQzRLd0VwV24wUVlYZi1VUkNUNUYyejFyakVBZU9NeU95eENlV0xwc2NDUUZ0WVdHZzFVOXRqeVRQa0RZelZBUm10anVEQjFyRURCNWN0TEw0cllSaloxUXQwWVowSld2MWVRNEhmUXhqRGp4YktjRG1KVENtbjB1SEFJMVZsdWZ4Y1cxN3lDRS1SUFNuNlNhangyeU1TZjNyMm9ZUEhCMkJYVWVFWEZCX0cxT29fSG8xNldyQkxqUzVXcTdwaTJ4MDZTTnhiRURtdER2MEpETVk0ZHpEZm1Lcy1kR0ZQaklSVkxQZ0tUelo5TDFHRWF5a3lnN0RBa1h6djA5SlhkaUVZaUF3bFpkS1ljWFlKN0l1UmhpV01YYTFfSTk5cndSNGU4Y1JrT0lJS1NIcHNUajY4SHVxY2wzTnRFVFhtZ29BZDhEYjk4ajVsMWdF?oc=5",
+          "pubDate": "Thu, 23 Jul 2026 15:52:11 GMT",
           "score": 1.15
         },
         {
           "title": "CSP巨頭狂砸AI基建　伺服器台廠加速北美擴廠應戰 - 經濟日報",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0waFU2bUhLdmcxQmxyMXIyTDZJVVZ6eDBoY201U2pxZ1U5UmIwcUFJV0pyZDQtckJLSGtJd0Zpa2JrbFNZam5kQUF1ai00M2tpWklITFd5cU9Pb1HSAWBBVV95cUxQbzl1YzF2NTlHYWxUcFhBM3p5d2F6UmZsYTVxc282Mmh0bU9SQ0ZWXzU0MXVEOWFTMTNKd05OUDFfSmNQdVB6TGlrUEJvRndSR0d5aFh0bkc2OXd1NlNYSkw?oc=5",
           "pubDate": "Fri, 24 Jul 2026 12:21:28 GMT",
-          "score": 1.35
-        },
-        {
-          "title": "今日漲停股｜AI伺服器與記憶體族群強勢領軍反彈，緯創、旺宏、華邦電點燃盤面熱潮0722｜豐雲學堂2026 年 07 月 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMilwRBVV95cUxOajVvU3liWWoyblBQRU9iQTdQSndhLXpZV1hKbm8wcHByTklvUHVUWElXRWxrZ0trSndidWJwS3FaUWptQ3Jmd3JhMU5XNV9pWGRraExJcU91TGZ2OHpjMU9qVmJwOGVzSGphNm1EODhnRkR5ZktxNl9hUHN6Q3FEdWQzNTdXTHRPOTFISEJqZTZ2enRUdktWaWVFTDRuTm1vbURGQ054Z1dkbEJJNm9taF9SUnV3dV81YmhhTTE1NGhqb0E1T3dNZFlXQzRLd0VwV24wUVlYZi1VUkNUNUYyejFyakVBZU9NeU95eENlV0xwc2NDUUZ0WVdHZzFVOXRqeVRQa0RZelZBUm10anVEQjFyRURCNWN0TEw0cllSaloxUXQwWVowSld2MWVRNEhmUXhqRGp4YktjRG1KVENtbjB1SEFJMVZsdWZ4Y1cxN3lDRS1SUFNuNlNhangyeU1TZjNyMm9ZUEhCMkJYVWVFWEZCX0cxT29fSG8xNldyQkxqUzVXcTdwaTJ4MDZTTnhiRURtdER2MEpETVk0ZHpEZm1Lcy1kR0ZQaklSVkxQZ0tUelo5TDFHRWF5a3lnN0RBa1h6djA5SlhkaUVZaUF3bFpkS1ljWFlKN0l1UmhpV01YYTFfSTk5cndSNGU4Y1JrT0lJS1NIcHNUajY4SHVxY2wzTnRFVFhtZ29BZDhEYjk4ajVsMWdF?oc=5",
-          "pubDate": "Wed, 22 Jul 2026 07:19:16 GMT",
-          "score": 1
+          "score": 1.15
         }
       ]
     },
     {
       "rank": 4,
       "theme": "機器人/自動化",
-      "score": 8.25,
+      "score": 7.15,
       "news": [
         {
           "title": "達明攜手廣達進駐德國車電廠 AI機器人升級車載生產線 - news.cnyes.com",
@@ -93,8 +93,8 @@
           "score": 0.55
         },
         {
-          "title": "AI淨零／達明：AI協作機器人導入廣達德國車用生產線 | 證券 - 中央社 CNA",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE54N0lKUGw1M3JLcUpyVzhvYWR6V1VhOF8wdjNYN3VoeldGSnp6VWhUc2JNS1ltVDk2YmVxOGltQ2JLeGVPWUpCQjZCdFhXWkhMM3FfT2hOVkZOT2dmTHc?oc=5",
+          "title": "達明AI機器人進駐廣達德國廠！搶攻歐洲車用電子 導入ECU檢測產線 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBDeFUxVktoYTNHcmtBOEF6TjBQOXJfUU9lVVJJSF9BblY5UTVIUHR4N2lTUWdNakxoc3hBbmVfTmFEenMzWTJzcHF2RQ?oc=5",
           "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
           "score": 0.55
         },
@@ -109,25 +109,25 @@
     {
       "rank": 5,
       "theme": "散熱",
-      "score": 5.7,
+      "score": 6.9,
       "news": [
         {
           "title": "AI伺服器氣冷轉向液冷散熱，滲透率突破50%，奇鋐、雙鴻、台達電等6檔供應鏈受惠｜產業熱話｜豐雲學堂2026 年 07 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiowRBVV95cUxPT2ZYTEVMaWF3ZGhxRU1OSk4zNWU3cjdDMUJWTXRDb1dPbzNhR0JTYzVzcTNIOE9vT3Q2TGF3SXFfU3AtTndnOWFSUXhIYjI4VTJSWWhzY3hWWGhHaWN1ZEFZOGJPdW1EYV9iS2V0MDBzTUdnTWtBeGtGYnBXTmRfR0VvU0RpcURtOTB4cDhVSk1CbDZibHkybFRmelJtUWk2T05mRDd5TTR0YXJBREFnMkFHMU9NczlCZ3I5NW8wNU42clg0bF9CNjJCc3gyVXJJS0FMUGd5TzFxWV94TzJFT1NJRnJiT0o2VjdaSGpIU2s1OG1MNG9sYXdMOTR2WlFaamtxN3c4SmVDY2I5ZWNSdnVMT1drM2VaMFVQNEVvQk5pZFJfWW9GWEtZbUhWWGJ6Q1VMTEt4d3VXNFhaSnNlVDYwNVZORUNySGFMRFJxX3hxaHVOZ3dqQkI5bUk1dmtDUTVCM0lSOXNzUFRyNUlXMlV3cUxfci15NHVEMm9oT2RtV3BOZjhuVEpfTUZ5SlFwTW8zWEEyOHhMNFprV3JuRGV2Xy1jZ05VX09QY2ZBU296b0tLVDVrSjhCVmJDSVM5TEFuUlF0YU4yejlBQmZoaVc0d09sTEI1aTE1OG5UNlcwYWhCVG9wRFBKM1drVHdiNEdwM0gxbm16b0JGbWx4WXprRzh1R0xiQVduR0ZrV1R4V1BGUFVWaXdYLWFmSzBHUXBr?oc=5",
           "pubDate": "Sat, 25 Jul 2026 00:15:19 GMT",
-          "score": 3.2
+          "score": 2.7
         },
         {
-          "title": "奇鋐武漢廠斥資逾10億元添購設備AI伺服器液冷產能全面擴張 - news.cnyes.com",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5TcUZvNC1mcHBGRkJJT0JjX1I3R0V3Q2Z0TFZhRUpMWUE2aEszZWFENUVCM2tuV0F3VmdQeVl0RGhYMkNWbDRTS2QxMTYzTmc?oc=5",
-          "pubDate": "Fri, 24 Jul 2026 07:30:15 GMT",
-          "score": 1.35
+          "title": "GB300升級VR200！AI伺服器液冷全面標配化 散熱產業規格升級全解析 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qTlRBc09MS1RjaUpoTmxIZncyYklpMWpqcTctTnJOSGNzeUloOE11LXZwRHN0V1Nqa0hBTW8wMGNUeDhzTWoycXZtU2d0ZFU?oc=5",
+          "pubDate": "Sat, 25 Jul 2026 13:30:03 GMT",
+          "score": 3.2
         },
         {
           "title": "【0723台股盤後】回測月線展現強防守！加權小漲 25 點收 44,850 點；AI 伺服器與散熱重啟攻勢 - news.cnyes.com",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1CdjdpT3BBNGVvSU0zX2daODlmTXBna3JoTkJQRUducjl2T2JZODRWcTd5endSaktzeGZCRUF4dDNVNWVOU0VXclBuR3pPNUE?oc=5",
           "pubDate": "Thu, 23 Jul 2026 10:06:10 GMT",
-          "score": 1.15
+          "score": 1
         }
       ]
     }
@@ -167,21 +167,20 @@
       "tp2": 62.18,
       "stop": 47.21,
       "inst": {
-        "windowDays": 5,
+        "windowDays": 4,
         "asOfDate": "2026-07-24",
         "latestDate": "20260724",
         "usedDates": [
           "20260724",
-          "20260723",
           "20260722",
-          "20260721",
-          "20260720"
+          "20260714",
+          "20260713"
         ],
-        "sumTotal": 769,
+        "sumTotal": 65,
         "sumForeign": 0,
         "sumTrust": 0,
-        "sumDealer": -20,
-        "buyStreak": 2,
+        "sumDealer": -21,
+        "buyStreak": 1,
         "foreignBuyStreak": 0,
         "trustBuyStreak": 0,
         "latestTotalNet": 582,
@@ -236,20 +235,19 @@
       "tp2": 55.91,
       "stop": 49.9,
       "inst": {
-        "windowDays": 5,
+        "windowDays": 4,
         "asOfDate": "2026-07-24",
         "latestDate": "20260724",
         "usedDates": [
           "20260724",
-          "20260723",
           "20260722",
-          "20260721",
-          "20260720"
+          "20260714",
+          "20260713"
         ],
-        "sumTotal": 281,
+        "sumTotal": 259,
         "sumForeign": 0,
         "sumTrust": 0,
-        "sumDealer": -11,
+        "sumDealer": -1,
         "buyStreak": 1,
         "foreignBuyStreak": 0,
         "trustBuyStreak": 0,
@@ -305,21 +303,20 @@
       "tp2": 130.03,
       "stop": 111.24,
       "inst": {
-        "windowDays": 5,
+        "windowDays": 4,
         "asOfDate": "2026-07-24",
         "latestDate": "20260724",
         "usedDates": [
           "20260724",
-          "20260723",
           "20260722",
-          "20260721",
-          "20260720"
+          "20260714",
+          "20260713"
         ],
-        "sumTotal": 267,
+        "sumTotal": 21,
         "sumForeign": 0,
         "sumTrust": 0,
-        "sumDealer": -2,
-        "buyStreak": 5,
+        "sumDealer": 0,
+        "buyStreak": 2,
         "foreignBuyStreak": 0,
         "trustBuyStreak": 0,
         "latestTotalNet": 85,
@@ -342,5 +339,5 @@
       "isAlternate": true
     }
   ],
-  "candidatesCount": 35
+  "candidatesCount": 37
 }
