@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-07-30T15:11:58.357Z",
-  "range": "2026-02-05 ~ 2026-07-30",
-  "totalHistoryFiles": 160,
-  "validPickDays": 141,
-  "totalSamples": 444,
+  "generatedAt": "2026-07-31T03:59:04.030Z",
+  "range": "2026-02-05 ~ 2026-07-31",
+  "totalHistoryFiles": 161,
+  "validPickDays": 142,
+  "totalSamples": 447,
   "d1": {
     "samples": 444,
     "wins": 208,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 141,
+      "days": 142,
       "hitDays": 134,
-      "hitRate": 0.950354609929078
+      "hitRate": 0.9436619718309859
     },
     "tp2": {
-      "days": 141,
+      "days": 142,
       "hitDays": 132,
-      "hitRate": 0.9361702127659575
+      "hitRate": 0.9295774647887324
     }
   },
   "details": [
@@ -8038,6 +8038,60 @@
       "d5HighMax": 259,
       "tp1Hit": true,
       "tp2Hit": true
+    },
+    {
+      "date": "2026-07-31",
+      "pickDate": "2026-07-31",
+      "symbol": "2540",
+      "name": "愛山林",
+      "entry": 61.4,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 63.24,
+      "tp2Price": 64.47,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-07-31",
+      "pickDate": "2026-07-31",
+      "symbol": "3231",
+      "name": "緯創",
+      "entry": 171.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 176.65,
+      "tp2Price": 180.08,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-07-31",
+      "pickDate": "2026-07-31",
+      "symbol": "6214",
+      "name": "精誠",
+      "entry": 152,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 156.56,
+      "tp2Price": 159.6,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
     }
   ]
 }
