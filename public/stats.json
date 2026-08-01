@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-07-31T15:21:24.825Z",
-  "range": "2026-02-05 ~ 2026-07-31",
-  "totalHistoryFiles": 161,
-  "validPickDays": 142,
-  "totalSamples": 447,
+  "generatedAt": "2026-08-01T03:59:08.445Z",
+  "range": "2026-02-05 ~ 2026-08-01",
+  "totalHistoryFiles": 162,
+  "validPickDays": 143,
+  "totalSamples": 450,
   "d1": {
     "samples": 444,
     "wins": 208,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 142,
+      "days": 143,
       "hitDays": 134,
-      "hitRate": 0.9436619718309859
+      "hitRate": 0.9370629370629371
     },
     "tp2": {
-      "days": 142,
+      "days": 143,
       "hitDays": 132,
-      "hitRate": 0.9295774647887324
+      "hitRate": 0.9230769230769231
     }
   },
   "details": [
@@ -8011,7 +8011,7 @@
       "entry": 364.5,
       "d1Close": 324.282958984375,
       "d3Close": 263.078857421875,
-      "d5Close": 286.770751953125,
+      "d5Close": 290.5,
       "d1Win": false,
       "d3Win": false,
       "d5Win": false,
@@ -8077,6 +8077,60 @@
     },
     {
       "date": "2026-07-31",
+      "pickDate": "2026-07-31",
+      "symbol": "2357",
+      "name": "華碩",
+      "entry": 810,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 834.3,
+      "tp2Price": 850.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-01",
+      "pickDate": "2026-07-31",
+      "symbol": "3231",
+      "name": "緯創",
+      "entry": 176,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 181.28,
+      "tp2Price": 184.8,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-01",
+      "pickDate": "2026-07-31",
+      "symbol": "6863",
+      "name": "永道-KY",
+      "entry": 133.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 137.5,
+      "tp2Price": 140.18,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-01",
       "pickDate": "2026-07-31",
       "symbol": "2357",
       "name": "華碩",
