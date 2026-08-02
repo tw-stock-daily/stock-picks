@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-01T14:28:17.808Z",
-  "range": "2026-02-05 ~ 2026-08-01",
-  "totalHistoryFiles": 162,
-  "validPickDays": 143,
-  "totalSamples": 450,
+  "generatedAt": "2026-08-02T04:02:59.141Z",
+  "range": "2026-02-05 ~ 2026-08-02",
+  "totalHistoryFiles": 163,
+  "validPickDays": 144,
+  "totalSamples": 453,
   "d1": {
     "samples": 444,
     "wins": 208,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 143,
+      "days": 144,
       "hitDays": 134,
-      "hitRate": 0.9370629370629371
+      "hitRate": 0.9305555555555556
     },
     "tp2": {
-      "days": 143,
+      "days": 144,
       "hitDays": 132,
-      "hitRate": 0.9230769230769231
+      "hitRate": 0.9166666666666666
     }
   },
   "details": [
@@ -8131,6 +8131,60 @@
     },
     {
       "date": "2026-08-01",
+      "pickDate": "2026-07-31",
+      "symbol": "2357",
+      "name": "華碩",
+      "entry": 810,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 834.3,
+      "tp2Price": 850.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-02",
+      "pickDate": "2026-07-31",
+      "symbol": "3231",
+      "name": "緯創",
+      "entry": 176,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 181.28,
+      "tp2Price": 184.8,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-02",
+      "pickDate": "2026-07-31",
+      "symbol": "6863",
+      "name": "永道-KY",
+      "entry": 133.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 137.5,
+      "tp2Price": 140.18,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-02",
       "pickDate": "2026-07-31",
       "symbol": "2357",
       "name": "華碩",
