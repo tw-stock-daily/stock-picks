@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-04T03:46:25.050Z",
+  "generatedAt": "2026-08-04T15:25:27.963Z",
   "range": "2026-02-05 ~ 2026-08-04",
   "totalHistoryFiles": 165,
-  "validPickDays": 146,
-  "totalSamples": 459,
+  "validPickDays": 145,
+  "totalSamples": 456,
   "d1": {
     "samples": 456,
     "wins": 217,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 146,
+      "days": 145,
       "hitDays": 138,
-      "hitRate": 0.9452054794520548
+      "hitRate": 0.9517241379310345
     },
     "tp2": {
-      "days": 146,
+      "days": 145,
       "hitDays": 136,
-      "hitRate": 0.9315068493150684
+      "hitRate": 0.9379310344827586
     }
   },
   "details": [
@@ -8207,7 +8207,7 @@
       "symbol": "3231",
       "name": "緯創",
       "entry": 186,
-      "d1Close": 192,
+      "d1Close": 195,
       "d3Close": null,
       "d5Close": null,
       "d1Win": true,
@@ -8225,7 +8225,7 @@
       "symbol": "6669",
       "name": "緯穎",
       "entry": 5925,
-      "d1Close": 6170,
+      "d1Close": 6205,
       "d3Close": null,
       "d5Close": null,
       "d1Win": true,
@@ -8243,7 +8243,7 @@
       "symbol": "2006",
       "name": "東和鋼鐵",
       "entry": 80.4,
-      "d1Close": 82.19999694824219,
+      "d1Close": 82.5,
       "d3Close": null,
       "d5Close": null,
       "d1Win": true,
@@ -8253,60 +8253,6 @@
       "tp2Price": 84.42,
       "d5HighMax": 82.9000015258789,
       "tp1Hit": true,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-08-04",
-      "pickDate": "2026-08-04",
-      "symbol": "3231",
-      "name": "緯創",
-      "entry": 192,
-      "d1Close": null,
-      "d3Close": null,
-      "d5Close": null,
-      "d1Win": null,
-      "d3Win": null,
-      "d5Win": null,
-      "tp1Price": 197.76,
-      "tp2Price": 201.6,
-      "d5HighMax": null,
-      "tp1Hit": false,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-08-04",
-      "pickDate": "2026-08-04",
-      "symbol": "2425",
-      "name": "承啟",
-      "entry": 49.4,
-      "d1Close": null,
-      "d3Close": null,
-      "d5Close": null,
-      "d1Win": null,
-      "d3Win": null,
-      "d5Win": null,
-      "tp1Price": 50.88,
-      "tp2Price": 51.87,
-      "d5HighMax": null,
-      "tp1Hit": false,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-08-04",
-      "pickDate": "2026-08-04",
-      "symbol": "6669",
-      "name": "緯穎",
-      "entry": 6180,
-      "d1Close": null,
-      "d3Close": null,
-      "d5Close": null,
-      "d1Win": null,
-      "d3Win": null,
-      "d5Win": null,
-      "tp1Price": 6365.4,
-      "tp2Price": 6489,
-      "d5HighMax": null,
-      "tp1Hit": false,
       "tp2Hit": false
     }
   ]
