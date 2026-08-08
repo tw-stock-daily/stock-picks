@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-07T14:13:43.388Z",
-  "range": "2026-02-05 ~ 2026-08-07",
-  "totalHistoryFiles": 168,
-  "validPickDays": 148,
-  "totalSamples": 465,
+  "generatedAt": "2026-08-08T02:27:44.028Z",
+  "range": "2026-02-05 ~ 2026-08-08",
+  "totalHistoryFiles": 169,
+  "validPickDays": 149,
+  "totalSamples": 468,
   "d1": {
     "samples": 462,
     "wins": 220,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 148,
+      "days": 149,
       "hitDays": 140,
-      "hitRate": 0.9459459459459459
+      "hitRate": 0.9395973154362416
     },
     "tp2": {
-      "days": 148,
+      "days": 149,
       "hitDays": 138,
-      "hitRate": 0.9324324324324325
+      "hitRate": 0.9261744966442953
     }
   },
   "details": [
@@ -8401,6 +8401,60 @@
     },
     {
       "date": "2026-08-07",
+      "pickDate": "2026-08-07",
+      "symbol": "3022",
+      "name": "威強電",
+      "entry": 103,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 106.09,
+      "tp2Price": 108.15,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-08",
+      "pickDate": "2026-08-07",
+      "symbol": "6533",
+      "name": "晶心科",
+      "entry": 256,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 263.68,
+      "tp2Price": 268.8,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-08",
+      "pickDate": "2026-08-07",
+      "symbol": "4961",
+      "name": "天鈺",
+      "entry": 172.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 177.68,
+      "tp2Price": 181.13,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-08",
       "pickDate": "2026-08-07",
       "symbol": "3022",
       "name": "威強電",
