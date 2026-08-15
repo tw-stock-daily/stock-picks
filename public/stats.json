@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-14T14:16:26.851Z",
-  "range": "2026-02-05 ~ 2026-08-14",
-  "totalHistoryFiles": 175,
-  "validPickDays": 155,
-  "totalSamples": 447,
+  "generatedAt": "2026-08-15T01:55:29.079Z",
+  "range": "2026-02-05 ~ 2026-08-15",
+  "totalHistoryFiles": 176,
+  "validPickDays": 156,
+  "totalSamples": 450,
   "d1": {
     "samples": 444,
     "wins": 213,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 155,
+      "days": 156,
       "hitDays": 144,
-      "hitRate": 0.9290322580645162
+      "hitRate": 0.9230769230769231
     },
     "tp2": {
-      "days": 155,
+      "days": 156,
       "hitDays": 141,
-      "hitRate": 0.9096774193548387
+      "hitRate": 0.9038461538461539
     }
   },
   "details": [
@@ -8077,6 +8077,60 @@
     },
     {
       "date": "2026-08-14",
+      "pickDate": "2026-08-14",
+      "symbol": "2344",
+      "name": "華邦電",
+      "entry": 183.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 189,
+      "tp2Price": 192.68,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-15",
+      "pickDate": "2026-08-14",
+      "symbol": "9945",
+      "name": "潤泰新",
+      "entry": 29.8,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 30.69,
+      "tp2Price": 31.29,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-15",
+      "pickDate": "2026-08-14",
+      "symbol": "2383",
+      "name": "台光電",
+      "entry": 6165,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 6349.95,
+      "tp2Price": 6473.25,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-15",
       "pickDate": "2026-08-14",
       "symbol": "2344",
       "name": "華邦電",
