@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-21T13:47:29.425Z",
-  "range": "2026-02-05 ~ 2026-08-21",
-  "totalHistoryFiles": 182,
-  "validPickDays": 162,
-  "totalSamples": 468,
+  "generatedAt": "2026-08-22T01:57:19.997Z",
+  "range": "2026-02-05 ~ 2026-08-22",
+  "totalHistoryFiles": 183,
+  "validPickDays": 163,
+  "totalSamples": 471,
   "d1": {
     "samples": 465,
     "wins": 226,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 162,
+      "days": 163,
       "hitDays": 151,
-      "hitRate": 0.9320987654320988
+      "hitRate": 0.9263803680981595
     },
     "tp2": {
-      "days": 162,
+      "days": 163,
       "hitDays": 145,
-      "hitRate": 0.8950617283950617
+      "hitRate": 0.8895705521472392
     }
   },
   "details": [
@@ -8467,6 +8467,60 @@
       "d5Win": null,
       "tp1Price": 31.26,
       "tp2Price": 31.87,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-22",
+      "pickDate": "2026-08-21",
+      "symbol": "2603",
+      "name": "長榮",
+      "entry": 251.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 259.05,
+      "tp2Price": 264.07,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-22",
+      "pickDate": "2026-08-21",
+      "symbol": "1402",
+      "name": "遠東新",
+      "entry": 30.35,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 31.26,
+      "tp2Price": 31.87,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-22",
+      "pickDate": "2026-08-21",
+      "symbol": "1709",
+      "name": "和益",
+      "entry": 33.3,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 34.3,
+      "tp2Price": 34.96,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
