@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-22T13:33:25.167Z",
-  "range": "2026-02-05 ~ 2026-08-22",
-  "totalHistoryFiles": 183,
-  "validPickDays": 163,
-  "totalSamples": 471,
+  "generatedAt": "2026-08-23T02:08:13.961Z",
+  "range": "2026-02-05 ~ 2026-08-23",
+  "totalHistoryFiles": 184,
+  "validPickDays": 164,
+  "totalSamples": 474,
   "d1": {
     "samples": 465,
     "wins": 226,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 163,
+      "days": 164,
       "hitDays": 151,
-      "hitRate": 0.9263803680981595
+      "hitRate": 0.9207317073170732
     },
     "tp2": {
-      "days": 163,
+      "days": 164,
       "hitDays": 145,
-      "hitRate": 0.8895705521472392
+      "hitRate": 0.8841463414634146
     }
   },
   "details": [
@@ -8509,6 +8509,60 @@
     },
     {
       "date": "2026-08-22",
+      "pickDate": "2026-08-21",
+      "symbol": "1402",
+      "name": "遠東新",
+      "entry": 30.35,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 31.26,
+      "tp2Price": 31.87,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-23",
+      "pickDate": "2026-08-21",
+      "symbol": "2603",
+      "name": "長榮",
+      "entry": 251.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 259.05,
+      "tp2Price": 264.07,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-23",
+      "pickDate": "2026-08-21",
+      "symbol": "3443",
+      "name": "創意",
+      "entry": 5600,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 5768,
+      "tp2Price": 5880,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-23",
       "pickDate": "2026-08-21",
       "symbol": "1402",
       "name": "遠東新",
