@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-08-29T07:14:11.105Z",
-  "range": "2026-02-05 ~ 2026-08-29",
-  "totalHistoryFiles": 190,
-  "validPickDays": 170,
-  "totalSamples": 474,
+  "generatedAt": "2026-08-29T17:02:56.323Z",
+  "range": "2026-02-05 ~ 2026-08-30",
+  "totalHistoryFiles": 191,
+  "validPickDays": 171,
+  "totalSamples": 477,
   "d1": {
     "samples": 468,
     "wins": 221,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 170,
+      "days": 171,
       "hitDays": 152,
-      "hitRate": 0.8941176470588236
+      "hitRate": 0.8888888888888888
     },
     "tp2": {
-      "days": 170,
+      "days": 171,
       "hitDays": 145,
-      "hitRate": 0.8529411764705882
+      "hitRate": 0.847953216374269
     }
   },
   "details": [
@@ -8563,6 +8563,60 @@
     },
     {
       "date": "2026-08-29",
+      "pickDate": "2026-08-28",
+      "symbol": "2303",
+      "name": "聯電",
+      "entry": 130,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 133.9,
+      "tp2Price": 136.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-30",
+      "pickDate": "2026-08-28",
+      "symbol": "2449",
+      "name": "京元電子",
+      "entry": 270,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 278.1,
+      "tp2Price": 283.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-30",
+      "pickDate": "2026-08-28",
+      "symbol": "3450",
+      "name": "聯鈞",
+      "entry": 635,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 654.05,
+      "tp2Price": 666.75,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-08-30",
       "pickDate": "2026-08-28",
       "symbol": "2303",
       "name": "聯電",
