@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-09-06T04:55:43.159Z",
-  "range": "2026-02-05 ~ 2026-09-06",
-  "totalHistoryFiles": 198,
-  "validPickDays": 178,
-  "totalSamples": 492,
+  "generatedAt": "2026-09-06T16:01:55.551Z",
+  "range": "2026-02-05 ~ 2026-09-07",
+  "totalHistoryFiles": 199,
+  "validPickDays": 179,
+  "totalSamples": 495,
   "d1": {
     "samples": 483,
     "wins": 219,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 178,
+      "days": 179,
       "hitDays": 156,
-      "hitRate": 0.8764044943820225
+      "hitRate": 0.8715083798882681
     },
     "tp2": {
-      "days": 178,
+      "days": 179,
       "hitDays": 149,
-      "hitRate": 0.8370786516853933
+      "hitRate": 0.8324022346368715
     }
   },
   "details": [
@@ -8887,6 +8887,60 @@
     },
     {
       "date": "2026-09-06",
+      "pickDate": "2026-09-04",
+      "symbol": "2455",
+      "name": "全新",
+      "entry": 528,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 543.84,
+      "tp2Price": 554.4,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-07",
+      "pickDate": "2026-09-04",
+      "symbol": "3231",
+      "name": "緯創",
+      "entry": 198,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 203.94,
+      "tp2Price": 207.9,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-07",
+      "pickDate": "2026-09-04",
+      "symbol": "6271",
+      "name": "同欣電",
+      "entry": 237,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 244.11,
+      "tp2Price": 248.85,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-07",
       "pickDate": "2026-09-04",
       "symbol": "2455",
       "name": "全新",
