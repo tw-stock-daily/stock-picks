@@ -1,41 +1,72 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-09-27T00:55:32+08:00",
-  "asOfLocal": "2026-09-27T00:55:32+08:00",
+  "generatedAt": "2026-09-27T13:30:01+08:00",
+  "asOfLocal": "2026-09-27T13:30:01+08:00",
   "date": "2026-09-27",
   "marketState": "strong",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 44.8,
+      "score": 38.8,
       "news": [
+        {
+          "title": "＜財經週報-台股熱點＞AI資料中心搶電 磊晶與代工三雄強勢補漲 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB6bklaa2FPRlZDSnJUak5DTmhYYk4xdTY0b05ndl80M2RMTWhPSzJvc0lPUVBpajRPeHBpOFRIUnRKdVFUTVZBOEN5NXpOMnI1WXAwbE9VNWh5Y1hQSGpV0gFkQVVfeXFMTmRtMDFnUXlsa2o4SnlMTFo3aE9KWlhWMVE1OVpzbGdFQi1nYmIyVXh2WGd0XzZFQ0V3Z1U2R214OVFPNVRyTkUtaU56cUhBZjkwcVFoWTFmYnZFNURHYTg0cjN0SQ?oc=5",
+          "pubDate": "Sun, 27 Sep 2026 03:40:00 GMT",
+          "score": 1.6
+        },
         {
           "title": "台股主動ETF新浪潮！群益00415A 9月30日開募鴻海法說登場AI伺服器全年倍增成長怎麼說？聯準會升息後兩大關卡！PCE＋非農數據牽動11月是否再升｜投資早知道 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMi4AZBVV95cUxPWDBZNVc3My14blVCcXRIamlzQmpHQ0RNNkczSF9RUEpsSGptVUJuLXdJbFhLMzR1RldoU1lpQ19WbGRrUmFyekY1akFlcGg4aDJUR1duQnFhX0JkMXRaMW1TVjh5VzBOV1pYUFR3Qm9vMzQ2LUtZR3A1dDZkTl9tZjR5dFV0S01JaXgwLWQ4NkM4VjV5VDRlN2JTM1puNFN1THJ5eUstUHlnMVpZUkZrSVluVDYxTjBiYklDOThWYnQ4MklGYXFKLUE5bkNMMnA1UEduc1ctTHNHUURxYkE3NGxYcjczcGNxYmdFQllSWkt5MDA1bUx0SjZtMzJVYVljcVExZW4wem9EUDJJRHFGMGZXQXExWXM4QnQ1V1ZCem1nM2dGckNOZkJiczVXRVZSNGszSzhlTGROblVlSDlVdmpCUnVsVmpzTUJRRlBYZkJMTkxMZXk0NU1OYU9NSzBXbmRSZ29YcS15bGVBVTZDVWwzUHBUd3FHbkRLbm1ZSl8xeFREZEg2WWY5ZldZdU9LdGYwNlR6TUhHVUZ2WV9CYVNXUlJFcEp5VjNsNHB6NDk3OVhFZ2pEUUhzVURuWXMwVE9BNTA1aEYzLThnSDFFQ2JVdzVrblI2NUIzZ2xKUnRSaXFDM0ZDMGdkM2E2UnBGS25PQWlxSi04cWJqX3FTTnQwTXUxTVE2Qmg0ZEJIdU1oaGpkMTBWb01vY3hPcWI2WS1adElTZ2VFOVVkTVFXOU90NmFlb1dSUlJPWC1BRF83YU5hVHhXeHoxQmoxeE95RWlqc3pab29kS3FMVGlLY0JoVnpseEJZSzZuVHFEZy1hVEdIaEJhMGNPMExrT1RBTng4d0M4T1NHUTVrQnRqTkNhS0NNcnJVU1puVGVUN3BqUmU3NHp0d0ktazVPNTktSG9mM24tMFMwUS12UTZoODhYRUE3b3I4dGM5ZFBnMFVDbk5FWUFCem5SbmhqaGFuRFFZaUlIcWl0N1VCaU5NYlVzcEZZbWU4LWJQVG1zNEgwelZlRjZSVTYwOENYRE05cXVWZENfOGNEc20yU1Z3T0VmejFWT2Y1UTEyNmpxZ3NqazNpRUx2aVUzcmRDVjlxSE5nZXNYYlZ4T3MySDRsMU5wYUU5LUFIUWpHeGM2RTU?oc=5",
           "pubDate": "Thu, 24 Sep 2026 17:06:02 GMT",
-          "score": 2.3
+          "score": 2
         },
         {
           "title": "外資百億撐腰台股仍翻黑 穎崴亮燈號召千金股、記憶體三雄救火守住4萬7｜Yahoo財經掃描 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMilgRBVV95cUxPNjdWQWJwYWdTbUE1aG0xZXR0aE5Qbkd3UW1RTElWRFUxaGtDUnFXZHdqRzJ5dWlBMThsU2t5OVpPU2trZW9TemtkcGlacWFfNS16SEg5ODJVd1A2OE44ckpCd25rYXB3XzkwODJVUVZYbDNLb3djYWVNZmlRTE1sdHFVU2NfZ2d4X2JfWm9rVEUycUVVbmJ5bWFoLWdtcUtfLTZ2Nmc5V0RzTi1UemxYOF9tSmd2Mmhtc3hTTmY1Wk1JMm9UbkRaVjBrT3dyN3FxRXd0b3BFaWh4MURaZUFkcTY5bVdmOF9CVU5MVldMaVBfQ2xvYjN2WEw0d2xRUmMzNEV5cTd5NkllYWxvWXE4S2JDTlNjVE1mV2g1TkRORk12eGNzQWYyX1pJMDBpWW5QWEZOeEdISGVMc0hrRWNaeWFxYXdlMkVxeG1hQU4wT3NYNlZBeS1vWUpsME9heDVvanJEQllfbUtnTXNZY0duWEhwdW1PajFMYUpOZDhwVUo2U0JjWlZJX3ZSSERPQVZvQ3c2bzVhNlRZY2RBNm5KNUhwVTF2NHc5TGpUZV9ISHVmVnRac0xZcWwwYkRzcVlScVRhU1V3NWVMN2RLNmw1SnFkQmZodGFzeEVHdXhkc0owUDFQaG5aMmVUeV9ldWhKOTdzNGoxNUhadG5aMGRkdVB1ZEpkNnBXZkh1WlhPRWx2OU9YN1E?oc=5",
           "pubDate": "Tue, 08 Sep 2026 07:00:00 GMT",
           "score": 0.55
-        },
-        {
-          "title": "AI 伺服器供應鏈迎千億美元商機！最新台股市值破 5.3 兆美元躍升全球第四大-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTnlTRjY1UHBTajdfX3BkZTk1Q3JtV2tycm5qYWdBWndYOHl6OE0zZ0FZSDR5UjR6QXBXV1A3OEk0X3NaY0JBblB4LW9fb1JlRFJNdUxLNHFIaTlrWEoxUXRzS0h6YVVYZEZ2MnVBSkl3Zmw4a3JEMmtaaHF5ZnAzQUlB?oc=5",
-          "pubDate": "Sat, 26 Sep 2026 16:44:52 GMT",
-          "score": 1.6
         }
       ]
     },
     {
       "rank": 2,
-      "theme": "半導體",
-      "score": 23.5,
+      "theme": "CPO/光通訊",
+      "score": 23.9,
       "news": [
+        {
+          "title": "AI伺服器供應鏈啟動1700億大籌資，液冷與矽光子長單帶動鴻海等廠擴產-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUXZWRWY1WGwxYi10a3g4WDNuSWZaNlZKem11dHk1T0RsQi1TQlpkc3VKTlgtN1JpTWh4eFRaaXBtcXRBOENCbklpX1Y5c1o1b0ZWZmZtSDd4d082Qmo1OU11bWNCUlNTTG9LbWxtVm13YkxSS0tvVFBvSzR1ZVhZRFNR?oc=5",
+          "pubDate": "Sun, 27 Sep 2026 01:45:43 GMT",
+          "score": 1.6
+        },
+        {
+          "title": "英特爾跨入Micro LED CPO 台LED廠迎AI矽光子商機 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JTTVDcFNTSzc1TTJyUkE2SzVFMlc3eUZtZ1RaaTJUZVhRa1ZvWG1tWGxKYnp1WWh5czFPV3doQl9tRks0WUtpN00teXNpcGM?oc=5",
+          "pubDate": "Sun, 27 Sep 2026 00:53:19 GMT",
+          "score": 3.2
+        },
+        {
+          "title": "光通訊概念股有哪些？從InP磊晶到CPO封裝，上中下游供應鏈解析 - pocket.tw",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBuUUVHRWhWTDNPUUxVQzZScklpTkxyMjRHMFBUMm51VE0tNUd5N0hoTjJtbkpVNm1yVFJxTzROTk9zM0lBTmJkbDFhOTBBZXlRVmN1Xzd4eFlJamdVeHRpTDV3TQ?oc=5",
+          "pubDate": "Wed, 16 Sep 2026 07:00:00 GMT",
+          "score": 1.1
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "theme": "半導體",
+      "score": 22.35,
+      "news": [
+        {
+          "title": "台股ETF績效靚半導體最猛- 財經要聞- 工商時報 - 中時新聞網",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAzOFZkOXJiRjdfZkg3OElQcGgtdlp5MkswSmR0Y0JIcVlNRnkwWUk2djFtZ0NEN2hLVFozM1dFbU1od2VyMWhCODFJc3Vob1ZuZHg5Wk1hUHdLSUVROXFLNWVxcHZFSkdJeGpF?oc=5",
+          "pubDate": "Sat, 26 Sep 2026 20:10:00 GMT",
+          "score": 1.6
+        },
         {
           "title": "外資百億撐腰台股仍翻黑 穎崴亮燈號召千金股、記憶體三雄救火守住4萬7｜Yahoo財經掃描 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMilgRBVV95cUxPNjdWQWJwYWdTbUE1aG0xZXR0aE5Qbkd3UW1RTElWRFUxaGtDUnFXZHdqRzJ5dWlBMThsU2t5OVpPU2trZW9TemtkcGlacWFfNS16SEg5ODJVd1A2OE44ckpCd25rYXB3XzkwODJVUVZYbDNLb3djYWVNZmlRTE1sdHFVU2NfZ2d4X2JfWm9rVEUycUVVbmJ5bWFoLWdtcUtfLTZ2Nmc5V0RzTi1UemxYOF9tSmd2Mmhtc3hTTmY1Wk1JMm9UbkRaVjBrT3dyN3FxRXd0b3BFaWh4MURaZUFkcTY5bVdmOF9CVU5MVldMaVBfQ2xvYjN2WEw0d2xRUmMzNEV5cTd5NkllYWxvWXE4S2JDTlNjVE1mV2g1TkRORk12eGNzQWYyX1pJMDBpWW5QWEZOeEdISGVMc0hrRWNaeWFxYXdlMkVxeG1hQU4wT3NYNlZBeS1vWUpsME9heDVvanJEQllfbUtnTXNZY0duWEhwdW1PajFMYUpOZDhwVUo2U0JjWlZJX3ZSSERPQVZvQ3c2bzVhNlRZY2RBNm5KNUhwVTF2NHc5TGpUZV9ISHVmVnRac0xZcWwwYkRzcVlScVRhU1V3NWVMN2RLNmw1SnFkQmZodGFzeEVHdXhkc0owUDFQaG5aMmVUeV9ldWhKOTdzNGoxNUhadG5aMGRkdVB1ZEpkNnBXZkh1WlhPRWx2OU9YN1E?oc=5",
@@ -43,48 +74,17 @@
           "score": 0.55
         },
         {
-          "title": "美股齊漲台股照樣摔 載板記憶體一起被提款！玉山金率金融軍團強漲撐盤 ｜Yahoo財經掃描 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMioARBVV95cUxNT3dzaUJud3lVMW84enR0OUFWakVjUTNmQUUzYTNVbUJlbFA3bFYyblZYWjBBejM2QzNtamFXaWhHUXE4TVRNN3hGcnVoMmx0M25jWU5Ja1gzaHhxYlExNWtYSHBBdElGTTE5ajBmeDdpWG5rdXZiUUF5d1dlcVViQm1yN19VVjBqUVFaUkpER3E0ZHlLR21CT2N3bHo5QlYwQm80dVp4ZXcyNXNHclRYT3drZExMRUtfQXB3dXp0UDRraFRmUzRSVEdwNmNiQU4zSVQzeVVQMDFyMDlhdWFvNVJGckNCVUNRZ3J3b29uWi1LWkh3Qy1MaHA0ZWVUdjFCbDdxSXZsSVAzMDNMbEIxS2tqOWc2eF9xZFBrOThxZXg2YjVYQ1VlWGx2LXhNUWZCaGF6T05lLVlUYTlMOU5FcVlCT3M5ZDdEUWt2Qmh1Wk9NWkxUZFpCU2Z1NVZVOXVqcTFwN1hOeDN5SFRIZ0pTWWVfUlUwVW9LZlViUWFIYkRQdEVDT2I3bkpFLW1kSklheHdyMFBRalBLTTN3RVY1SEpwNGRMakhUNTA0MTNpcGJhZExwdG1qeFMxN3loc2dwai1tSi0zWmEtMVByUmh0c3p1M3YyZ1ZyS1ltbi1LYkpkUE1mOU0taGFlcWFrR3JTRnRab0lyVWppZmxmOGI1aUJYY3huZE9zb1hMRmh5MTdqTUlUWjlUQTJTSlItMWdZ?oc=5",
-          "pubDate": "Thu, 03 Sep 2026 07:00:00 GMT",
-          "score": 0.55
-        },
-        {
-          "title": "外資看旺AI供應鏈！「這高息ETF」卡位半導體+金融防禦專家點名「高股利率+高填息」雙因子捕捉Q4行情 - FTNN",
-          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1aU0huS01lcVEyTWE1WlNlSUVXcGExdkpqZnBkQXhwdmk4bXpMUVliZjI2aEtLRnNBX2pDQmZaS2dVcVpIMmltQkllMA?oc=5",
-          "pubDate": "Sat, 26 Sep 2026 13:45:00 GMT",
+          "title": "10月題材一波接一波！AI、PCB、半導體盛事全開炸 台達電、聯茂等概念股短多點火 - FTNN",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE11SlMyYnFYdUs1Y3dBQUpmMU9yRDByVXRtZ3ZCQlNDVDB2OWV5cldGSTZiQldCY0dfSUR1M2tYSHNUY2kyVnZJWmw3SQ?oc=5",
+          "pubDate": "Sun, 27 Sep 2026 04:50:00 GMT",
           "score": 1.6
-        }
-      ]
-    },
-    {
-      "rank": 3,
-      "theme": "CPO/光通訊",
-      "score": 20.05,
-      "news": [
-        {
-          "title": "光通訊概念股有哪些？從InP磊晶到CPO封裝，上中下游供應鏈解析 - pocket.tw",
-          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBuUUVHRWhWTDNPUUxVQzZScklpTkxyMjRHMFBUMm51VE0tNUd5N0hoTjJtbkpVNm1yVFJxTzROTk9zM0lBTmJkbDFhOTBBZXlRVmN1Xzd4eFlJamdVeHRpTDV3TQ?oc=5",
-          "pubDate": "Wed, 16 Sep 2026 07:00:00 GMT",
-          "score": 1.1
-        },
-        {
-          "title": "2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看 - 數位時代",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNenlhajhKeGpjenpMSDJfaEtnTWZlR0pIY0F5ZmxWUFR5bXdtLUh0LXVVeFJYY0E2RHcySTlhQTJwRS1ITUNuMjkwT041U2FuamlWeHpJZ054bkFneVBTaDV2OFVDUVhWeFQ1Q2NGQmx6S1VBa0FETlAxaUJOZ0xDXw?oc=5",
-          "pubDate": "Thu, 10 Sep 2026 07:00:00 GMT",
-          "score": 1.1
-        },
-        {
-          "title": "CPO突然不香了？AI光通訊殺出NPO截胡：黃仁勳豪砸40億美元鎖定「下一個HBM」 - 理財周刊",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4zRU50NUgtUDRlT2N6LWhLUnVlazJCb0VWTmpPS1dqSng0YS04TG4zMDhZcFJtRnlfa21xNnI2aFRCUWdfeFBGTS10YWVxOUhrb1RfQ1h2ZUJvZzd1SEd0ZV9aLWN3dHR2RUxIc09acw?oc=5",
-          "pubDate": "Wed, 09 Sep 2026 07:00:00 GMT",
-          "score": 1.1
         }
       ]
     },
     {
       "rank": 4,
       "theme": "PCB/載板",
-      "score": 13.2,
+      "score": 13.05,
       "news": [
         {
           "title": "外資倒貨338億過中秋台股驚守4萬8 聯發科漲百元救援領載板散熱衝鋒｜Yahoo財經掃描 - Yahoo股市",
@@ -93,23 +93,23 @@
           "score": 1
         },
         {
-          "title": "美股齊漲台股照樣摔 載板記憶體一起被提款！玉山金率金融軍團強漲撐盤 ｜Yahoo財經掃描 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMioARBVV95cUxNT3dzaUJud3lVMW84enR0OUFWakVjUTNmQUUzYTNVbUJlbFA3bFYyblZYWjBBejM2QzNtamFXaWhHUXE4TVRNN3hGcnVoMmx0M25jWU5Ja1gzaHhxYlExNWtYSHBBdElGTTE5ajBmeDdpWG5rdXZiUUF5d1dlcVViQm1yN19VVjBqUVFaUkpER3E0ZHlLR21CT2N3bHo5QlYwQm80dVp4ZXcyNXNHclRYT3drZExMRUtfQXB3dXp0UDRraFRmUzRSVEdwNmNiQU4zSVQzeVVQMDFyMDlhdWFvNVJGckNCVUNRZ3J3b29uWi1LWkh3Qy1MaHA0ZWVUdjFCbDdxSXZsSVAzMDNMbEIxS2tqOWc2eF9xZFBrOThxZXg2YjVYQ1VlWGx2LXhNUWZCaGF6T05lLVlUYTlMOU5FcVlCT3M5ZDdEUWt2Qmh1Wk9NWkxUZFpCU2Z1NVZVOXVqcTFwN1hOeDN5SFRIZ0pTWWVfUlUwVW9LZlViUWFIYkRQdEVDT2I3bkpFLW1kSklheHdyMFBRalBLTTN3RVY1SEpwNGRMakhUNTA0MTNpcGJhZExwdG1qeFMxN3loc2dwai1tSi0zWmEtMVByUmh0c3p1M3YyZ1ZyS1ltbi1LYkpkUE1mOU0taGFlcWFrR3JTRnRab0lyVWppZmxmOGI1aUJYY3huZE9zb1hMRmh5MTdqTUlUWjlUQTJTSlItMWdZ?oc=5",
-          "pubDate": "Thu, 03 Sep 2026 07:00:00 GMT",
-          "score": 0.55
-        },
-        {
           "title": "台灣PCB製造產值挑戰1.14兆元！AI伺服器帶動哪些高階板升級？ - pocket.tw",
           "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9nLUMzeTEtX1JXZi0weUhwbmVXNmhtTVpuV1d1d2Q3LXdUdHUxUE9CQjMza3E4Y2RBNTlUOXdSc2ZPZWV5U016TVZwakVRN2JqMkdVYTdmRm9CYnBsekU2MHpkYw?oc=5",
           "pubDate": "Thu, 24 Sep 2026 08:43:59 GMT",
           "score": 2
+        },
+        {
+          "title": "10月題材一波接一波！AI、PCB、半導體盛事全開炸 台達電、聯茂等概念股短多點火 - FTNN",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE11SlMyYnFYdUs1Y3dBQUpmMU9yRDByVXRtZ3ZCQlNDVDB2OWV5cldGSTZiQldCY0dfSUR1M2tYSHNUY2kyVnZJWmw3SQ?oc=5",
+          "pubDate": "Sun, 27 Sep 2026 04:50:00 GMT",
+          "score": 1.6
         }
       ]
     },
     {
       "rank": 5,
       "theme": "機器人/自動化",
-      "score": 8.8,
+      "score": 8.25,
       "news": [
         {
           "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online 新聞",
