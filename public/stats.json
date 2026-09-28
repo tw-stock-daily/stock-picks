@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-09-28T05:39:49.346Z",
-  "range": "2026-02-05 ~ 2026-09-28",
-  "totalHistoryFiles": 220,
-  "validPickDays": 199,
-  "totalSamples": 495,
+  "generatedAt": "2026-09-28T20:03:12.985Z",
+  "range": "2026-02-05 ~ 2026-09-29",
+  "totalHistoryFiles": 221,
+  "validPickDays": 200,
+  "totalSamples": 498,
   "d1": {
     "samples": 480,
     "wins": 226,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 199,
+      "days": 200,
       "hitDays": 155,
-      "hitRate": 0.7788944723618091
+      "hitRate": 0.775
     },
     "tp2": {
-      "days": 199,
+      "days": 200,
       "hitDays": 147,
-      "hitRate": 0.7386934673366834
+      "hitRate": 0.735
     }
   },
   "details": [
@@ -8941,6 +8941,60 @@
     },
     {
       "date": "2026-09-28",
+      "pickDate": "2026-09-24",
+      "symbol": "6672",
+      "name": "騰輝電子-KY",
+      "entry": 337.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 347.63,
+      "tp2Price": 354.38,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-29",
+      "pickDate": "2026-09-24",
+      "symbol": "3189",
+      "name": "景碩",
+      "entry": 962,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 990.86,
+      "tp2Price": 1010.1,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-29",
+      "pickDate": "2026-09-24",
+      "symbol": "6533",
+      "name": "晶心科",
+      "entry": 276,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 284.28,
+      "tp2Price": 289.8,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-29",
       "pickDate": "2026-09-24",
       "symbol": "6672",
       "name": "騰輝電子-KY",
