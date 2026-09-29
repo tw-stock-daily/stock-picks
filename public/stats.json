@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-09-29T05:57:29.853Z",
-  "range": "2026-02-05 ~ 2026-09-29",
-  "totalHistoryFiles": 221,
-  "validPickDays": 200,
-  "totalSamples": 480,
+  "generatedAt": "2026-09-29T18:30:02.828Z",
+  "range": "2026-02-05 ~ 2026-09-30",
+  "totalHistoryFiles": 222,
+  "validPickDays": 201,
+  "totalSamples": 483,
   "d1": {
     "samples": 477,
     "wins": 227,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 200,
+      "days": 201,
       "hitDays": 156,
-      "hitRate": 0.78
+      "hitRate": 0.7761194029850746
     },
     "tp2": {
-      "days": 200,
+      "days": 201,
       "hitDays": 148,
-      "hitRate": 0.74
+      "hitRate": 0.736318407960199
     }
   },
   "details": [
@@ -8683,6 +8683,60 @@
       "d5Win": null,
       "tp1Price": 216.3,
       "tp2Price": 220.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-30",
+      "pickDate": "2026-09-29",
+      "symbol": "6533",
+      "name": "晶心科",
+      "entry": 303.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 312.61,
+      "tp2Price": 318.68,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-30",
+      "pickDate": "2026-09-29",
+      "symbol": "3035",
+      "name": "智原",
+      "entry": 210,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 216.3,
+      "tp2Price": 220.5,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-09-30",
+      "pickDate": "2026-09-29",
+      "symbol": "3717",
+      "name": "聯嘉投控",
+      "entry": 27.85,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 28.69,
+      "tp2Price": 29.24,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
