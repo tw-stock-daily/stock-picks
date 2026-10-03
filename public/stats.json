@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-03T05:32:52.465Z",
-  "range": "2026-02-05 ~ 2026-10-03",
-  "totalHistoryFiles": 225,
-  "validPickDays": 204,
-  "totalSamples": 483,
+  "generatedAt": "2026-10-03T17:03:29.560Z",
+  "range": "2026-02-05 ~ 2026-10-04",
+  "totalHistoryFiles": 226,
+  "validPickDays": 205,
+  "totalSamples": 486,
   "d1": {
     "samples": 477,
     "wins": 230,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 204,
+      "days": 205,
       "hitDays": 156,
-      "hitRate": 0.7647058823529411
+      "hitRate": 0.7609756097560976
     },
     "tp2": {
-      "days": 204,
+      "days": 205,
       "hitDays": 148,
-      "hitRate": 0.7254901960784313
+      "hitRate": 0.7219512195121951
     }
   },
   "details": [
@@ -8725,6 +8725,60 @@
     },
     {
       "date": "2026-10-03",
+      "pickDate": "2026-10-02",
+      "symbol": "8046",
+      "name": "南電",
+      "entry": 1460,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 1503.8,
+      "tp2Price": 1533,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-04",
+      "pickDate": "2026-10-02",
+      "symbol": "4958",
+      "name": "臻鼎-KY",
+      "entry": 561,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 577.83,
+      "tp2Price": 589.05,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-04",
+      "pickDate": "2026-10-02",
+      "symbol": "3031",
+      "name": "佰鴻",
+      "entry": 32.8,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 33.78,
+      "tp2Price": 34.44,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-04",
       "pickDate": "2026-10-02",
       "symbol": "8046",
       "name": "南電",
