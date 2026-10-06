@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-06T06:38:51.037Z",
-  "range": "2026-02-05 ~ 2026-10-06",
-  "totalHistoryFiles": 228,
-  "validPickDays": 207,
-  "totalSamples": 477,
+  "generatedAt": "2026-10-06T18:50:26.368Z",
+  "range": "2026-02-05 ~ 2026-10-07",
+  "totalHistoryFiles": 229,
+  "validPickDays": 208,
+  "totalSamples": 480,
   "d1": {
     "samples": 474,
     "wins": 238,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 207,
+      "days": 208,
       "hitDays": 155,
-      "hitRate": 0.748792270531401
+      "hitRate": 0.7451923076923077
     },
     "tp2": {
-      "days": 207,
+      "days": 208,
       "hitDays": 146,
-      "hitRate": 0.7053140096618358
+      "hitRate": 0.7019230769230769
     }
   },
   "details": [
@@ -8617,6 +8617,60 @@
     },
     {
       "date": "2026-10-06",
+      "pickDate": "2026-10-06",
+      "symbol": "3044",
+      "name": "健鼎",
+      "entry": 579,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 596.37,
+      "tp2Price": 607.95,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-07",
+      "pickDate": "2026-10-06",
+      "symbol": "3031",
+      "name": "佰鴻",
+      "entry": 34.2,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 35.23,
+      "tp2Price": 35.91,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-07",
+      "pickDate": "2026-10-06",
+      "symbol": "5469",
+      "name": "瀚宇博",
+      "entry": 80.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 82.92,
+      "tp2Price": 84.53,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-07",
       "pickDate": "2026-10-06",
       "symbol": "3044",
       "name": "健鼎",
