@@ -1,49 +1,49 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-07T06:18:24.018Z",
-  "range": "2026-02-05 ~ 2026-10-07",
-  "totalHistoryFiles": 229,
-  "validPickDays": 208,
+  "generatedAt": "2026-10-07T19:15:21.798Z",
+  "range": "2026-02-05 ~ 2026-10-08",
+  "totalHistoryFiles": 230,
+  "validPickDays": 209,
   "totalSamples": 480,
   "d1": {
-    "samples": 477,
-    "wins": 239,
-    "winRate": 0.5010482180293501
+    "samples": 474,
+    "wins": 236,
+    "winRate": 0.4978902953586498
   },
   "d3": {
-    "samples": 471,
-    "wins": 242,
-    "winRate": 0.5138004246284501
+    "samples": 468,
+    "wins": 241,
+    "winRate": 0.5149572649572649
   },
   "d5": {
-    "samples": 459,
-    "wins": 220,
-    "winRate": 0.4793028322440087
+    "samples": 456,
+    "wins": 219,
+    "winRate": 0.48026315789473684
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 477,
-    "hits": 373,
-    "hitRate": 0.7819706498951782
+    "samples": 474,
+    "hits": 370,
+    "hitRate": 0.7805907172995781
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 477,
-    "hits": 305,
-    "hitRate": 0.639412997903564
+    "samples": 474,
+    "hits": 304,
+    "hitRate": 0.6413502109704642
   },
   "dailyHit": {
     "tp1": {
-      "days": 208,
+      "days": 209,
       "hitDays": 155,
-      "hitRate": 0.7451923076923077
+      "hitRate": 0.7416267942583732
     },
     "tp2": {
-      "days": 208,
+      "days": 209,
       "hitDays": 146,
-      "hitRate": 0.7019230769230769
+      "hitRate": 0.6985645933014354
     }
   },
   "details": [
@@ -624,24 +624,6 @@
       "tp2Hit": false
     },
     {
-      "date": "2026-04-17",
-      "pickDate": "2026-04-17",
-      "symbol": "2492",
-      "name": "華新科",
-      "entry": 147,
-      "d1Close": 149.5,
-      "d3Close": 142.5,
-      "d5Close": 130,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 151.41,
-      "tp2Price": 154.35,
-      "d5HighMax": 152,
-      "tp1Hit": true,
-      "tp2Hit": false
-    },
-    {
       "date": "2026-04-18",
       "pickDate": "2026-04-17",
       "symbol": "3450",
@@ -675,24 +657,6 @@
       "tp2Price": 19.21,
       "d5HighMax": 18.549999237060547,
       "tp1Hit": false,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-04-18",
-      "pickDate": "2026-04-17",
-      "symbol": "2492",
-      "name": "華新科",
-      "entry": 147,
-      "d1Close": 149.5,
-      "d3Close": 142.5,
-      "d5Close": 130,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 151.41,
-      "tp2Price": 154.35,
-      "d5HighMax": 152,
-      "tp1Hit": true,
       "tp2Hit": false
     },
     {
@@ -7914,24 +7878,6 @@
       "tp2Hit": true
     },
     {
-      "date": "2026-09-23",
-      "pickDate": "2026-09-23",
-      "symbol": "2254",
-      "name": "巨鎧精密-創",
-      "entry": 86.7,
-      "d1Close": 88.80000305175781,
-      "d3Close": 92.5999984741211,
-      "d5Close": 94.30000305175781,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 89.3,
-      "tp2Price": 91.04,
-      "d5HighMax": 95,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
       "date": "2026-09-24",
       "pickDate": "2026-09-24",
       "symbol": "3189",
@@ -8683,6 +8629,60 @@
       "d5Win": null,
       "tp1Price": 612.85,
       "tp2Price": 624.75,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-08",
+      "pickDate": "2026-10-07",
+      "symbol": "1301",
+      "name": "台塑",
+      "entry": 75.4,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 77.66,
+      "tp2Price": 79.17,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-08",
+      "pickDate": "2026-10-07",
+      "symbol": "4958",
+      "name": "臻鼎-KY",
+      "entry": 595,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 612.85,
+      "tp2Price": 624.75,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-08",
+      "pickDate": "2026-10-07",
+      "symbol": "6278",
+      "name": "台表科",
+      "entry": 250.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 258.01,
+      "tp2Price": 263.03,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
