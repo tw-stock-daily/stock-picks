@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-08T06:25:51.941Z",
-  "range": "2026-02-05 ~ 2026-10-08",
-  "totalHistoryFiles": 230,
-  "validPickDays": 209,
-  "totalSamples": 480,
+  "generatedAt": "2026-10-08T19:11:31.202Z",
+  "range": "2026-02-05 ~ 2026-10-09",
+  "totalHistoryFiles": 231,
+  "validPickDays": 210,
+  "totalSamples": 483,
   "d1": {
     "samples": 477,
     "wins": 238,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 209,
+      "days": 210,
       "hitDays": 155,
-      "hitRate": 0.7416267942583732
+      "hitRate": 0.7380952380952381
     },
     "tp2": {
-      "days": 209,
+      "days": 210,
       "hitDays": 147,
-      "hitRate": 0.7033492822966507
+      "hitRate": 0.7
     }
   },
   "details": [
@@ -8683,6 +8683,60 @@
       "d5Win": null,
       "tp1Price": 12.57,
       "tp2Price": 12.81,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-09",
+      "pickDate": "2026-10-08",
+      "symbol": "4958",
+      "name": "臻鼎-KY",
+      "entry": 592,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 609.76,
+      "tp2Price": 621.6,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-09",
+      "pickDate": "2026-10-08",
+      "symbol": "2484",
+      "name": "希華",
+      "entry": 90.6,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 93.32,
+      "tp2Price": 95.13,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-09",
+      "pickDate": "2026-10-08",
+      "symbol": "6197",
+      "name": "佳必琪",
+      "entry": 381.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 392.94,
+      "tp2Price": 400.57,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
