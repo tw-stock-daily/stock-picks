@@ -1,41 +1,47 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-10-11T14:06:02+08:00",
-  "asOfLocal": "2026-10-11T14:06:02+08:00",
-  "date": "2026-10-11",
+  "generatedAt": "2026-10-12T01:56:05+08:00",
+  "asOfLocal": "2026-10-12T01:56:05+08:00",
+  "date": "2026-10-12",
   "marketState": "strong",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 37.65,
+      "score": 43.35,
       "news": [
         {
-          "title": "毛利率衝破 87% 遠超台積電！川湖 40 年只做滑軌，AI 伺服器市占近八成 - TechNews 科技新報",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBHMmd5eFJTQkEzZDBELW5kbVFOM3ZZTUg1RkUxZGRqN1pldW5lNnpYUUlyeERJVnpXWUtOUDQxbzlzd3VKaGJIcDRjZzVUMWRmTzhaTG9UMEd6ajQ4V0I3S1JFbXU4X2laakoyTTU5Z1ktVHRMcUI4OEZrdlBtUQ?oc=5",
-          "pubDate": "Sun, 11 Oct 2026 05:06:58 GMT",
-          "score": 1.6
-        },
-        {
-          "title": "AI伺服器供應鏈掀專利戰！美啟動337調查涉全球20廠，台廠鴻海受關注-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZDVfb0dTYk5kMmV0bUg5UTZhbkN1cFFvRkxtSXRPc19nMUk4eTM2WW1yYTBqRVN6OF8tZW1kS3J6WVBUUjdQbzJoWEZ1Zm91N21FLWdrSDlqNTMxWmVRZDBESmZtM1BfbEFzbXgwc0tJaXdneEJGUkcwUmtDcUxnQzVn?oc=5",
-          "pubDate": "Sun, 11 Oct 2026 05:50:22 GMT",
+          "title": "AI伺服器供應鏈捲專利戰，美啟動調查波及3大台廠，台積電法說成破局關鍵！-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWDFrVzk5YnJsdlYwYlRMTUZBaExiLUpiZmVpSGVxLWQ3OFJqV0MxLTZ0X2hHTlJ0TnlJcHBybGFjdlBRb1NWbDJhV3hDSHZBeV9oWlJ1eFdyNlV3SUc0TkNKNy1tWHNmVldXalZJTWNBT1pQblhHLWR6UXlTT2hCam13?oc=5",
+          "pubDate": "Sun, 11 Oct 2026 15:50:26 GMT",
           "score": 3.2
         },
         {
           "title": "電子五哥第三季股價三漲兩跌 最新伺服器展望一次看 - 鉅亨網",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jN0RfRWxyQnpNZGU0a2ZnYWphZFo0QU4yMWdVSGQyN1BNNjMya1pLTEZRdVQwbG9sS2Z5eGVWRnp6ZS13dWJkaWNIdnBXV2M?oc=5",
           "pubDate": "Sun, 11 Oct 2026 02:24:12 GMT",
-          "score": 1.6
+          "score": 1.35
+        },
+        {
+          "title": "法人上修今、明年伺服器出貨量 首選12檔電子硬體供應鏈 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5wN29iVGxPOEV6Y2tHRzl1bDlDalI0ekJmMDR5ZjdqT244SVRfTVR0UjYtd01OWEV0TV9zVUpiVDh6eGQtU3RWd0d5Q1ZKalc40gFWQVVfeXFMUFhXbllYNURyTUdnOGZXcVA2V1gzSGFENEVDSVVabjd5cU15UUVHcW5kR29mVUo2WWdfcmlGdy1lZFh2MjZiUEY3MHk0bUtpMTczaFVISnc?oc=5",
+          "pubDate": "Fri, 09 Oct 2026 05:25:41 GMT",
+          "score": 1
         }
       ]
     },
     {
       "rank": 2,
       "theme": "CPO/光通訊",
-      "score": 25.05,
+      "score": 26.15,
       "news": [
+        {
+          "title": "AI供應鏈被持續看好，先進封裝與CPO光通訊的成長動能有何差... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9hcHAtZmlmRVM3TVJUQTAyTkQ5TDI5eE8xY25YeWkxNGg1b3k4LTBwdldYYUJNWDMwMEw2VXhBMXVSWU16Ry1LV0VQTWlnQi1BRnlXWWNpRU4xQXNRRlM1QlM2RVhaUGROUWpDSHMzUVRzblg3R3NHQjZhVQ?oc=5",
+          "pubDate": "Sun, 11 Oct 2026 09:02:50 GMT",
+          "score": 3.2
+        },
         {
           "title": "美大咖唱旺台CPO族群發光- 日報 - 工商時報",
           "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBZVGRnV01ZVjVfVjBIVEZEZ2gwRzhSNGp4aUNJSzdDYV90UDN4LUVkVXhORkhaWjR1cVNvVUZxTWZCQl9wc3ZwWmVpbWttNDN4eTh5SWhSekRWNElqeVpz?oc=5",
@@ -43,14 +49,8 @@
           "score": 0.8
         },
         {
-          "title": "AI算力需求升溫，光通訊與CPO的角色為何更重要? - CMoney",
-          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9IUzhNMnBnRTFDZFhpUldHNjZ2cnlCazZwUEI5U3k0dmRUNHRMOUNmUFo1MzlhUW9IVXlEbTliNE9WNmlfRWljVVF5c05WZm5EODUyWnJmUUplU1dBT0N4LUl1R09PNmM4eHhJTnoweUctY3ZJNVdSMC1nMA?oc=5",
-          "pubDate": "Thu, 08 Oct 2026 22:40:23 GMT",
-          "score": 2
-        },
-        {
-          "title": "AI 高速光通訊族群點火！穩懋、聯亞、立碁亮燈 矽光子與 CPO 題材擴散 - 經濟日報",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WNzV3T3NONGktQVdEZ0lMeTh5UHFfd0xTQ2c0enMyZWVnT1FtS2s3QUVGS0tEMkx5NUM3aFlpV0Nld3RDUkpVNEtfbjVlbUhyYm5zcm9Vb3lnZ9IBX0FVX3lxTE1Vam1mNTJLY2wxemwzSmYyRElreTNydjZzOVJtYXVkZmp1anNkR0hrMmR6N0ZjbnZqTkYxX0RIX2ZwaFRCcWRpdVJFTEhvb2pwNTRiRDY2VGFTX3ltWllR?oc=5",
+          "title": "AI 高速光通訊族群點火！穩懋、聯亞、立碁亮燈 矽光子與 CPO 題材擴散 | 市場焦點 | 證券 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WNzV3T3NONGktQVdEZ0lMeTh5UHFfd0xTQ2c0enMyZWVnT1FtS2s3QUVGS0tEMkx5NUM3aFlpV0Nld3RDUkpVNEtfbjVlbUhyYm5zcm9Vb3lnZw?oc=5",
           "pubDate": "Fri, 02 Oct 2026 07:00:00 GMT",
           "score": 1.65
         }
@@ -59,41 +59,35 @@
     {
       "rank": 3,
       "theme": "半導體",
-      "score": 19,
+      "score": 25.2,
       "news": [
         {
-          "title": "台股直逼5萬點！AI從晶片旺到伺服器 「這檔」規模成長113.66% - 三立新聞網SETN.com",
-          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5NTXp1Q0RQRF9CY1RkVW5HcTlTT0hXRlZ3c2Vkd1dpWUhxYzNlMnZpckZ2X213aHR6ZlhOczhqTk44VDRSZlVUdXFycw?oc=5",
-          "pubDate": "Wed, 07 Oct 2026 21:34:24 GMT",
-          "score": 0.8
+          "title": "AI伺服器供應鏈拉貨強勁！先進封裝與半導體材料營收創高，台積電擴大委外-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOd3ZKbU9tN2Z0QWtIYzFvUmtiV0F2UUtlem5qOTJIOUhLSm4xUlRtOVFBaHZINU1zeVZoTVdsUE1OVUNNUVIyZXUxR3RDSTJqNjRpemhNd2l2cmFxTUpsWThCQTBYUl9pZm85Ykc0WFl5MzhhdXhSVXdpb0d6aHp4cWpn?oc=5",
+          "pubDate": "Sun, 11 Oct 2026 16:50:26 GMT",
+          "score": 3.2
         },
         {
-          "title": "AI 伺服器供應鏈最新動態！先進封裝與水冷需求爆發，這 2 檔指標廠9 月營收創高-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdEx1XzdaeUdLU0NBZUVkUG9vampvR2VjZ3ZXMy1KYTVFVjREZGxJY0FIN1FJa29QSDVNZEV1djhqdTZlYUNLQVBMYXhNRUMxejVNaXdXMW5sU2pTaUlxeUdIM1lkSUl5Mk1iNEg1b2gzT3FwcDhoWjhRNmFRdUtFMjFn?oc=5",
-          "pubDate": "Sun, 11 Oct 2026 02:50:30 GMT",
+          "title": "先進封裝產能成法說亮點！美337專利調查啟動，牽動3檔AI伺服器供應鏈-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRy1UMHlyZVhmSVdRTnplamJwZ3BMNlQ4cW1jdUczM0RSSHNvSXdXd3BZdURMdUpYQjN5WjlzcUd4WURiX0RvazV1bE5MbTBreHFJcFEyMnZvVXlwSkZNVXhoM3lrMmF1OFVFUTBrY1hvRS0zR2tEZnFWYmcwQ3JnTi1n?oc=5",
+          "pubDate": "Sun, 11 Oct 2026 11:50:32 GMT",
           "score": 1.6
         },
         {
-          "title": "全球PC第三季出貨暴跌兩成，AI伺服器擠壓記憶體供應，傳統旺季失靈 - 鉅亨網",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9MTFVRVXdGckxQMm51c3poNUhJZjJISFoxVjhqOHF6Y2FBbUlhZFpSb2ZMUVNKZGprYWpDM3VKVnJ4VTF4TjI2VTdRSEhTMTQ?oc=5",
-          "pubDate": "Sat, 10 Oct 2026 15:00:05 GMT",
-          "score": 1.35
+          "title": "AI伺服器供應鏈現分歧！台股ETF單週湧入逾9萬人，資金轉進半導體避險-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMkVBVlpzOE51MTN2cmdncTVJWXg0SmtPcWllQXNEVmlsd2hKem9LaUhHQVY5dHVhWk9XMERYa2U1dUJST05QWi1CS2pobWlBZnJrTDBuWXFESlE5eXZDR0FmZE84bmV3SmdKenR6TjBHWXNGcDBUQlhJeEtmSERzdHVR?oc=5",
+          "pubDate": "Thu, 08 Oct 2026 22:50:43 GMT",
+          "score": 1
         }
       ]
     },
     {
       "rank": 4,
       "theme": "車用電子",
-      "score": 8.45,
+      "score": 7.9,
       "news": [
         {
-          "title": "聯一光(3441)做什麼？CPO題材點火連飆漲停，車用光學、無人機鏡頭布局｜股市話題｜豐雲學堂2026 年 10 月 - 永豐金證券",
-          "link": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxOXzRNa2JUeXZtbjVPWmpjaXY1NG84a2pPUGF2clpXay1UUExyTjhBbWlMNVlfR1h5SEZhaXZvbnpSY0NzNU9SOW1wLS1kODhPOFpHNl9yZGs4cFQtcllXNE1tMm1ybVlwQVFXM1JoeEUzZmpITnlvUXQ5UEtUaFE2dnZ1M1dSU0dnSHZKNTNYaDVyc3YyN2ZHd01nNVFEcDVRNlNzU3lhWU1zc3lpdm10ZzJ4cGkyaW01N0NRd3M1RXhSQnBJaldFSEJLZTFRcXlxeU9iWUhFNF9iZFJnUDE0LVEyaG1xYXRGU0FnYldKNm1fMWI2bzRRU0ZVdS1oMl9uVFg0cGVEaDB0azRYa1pfV0NHVVdCOVhtUnkyUmxBbWtHR0hDUURTTS0xMmVreGRWdVNMXzdKVzFpWEtYcHFuMHlpazJCVUVzUGVYMXNxdXpxQVNGWlVVZ09icGstb0lhSWFFcU5vXzhjd2FiWnFWMDloZ2l4eG1tWi1mbjRGV1l6V1IxNXlnQjhVbTBNTGl1blk2WGRjOUJEQWREWWNqSWoyOWREZmJ5VFpRNlRjcVRGdVJnNUV5UEN4TEJVUXJpMk1pM1hfeTRycmdqd1Qtbi1OUVE1dzh5SmJxbDl4bFhka2QxV3ZuQVJuNA?oc=5",
-          "pubDate": "Wed, 16 Sep 2026 07:00:00 GMT",
-          "score": 0.55
-        },
-        {
-          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online新聞",
+          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online 新聞",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY0dQYWJobmtuWENfbmlhcGdoZU9Wb2dIZnlNRHlyTlQ4d0xrdGFibmQzck5uSGZFWDRtYklTTWNXSEVwUU1ERF9tVFpZdUI3eWxzS2RhTUF4eWpHWFlDS2xGbV8wQlFRQ3B5LXNEaEJwSFp6dW9MWVloLWdoRXF4MzBadTZ4Z3M?oc=5",
           "pubDate": "Fri, 04 Sep 2026 07:00:00 GMT",
           "score": 0.55
@@ -103,16 +97,22 @@
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkNTJMQ1VTbWJVNDZRSS0ybWZ6TzN5aTJlY25MOFY5VXRoQmgyMEFGY0o0Qm1uZXlFNEVRSjRIRmRQRzZiTENEckVzMHRrQ00?oc=5",
           "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
           "score": 0.55
+        },
+        {
+          "title": "AI淨零／達明：AI協作機器人導入廣達德國車用生產線 | 證券 - 中央社 CNA",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE54N0lKUGw1M3JLcUpyVzhvYWR6V1VhOF8wdjNYN3VoeldGSnp6VWhUc2JNS1ltVDk2YmVxOGltQ2JLeGVPWUpCQjZCdFhXWkhMM3FfT2hOVkZOT2dmTHc?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
         }
       ]
     },
     {
       "rank": 5,
       "theme": "機器人/自動化",
-      "score": 7.15,
+      "score": 6.6,
       "news": [
         {
-          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online新聞",
+          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online 新聞",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY0dQYWJobmtuWENfbmlhcGdoZU9Wb2dIZnlNRHlyTlQ4d0xrdGFibmQzck5uSGZFWDRtYklTTWNXSEVwUU1ERF9tVFpZdUI3eWxzS2RhTUF4eWpHWFlDS2xGbV8wQlFRQ3B5LXNEaEJwSFp6dW9MWVloLWdoRXF4MzBadTZ4Z3M?oc=5",
           "pubDate": "Fri, 04 Sep 2026 07:00:00 GMT",
           "score": 0.55

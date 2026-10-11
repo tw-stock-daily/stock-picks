@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-11T06:06:20.184Z",
-  "range": "2026-02-05 ~ 2026-10-11",
-  "totalHistoryFiles": 233,
-  "validPickDays": 212,
-  "totalSamples": 489,
+  "generatedAt": "2026-10-11T17:56:26.241Z",
+  "range": "2026-02-05 ~ 2026-10-12",
+  "totalHistoryFiles": 234,
+  "validPickDays": 213,
+  "totalSamples": 492,
   "d1": {
     "samples": 477,
     "wins": 242,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 212,
+      "days": 213,
       "hitDays": 155,
-      "hitRate": 0.7311320754716981
+      "hitRate": 0.7276995305164319
     },
     "tp2": {
-      "days": 212,
+      "days": 213,
       "hitDays": 147,
-      "hitRate": 0.6933962264150944
+      "hitRate": 0.6901408450704225
     }
   },
   "details": [
@@ -8833,6 +8833,60 @@
     },
     {
       "date": "2026-10-11",
+      "pickDate": "2026-10-08",
+      "symbol": "6658",
+      "name": "聯策",
+      "entry": 214.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 220.94,
+      "tp2Price": 225.23,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-12",
+      "pickDate": "2026-10-08",
+      "symbol": "1301",
+      "name": "台塑",
+      "entry": 81.3,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 83.74,
+      "tp2Price": 85.36,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-12",
+      "pickDate": "2026-10-08",
+      "symbol": "6505",
+      "name": "台塑化",
+      "entry": 110.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 113.81,
+      "tp2Price": 116.03,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-12",
       "pickDate": "2026-10-08",
       "symbol": "6658",
       "name": "聯策",
