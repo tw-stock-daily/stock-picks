@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-18T04:52:38.577Z",
-  "range": "2026-02-05 ~ 2026-10-18",
-  "totalHistoryFiles": 240,
-  "validPickDays": 219,
-  "totalSamples": 486,
+  "generatedAt": "2026-10-18T16:24:42.526Z",
+  "range": "2026-02-05 ~ 2026-10-19",
+  "totalHistoryFiles": 241,
+  "validPickDays": 220,
+  "totalSamples": 489,
   "d1": {
     "samples": 477,
     "wins": 241,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 219,
+      "days": 220,
       "hitDays": 156,
-      "hitRate": 0.7123287671232876
+      "hitRate": 0.7090909090909091
     },
     "tp2": {
-      "days": 219,
+      "days": 220,
       "hitDays": 146,
-      "hitRate": 0.6666666666666666
+      "hitRate": 0.6636363636363637
     }
   },
   "details": [
@@ -8779,6 +8779,60 @@
     },
     {
       "date": "2026-10-18",
+      "pickDate": "2026-10-16",
+      "symbol": "6209",
+      "name": "今國光",
+      "entry": 100.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 103.52,
+      "tp2Price": 105.53,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-19",
+      "pickDate": "2026-10-16",
+      "symbol": "6278",
+      "name": "台表科",
+      "entry": 298.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 307.45,
+      "tp2Price": 313.43,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-19",
+      "pickDate": "2026-10-16",
+      "symbol": "6108",
+      "name": "競國",
+      "entry": 30.85,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 31.78,
+      "tp2Price": 32.39,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-19",
       "pickDate": "2026-10-16",
       "symbol": "6209",
       "name": "今國光",
