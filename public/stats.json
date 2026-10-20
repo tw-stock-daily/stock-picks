@@ -1,49 +1,49 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-19T19:07:26.849Z",
+  "generatedAt": "2026-10-20T05:05:00.058Z",
   "range": "2026-02-05 ~ 2026-10-20",
   "totalHistoryFiles": 242,
-  "validPickDays": 220,
-  "totalSamples": 480,
+  "validPickDays": 221,
+  "totalSamples": 483,
   "d1": {
-    "samples": 477,
-    "wins": 241,
-    "winRate": 0.5052410901467506
+    "samples": 480,
+    "wins": 243,
+    "winRate": 0.50625
   },
   "d3": {
-    "samples": 465,
+    "samples": 468,
     "wins": 239,
-    "winRate": 0.513978494623656
+    "winRate": 0.5106837606837606
   },
   "d5": {
-    "samples": 459,
-    "wins": 214,
-    "winRate": 0.4662309368191721
+    "samples": 462,
+    "wins": 215,
+    "winRate": 0.4653679653679654
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 477,
-    "hits": 374,
-    "hitRate": 0.7840670859538784
+    "samples": 480,
+    "hits": 377,
+    "hitRate": 0.7854166666666667
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 477,
-    "hits": 307,
-    "hitRate": 0.6436058700209644
+    "samples": 480,
+    "hits": 312,
+    "hitRate": 0.65
   },
   "dailyHit": {
     "tp1": {
-      "days": 220,
-      "hitDays": 157,
-      "hitRate": 0.7136363636363636
+      "days": 221,
+      "hitDays": 158,
+      "hitRate": 0.7149321266968326
     },
     "tp2": {
-      "days": 220,
-      "hitDays": 146,
-      "hitRate": 0.6636363636363637
+      "days": 221,
+      "hitDays": 147,
+      "hitRate": 0.665158371040724
     }
   },
   "details": [
@@ -8317,10 +8317,10 @@
       "entry": 119,
       "d1Close": 119.5,
       "d3Close": 122.5,
-      "d5Close": null,
+      "d5Close": 107,
       "d1Win": true,
       "d3Win": true,
-      "d5Win": null,
+      "d5Win": false,
       "tp1Price": 122.57,
       "tp2Price": 124.95,
       "d5HighMax": 129,
@@ -8335,10 +8335,10 @@
       "entry": 264,
       "d1Close": 290,
       "d3Close": 298.5,
-      "d5Close": null,
+      "d5Close": 290,
       "d1Win": true,
       "d3Win": true,
-      "d5Win": null,
+      "d5Win": true,
       "tp1Price": 271.92,
       "tp2Price": 277.2,
       "d5HighMax": 314.5,
@@ -8353,13 +8353,13 @@
       "entry": 57,
       "d1Close": 59.599998474121094,
       "d3Close": 56,
-      "d5Close": null,
+      "d5Close": 56.29999923706055,
       "d1Win": true,
       "d3Win": false,
-      "d5Win": null,
+      "d5Win": false,
       "tp1Price": 58.71,
       "tp2Price": 59.85,
-      "d5HighMax": 59.900001525878906,
+      "d5HighMax": 60.5,
       "tp1Hit": true,
       "tp2Hit": true
     },
@@ -8413,7 +8413,7 @@
       "d5Win": null,
       "tp1Price": 60.77,
       "tp2Price": 61.95,
-      "d5HighMax": 59.70000076293945,
+      "d5HighMax": 60.5,
       "tp1Hit": false,
       "tp2Hit": false
     },
@@ -8424,10 +8424,10 @@
       "name": "天二科技",
       "entry": 146.5,
       "d1Close": 142.5,
-      "d3Close": null,
+      "d3Close": 131.5,
       "d5Close": null,
       "d1Win": false,
-      "d3Win": null,
+      "d3Win": false,
       "d5Win": null,
       "tp1Price": 150.9,
       "tp2Price": 153.83,
@@ -8442,10 +8442,10 @@
       "name": "銘旺科",
       "entry": 36.55,
       "d1Close": 36,
-      "d3Close": null,
+      "d3Close": 34.45000076293945,
       "d5Close": null,
       "d1Win": false,
-      "d3Win": null,
+      "d3Win": false,
       "d5Win": null,
       "tp1Price": 37.65,
       "tp2Price": 38.38,
@@ -8460,10 +8460,10 @@
       "name": "大山",
       "entry": 51,
       "d1Close": 50.5,
-      "d3Close": null,
+      "d3Close": 49.04999923706055,
       "d5Close": null,
       "d1Win": false,
-      "d3Win": null,
+      "d3Win": false,
       "d5Win": null,
       "tp1Price": 52.53,
       "tp2Price": 53.55,
@@ -8485,7 +8485,7 @@
       "d5Win": null,
       "tp1Price": 307.45,
       "tp2Price": 313.43,
-      "d5HighMax": 295.5,
+      "d5HighMax": 297.5,
       "tp1Hit": false,
       "tp2Hit": false
     },
@@ -8503,7 +8503,7 @@
       "d5Win": null,
       "tp1Price": 31.83,
       "tp2Price": 32.45,
-      "d5HighMax": 33.20000076293945,
+      "d5HighMax": 34.5,
       "tp1Hit": true,
       "tp2Hit": true
     },
@@ -8521,9 +8521,9 @@
       "d5Win": null,
       "tp1Price": 103.52,
       "tp2Price": 105.53,
-      "d5HighMax": 104.5,
+      "d5HighMax": 112,
       "tp1Hit": true,
-      "tp2Hit": false
+      "tp2Hit": true
     },
     {
       "date": "2026-10-17",
@@ -8539,7 +8539,7 @@
       "d5Win": null,
       "tp1Price": 307.45,
       "tp2Price": 313.43,
-      "d5HighMax": 295.5,
+      "d5HighMax": 297.5,
       "tp1Hit": false,
       "tp2Hit": false
     },
@@ -8557,7 +8557,7 @@
       "d5Win": null,
       "tp1Price": 31.78,
       "tp2Price": 32.39,
-      "d5HighMax": 33.20000076293945,
+      "d5HighMax": 34.5,
       "tp1Hit": true,
       "tp2Hit": true
     },
@@ -8575,9 +8575,9 @@
       "d5Win": null,
       "tp1Price": 103.52,
       "tp2Price": 105.53,
-      "d5HighMax": 104.5,
+      "d5HighMax": 112,
       "tp1Hit": true,
-      "tp2Hit": false
+      "tp2Hit": true
     },
     {
       "date": "2026-10-18",
@@ -8593,7 +8593,7 @@
       "d5Win": null,
       "tp1Price": 307.45,
       "tp2Price": 313.43,
-      "d5HighMax": 295.5,
+      "d5HighMax": 297.5,
       "tp1Hit": false,
       "tp2Hit": false
     },
@@ -8611,7 +8611,7 @@
       "d5Win": null,
       "tp1Price": 31.78,
       "tp2Price": 32.39,
-      "d5HighMax": 33.20000076293945,
+      "d5HighMax": 34.5,
       "tp1Hit": true,
       "tp2Hit": true
     },
@@ -8629,9 +8629,9 @@
       "d5Win": null,
       "tp1Price": 103.52,
       "tp2Price": 105.53,
-      "d5HighMax": 104.5,
+      "d5HighMax": 112,
       "tp1Hit": true,
-      "tp2Hit": false
+      "tp2Hit": true
     },
     {
       "date": "2026-10-19",
@@ -8639,17 +8639,17 @@
       "symbol": "6108",
       "name": "競國",
       "entry": 31.35,
-      "d1Close": null,
+      "d1Close": 32.95000076293945,
       "d3Close": null,
       "d5Close": null,
-      "d1Win": null,
+      "d1Win": true,
       "d3Win": null,
       "d5Win": null,
       "tp1Price": 32.29,
       "tp2Price": 32.92,
-      "d5HighMax": null,
-      "tp1Hit": false,
-      "tp2Hit": false
+      "d5HighMax": 34.5,
+      "tp1Hit": true,
+      "tp2Hit": true
     },
     {
       "date": "2026-10-19",
@@ -8657,17 +8657,17 @@
       "symbol": "6209",
       "name": "今國光",
       "entry": 102.5,
-      "d1Close": null,
+      "d1Close": 112,
       "d3Close": null,
       "d5Close": null,
-      "d1Win": null,
+      "d1Win": true,
       "d3Win": null,
       "d5Win": null,
       "tp1Price": 105.58,
       "tp2Price": 107.63,
-      "d5HighMax": null,
-      "tp1Hit": false,
-      "tp2Hit": false
+      "d5HighMax": 112,
+      "tp1Hit": true,
+      "tp2Hit": true
     },
     {
       "date": "2026-10-19",
@@ -8675,14 +8675,68 @@
       "symbol": "6668",
       "name": "中揚光",
       "entry": 61.5,
+      "d1Close": 59.599998474121094,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": false,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 63.34,
+      "tp2Price": 64.58,
+      "d5HighMax": 64.5,
+      "tp1Hit": true,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-20",
+      "pickDate": "2026-10-20",
+      "symbol": "6277",
+      "name": "宏正",
+      "entry": 96.8,
       "d1Close": null,
       "d3Close": null,
       "d5Close": null,
       "d1Win": null,
       "d3Win": null,
       "d5Win": null,
-      "tp1Price": 63.34,
-      "tp2Price": 64.58,
+      "tp1Price": 99.7,
+      "tp2Price": 101.64,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-20",
+      "pickDate": "2026-10-20",
+      "symbol": "4566",
+      "name": "時碩工業",
+      "entry": 86.2,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 88.79,
+      "tp2Price": 90.51,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-20",
+      "pickDate": "2026-10-20",
+      "symbol": "6141",
+      "name": "柏承",
+      "entry": 60.2,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 62.01,
+      "tp2Price": 63.21,
       "d5HighMax": null,
       "tp1Hit": false,
       "tp2Hit": false
