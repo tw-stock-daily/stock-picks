@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-23T05:08:41.183Z",
-  "range": "2026-02-05 ~ 2026-10-23",
-  "totalHistoryFiles": 245,
-  "validPickDays": 224,
-  "totalSamples": 483,
+  "generatedAt": "2026-10-23T17:46:34.636Z",
+  "range": "2026-02-05 ~ 2026-10-24",
+  "totalHistoryFiles": 246,
+  "validPickDays": 225,
+  "totalSamples": 486,
   "d1": {
     "samples": 477,
     "wins": 243,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 224,
+      "days": 225,
       "hitDays": 157,
-      "hitRate": 0.7008928571428571
+      "hitRate": 0.6977777777777778
     },
     "tp2": {
-      "days": 224,
+      "days": 225,
       "hitDays": 146,
-      "hitRate": 0.6517857142857143
+      "hitRate": 0.6488888888888888
     }
   },
   "details": [
@@ -8725,6 +8725,60 @@
     },
     {
       "date": "2026-10-23",
+      "pickDate": "2026-10-22",
+      "symbol": "2069",
+      "name": "運錩",
+      "entry": 28.95,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 29.82,
+      "tp2Price": 30.4,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-24",
+      "pickDate": "2026-10-22",
+      "symbol": "2468",
+      "name": "華經",
+      "entry": 55,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 56.65,
+      "tp2Price": 57.75,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-24",
+      "pickDate": "2026-10-22",
+      "symbol": "6277",
+      "name": "宏正",
+      "entry": 100.5,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 103.52,
+      "tp2Price": 105.53,
+      "d5HighMax": null,
+      "tp1Hit": false,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-10-24",
       "pickDate": "2026-10-22",
       "symbol": "2069",
       "name": "運錩",
