@@ -1,0 +1,138 @@
+{
+  "version": "v3.9.2",
+  "tradeStyle": "資金流強勢版v3.9.2",
+  "generatedAt": "2026-10-27T03:03:43+08:00",
+  "asOfLocal": "2026-10-27T03:03:43+08:00",
+  "date": "2026-10-27",
+  "marketState": "weak",
+  "hotThemes": [
+    {
+      "rank": 1,
+      "theme": "AI伺服器",
+      "score": 41.3,
+      "news": [
+        {
+          "title": "目標價4字頭！「AI伺服器大廠」ASIC、GPU雙引擎齊發 高盛點名4大成長動能 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMijwNBVV95cUxNSnJTc3RuZ183d3JKTnBEbWQzZlhFTUhzTm9HdW43d0wyT2h3eDVucDEwWmJ4WERrcXJPXzRwdkZENlNMRVdjU3lDNzhNUnFMMnlJTUo2QmZWM2ZVaEZRNjhFUjJuY1BhLVh5Q043V0RPRUpXSVUxeS0xUVpaT2NvVHYxNmV5WlhvMnNxd2pHZ3RRQ1NBazJqVlJZQjlEWDRyWmk1RWRyekI4M0FxUE4xWG9Td3JVUzNKUnpndXJERzZQR0RUNXRfMURaQUVrWTFNV1lwWUNFYnN4QmlTSDctZWN4Snp6V3g5VlpJVFVIMlRYQndlejAwSlUtSHUwOTlxVTF1TDJtTU1YanV3N2xRdlZBZjZMVFoya2dPU3M1ZjJUUk9hVnRJQ0pTX19Cb1hCZUZxZHk2RDhIQS1fdjFta1gtcFotUmV1SzZvNjR4djZNa1l3LWp4WVdqM19FeEwyY2Y4NnA1aFdlMWw3aGFWN3VfaEJEdnFFakl1cjVkbUdqdTgyLXE3dFF2czVuU1U?oc=5",
+          "pubDate": "Mon, 26 Oct 2026 03:07:28 GMT",
+          "score": 4.05
+        },
+        {
+          "title": "AI伺服器供應鏈Q3營收季增逾六成！最新液冷與高瓦數電源需求帶旺4檔概念股-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZmJXRk85Ujd6UE12N1dkR19maUo4NHB3Q0JIVWFqcnBPcjdpZmFjM1JNSHFNcWVuWmFDcGlkVVI2dDkwbENyNWh5RkYtelQ2NUJXVVFYZ3JiU0k1bkZnZlNQbDh5S00yVmpnclc1TG5HcmdBSW1kMnRTYUM3dGVwUFZ3?oc=5",
+          "pubDate": "Mon, 26 Oct 2026 03:39:16 GMT",
+          "score": 2.7
+        },
+        {
+          "title": "輝達VR伺服器啟動出貨 法人點名6大受惠產業 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2dnBmWldoZXcwQW8zb29KamtLbmJmbU50ODlkUFNVNkt1ZFNkamJDT1JhQVFNamNRVDNMaDVDSEZPZkgyWjE4QWVpdzFtRldLUWJfVW1wbVg?oc=5",
+          "pubDate": "Mon, 26 Oct 2026 08:56:40 GMT",
+          "score": 1.6
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "theme": "CPO/光通訊",
+      "score": 25.8,
+      "news": [
+        {
+          "title": "2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看 - 數位時代",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNenlhajhKeGpjenpMSDJfaEtnTWZlR0pIY0F5ZmxWUFR5bXdtLUh0LXVVeFJYY0E2RHcySTlhQTJwRS1ITUNuMjkwT041U2FuamlWeHpJZ054bkFneVBTaDV2OFVDUVhWeFQ1Q2NGQmx6S1VBa0FETlAxaUJOZ0xDXw?oc=5",
+          "pubDate": "Tue, 13 Oct 2026 07:00:00 GMT",
+          "score": 1.1
+        },
+        {
+          "title": "光通訊概念股有哪些？從InP磊晶到CPO封裝，上中下游供應鏈解析 - 口袋證券",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1vTnNuQkptQnRiUEFlY3hqdy11MUdqcWI3QkExTWZZa2U5ZEUtUWlrWUhjb1N4eDR3YktPRGNvV1dFOHlObWp1WjJEODZBYU05ektEVFNR?oc=5",
+          "pubDate": "Fri, 16 Oct 2026 13:49:38 GMT",
+          "score": 1.1
+        },
+        {
+          "title": "矽光子CPO是什麼？2026矽光子概念股與光通訊產業鏈一次看｜豐雲學堂 2026 年 10 月 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMijwNBVV95cUxPWlBnU0JkZ1cwVl96YUhUSFViNlo3NG9DdEhwbXVUQnBIMkVFa2VVWXY5NXFWZWJ0TkF1RmstVG5ZYUd4VlVPbU9HbVB6aWd1d1c2Z0g2QzBtUkQwdl9GR2lBMmFqRmFXS2M3OXFxVHRZWEgzU1ZBMnlTdXZQbGhoaGRIRldKQTNyNjhheHNtNThGbHhrOUFzdHU0MW10UnRqdVRYM1QyVXdzS1ZQbzY3bmdHaGltaDFXTUJpTlFXd0VrN0tlbndYRDZLS1hyaFNKbnVjT045bVN4Z0M3NUtyd2VlVERfVlB3N2FrN05JcC1nRGVTMlVXMzhxeDZjaF9ZSDZOVmRQWGwtM0IwTkhpdzFMdi1fWUpQckg3eEFoemFFT0tZanNCY01LLXB4dks5cUZmMVBRRGhhZFc3MzFRZlNudmVLeXFjcDR0Wk4yVVJORThGWkZBWi1mcGVnNUhDdXlGc3JPZWRydFNUODlBa1FVU05VNXdHdk5oVTYzVnJfZVRDTjhtQ1dId2RjazQ?oc=5",
+          "pubDate": "Tue, 28 Jul 2026 01:24:10 GMT",
+          "score": 1.65
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "theme": "半導體",
+      "score": 17.2,
+      "news": [
+        {
+          "title": "輝達先進封裝大單護體！台股爆量重挫失季線，AI 供應鏈成資金避風港-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQemZUeXoySE5qMGJZd3JkUjVNYkxEZ05wVG9JcXhIcURKMTBtaVZuempuR3BRYWJobkxnNzdTd21zeEw2c0FBUk1EQkN0ekNBM0J0VGxGa2V2b2hEbGlPWDNtNGVxUGRTV2dyc2hDWHV4YjVKa1QyOS14UUhIamZJajN3?oc=5",
+          "pubDate": "Mon, 26 Oct 2026 12:09:17 GMT",
+          "score": 1.6
+        },
+        {
+          "title": "台股震盪半導體ETF績效逆勢衝- 日報 - 工商時報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9DQVR4Um16cmRXQTZhb3JRWXF2WFh2S2JiVU9yS0VqOWZZOWlJaXhkVTdQNnFOcXg0STNFUUNGaW9GejQ2OXZCSGk3eUlHa1R5QnRYT3hBbTAzNEkzak9R?oc=5",
+          "pubDate": "Sat, 24 Oct 2026 19:00:00 GMT",
+          "score": 1
+        },
+        {
+          "title": "8檔台股ETF雙成長！IC設計一年飆122% 主動ETF規模暴增12倍 - 壹蘋新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVWJvVVkzWWV6cGZKQ1BPd1VqT2hNYW1HM0RUQzNZVERkNnBCWWpxWmo0el8ydlI5eTg4YWlvUDJETVJGdXhBQi12d3VZa3lGSGZZSGR6WTRGUUFoTlRNcGxuYUNMZDB1a3FjVVJ6cVdPdUFfWlNoVnZpenR0T0xRdzd3?oc=5",
+          "pubDate": "Sun, 25 Oct 2026 02:37:00 GMT",
+          "score": 1.15
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "theme": "機器人/自動化",
+      "score": 11,
+      "news": [
+        {
+          "title": "達明AI機器人進駐廣達德國廠！搶攻歐洲車用電子 導入ECU檢測產線 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMinANBVV95cUxPdkR2OXZmNUFqS1ZMRWZTSmlIdmc5LTVHNkZJYlRwV0JGdTFGLWgtZVZxbHN5WEZFRlZkallQb0taQXAzcnk4QlZHTnBzcTZaRnRfS1dVOURxdjR0OTVMR3pZZmV4eGg5dGZaVlNPOUdNRnJUajFYcVIycXNNUzE0VFBEcUZTMHBhT3Z5WTFQU1U2YUNYZ0JoU0czYmFqUmhtY2FCTjZDdThFVmI4U0lGNHc5bW5NMFk5alJIZ29BRkJFTkYtM29QbHl2SzlrOTFOeHR6bEF3eXZDQWdVaGduZEVwLUZsdVN2eHZtVEZSemNnc0FOczZ6NzJvc2swWmhGaTQ2U0NoMmMwUkhyNVY1TDhYWUl3NjNqNUQxdlRsVE9IanVGWURZemN5QTJEbDZzWmJhLW5ROExESk05WFJZemlzYWNJWlFhOUU0LUh3ell3QVJENThfdzZ5cEZycWhNVnp3X3BjNXVXSERIU1l1bFlCdWxhVFNkbmxjaDRaN2RkWU9iLUpyVzhOOEFJZHduTDMzd2FXR083b3Zo?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
+        },
+        {
+          "title": "達明攜手廣達進駐德國車電廠 AI機器人升級車載生產線 - 鉅亨網",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkNTJMQ1VTbWJVNDZRSS0ybWZ6TzN5aTJlY25MOFY5VXRoQmgyMEFGY0o0Qm1uZXlFNEVRSjRIRmRQRzZiTENEckVzMHRrQ00?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
+        },
+        {
+          "title": "達明 AI 協作機器人 導入廣達德國車載生產線 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLQWoya18yRkJKSlV0cWkwLXo5cXI3dVhNT3kydFNGRG4xeVVXYzhvS1pfM3Rta1p4MkZieUQ5clk4ay03QjdYUDV4eUxHTUV3Q3dCX0xCTlVFYTTSAWBBVV95cUxOZlNMTml3X3FZRERXRTVVV1pFREhQWFVrR2xTT2VIUF9nR2VVMTg0eDJUZ2xSam93Q3kyTWJmczlRT0V0el9WdTkySERHU0FCMVpVME5zcHlRWUlPV3pGRHk?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "theme": "PCB/載板",
+      "score": 7.9,
+      "news": [
+        {
+          "title": "AI伺服器商機還在，PCB股價先修正！台光電獨紅 金像電、台郡、台虹跌幅擴大 - 聚財網",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1PcWh1d05HNFZ6dExGaWNLV28zM2FtZHdubU9wRjRXV09pb0toOFBPNU9falppQnQ1VjVONnN4VjdSX2xjS2ZCdHdZM1g?oc=5",
+          "pubDate": "Mon, 26 Oct 2026 03:05:43 GMT",
+          "score": 1.35
+        },
+        {
+          "title": "AI伺服器推升PCB載板規格！最新供應鏈擴產佈局曝，欣興拚AI佔比逾60%-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQeG5DbFJacWFhNTN4QUlGakpGQmd2QW8yUzF3akFYV0ZteFlhRDVEc1czbzU1eVNXMlpXRTg0UzZYcEI1aUVzdTRVRWR1dzJvU1JJZEhRcjdkRUpTSFJCcndxeE9tMVdqN0tmMjR1Q1FQSERhWmtMTlppbHFyMmw5dHZ3?oc=5",
+          "pubDate": "Mon, 26 Oct 2026 06:39:19 GMT",
+          "score": 2.7
+        },
+        {
+          "title": "AI下一波飆股藏在這？光通訊、CPO、高階PCB成新主戰場 13檔台廠被點名受惠 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMixgNBVV95cUxQTDA3ZElnV042Xy1ReWFjcVN5b3hJMzFELU81RHBXRlRBY3hqX0EtZXlUVVB1VUYyakI1Mmx1blZlbUJjdjJrVTFSTjZkcEVPOVJGNzJOTTlSSGY1Q3lkYVRPSV92UklIWTZmaXlkOHIwNUxqTjJaaXRDcFNFaWNXbGt2ZDR2U0NZUlpHWlNUYXFOYWsyamJ6YW5TY2hmeWRXbmFiT3R1cVJtaFEtNGlPSmxZWXpzWEZoV1BIdklZUDJGQl9rWkpuVzhpMFVqSEk2clJLWVp1SlQ3azNJeGZRdlNHR3JGbENjaTU3Snp2aXpQbzRaNjNETDdwNG5Qb0xtcDBib1FhZThUY2ExVFpFckh2NUdaUEtMNjQtTkNnMTlfV0xGS0w3V0ZnN3MxbUZKRUJXbmxkQjRia3lMMDB1Qmd6bk54MnVaNmpfVTdUTHpUVGZIXy1hbGVLQkF0NF9pdlhRZy1QY1V6dXNKM2JaNzZmRXZFd1FyV1NkaWlzUGc0SEJFRU5ybjViZ0hLLXU2V0FvemF0VzFhVzFxZmRrWFlCckFYZnpsT2tpT3dyQnZuaHdhOVN2WHJmTVVDbzg3RUM2eW1R?oc=5",
+          "pubDate": "Sat, 13 Jun 2026 07:00:00 GMT",
+          "score": 0.55
+        }
+      ]
+    }
+  ],
+  "picks": [],
+  "alternates": [],
+  "candidatesCount": 0
+}
