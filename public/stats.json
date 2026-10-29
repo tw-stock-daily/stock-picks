@@ -1,106 +1,52 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-28T18:42:07.365Z",
+  "generatedAt": "2026-10-29T06:06:54.548Z",
   "range": "2026-02-05 ~ 2026-10-29",
   "totalHistoryFiles": 251,
   "validPickDays": 224,
-  "totalSamples": 468,
+  "totalSamples": 465,
   "d1": {
-    "samples": 468,
+    "samples": 465,
     "wins": 235,
-    "winRate": 0.5021367521367521
+    "winRate": 0.5053763440860215
   },
   "d3": {
-    "samples": 468,
-    "wins": 243,
-    "winRate": 0.5192307692307693
+    "samples": 465,
+    "wins": 240,
+    "winRate": 0.5161290322580645
   },
   "d5": {
     "samples": 459,
-    "wins": 206,
-    "winRate": 0.44880174291938996
+    "wins": 205,
+    "winRate": 0.4466230936819172
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 468,
-    "hits": 369,
-    "hitRate": 0.7884615384615384
+    "samples": 465,
+    "hits": 366,
+    "hitRate": 0.7870967741935484
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 468,
-    "hits": 303,
-    "hitRate": 0.6474358974358975
+    "samples": 465,
+    "hits": 300,
+    "hitRate": 0.6451612903225806
   },
   "dailyHit": {
     "tp1": {
       "days": 224,
-      "hitDays": 154,
-      "hitRate": 0.6875
+      "hitDays": 153,
+      "hitRate": 0.6830357142857143
     },
     "tp2": {
       "days": 224,
-      "hitDays": 143,
-      "hitRate": 0.6383928571428571
+      "hitDays": 142,
+      "hitRate": 0.6339285714285714
     }
   },
   "details": [
-    {
-      "date": "2026-04-28",
-      "pickDate": "2026-04-28",
-      "symbol": "3037",
-      "name": "欣興",
-      "entry": 825,
-      "d1Close": 803,
-      "d3Close": 911,
-      "d5Close": 858,
-      "d1Win": false,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 849.75,
-      "tp2Price": 866.25,
-      "d5HighMax": 948,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-04-28",
-      "pickDate": "2026-04-28",
-      "symbol": "3605",
-      "name": "宏致",
-      "entry": 83.6,
-      "d1Close": 82.5,
-      "d3Close": 85.80000305175781,
-      "d5Close": 87.69999694824219,
-      "d1Win": false,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 86.11,
-      "tp2Price": 87.78,
-      "d5HighMax": 91.80000305175781,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-04-28",
-      "pickDate": "2026-04-28",
-      "symbol": "3189",
-      "name": "景碩",
-      "entry": 508,
-      "d1Close": 508,
-      "d3Close": 531,
-      "d5Close": 482.5,
-      "d1Win": false,
-      "d3Win": true,
-      "d5Win": false,
-      "tp1Price": 523.24,
-      "tp2Price": 533.4,
-      "d5HighMax": 556,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
     {
       "date": "2026-04-29",
       "pickDate": "2026-04-29",
@@ -8317,10 +8263,10 @@
       "entry": 97.2,
       "d1Close": 100.5,
       "d3Close": 101,
-      "d5Close": null,
+      "d5Close": 93.0999984741211,
       "d1Win": true,
       "d3Win": true,
-      "d5Win": null,
+      "d5Win": false,
       "tp1Price": 100.12,
       "tp2Price": 102.06,
       "d5HighMax": 103.5,
@@ -8335,10 +8281,10 @@
       "entry": 108,
       "d1Close": 99,
       "d3Close": 94.5999984741211,
-      "d5Close": null,
+      "d5Close": 93.5999984741211,
       "d1Win": false,
       "d3Win": false,
-      "d5Win": null,
+      "d5Win": false,
       "tp1Price": 111.24,
       "tp2Price": 113.4,
       "d5HighMax": 112.5,
@@ -8353,10 +8299,10 @@
       "entry": 29.2,
       "d1Close": 30.950000762939453,
       "d3Close": 34,
-      "d5Close": null,
+      "d5Close": 29.25,
       "d1Win": true,
       "d3Win": true,
-      "d5Win": null,
+      "d5Win": true,
       "tp1Price": 30.08,
       "tp2Price": 30.66,
       "d5HighMax": 35.349998474121094,
