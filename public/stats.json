@@ -1,8 +1,8 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-10-29T06:06:54.548Z",
-  "range": "2026-02-05 ~ 2026-10-29",
-  "totalHistoryFiles": 251,
+  "generatedAt": "2026-10-29T18:50:18.338Z",
+  "range": "2026-02-05 ~ 2026-10-30",
+  "totalHistoryFiles": 252,
   "validPickDays": 224,
   "totalSamples": 465,
   "d1": {
@@ -16,9 +16,9 @@
     "winRate": 0.5161290322580645
   },
   "d5": {
-    "samples": 459,
-    "wins": 205,
-    "winRate": 0.4466230936819172
+    "samples": 456,
+    "wins": 204,
+    "winRate": 0.4473684210526316
   },
   "tp1": {
     "label": "+3% within 5 trading days",
@@ -8263,10 +8263,10 @@
       "entry": 97.2,
       "d1Close": 100.5,
       "d3Close": 101,
-      "d5Close": 93.0999984741211,
+      "d5Close": null,
       "d1Win": true,
       "d3Win": true,
-      "d5Win": false,
+      "d5Win": null,
       "tp1Price": 100.12,
       "tp2Price": 102.06,
       "d5HighMax": 103.5,
@@ -8281,10 +8281,10 @@
       "entry": 108,
       "d1Close": 99,
       "d3Close": 94.5999984741211,
-      "d5Close": 93.5999984741211,
+      "d5Close": null,
       "d1Win": false,
       "d3Win": false,
-      "d5Win": false,
+      "d5Win": null,
       "tp1Price": 111.24,
       "tp2Price": 113.4,
       "d5HighMax": 112.5,
@@ -8299,10 +8299,10 @@
       "entry": 29.2,
       "d1Close": 30.950000762939453,
       "d3Close": 34,
-      "d5Close": 29.25,
+      "d5Close": null,
       "d1Win": true,
       "d3Win": true,
-      "d5Win": true,
+      "d5Win": null,
       "tp1Price": 30.08,
       "tp2Price": 30.66,
       "d5HighMax": 35.349998474121094,
