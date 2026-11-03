@@ -1,0 +1,355 @@
+{
+  "version": "v3.9.2",
+  "tradeStyle": "資金流強勢版v3.9.2",
+  "generatedAt": "2026-11-04T03:59:15+08:00",
+  "asOfLocal": "2026-11-04T03:59:15+08:00",
+  "date": "2026-11-04",
+  "marketState": "weak",
+  "hotThemes": [
+    {
+      "rank": 1,
+      "theme": "AI伺服器",
+      "score": 31.55,
+      "news": [
+        {
+          "title": "富世達法說會》明年AI伺服器業務拚倍數成長！快接頭產能增5成 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiowNBVV95cUxNcHFzU202OUV2bl80RlBVWHlzamF2dVRob2l1UDRnUkVTRmhsMTV2WFdUTjdWdWVqcXJRbkJNUTNCV1NudnFHV0dJRDlQbFFlZ2N5MW1WNHprRnBOTndlVy0yV0hCTndpX3lMOFo0UGo4RzFieVlXRkJJa1l5QVpTSWJPdWxuSGRtazBVUlBTNG8yYmFrcEpTa2lOdXBjYWgyWExCY3RNc0hOQU9JVjBxOHVyeGdNcmQxY3JUVWRUdElYcTFlQmhyTjZSUzdjaExaems0Tmh3ckUyZTUyWFVlYTBHS2hPSlVpSmQ5QTdfdllVTm5vUUJLdnlBa2lWVUlnY3ZOSDBNQW5VdTZkdG5YRlJNc1JNWllKSDRGd0lOQkZVQzM0dnhtMUZBMHJKLUpOTGxLOGRqV1JsQm1jRVZEdnBEMGZkaGZ1RENCQzVPdk1uUThCUW1NWl9FSGRMY2NURUpGYjQwV3gtVzZyWnhSb2I2ZG5jZXBGX2ZING5MM2wya1AxOTExLWx1dnk2RWwwXzI2YXh2amNCQmpvV1ZqU1BvUQ?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 08:54:18 GMT",
+          "score": 3.2
+        },
+        {
+          "title": "AI股重挫、蘋果財報卻優於預期！鴻海、大立光與AI伺服器股分歧 台股資金輪動訊號浮現？ - 理財周刊",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBHZDEyQjduUVpzeEtIZGI2ZGJGT0FWRVpJUDYtV3ZaSXZXak5MN1VfZE94SnpndUszV2JKb0FGa0VaUWxaQ1c2VXJtYjZOQ3IwaGVKYWZ4OFdBcG5hT0V6SGhieDBBZDJDM2hfNy1IZw?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 01:38:13 GMT",
+          "score": 2.7
+        },
+        {
+          "title": "台股狂殺1600點它只跌1元！代工大廠有望打進SpaceX供應鏈 AI伺服器「單季出貨拚千櫃」...法人調高目標價10％ - 旺得富理財網",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5EZXFNZ3R3U2E2SGR1TEl1cFN4YzNkVUR5X0dKZ1pKbndTY1h2bVRrelBuOVhUWmtUMHJFdUVGVmVCei15TVFac29FYUZZaTRDdUwzM3Q5RHl6UUpzN2ZQUUgtMzRKck40d2c?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 07:14:41 GMT",
+          "score": 2.7
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "theme": "CPO/光通訊",
+      "score": 30.1,
+      "news": [
+        {
+          "title": "就市論勢／半導體設備、光通訊 聚光 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAyMkY3WVN0UFBnWDRRTURPSDZwNlpMaG4zUTVtVWJNTW5BTXRrV2pGTWZZTXBqeXJRclZIZnVqazFtZWhZQ1Eycl85OWVuNnBwVVkwUzZrTS03Z9IBX0FVX3lxTFA5dkpQRmlmV3ZVQlVKZ201bkxPa3hjM2Y3cWpLX3dzYzg5Q3IyVm15QlVFdXBWWnRENWxIeThWQVFXS2ZqblVKNS1jVlljQUxoY0NDZ0VSekxzNXdFRlFV?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 16:55:19 GMT",
+          "score": 1.6
+        },
+        {
+          "title": "2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看 - 數位時代",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNenlhajhKeGpjenpMSDJfaEtnTWZlR0pIY0F5ZmxWUFR5bXdtLUh0LXVVeFJYY0E2RHcySTlhQTJwRS1ITUNuMjkwT041U2FuamlWeHpJZ054bkFneVBTaDV2OFVDUVhWeFQ1Q2NGQmx6S1VBa0FETlAxaUJOZ0xDXw?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 11:15:31 GMT",
+          "score": 3.2
+        },
+        {
+          "title": "1.6T光模組2027年大爆發！法人點名聯亞、光聖等6檔受惠股 喊：CPO還沒搶走大餅 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxPaDlxX0QxNXY1OHRWNThVaVpNUjNkYi1Pdm9vVnhoaFlHbVZfRkdMYnpNRmE3SXlYVDc5amNIaThCdnlZMEs4UHJHY1RqQ3hWR1lHX2NzUzFzMGszbmdOaU5Oa2NzWjdhbFZtcFJqeWhuc1lZdTFyZ0FHUWxwZEJmdUtud0MtcF9OcDllY3VmT2hHNHNEazdDaVZXZHJOLTN3UFRFX2pUOVFrREpiNkxaZkJqbGNnc1A4VXFPSmRxWmpTV3plVXBSS2Z1WEFOV2pxaTQwWTNJRHlud3p3dnFHSmppNHdYdm0tUEttdUtramFETUxvWmE5WlY5VlpvdGdldnAwSkRWOW1SZzcwVG9pWUIwdm5ld2NmNzdEU3pnVG5WVGJmT3VZOFRCcjVlMjlzaHRudlVnQm8xS25OekdiYlZzekNSTzNySFBqUUNnSzVmd1NCbWxJSFlJOGhYNzFpWkwyUmE4aw?oc=5",
+          "pubDate": "Mon, 02 Nov 2026 23:50:00 GMT",
+          "score": 4.05
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "theme": "半導體",
+      "score": 24.75,
+      "news": [
+        {
+          "title": "台指期夜盤急彈600點！專家曝1關鍵：台股有好戲看了 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNX3U5WDJ5YmVxR0MyMVNOSlhTcGpld0VUbExKMHJQZ196YjlSejdaOEpIcHY4WUZOOUN2VnBKTTFHbm9vV0NiMm5pTmo1akc5SUZmZFkwY0VHQm9XOWhXMmtkVUpFTjdYaHRiNEJsd3ZLN01OblZWdV9SNklta1JxTlVhVWc2RG9ZbnhSNkF1TElyNG9Bd0cwM21oNklCSXV3LVhkQWZoN1pBcmlNdDczUWhVZVVKTDM2SzZvT1FTbGg2R2ZndGROZUZMb2xaRWE1SU5XcUlMZ0xnMXZrc0N2elhzZDFOejdHRGNkZ3ZvcUJ0LS15bGk5RmhocjQ1c3RxNEotN29OcUk2dF9vZUpTcmdaU3JQV3BXa0lnS2FUZ2oxcFJLei1WUkY2ZUJEUXRDSjhuSnVPTFRaVUh5TVdjWmtTYkZ4VS1mM1pfdQ?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 14:35:00 GMT",
+          "score": 1.6
+        },
+        {
+          "title": "就市論勢／半導體設備、光通訊 聚光 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAyMkY3WVN0UFBnWDRRTURPSDZwNlpMaG4zUTVtVWJNTW5BTXRrV2pGTWZZTXBqeXJRclZIZnVqazFtZWhZQ1Eycl85OWVuNnBwVVkwUzZrTS03Z9IBX0FVX3lxTFA5dkpQRmlmV3ZVQlVKZ201bkxPa3hjM2Y3cWpLX3dzYzg5Q3IyVm15QlVFdXBWWnRENWxIeThWQVFXS2ZqblVKNS1jVlljQUxoY0NDZ0VSekxzNXdFRlFV?oc=5",
+          "pubDate": "Tue, 03 Nov 2026 16:55:19 GMT",
+          "score": 1.6
+        },
+        {
+          "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43T3RHRjZtNVdIQkFLQ1RSYlk1d045RzdBTEVVWW5QYzRvbWJMVEZtdENFa21HcVVLTHV6a04wb243TklQaXBpN1FFYTdER19XSGJJUE5oTVdOd9IBX0FVX3lxTE04RGpIQTRLdWdaUWM2SFVnSEJIaU1scjRVak1keUw5ZVV4M3QxSWNYbEFCUzgwTnl0ajBDQW12dVFZQTl6SVdaWmg0UGZxMHQ3Yk1BZE5jVnprUFM1NTJr?oc=5",
+          "pubDate": "Mon, 02 Nov 2026 08:00:00 GMT",
+          "score": 2.3
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "theme": "機器人/自動化",
+      "score": 9.4,
+      "news": [
+        {
+          "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43T3RHRjZtNVdIQkFLQ1RSYlk1d045RzdBTEVVWW5QYzRvbWJMVEZtdENFa21HcVVLTHV6a04wb243TklQaXBpN1FFYTdER19XSGJJUE5oTVdOd9IBX0FVX3lxTE04RGpIQTRLdWdaUWM2SFVnSEJIaU1scjRVak1keUw5ZVV4M3QxSWNYbEFCUzgwTnl0ajBDQW12dVFZQTl6SVdaWmg0UGZxMHQ3Yk1BZE5jVnprUFM1NTJr?oc=5",
+          "pubDate": "Mon, 02 Nov 2026 08:00:00 GMT",
+          "score": 1.15
+        },
+        {
+          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online 新聞",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY0dQYWJobmtuWENfbmlhcGdoZU9Wb2dIZnlNRHlyTlQ4d0xrdGFibmQzck5uSGZFWDRtYklTTWNXSEVwUU1ERF9tVFpZdUI3eWxzS2RhTUF4eWpHWFlDS2xGbV8wQlFRQ3B5LXNEaEJwSFp6dW9MWVloLWdoRXF4MzBadTZ4Z3M?oc=5",
+          "pubDate": "Fri, 04 Sep 2026 07:00:00 GMT",
+          "score": 0.55
+        },
+        {
+          "title": "達明AI機器人進駐廣達德國廠！搶攻歐洲車用電子 導入ECU檢測產線 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMinANBVV95cUxPdkR2OXZmNUFqS1ZMRWZTSmlIdmc5LTVHNkZJYlRwV0JGdTFGLWgtZVZxbHN5WEZFRlZkallQb0taQXAzcnk4QlZHTnBzcTZaRnRfS1dVOURxdjR0OTVMR3pZZmV4eGg5dGZaVlNPOUdNRnJUajFYcVIycXNNUzE0VFBEcUZTMHBhT3Z5WTFQU1U2YUNYZ0JoU0czYmFqUmhtY2FCTjZDdThFVmI4U0lGNHc5bW5NMFk5alJIZ29BRkJFTkYtM29QbHl2SzlrOTFOeHR6bEF3eXZDQWdVaGduZEVwLUZsdVN2eHZtVEZSemNnc0FOczZ6NzJvc2swWmhGaTQ2U0NoMmMwUkhyNVY1TDhYWUl3NjNqNUQxdlRsVE9IanVGWURZemN5QTJEbDZzWmJhLW5ROExESk05WFJZemlzYWNJWlFhOUU0LUh3ell3QVJENThfdzZ5cEZycWhNVnp3X3BjNXVXSERIU1l1bFlCdWxhVFNkbmxjaDRaN2RkWU9iLUpyVzhOOEFJZHduTDMzd2FXR083b3Zo?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "theme": "車用電子",
+      "score": 4.4,
+      "news": [
+        {
+          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online 新聞",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY0dQYWJobmtuWENfbmlhcGdoZU9Wb2dIZnlNRHlyTlQ4d0xrdGFibmQzck5uSGZFWDRtYklTTWNXSEVwUU1ERF9tVFpZdUI3eWxzS2RhTUF4eWpHWFlDS2xGbV8wQlFRQ3B5LXNEaEJwSFp6dW9MWVloLWdoRXF4MzBadTZ4Z3M?oc=5",
+          "pubDate": "Fri, 04 Sep 2026 07:00:00 GMT",
+          "score": 0.55
+        },
+        {
+          "title": "達明AI機器人進駐廣達德國廠！搶攻歐洲車用電子 導入ECU檢測產線 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMinANBVV95cUxPdkR2OXZmNUFqS1ZMRWZTSmlIdmc5LTVHNkZJYlRwV0JGdTFGLWgtZVZxbHN5WEZFRlZkallQb0taQXAzcnk4QlZHTnBzcTZaRnRfS1dVOURxdjR0OTVMR3pZZmV4eGg5dGZaVlNPOUdNRnJUajFYcVIycXNNUzE0VFBEcUZTMHBhT3Z5WTFQU1U2YUNYZ0JoU0czYmFqUmhtY2FCTjZDdThFVmI4U0lGNHc5bW5NMFk5alJIZ29BRkJFTkYtM29QbHl2SzlrOTFOeHR6bEF3eXZDQWdVaGduZEVwLUZsdVN2eHZtVEZSemNnc0FOczZ6NzJvc2swWmhGaTQ2U0NoMmMwUkhyNVY1TDhYWUl3NjNqNUQxdlRsVE9IanVGWURZemN5QTJEbDZzWmJhLW5ROExESk05WFJZemlzYWNJWlFhOUU0LUh3ell3QVJENThfdzZ5cEZycWhNVnp3X3BjNXVXSERIU1l1bFlCdWxhVFNkbmxjaDRaN2RkWU9iLUpyVzhOOEFJZHduTDMzd2FXR083b3Zo?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
+        },
+        {
+          "title": "達明攜手廣達進駐德國車電廠 AI機器人升級車載生產線 - 鉅亨網",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkNTJMQ1VTbWJVNDZRSS0ybWZ6TzN5aTJlY25MOFY5VXRoQmgyMEFGY0o0Qm1uZXlFNEVRSjRIRmRQRzZiTENEckVzMHRrQ00?oc=5",
+          "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
+          "score": 0.55
+        }
+      ]
+    }
+  ],
+  "picks": [],
+  "alternates": [
+    {
+      "rank": 4,
+      "symbol": "2468",
+      "name": "華經",
+      "score": 53.282,
+      "baseScore": 63.282,
+      "instScore": 0,
+      "themeScore": 0,
+      "lastClose": 58.5,
+      "rsi14": 70.9,
+      "volRatio": 1.83,
+      "ma5": 54.58,
+      "ma10": 53.09,
+      "ma20": 48.87,
+      "atr14": 3.68,
+      "macdDif": 3.7117,
+      "macdDea": 3.2697,
+      "macdHist": 0.442,
+      "rs5": 0,
+      "rs10": 0,
+      "rsScore": 0,
+      "falseBreakoutLike": false,
+      "plan": {
+        "entryLow": 57.58,
+        "entryHigh": 59.24,
+        "stop": 53.35,
+        "tp1": 65.12,
+        "tp2": 68.8
+      },
+      "tp1": 65.12,
+      "tp2": 68.8,
+      "stop": 53.35,
+      "inst": {
+        "windowDays": 5,
+        "asOfDate": "2026-11-02",
+        "latestDate": "20261102",
+        "usedDates": [
+          "20261102",
+          "20261030",
+          "20261029",
+          "20261028",
+          "20261027"
+        ],
+        "sumTotal": 734,
+        "sumForeign": 0,
+        "sumTrust": 0,
+        "sumDealer": -19,
+        "buyStreak": 1,
+        "foreignBuyStreak": 0,
+        "trustBuyStreak": 0,
+        "latestTotalNet": 2956,
+        "latestForeignNet": 0,
+        "latestTrustNet": 0,
+        "latestDealerNet": 3,
+        "unit": "張",
+        "source": "TWSE T86 (5 latest available days)"
+      },
+      "stockTags": [],
+      "industryRoots": [],
+      "industryRoles": [],
+      "matchedThemes": [],
+      "matchedThemeReasons": [],
+      "theme": null,
+      "marketState": "weak",
+      "asOfDataDate": "2026-11-02",
+      "reason": "20日強勢突破 / 主力爆量 / MACD多方 / 短線加速 / 逆勢篩選",
+      "tradeStyle": "資金流強勢版v3.9",
+      "isAlternate": true
+    },
+    {
+      "rank": 5,
+      "symbol": "4562",
+      "name": "穎漢",
+      "score": 48.681,
+      "baseScore": 49.431,
+      "instScore": 0,
+      "themeScore": 3,
+      "lastClose": 33.3,
+      "rsi14": 63.95,
+      "volRatio": 4.97,
+      "ma5": 31.39,
+      "ma10": 30.62,
+      "ma20": 30.38,
+      "atr14": 1.38,
+      "macdDif": 0.2874,
+      "macdDea": -0.0019,
+      "macdHist": 0.2893,
+      "rs5": 0,
+      "rs10": 0,
+      "rsScore": 0,
+      "falseBreakoutLike": false,
+      "plan": {
+        "entryLow": 32.96,
+        "entryHigh": 33.58,
+        "stop": 31.37,
+        "tp1": 35.78,
+        "tp2": 37.16
+      },
+      "tp1": 35.78,
+      "tp2": 37.16,
+      "stop": 31.37,
+      "inst": {
+        "windowDays": 5,
+        "asOfDate": "2026-11-02",
+        "latestDate": "20261102",
+        "usedDates": [
+          "20261102",
+          "20261030",
+          "20261029",
+          "20261028",
+          "20261027"
+        ],
+        "sumTotal": 400,
+        "sumForeign": 0,
+        "sumTrust": 0,
+        "sumDealer": -1,
+        "buyStreak": 1,
+        "foreignBuyStreak": 0,
+        "trustBuyStreak": 0,
+        "latestTotalNet": 282,
+        "latestForeignNet": 0,
+        "latestTrustNet": 0,
+        "latestDealerNet": 0,
+        "unit": "張",
+        "source": "TWSE T86 (5 latest available days)"
+      },
+      "stockTags": [
+        "機器人/自動化",
+        "自動化設備"
+      ],
+      "industryRoots": [
+        "機器人/自動化"
+      ],
+      "industryRoles": [],
+      "matchedThemes": [
+        "機器人/自動化"
+      ],
+      "matchedThemeReasons": [
+        "核心題材:機器人/自動化"
+      ],
+      "theme": "機器人/自動化",
+      "marketState": "weak",
+      "asOfDataDate": "2026-11-02",
+      "reason": "主力爆量 / MACD多方 / 短線加速 / 主流:機器人/自動化 / 逆勢篩選",
+      "tradeStyle": "資金流強勢版v3.9",
+      "isAlternate": true
+    },
+    {
+      "rank": 6,
+      "symbol": "6689",
+      "name": "伊雲谷",
+      "score": 44.925,
+      "baseScore": 54.925,
+      "instScore": 0,
+      "themeScore": 0,
+      "lastClose": 77.3,
+      "rsi14": 65.68,
+      "volRatio": 2.89,
+      "ma5": 73.3,
+      "ma10": 73.05,
+      "ma20": 68.7,
+      "atr14": 3.28,
+      "macdDif": 2.7063,
+      "macdDea": 2.216,
+      "macdHist": 0.4902,
+      "rs5": 0,
+      "rs10": 0,
+      "rsScore": 0,
+      "falseBreakoutLike": false,
+      "plan": {
+        "entryLow": 76.48,
+        "entryHigh": 77.96,
+        "stop": 72.7,
+        "tp1": 83.21,
+        "tp2": 86.49
+      },
+      "tp1": 83.21,
+      "tp2": 86.49,
+      "stop": 72.7,
+      "inst": {
+        "windowDays": 5,
+        "asOfDate": "2026-11-02",
+        "latestDate": "20261102",
+        "usedDates": [
+          "20261102",
+          "20261030",
+          "20261029",
+          "20261028",
+          "20261027"
+        ],
+        "sumTotal": 339,
+        "sumForeign": 0,
+        "sumTrust": 0,
+        "sumDealer": 4,
+        "buyStreak": 2,
+        "foreignBuyStreak": 0,
+        "trustBuyStreak": 0,
+        "latestTotalNet": 151,
+        "latestForeignNet": 0,
+        "latestTrustNet": 0,
+        "latestDealerNet": 5,
+        "unit": "張",
+        "source": "TWSE T86 (5 latest available days)"
+      },
+      "stockTags": [],
+      "industryRoots": [],
+      "industryRoles": [],
+      "matchedThemes": [],
+      "matchedThemeReasons": [],
+      "theme": null,
+      "marketState": "weak",
+      "asOfDataDate": "2026-11-02",
+      "reason": "主力爆量 / MACD多方 / 逆勢篩選",
+      "tradeStyle": "資金流強勢版v3.9",
+      "isAlternate": true
+    }
+  ],
+  "candidatesCount": 28
+}
