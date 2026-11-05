@@ -1,106 +1,52 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-04T20:19:29.114Z",
+  "generatedAt": "2026-11-05T07:09:27.763Z",
   "range": "2026-02-05 ~ 2026-11-05",
   "totalHistoryFiles": 258,
   "validPickDays": 224,
-  "totalSamples": 450,
+  "totalSamples": 447,
   "d1": {
-    "samples": 450,
-    "wins": 226,
-    "winRate": 0.5022222222222222
+    "samples": 447,
+    "wins": 224,
+    "winRate": 0.5011185682326622
   },
   "d3": {
-    "samples": 450,
-    "wins": 229,
-    "winRate": 0.5088888888888888
+    "samples": 447,
+    "wins": 228,
+    "winRate": 0.5100671140939598
   },
   "d5": {
-    "samples": 450,
-    "wins": 198,
-    "winRate": 0.44
+    "samples": 447,
+    "wins": 197,
+    "winRate": 0.4407158836689038
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 450,
-    "hits": 352,
-    "hitRate": 0.7822222222222223
+    "samples": 447,
+    "hits": 349,
+    "hitRate": 0.7807606263982103
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 450,
-    "hits": 286,
-    "hitRate": 0.6355555555555555
+    "samples": 447,
+    "hits": 284,
+    "hitRate": 0.6353467561521253
   },
   "dailyHit": {
     "tp1": {
       "days": 224,
-      "hitDays": 148,
-      "hitRate": 0.6607142857142857
+      "hitDays": 147,
+      "hitRate": 0.65625
     },
     "tp2": {
       "days": 224,
-      "hitDays": 137,
-      "hitRate": 0.6116071428571429
+      "hitDays": 136,
+      "hitRate": 0.6071428571428571
     }
   },
   "details": [
-    {
-      "date": "2026-05-04",
-      "pickDate": "2026-05-04",
-      "symbol": "3135",
-      "name": "凌航",
-      "entry": 155.5,
-      "d1Close": 155.58087158203125,
-      "d3Close": 161.78501892089844,
-      "d5Close": 185.64712524414062,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 160.16,
-      "tp2Price": 163.28,
-      "d5HighMax": 185.64712524414062,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-04",
-      "pickDate": "2026-05-04",
-      "symbol": "6205",
-      "name": "詮欣",
-      "entry": 94.5,
-      "d1Close": 98.19999694824219,
-      "d3Close": 90.69999694824219,
-      "d5Close": 86.0999984741211,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 97.34,
-      "tp2Price": 99.23,
-      "d5HighMax": 104.5,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-04",
-      "pickDate": "2026-05-04",
-      "symbol": "8103",
-      "name": "瀚荃",
-      "entry": 123,
-      "d1Close": 122.5,
-      "d3Close": 121.5,
-      "d5Close": 115.5,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 126.69,
-      "tp2Price": 129.15,
-      "d5HighMax": 127,
-      "tp1Hit": true,
-      "tp2Hit": false
-    },
     {
       "date": "2026-05-05",
       "pickDate": "2026-05-05",
