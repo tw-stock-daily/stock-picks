@@ -1,14 +1,14 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-07T06:20:17.575Z",
-  "range": "2026-02-05 ~ 2026-11-07",
-  "totalHistoryFiles": 260,
+  "generatedAt": "2026-11-07T17:58:18.355Z",
+  "range": "2026-02-05 ~ 2026-11-08",
+  "totalHistoryFiles": 261,
   "validPickDays": 225,
   "totalSamples": 445,
   "d1": {
-    "samples": 444,
+    "samples": 445,
     "wins": 223,
-    "winRate": 0.5022522522522522
+    "winRate": 0.501123595505618
   },
   "d3": {
     "samples": 444,
@@ -23,16 +23,16 @@
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 444,
+    "samples": 445,
     "hits": 347,
-    "hitRate": 0.7815315315315315
+    "hitRate": 0.7797752808988764
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 444,
+    "samples": 445,
     "hits": 282,
-    "hitRate": 0.6351351351351351
+    "hitRate": 0.6337078651685393
   },
   "dailyHit": {
     "tp1": {
@@ -8045,15 +8045,15 @@
       "symbol": "0061",
       "name": "元大寶滬深",
       "entry": 22.66,
-      "d1Close": null,
+      "d1Close": 22.280000686645508,
       "d3Close": null,
       "d5Close": null,
-      "d1Win": null,
+      "d1Win": false,
       "d3Win": null,
       "d5Win": null,
       "tp1Price": 23.34,
       "tp2Price": 23.79,
-      "d5HighMax": null,
+      "d5HighMax": 22.56999969482422,
       "tp1Hit": false,
       "tp2Hit": false
     }
