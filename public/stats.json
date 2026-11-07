@@ -1,10 +1,10 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-06T19:53:32.315Z",
+  "generatedAt": "2026-11-07T06:20:17.575Z",
   "range": "2026-02-05 ~ 2026-11-07",
   "totalHistoryFiles": 260,
-  "validPickDays": 224,
-  "totalSamples": 444,
+  "validPickDays": 225,
+  "totalSamples": 445,
   "d1": {
     "samples": 444,
     "wins": 223,
@@ -36,14 +36,14 @@
   },
   "dailyHit": {
     "tp1": {
-      "days": 224,
+      "days": 225,
       "hitDays": 146,
-      "hitRate": 0.6517857142857143
+      "hitRate": 0.6488888888888888
     },
     "tp2": {
-      "days": 224,
+      "days": 225,
       "hitDays": 135,
-      "hitRate": 0.6026785714285714
+      "hitRate": 0.6
     }
   },
   "details": [
@@ -8037,6 +8037,24 @@
       "tp2Price": 30.4,
       "d5HighMax": 29.950000762939453,
       "tp1Hit": true,
+      "tp2Hit": false
+    },
+    {
+      "date": "2026-11-07",
+      "pickDate": "2026-11-05",
+      "symbol": "0061",
+      "name": "元大寶滬深",
+      "entry": 22.66,
+      "d1Close": null,
+      "d3Close": null,
+      "d5Close": null,
+      "d1Win": null,
+      "d3Win": null,
+      "d5Win": null,
+      "tp1Price": 23.34,
+      "tp2Price": 23.79,
+      "d5HighMax": null,
+      "tp1Hit": false,
       "tp2Hit": false
     }
   ]
