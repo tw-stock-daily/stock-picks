@@ -1,8 +1,8 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-09T06:58:42.160Z",
-  "range": "2026-02-05 ~ 2026-11-09",
-  "totalHistoryFiles": 262,
+  "generatedAt": "2026-11-09T22:54:39.217Z",
+  "range": "2026-02-05 ~ 2026-11-10",
+  "totalHistoryFiles": 263,
   "validPickDays": 225,
   "totalSamples": 430,
   "d1": {
