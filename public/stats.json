@@ -1,6 +1,6 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-10T20:19:36.149Z",
+  "generatedAt": "2026-11-11T06:54:13.060Z",
   "range": "2026-02-05 ~ 2026-11-11",
   "totalHistoryFiles": 264,
   "validPickDays": 225,
@@ -11,9 +11,9 @@
     "winRate": 0.5
   },
   "d3": {
-    "samples": 429,
+    "samples": 430,
     "wins": 220,
-    "winRate": 0.5128205128205128
+    "winRate": 0.5116279069767442
   },
   "d5": {
     "samples": 429,
@@ -7776,14 +7776,14 @@
       "name": "元大寶滬深",
       "entry": 22.66,
       "d1Close": 22.280000686645508,
-      "d3Close": null,
+      "d3Close": 22.469999313354492,
       "d5Close": null,
       "d1Win": false,
-      "d3Win": null,
+      "d3Win": false,
       "d5Win": null,
       "tp1Price": 23.34,
       "tp2Price": 23.79,
-      "d5HighMax": 22.56999969482422,
+      "d5HighMax": 22.579999923706055,
       "tp1Hit": false,
       "tp2Hit": false
     }
