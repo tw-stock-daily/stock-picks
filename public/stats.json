@@ -1,44 +1,44 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-11T20:02:34.766Z",
+  "generatedAt": "2026-11-12T07:30:50.196Z",
   "range": "2026-02-05 ~ 2026-11-12",
   "totalHistoryFiles": 265,
   "validPickDays": 225,
-  "totalSamples": 430,
+  "totalSamples": 427,
   "d1": {
-    "samples": 430,
-    "wins": 215,
-    "winRate": 0.5
+    "samples": 427,
+    "wins": 213,
+    "winRate": 0.49882903981264637
   },
   "d3": {
-    "samples": 430,
+    "samples": 427,
     "wins": 220,
-    "winRate": 0.5116279069767442
+    "winRate": 0.5152224824355972
   },
   "d5": {
-    "samples": 429,
+    "samples": 426,
     "wins": 189,
-    "winRate": 0.4405594405594406
+    "winRate": 0.44366197183098594
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 430,
-    "hits": 340,
-    "hitRate": 0.7906976744186046
+    "samples": 427,
+    "hits": 338,
+    "hitRate": 0.7915690866510539
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 430,
+    "samples": 427,
     "hits": 276,
-    "hitRate": 0.641860465116279
+    "hitRate": 0.6463700234192038
   },
   "dailyHit": {
     "tp1": {
       "days": 225,
-      "hitDays": 141,
-      "hitRate": 0.6266666666666667
+      "hitDays": 140,
+      "hitRate": 0.6222222222222222
     },
     "tp2": {
       "days": 225,
@@ -47,60 +47,6 @@
     }
   },
   "details": [
-    {
-      "date": "2026-05-11",
-      "pickDate": "2026-05-11",
-      "symbol": "2342",
-      "name": "茂矽",
-      "entry": 43.05,
-      "d1Close": 44.099998474121094,
-      "d3Close": 42.150001525878906,
-      "d5Close": 39.650001525878906,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 44.34,
-      "tp2Price": 45.2,
-      "d5HighMax": 44.79999923706055,
-      "tp1Hit": true,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-05-11",
-      "pickDate": "2026-05-11",
-      "symbol": "2395",
-      "name": "研華",
-      "entry": 478.5,
-      "d1Close": 494.5,
-      "d3Close": 465,
-      "d5Close": 457.5,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 492.86,
-      "tp2Price": 502.43,
-      "d5HighMax": 500,
-      "tp1Hit": true,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-05-11",
-      "pickDate": "2026-05-11",
-      "symbol": "2855",
-      "name": "統一證",
-      "entry": 43.7,
-      "d1Close": 41.79999923706055,
-      "d3Close": 40.150001525878906,
-      "d5Close": 39.79999923706055,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 45.01,
-      "tp2Price": 45.89,
-      "d5HighMax": 43.79999923706055,
-      "tp1Hit": false,
-      "tp2Hit": false
-    },
     {
       "date": "2026-05-12",
       "pickDate": "2026-05-12",
@@ -7783,7 +7729,7 @@
       "d5Win": null,
       "tp1Price": 23.34,
       "tp2Price": 23.79,
-      "d5HighMax": 22.56999969482422,
+      "d5HighMax": 22.6200008392334,
       "tp1Hit": false,
       "tp2Hit": false
     }
