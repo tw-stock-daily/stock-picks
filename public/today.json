@@ -1,33 +1,33 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-11-14T14:49:57+08:00",
-  "asOfLocal": "2026-11-14T14:49:57+08:00",
-  "date": "2026-11-14",
+  "generatedAt": "2026-11-15T02:40:25+08:00",
+  "asOfLocal": "2026-11-15T02:40:25+08:00",
+  "date": "2026-11-15",
   "marketState": "weak",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 30.05,
+      "score": 31.25,
       "news": [
         {
-          "title": "AI伺服器迎高層震撼彈！外資下修目標價至200美元，台廠供應鏈洗牌-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcUJuTExwa1JmeUJSbGFaWXBHVjY2aS1OYzdMY2Jscy1KM0lPaGJ3VHh6WVRZVmd4Zm1YNzFndmVMNXE5VHBzUVc1RjlZdG5hUG5CVUU1SUROdDJheEl0T1BLSlA1SnlOYUxtSC0yR3RYNW13S0lCdFpPZXZyR0hoX193?oc=5",
-          "pubDate": "Sat, 14 Nov 2026 05:54:05 GMT",
+          "title": "台積電法說遇輝達財報AI行情的關鍵48小時 MSCI半年度調整出爐AI伺服器供電散熱誰最強？緯穎台達電奇鋐雙鴻11月17至18日法說見真章中油油價連8凍漲｜投資早知道 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMigwdBVV95cUxQOXN2QXlmOEJLa2VBcEQ1SGtxRU0yOUNkUDRpQzZCMVRCWTdEVzZpVGNqTDJROFo5eC11Zy0tdGhnUFBvV1llZEwtbi1PQUdXZEdBOGJuTjhreGQxcVhwbjRHb2hOXzlFNVBtNkZVaC1YZmJGUmsxZ0xuUVhNS0JKT0tQaGlVRDlsNm5LdHdpR2lSeGpOWDI2S01hU1VMblBIR2JvX05vcWVucFotd1hBVHNRWlROZUhsTjZPdzdNMTI5M1BpYWFoSlV1dzRKNjZPQUNCY2FnS0VRSGtDYXhINFlmU1BMQ0dINklkckFRc28tVF9xT0xIOHZvUW1hV0NHWHFRX051UmpUQVhaVEp1OUN0Wk1teEpjVndCU19ZS2lDU2F2Qkcwdl80V0lSd1lpS3FHVzVZM1VqdFJzYWd4bjM4T2p0YkNDMW9ZZEJyVkhDQk5CY1dEdGRtRHpSWU1QVFcyTGV0eUhKS0F0dXVRNjUwY3RDOW9sUHJ4ZzNZOVBuVWUxUFotYXNBdmhjUVZicHFZZWJwVXRjOG1fYmpWS0ltN0lSb1VvM0NnNXNaODJFYndiZXFJTHpiRW0yT1NzdnpENTZpSnNON0R1SnhkUEhMcUV1UjNHclhvODVHNHFnSTdwU2pXaTFRQjB0WWxzaWJBblN6TjZZRVA2cGR5QUEwSmFJX3hlY1JyMFFhM2xTc0lpb0ppeHh1ZzE2Ty01SDczeC1YdWdLRmlYR3BuczFfVm5Ob1djMy1aN1gxWXk5UGFBZVVGM1g4bHA5Rzd5WHFQMS1FWFpnTFk1VWc4NkJQS3Bmb3V0X0sxSkVuTHhtTE1xU1U4NUFQX1QwckFFek5jU3B0bzh4ZmwxS3ZwTXE2WFBnOHZIdFYwUmFIRTdGTGdkMTlVM21qaHBzWGNvd3JIVmlFWmJEYm5sV2x6T3RCbDVBalozblQzckpLQ01NVEVNcDNiejYtaHd5NFpQTEx3RU1vQnlZSHRmTUxNMWVNSkFrdHptYTJsZ1ZfVGtNdmNoU0llNUdzbU9qbDVaNzVtcDBPY2k4YUh3OFlqYlliYV96SGJKdnlENVRMTnU4RU12Wms2UkFUTWlZaXUxQ21GVE5XS0NiZFF6eF9CZDI1XzFnQ0hlVjBQZUpQekRwNWtKeVduUXVHczh2R3I2TmlHRzhla2FYZWlYSmwxOWRZZw?oc=5",
+          "pubDate": "Sat, 14 Nov 2026 13:18:33 GMT",
           "score": 3.2
-        },
-        {
-          "title": "前三季大賺逾1股本！「這檔」AI伺服器產能再提升、台美擴廠豪砸逾134億獲上修EPS、目標價上看289.5元 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMiyANBVV95cUxPZS1YR0JQWEVuX0ZfS2ZlczAxa0xUY3dFNDJ2VmZKWTMzZlBSNVdQQ2c1UDZXRXJEOGxMbmlLaUhZLWtidkF5T1ZJOFR2NHotSWpiWVZCVUdKTXBqQXpTSnJXd2tQMnd2UUhESlc0YlExVEh1dUtTYkJzYWp6OXM3NEEtZ1NaRlduWXJZY2NKNDlNN29maDJHdnFFd041cGEyU0d6ck1qd0k2TkFBX0tvVWY4bS1BVG9OQTFVUDktcG4wYUtRNXRHYy1JTjhZVzZ1UXB6WXZBZ0VydzZXVlhLZXEwRl9yWGt4YnIwTFlILUJueUQ0NXhGMXFxUktfV3R0WFhuY3NiYTNFWno3T0pHUEc0UTlBVUQ2T2NhTFFtMFU5WWtHZnU0a3lVaG9xcUhNa0NYaF9iQ3lXNEpnX0hRQXdSRU5oZUJ2SHBMcHF6YTdLUUxRS0VIaE9OaUwyUmV0amNyNVlTTnlGd2VIRkE0MFRlX1hCM29McUF6aWNhOEdaVWlENmlCa3B0ejlSUDZhWlR3SC1kZ05qdFI0NmN4Vl84NVpvMmI4UWV5dHBhTnZ6a3Q4Sk9TUDNPQk5xWTRpazcyQjJ5cGo?oc=5",
-          "pubDate": "Fri, 13 Nov 2026 09:30:00 GMT",
-          "score": 2.7
         },
         {
           "title": "〈台股盤前要聞〉廣達明年AI伺服器營收年增高雙位數、中信金前10月加計FVOCI股票狂賺1488億元 - 鉅亨網",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5xbG16dC1vMVZreTZ4MmpZanhnS2llSWw4aFdiSXpndDlSMGN0MmQtZlhxbmYyYXpXblNUTEZCTlRnVHJkYVZhTDhYODlVd3M?oc=5",
           "pubDate": "Wed, 11 Nov 2026 21:12:29 GMT",
           "score": 2
+        },
+        {
+          "title": "AI伺服器迎高層震撼彈！外資下修目標價至200美元，台廠供應鏈洗牌-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcUJuTExwa1JmeUJSbGFaWXBHVjY2aS1OYzdMY2Jscy1KM0lPaGJ3VHh6WVRZVmd4Zm1YNzFndmVMNXE5VHBzUVc1RjlZdG5hUG5CVUU1SUROdDJheEl0T1BLSlA1SnlOYUxtSC0yR3RYNW13S0lCdFpPZXZyR0hoX193?oc=5",
+          "pubDate": "Sat, 14 Nov 2026 05:54:05 GMT",
+          "score": 2.7
         }
       ]
     },
@@ -59,38 +59,38 @@
     {
       "rank": 3,
       "theme": "半導體",
-      "score": 23.35,
+      "score": 22,
       "news": [
+        {
+          "title": "AI晶片供應鏈迎震撼彈！輝達人事異動致股價跌12.75%，牽動台積電等3檔台廠-財經焦點情報站 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlYzUjdxUHhuaEt4YmtkUDMzQXRGZld6RkVNNzBNNk80NzRPUE5FS2IzcGx4R0VYU29qS1ZtX3o4RFRLRzZCd292UUt1YUJwZHl6MTMtVklOeGxIMW1qcmFrYmdocGNxWmIwdzFOU3RrM2RoNU02UmtkdzE3aDdCYzJ3?oc=5",
+          "pubDate": "Sat, 14 Nov 2026 09:24:10 GMT",
+          "score": 1.6
+        },
         {
           "title": "前三季大賺逾1股本！「這檔」AI伺服器產能再提升、台美擴廠豪砸逾134億獲上修EPS、目標價上看289.5元 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMiyANBVV95cUxPZS1YR0JQWEVuX0ZfS2ZlczAxa0xUY3dFNDJ2VmZKWTMzZlBSNVdQQ2c1UDZXRXJEOGxMbmlLaUhZLWtidkF5T1ZJOFR2NHotSWpiWVZCVUdKTXBqQXpTSnJXd2tQMnd2UUhESlc0YlExVEh1dUtTYkJzYWp6OXM3NEEtZ1NaRlduWXJZY2NKNDlNN29maDJHdnFFd041cGEyU0d6ck1qd0k2TkFBX0tvVWY4bS1BVG9OQTFVUDktcG4wYUtRNXRHYy1JTjhZVzZ1UXB6WXZBZ0VydzZXVlhLZXEwRl9yWGt4YnIwTFlILUJueUQ0NXhGMXFxUktfV3R0WFhuY3NiYTNFWno3T0pHUEc0UTlBVUQ2T2NhTFFtMFU5WWtHZnU0a3lVaG9xcUhNa0NYaF9iQ3lXNEpnX0hRQXdSRU5oZUJ2SHBMcHF6YTdLUUxRS0VIaE9OaUwyUmV0amNyNVlTTnlGd2VIRkE0MFRlX1hCM29McUF6aWNhOEdaVWlENmlCa3B0ejlSUDZhWlR3SC1kZ05qdFI0NmN4Vl84NVpvMmI4UWV5dHBhTnZ6a3Q4Sk9TUDNPQk5xWTRpazcyQjJ5cGo?oc=5",
           "pubDate": "Fri, 13 Nov 2026 09:30:00 GMT",
-          "score": 1.35
-        },
-        {
-          "title": "台灣半導體產值今年衝9.76兆創新高 記憶體年增逾2.6倍最狂 - 自由時報",
-          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4xRVo4bzU5a2FXdzNTZE9uTXdYMDh3WVNOdnpjWEFyeVRtU1lLRDVWNUUwbmttOXhmUEZJSDN2blVaMmlVYy1rR3M4ZE15d3UxcVRKVVJNS1c?oc=5",
-          "pubDate": "Fri, 13 Nov 2026 09:30:23 GMT",
-          "score": 2.7
-        },
-        {
-          "title": "今日最夯 ETF／00947漲3.4% ASIC 概念股、記憶體族群雙助攻 - 經濟日報",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1zRjRYZ292dzBrNktMaEU2SkRpZnZJS0tSWHBHZHQ2X2FKaUtQOW9ZTG02eTRIWDFSbXVNX1cwU21Vc0k2SGI2eDBHZVNrR0pEallOc0N6QU9DQdIBX0FVX3lxTE8wNGlFdno2dEw5WVNHeTFLenhDRk9ueW03UnI1UmJ0TVNBSVdXVVNFNHp6RHIzYWYxWlNhRGRIeklOSEZDemg0NjFFV0dBSUc1a21qSWJybmZYc3VoN2Ew?oc=5",
-          "pubDate": "Fri, 13 Nov 2026 04:00:00 GMT",
           "score": 1.15
+        },
+        {
+          "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43T3RHRjZtNVdIQkFLQ1RSYlk1d045RzdBTEVVWW5QYzRvbWJMVEZtdENFa21HcVVLTHV6a04wb243TklQaXBpN1FFYTdER19XSGJJUE5oTVdOd9IBX0FVX3lxTE04RGpIQTRLdWdaUWM2SFVnSEJIaU1scjRVak1keUw5ZVV4M3QxSWNYbEFCUzgwTnl0ajBDQW12dVFZQTl6SVdaWmg0UGZxMHQ3Yk1BZE5jVnprUFM1NTJr?oc=5",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "score": 1.1
         }
       ]
     },
     {
       "rank": 4,
-      "theme": "車用電子",
-      "score": 8.15,
+      "theme": "機器人/自動化",
+      "score": 8.8,
       "news": [
         {
-          "title": "自駕車如何看路？ADAS是什麼？自動駕駛分級、車用感測器概念股、車用電子供應鏈一次看｜豐雲學堂2026 年 11 月 - 永豐金證券",
-          "link": "https://news.google.com/rss/articles/CBMinwRBVV95cUxNaEgybko5ZHpoRHhXOEM1UFl5ckVFMmVneVdIcDAzX1BBTWtjSV9vanpnNTJIZWdXOWdhTHY2VUZEYllDcExpYnFzaTFxa2tHcmxMZ0RwRWw2WTRyaG45bk1UUFZaYi1NaVhaOE1wd0pPTk9VSnNwYXBYazFXd3pFQWV6UzkweTlDcXNaekdCUF9kakgzRTFQUllrN1hDbjdVX1pGc05FNTR2WExGa1dCc3ppT2xOSF91LUY5UTltbi1jYUFGR1ZMdmd6WGlyblNWZUxuazZ2STZkUVZ3UU00V20wcEI0ZGpSbEtOanlnU1o2T0REX2lFT0RlMGthUXVKS3JGX3ROOUlQR3daMzBtVGIzOHNFN3kyQ1ZVRl9relhkeXZqS0JHUl9qQl81UTNVdXZTSnJaazdjNEFZelJsUFZhckJ2RU9VekdtZU1iSVllZ3lwaWxDRTJzdE1WVjh6QnJMaWNRVmNLRnozM3FqR1otWGNlZGg2T2xFU1NsUE1fZVFLY2oxUWJwMkdFZ3o2a1JyY0txeEhaQ0NtLVNBSnNIVmNqUjc2TUJycFQxN1JTX3RZUG5paDBpel9oaWZvUndCYjF3a2ZvRWgtblJLeVNXb01lY0w2c1R5aHduS1JQdlZ1NURibkVVbFRGVEF2OXBfRU5PY1pUR0Nla1dybjluaW4xXy0weXRWRkk1dDZZRVNnWWZYUFhpS0xJdVk?oc=5",
-          "pubDate": "Tue, 06 Oct 2026 16:52:24 GMT",
-          "score": 1.65
+          "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43T3RHRjZtNVdIQkFLQ1RSYlk1d045RzdBTEVVWW5QYzRvbWJMVEZtdENFa21HcVVLTHV6a04wb243TklQaXBpN1FFYTdER19XSGJJUE5oTVdOd9IBX0FVX3lxTE04RGpIQTRLdWdaUWM2SFVnSEJIaU1scjRVak1keUw5ZVV4M3QxSWNYbEFCUzgwTnl0ajBDQW12dVFZQTl6SVdaWmg0UGZxMHQ3Yk1BZE5jVnprUFM1NTJr?oc=5",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "score": 0.55
         },
         {
           "title": "達明攜手廣達進駐德國車電廠 AI機器人升級車載生產線 - 鉅亨網",
@@ -108,9 +108,15 @@
     },
     {
       "rank": 5,
-      "theme": "機器人/自動化",
-      "score": 7.7,
+      "theme": "車用電子",
+      "score": 7.15,
       "news": [
+        {
+          "title": "自駕車如何看路？ADAS是什麼？自動駕駛分級、車用感測器概念股、車用電子供應鏈一次看｜豐雲學堂2026 年 11 月 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMinwRBVV95cUxNaEgybko5ZHpoRHhXOEM1UFl5ckVFMmVneVdIcDAzX1BBTWtjSV9vanpnNTJIZWdXOWdhTHY2VUZEYllDcExpYnFzaTFxa2tHcmxMZ0RwRWw2WTRyaG45bk1UUFZaYi1NaVhaOE1wd0pPTk9VSnNwYXBYazFXd3pFQWV6UzkweTlDcXNaekdCUF9kakgzRTFQUllrN1hDbjdVX1pGc05FNTR2WExGa1dCc3ppT2xOSF91LUY5UTltbi1jYUFGR1ZMdmd6WGlyblNWZUxuazZ2STZkUVZ3UU00V20wcEI0ZGpSbEtOanlnU1o2T0REX2lFT0RlMGthUXVKS3JGX3ROOUlQR3daMzBtVGIzOHNFN3kyQ1ZVRl9relhkeXZqS0JHUl9qQl81UTNVdXZTSnJaazdjNEFZelJsUFZhckJ2RU9VekdtZU1iSVllZ3lwaWxDRTJzdE1WVjh6QnJMaWNRVmNLRnozM3FqR1otWGNlZGg2T2xFU1NsUE1fZVFLY2oxUWJwMkdFZ3o2a1JyY0txeEhaQ0NtLVNBSnNIVmNqUjc2TUJycFQxN1JTX3RZUG5paDBpel9oaWZvUndCYjF3a2ZvRWgtblJLeVNXb01lY0w2c1R5aHduS1JQdlZ1NURibkVVbFRGVEF2OXBfRU5PY1pUR0Nla1dybjluaW4xXy0weXRWRkk1dDZZRVNnWWZYUFhpS0xJdVk?oc=5",
+          "pubDate": "Tue, 06 Oct 2026 16:52:24 GMT",
+          "score": 1.65
+        },
         {
           "title": "達明攜手廣達進駐德國車電廠 AI機器人升級車載生產線 - 鉅亨網",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkNTJMQ1VTbWJVNDZRSS0ybWZ6TzN5aTJlY25MOFY5VXRoQmgyMEFGY0o0Qm1uZXlFNEVRSjRIRmRQRzZiTENEckVzMHRrQ00?oc=5",
@@ -121,12 +127,6 @@
           "title": "達明AI機器人進駐廣達德國廠！搶攻歐洲車用電子 導入ECU檢測產線 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMinANBVV95cUxPdkR2OXZmNUFqS1ZMRWZTSmlIdmc5LTVHNkZJYlRwV0JGdTFGLWgtZVZxbHN5WEZFRlZkallQb0taQXAzcnk4QlZHTnBzcTZaRnRfS1dVOURxdjR0OTVMR3pZZmV4eGg5dGZaVlNPOUdNRnJUajFYcVIycXNNUzE0VFBEcUZTMHBhT3Z5WTFQU1U2YUNYZ0JoU0czYmFqUmhtY2FCTjZDdThFVmI4U0lGNHc5bW5NMFk5alJIZ29BRkJFTkYtM29QbHl2SzlrOTFOeHR6bEF3eXZDQWdVaGduZEVwLUZsdVN2eHZtVEZSemNnc0FOczZ6NzJvc2swWmhGaTQ2U0NoMmMwUkhyNVY1TDhYWUl3NjNqNUQxdlRsVE9IanVGWURZemN5QTJEbDZzWmJhLW5ROExESk05WFJZemlzYWNJWlFhOUU0LUh3ell3QVJENThfdzZ5cEZycWhNVnp3X3BjNXVXSERIU1l1bFlCdWxhVFNkbmxjaDRaN2RkWU9iLUpyVzhOOEFJZHduTDMzd2FXR083b3Zo?oc=5",
           "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
-          "score": 0.55
-        },
-        {
-          "title": "AI機器人、車載鏡頭夯什麼？光學概念股，一文看懂AI「眼睛」供應鏈受惠股- 財經新聞 - PChome Online 新聞",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY0dQYWJobmtuWENfbmlhcGdoZU9Wb2dIZnlNRHlyTlQ4d0xrdGFibmQzck5uSGZFWDRtYklTTWNXSEVwUU1ERF9tVFpZdUI3eWxzS2RhTUF4eWpHWFlDS2xGbV8wQlFRQ3B5LXNEaEJwSFp6dW9MWVloLWdoRXF4MzBadTZ4Z3M?oc=5",
-          "pubDate": "Fri, 04 Sep 2026 07:00:00 GMT",
           "score": 0.55
         }
       ]
