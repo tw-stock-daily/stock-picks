@@ -1,65 +1,65 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-11-15T14:54:32+08:00",
-  "asOfLocal": "2026-11-15T14:54:32+08:00",
-  "date": "2026-11-15",
+  "generatedAt": "2026-11-16T03:16:34+08:00",
+  "asOfLocal": "2026-11-16T03:16:34+08:00",
+  "date": "2026-11-16",
   "marketState": "weak",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 30.35,
+      "score": 26.15,
       "news": [
         {
           "title": "台積電法說遇輝達財報AI行情的關鍵48小時 MSCI半年度調整出爐AI伺服器供電散熱誰最強？緯穎台達電奇鋐雙鴻11月17至18日法說見真章中油油價連8凍漲｜投資早知道 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMigwdBVV95cUxQOXN2QXlmOEJLa2VBcEQ1SGtxRU0yOUNkUDRpQzZCMVRCWTdEVzZpVGNqTDJROFo5eC11Zy0tdGhnUFBvV1llZEwtbi1PQUdXZEdBOGJuTjhreGQxcVhwbjRHb2hOXzlFNVBtNkZVaC1YZmJGUmsxZ0xuUVhNS0JKT0tQaGlVRDlsNm5LdHdpR2lSeGpOWDI2S01hU1VMblBIR2JvX05vcWVucFotd1hBVHNRWlROZUhsTjZPdzdNMTI5M1BpYWFoSlV1dzRKNjZPQUNCY2FnS0VRSGtDYXhINFlmU1BMQ0dINklkckFRc28tVF9xT0xIOHZvUW1hV0NHWHFRX051UmpUQVhaVEp1OUN0Wk1teEpjVndCU19ZS2lDU2F2Qkcwdl80V0lSd1lpS3FHVzVZM1VqdFJzYWd4bjM4T2p0YkNDMW9ZZEJyVkhDQk5CY1dEdGRtRHpSWU1QVFcyTGV0eUhKS0F0dXVRNjUwY3RDOW9sUHJ4ZzNZOVBuVWUxUFotYXNBdmhjUVZicHFZZWJwVXRjOG1fYmpWS0ltN0lSb1VvM0NnNXNaODJFYndiZXFJTHpiRW0yT1NzdnpENTZpSnNON0R1SnhkUEhMcUV1UjNHclhvODVHNHFnSTdwU2pXaTFRQjB0WWxzaWJBblN6TjZZRVA2cGR5QUEwSmFJX3hlY1JyMFFhM2xTc0lpb0ppeHh1ZzE2Ty01SDczeC1YdWdLRmlYR3BuczFfVm5Ob1djMy1aN1gxWXk5UGFBZVVGM1g4bHA5Rzd5WHFQMS1FWFpnTFk1VWc4NkJQS3Bmb3V0X0sxSkVuTHhtTE1xU1U4NUFQX1QwckFFek5jU3B0bzh4ZmwxS3ZwTXE2WFBnOHZIdFYwUmFIRTdGTGdkMTlVM21qaHBzWGNvd3JIVmlFWmJEYm5sV2x6T3RCbDVBalozblQzckpLQ01NVEVNcDNiejYtaHd5NFpQTEx3RU1vQnlZSHRmTUxNMWVNSkFrdHptYTJsZ1ZfVGtNdmNoU0llNUdzbU9qbDVaNzVtcDBPY2k4YUh3OFlqYlliYV96SGJKdnlENVRMTnU4RU12Wms2UkFUTWlZaXUxQ21GVE5XS0NiZFF6eF9CZDI1XzFnQ0hlVjBQZUpQekRwNWtKeVduUXVHczh2R3I2TmlHRzhla2FYZWlYSmwxOWRZZw?oc=5",
           "pubDate": "Sat, 14 Nov 2026 13:18:33 GMT",
-          "score": 2.7
+          "score": 2.3
+        },
+        {
+          "title": "市場氣氛轉弱 外資調降廣達、鴻海及緯創等 AI 伺服器概念股目標價 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5wcE04cGxVcHA5WHRfV2ZacVlCZFIxVzhTVUI5cGFBSFVLdlhIeHp0LXNhaHdlSWh1cy1DVXc3WU1WSGg1cl90dEU3SFREOXN4QVZ4Tk9yMmVod9IBX0FVX3lxTE0zUW9BYnlhWVBDOUdzcnQ5VWdFZnEzVlBhMlRLQ29kMm5MM1ZIYnllMUxjNUdNanhVcVVkN1FZekxOczlWTzVvTjJWSWxPMzJHRzBqeFF3Vl9HX3pfRGFB?oc=5",
+          "pubDate": "Sun, 15 Nov 2026 03:00:00 GMT",
+          "score": 1.35
         },
         {
           "title": "AI伺服器成PC大廠2027年成長動能 華碩拚高雙位數增長、技嘉擴產搶市 - 鉅亨網",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BT1U3dnN5RXFpQV96VEo1cVI2TlgtTVp4dnRTb3Q2M3ZwYlo3dTBHeEtNa1RxUl96WUZ6MnBIRVBsbUdHQ212bjczZEZyUkk?oc=5",
           "pubDate": "Sun, 15 Nov 2026 00:40:04 GMT",
-          "score": 3.2
-        },
-        {
-          "title": "AI供應鏈迎擴充潮！伺服器最新營收暴增280%，這4檔受惠股動能延續-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaWVaZWtFR2cxTXo1b19yT2dzd0xKQUFqSkwtR01IRnRVX29KWVpxTU1kZHhfNjk0blBIY0JWUFRFTjlvU1o4YlZaN0FrT2VtWmdWc0MxX2hWT0c3c3NScmV1LWF4RmZJbkptQTdnb0M2U2dHQWROcjYzVjVNdUNNTVh3?oc=5",
-          "pubDate": "Sun, 15 Nov 2026 01:23:55 GMT",
-          "score": 1.6
+          "score": 2.7
         }
       ]
     },
     {
       "rank": 2,
       "theme": "半導體",
-      "score": 23.5,
+      "score": 24.35,
       "news": [
         {
-          "title": "AI晶片供應鏈迎震撼彈！輝達人事異動致股價跌12.75%，牽動台積電等3檔台廠-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlYzUjdxUHhuaEt4YmtkUDMzQXRGZld6RkVNNzBNNk80NzRPUE5FS2IzcGx4R0VYU29qS1ZtX3o4RFRLRzZCd292UUt1YUJwZHl6MTMtVklOeGxIMW1qcmFrYmdocGNxWmIwdzFOU3RrM2RoNU02UmtkdzE3aDdCYzJ3?oc=5",
-          "pubDate": "Sat, 14 Nov 2026 09:24:10 GMT",
-          "score": 1.35
+          "title": "台股今天開高，但是尾盤有拉回！ IC設計大廠盤中亮燈漲停，中信金也差點站上80大關！ 下禮拜股市會怎麼走？只有500個幸運兒，讓我跟財經大神來說給你聽！ - Facebook",
+          "link": "https://news.google.com/rss/articles/CBMixgZBVV95cUxPekRCX2Z5TXUyNlp3czdEaW14aDBOaGx3YVJlWmd6a3NYc1AzSUxLQ0lzNVVMVTV2bno2cEQ1eXJSenlJcVpURlJPOXNabm1lOVVOa3NYQm1teXpsaGpjMk5KcEtJbUV5NFZoRTE0YndHZE1OUjZLUHIydGg1QXJ1Sm1hSjBUNHhEdThTYWozaHVpVkdEeFVfNnRjX1loaEthQ1ROUHFyWDEyU0h1ZnVhWTV2cHZPajc4Tjc3QmgyVVRwdWk5OC0xUUl6NHdWS1p4cE00elV2M1ktcVplYWtRdlNxZjdLY2poMXlsRjNBNV9JeUtYWHVlRjU0WTRlQ1QzOVBzNGZ1UnVVTVRacGVzYVBMeUlXSDhGUnZmUnpqM2MzSEFUYlJvM0Y5U1NMT0JwZWd1bEcwX2s4VDFDc3lMeUtMLUoxYUZFNlpmRUNUNUZCWTlFTGJlTFZTUG9GdzRqUlRrV01IczA2VDl1bnNBVU1CSE1MVEdOZXZWZGtCbWtWRDhaY1FIdi12VWYtVXpNSlRGY3gyX1NOMzYwZHg3bkliYng0OWxfN1hXbmFBZkhlTTdoY0o3dmlNUlRvUlJYME1iY2tDZWppM2VhejNsRjN3VmZxck9fUjc4dE8zQlFtSmhmbVZBeW5nMW5DNmxNcWZ2YXZfdUhXOUZNejRSYXRVWFYwaE9kVTJsQWdWUkF1Z0w5VkVKdHgweE9jeXRRZzkwOWtjcHhXZ2JjOE5pNEpnRDI4ZEhZbkoxZXpleF8zekVCdGdob1RBanhfTjBqUzBHNEVxUUZwVUs4bWlkaVhUSzFCVGlLOGtfZ2UtMkpEX1hnSklGcFRfd2JUaWwxR3lHbnR4Yk9mTmZ6REFTREpyNEVYc2JMcjB3LTZ3d1lZZFhfZXJIZ3A5bW5WRFpVT09iZ2FuRXQ3NFlabG9hQ2V6cTlheEl0WXpjbmF6S3RqNkNvSHhpU0wzN1lmdDc5ZEtsM211cG42ajBnMmtBajVjV3JEX3FqUUhld3o3dzJ0NUZjZmxSbHBXZkl5aXNaWl9ZNVlFalNaR2o0MTZkVTlVNXd6ckc2WEw3enFsZGdrdTA3SV8xSGlRVE94T2g4YXRyVWZR?oc=5",
+          "pubDate": "Fri, 13 Nov 2026 12:29:36 GMT",
+          "score": 1
         },
         {
           "title": "前三季大賺逾1股本！「這檔」AI伺服器產能再提升、台美擴廠豪砸逾134億獲上修EPS、目標價上看289.5元 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMiyANBVV95cUxPZS1YR0JQWEVuX0ZfS2ZlczAxa0xUY3dFNDJ2VmZKWTMzZlBSNVdQQ2c1UDZXRXJEOGxMbmlLaUhZLWtidkF5T1ZJOFR2NHotSWpiWVZCVUdKTXBqQXpTSnJXd2tQMnd2UUhESlc0YlExVEh1dUtTYkJzYWp6OXM3NEEtZ1NaRlduWXJZY2NKNDlNN29maDJHdnFFd041cGEyU0d6ck1qd0k2TkFBX0tvVWY4bS1BVG9OQTFVUDktcG4wYUtRNXRHYy1JTjhZVzZ1UXB6WXZBZ0VydzZXVlhLZXEwRl9yWGt4YnIwTFlILUJueUQ0NXhGMXFxUktfV3R0WFhuY3NiYTNFWno3T0pHUEc0UTlBVUQ2T2NhTFFtMFU5WWtHZnU0a3lVaG9xcUhNa0NYaF9iQ3lXNEpnX0hRQXdSRU5oZUJ2SHBMcHF6YTdLUUxRS0VIaE9OaUwyUmV0amNyNVlTTnlGd2VIRkE0MFRlX1hCM29McUF6aWNhOEdaVWlENmlCa3B0ejlSUDZhWlR3SC1kZ05qdFI0NmN4Vl84NVpvMmI4UWV5dHBhTnZ6a3Q4Sk9TUDNPQk5xWTRpazcyQjJ5cGo?oc=5",
           "pubDate": "Fri, 13 Nov 2026 09:30:00 GMT",
-          "score": 1.15
+          "score": 1
         },
         {
           "title": "台灣半導體產值今年衝9.76兆創新高 記憶體年增逾2.6倍最狂 - 自由時報",
           "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4xRVo4bzU5a2FXdzNTZE9uTXdYMDh3WVNOdnpjWEFyeVRtU1lLRDVWNUUwbmttOXhmUEZJSDN2blVaMmlVYy1rR3M4ZE15d3UxcVRKVVJNS1c?oc=5",
           "pubDate": "Fri, 13 Nov 2026 09:30:23 GMT",
-          "score": 2.3
+          "score": 2
         }
       ]
     },
     {
       "rank": 3,
       "theme": "CPO/光通訊",
-      "score": 22.8,
+      "score": 24.2,
       "news": [
         {
           "title": "邁威爾3.75兆併Lumentum！光通訊概念股有哪些？17檔台股、CPO進度一次看 - 數位時代",
@@ -84,7 +84,7 @@
     {
       "rank": 4,
       "theme": "機器人/自動化",
-      "score": 8.8,
+      "score": 8.25,
       "news": [
         {
           "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
