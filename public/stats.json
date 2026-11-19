@@ -1,106 +1,52 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-18T21:09:13.084Z",
+  "generatedAt": "2026-11-19T07:44:34.181Z",
   "range": "2026-02-05 ~ 2026-11-19",
   "totalHistoryFiles": 272,
   "validPickDays": 225,
-  "totalSamples": 409,
+  "totalSamples": 406,
   "d1": {
-    "samples": 409,
-    "wins": 200,
-    "winRate": 0.4889975550122249
+    "samples": 406,
+    "wins": 198,
+    "winRate": 0.4876847290640394
   },
   "d3": {
-    "samples": 409,
-    "wins": 214,
-    "winRate": 0.5232273838630807
+    "samples": 406,
+    "wins": 212,
+    "winRate": 0.5221674876847291
   },
   "d5": {
-    "samples": 409,
-    "wins": 178,
-    "winRate": 0.4352078239608802
+    "samples": 406,
+    "wins": 176,
+    "winRate": 0.43349753694581283
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 409,
-    "hits": 321,
-    "hitRate": 0.784841075794621
+    "samples": 406,
+    "hits": 318,
+    "hitRate": 0.7832512315270936
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 409,
-    "hits": 264,
-    "hitRate": 0.6454767726161369
+    "samples": 406,
+    "hits": 261,
+    "hitRate": 0.6428571428571429
   },
   "dailyHit": {
     "tp1": {
       "days": 225,
-      "hitDays": 134,
-      "hitRate": 0.5955555555555555
+      "hitDays": 133,
+      "hitRate": 0.5911111111111111
     },
     "tp2": {
       "days": 225,
-      "hitDays": 124,
-      "hitRate": 0.5511111111111111
+      "hitDays": 123,
+      "hitRate": 0.5466666666666666
     }
   },
   "details": [
-    {
-      "date": "2026-05-18",
-      "pickDate": "2026-05-18",
-      "symbol": "3209",
-      "name": "全科",
-      "entry": 71.7,
-      "d1Close": 72.57142639160156,
-      "d3Close": 75.33333587646484,
-      "d5Close": 70.38095092773438,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": false,
-      "tp1Price": 73.85,
-      "tp2Price": 75.29,
-      "d5HighMax": 76.76190185546875,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-18",
-      "pickDate": "2026-05-18",
-      "symbol": "3055",
-      "name": "蔚華科",
-      "entry": 113,
-      "d1Close": 124,
-      "d3Close": 116.5,
-      "d5Close": 118,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 116.39,
-      "tp2Price": 118.65,
-      "d5HighMax": 126,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-18",
-      "pickDate": "2026-05-18",
-      "symbol": "2464",
-      "name": "盟立",
-      "entry": 139,
-      "d1Close": 135,
-      "d3Close": 136,
-      "d5Close": 158,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": true,
-      "tp1Price": 143.17,
-      "tp2Price": 145.95,
-      "d5HighMax": 158,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
     {
       "date": "2026-05-19",
       "pickDate": "2026-05-19",
