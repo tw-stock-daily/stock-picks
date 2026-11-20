@@ -1,106 +1,52 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-19T21:13:58.435Z",
+  "generatedAt": "2026-11-20T07:35:18.913Z",
   "range": "2026-02-05 ~ 2026-11-20",
   "totalHistoryFiles": 273,
   "validPickDays": 225,
-  "totalSamples": 406,
+  "totalSamples": 403,
   "d1": {
-    "samples": 406,
-    "wins": 198,
-    "winRate": 0.4876847290640394
+    "samples": 403,
+    "wins": 197,
+    "winRate": 0.48883374689826303
   },
   "d3": {
-    "samples": 406,
-    "wins": 212,
-    "winRate": 0.5221674876847291
+    "samples": 403,
+    "wins": 210,
+    "winRate": 0.5210918114143921
   },
   "d5": {
-    "samples": 406,
-    "wins": 176,
-    "winRate": 0.43349753694581283
+    "samples": 403,
+    "wins": 173,
+    "winRate": 0.4292803970223325
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 406,
-    "hits": 318,
-    "hitRate": 0.7832512315270936
+    "samples": 403,
+    "hits": 315,
+    "hitRate": 0.7816377171215881
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 406,
-    "hits": 261,
-    "hitRate": 0.6428571428571429
+    "samples": 403,
+    "hits": 258,
+    "hitRate": 0.6401985111662531
   },
   "dailyHit": {
     "tp1": {
       "days": 225,
-      "hitDays": 133,
-      "hitRate": 0.5911111111111111
+      "hitDays": 132,
+      "hitRate": 0.5866666666666667
     },
     "tp2": {
       "days": 225,
-      "hitDays": 123,
-      "hitRate": 0.5466666666666666
+      "hitDays": 122,
+      "hitRate": 0.5422222222222223
     }
   },
   "details": [
-    {
-      "date": "2026-05-19",
-      "pickDate": "2026-05-19",
-      "symbol": "3008",
-      "name": "大立光",
-      "entry": 3365,
-      "d1Close": 3200,
-      "d3Close": 3540,
-      "d5Close": 3665,
-      "d1Win": false,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 3465.95,
-      "tp2Price": 3533.25,
-      "d5HighMax": 3875,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-19",
-      "pickDate": "2026-05-19",
-      "symbol": "3048",
-      "name": "益登",
-      "entry": 55.7,
-      "d1Close": 61.70000076293945,
-      "d3Close": 74.5,
-      "d5Close": 73,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 57.37,
-      "tp2Price": 58.49,
-      "d5HighMax": 81.9000015258789,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-19",
-      "pickDate": "2026-05-19",
-      "symbol": "2481",
-      "name": "強茂",
-      "entry": 133.5,
-      "d1Close": 133,
-      "d3Close": 133.5,
-      "d5Close": 147,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": true,
-      "tp1Price": 137.5,
-      "tp2Price": 140.18,
-      "d5HighMax": 147,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
     {
       "date": "2026-05-20",
       "pickDate": "2026-05-20",
