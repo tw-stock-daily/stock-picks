@@ -1,52 +1,77 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-11-22T03:58:45+08:00",
-  "asOfLocal": "2026-11-22T03:58:45+08:00",
+  "generatedAt": "2026-11-22T15:11:59+08:00",
+  "asOfLocal": "2026-11-22T15:11:59+08:00",
   "date": "2026-11-22",
   "marketState": "weak",
   "hotThemes": [
     {
       "rank": 1,
-      "theme": "AI伺服器",
-      "score": 29.1,
+      "theme": "半導體",
+      "score": 26.5,
       "news": [
         {
-          "title": "金管會限空令第三箭！全面禁止平盤下放空 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNY2I5NnlrUFhtcmJRejlYTUZWTlY1d04yZDl6cmJzbkhHWDdGZUppVmdGQ1pGOGxBRm1adFRxWmF3QUt6NmQ3eVJobmh0aTRKYm9wdnhyWDZyQ3pfY0J1NzBNMm50OHp5T3ZZajRUYW5ZSHp1TDIzMHFKcm1qZmdJSXF0SzFNeUpnTXBVS2hHSkZoVTNFZjdRazlreVdZS1l3S3dISk1jQ2tPQUlpMTBFa2o1NkxSSVdhSXJDbDI1VDRGSmNPRVExU1h6dlZlUDdORmZQWmlaMFN6VkM5MUg2bDJZbWhFZUd4R3BMVVozRGpUaFk3NGtaaE1qSVhhZzlqOEE1V1hoazYxVF9rYmdSRGs0c0VVZjZTakVrczl6TUFBQkZtVjdtYVdOeHRIYlJfYjlzR0oxeFhNOTR3TTZZ?oc=5",
-          "pubDate": "Sat, 21 Nov 2026 08:09:46 GMT",
+          "title": "週一台股再迎血洗？費半狂瀉10%、美半導體股慘遭狙擊投資達人喊話投資人做「1件事」：大跌最恐怖的是它 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiywNBVV95cUxQakFTS3d6RFF2QW9uTzFzRkFocEFKTWR1dkdad3FwMjRqMV9Hd0huLUNIOFBxbURkYnplWXNzb2hTY2hTMlR1Slc2Y1JIMUNoc0tMNlhXRzlJVjdXQ3paUU1RbEJfSzBMSmlvdWZFWEhHVXg1UmxDbWxLUExPUUV3ZU1COE1Fb0N6Yk1SaHB0MGQzSGQ1aW92UndnRUlUZGNwZ1NiNlZBV2xfbHRZeFc2VWlIekY0YUZqSVF0MEVxZXpEb1M1aGs0aG04VnF6UGhVWHpvTzBjd2dYOVVzWm9kMWRnYzdLRnFHTG5QZEpuNHFleVIzbEpmMU5BRjc2SlZ6R01taUl1R3hRZjZmVUZHTTU4R3ZTc0lETHQ2dW9GNTlRZmtJYmRfdENyOWl3MDVQVV81WmtzQ2MzXzRtbHlweVV6Z2tZamdnQlF2Ykx1b09ta3h6R09SWXhWN2lLeXZLc0U3RjE0T3ZyWUQ4SkUxRnJTWmN0YnZUbndWYm5pV2xGX2VsMlU5TEMwUW9wOEItZFlHTTA4NnBGN19XVER5XzkzRDlJS1NONm4wNVR5MnkwdE5BTjJSNHVnOHVSRnduNFdnMDQ1NHBFUWc?oc=5",
+          "pubDate": "Sun, 22 Nov 2026 01:32:28 GMT",
           "score": 1.6
         },
         {
-          "title": "黃仁勳去職衝擊台灣訂單？經濟部回應了！10月接單暴增96% AI伺服器需求強勁 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxOT2VtMnNhVk42c0c1NzB2bVNNQkxLdlY4ZFBQU1ZIbGRyUHVqeTMxODQ0TVRlbjNxd3hGVHpNUmprak1SaWd0T0JPVy1Dc2tXOUszLXF2dkM1djNzN1JoTFQtbFJtdlluV0tULXliajN4ZXZjelRpVXktdUwwc1RPS2Vlb3lRRmpMQ2xqOWliMUhMYmxQU2MyeGpsYXBPWnhRUjZxTTBHYlhTX1dHRTFpLVVqdzNneXl0dmhNZTlWMlBRV0FLaE9wS1liczJDNTV4V0kyVU1RSzZtcVZVcGFlZGNReU9tYW5CUlpTTU15OFZ3NVZKa1I1a2ozU3FtTW0zcTlrZG54c1FjM3ZrY05UTzhLajBmeDlMeE42ZE41cVoycUxGU2pTSDdGc1hLLVYwQVluUjZaMzdZQV80dlhOc2Y3YlU4OU1IVEZpVHpRY3F1ZVp1WXpzRS1tOTN3aENldFJQQTRiMDcxVWZ1dXNSZXpGNTZSblE3aVo0VDRaVGhfNWVBSWZfVmFibWlFeEJLQTZaYnBUeE91RGtSQlVIMFpxMkJ4SnpOTGhUeFBQcjE4Y0FDaFhhRDBHSUpwaE5TenNv?oc=5",
-          "pubDate": "Sat, 21 Nov 2026 04:57:16 GMT",
-          "score": 2.7
+          "title": "逆勢飆出漲停！台股猛殺探36k「這檔資安股」帶量紅棒登量價雙增王Q3強勢財報、旺季將至利多加持 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMizwNBVV95cUxQekFHNkJDR1lTdnA3QlItM2ZGMDdHNDFkYWo4aVFtandORFdVQWYxTlZUM3RPVlYwallsYU15M3hYdTVKUHl5ZFpjX21Jblg5WGtHZElQaHVYNjRSYzFLYXZXcVFRWno4WHlPanQxemxWSEhaZ2RQYUVISlJCRjZ3czB4NlNzejd5b2FPS1JXd1NraVUtT2xqbG81UVktTmZ2WVExR2xkY3RtNFNFOFI1V3pyRG5Cb2M1aG9sTTdaZmRnVVl0dko2bWQ3RGZpQmRtaW9FbTZNSlk0VEpzVk10WV9uaUx4d2dMcDZLNU9IS3pnU2lNNXJpRjJub0xyZ21rV2hneWdNSnpnNU9lRm5KTHBhUFpGUW9mYnIzMlEwZ3RsSEhLb3d0RmR1eVhWbXpWOUZxQVhJTTFmV2RVTDNRQkt4SkQxTGozX3BrUFJIWjRheWhxOXpkam80VHJfczJiMHhaWTRZS3BBbUNPWWhKZ0R4MTAwdzNvMXlRNnVXZXR3dGk1cDlxenNaT2ZycnN6aWpsMHl5d0tvRUJ3YTF5S3ZwOG1UM2lnUGlhbm41bjNpTHdyZ0NldHl1eXZrQ1NQZDNSQmhUUzJ5M2RoVjJZ?oc=5",
+          "pubDate": "Sun, 22 Nov 2026 01:09:31 GMT",
+          "score": 1.6
         },
         {
-          "title": "AI伺服器出貨看增！和碩(4938)逆勢強鎖漲停！ - 口袋證券",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBKVlBVV1JzRURYeUl1M1p5RjgyUlRNcTByeEgxczQtT1J3NDZ2YnVhQzRGMDRoRktNUXJHbXhXSEdtbVVtdC1EQ2dveTdaamttOElILThnZTVXZw?oc=5",
-          "pubDate": "Tue, 17 Nov 2026 19:59:03 GMT",
+          "title": "台灣AI供應鏈雙重依賴：供應晶片與伺服器，也用海外AI工具 - 蕃新聞",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBSMzBKaTlqV2p1bldtY1JmY3I3QWhqc2RtR0VfSkRwc0JZOXdLOHhZMXlZTWtveG9UY1lUc1pxNGQxeXItVVhvRG1tSC1GcDBRWEE?oc=5",
+          "pubDate": "Sat, 21 Nov 2026 22:30:00 GMT",
           "score": 1.6
         }
       ]
     },
     {
       "rank": 2,
+      "theme": "AI伺服器",
+      "score": 24.5,
+      "news": [
+        {
+          "title": "黃仁勳去職衝擊台灣訂單？經濟部回應了！10月接單暴增96% AI伺服器需求強勁 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxOT2VtMnNhVk42c0c1NzB2bVNNQkxLdlY4ZFBQU1ZIbGRyUHVqeTMxODQ0TVRlbjNxd3hGVHpNUmprak1SaWd0T0JPVy1Dc2tXOUszLXF2dkM1djNzN1JoTFQtbFJtdlluV0tULXliajN4ZXZjelRpVXktdUwwc1RPS2Vlb3lRRmpMQ2xqOWliMUhMYmxQU2MyeGpsYXBPWnhRUjZxTTBHYlhTX1dHRTFpLVVqdzNneXl0dmhNZTlWMlBRV0FLaE9wS1liczJDNTV4V0kyVU1RSzZtcVZVcGFlZGNReU9tYW5CUlpTTU15OFZ3NVZKa1I1a2ozU3FtTW0zcTlrZG54c1FjM3ZrY05UTzhLajBmeDlMeE42ZE41cVoycUxGU2pTSDdGc1hLLVYwQVluUjZaMzdZQV80dlhOc2Y3YlU4OU1IVEZpVHpRY3F1ZVp1WXpzRS1tOTN3aENldFJQQTRiMDcxVWZ1dXNSZXpGNTZSblE3aVo0VDRaVGhfNWVBSWZfVmFibWlFeEJLQTZaYnBUeE91RGtSQlVIMFpxMkJ4SnpOTGhUeFBQcjE4Y0FDaFhhRDBHSUpwaE5TenNv?oc=5",
+          "pubDate": "Sat, 21 Nov 2026 04:57:16 GMT",
+          "score": 2.3
+        },
+        {
+          "title": "殺！台股重挫逾2,000 點，AI 伺服器股跌停、限空令2.0 撐不住| 動區動趨-最具影響力的區塊鏈新聞媒體 - 動區動趨",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRjZtVnlGRnlZdUNPbzdIQjA5Z2g5VVdMS2JxdVpSdTk3b2VOazI5MFBqemRMRHg2N2RMRHNfOC1jSk1nbmZDRjlkSm45MVI5VTctLUJtZElYaWl0Um8wUnZ1bjJFRHdGMVY4c0VrODlOejFZdnJnZ3FxWnlvbjJvem44NU8yR3ExYldiZzhDSQ?oc=5",
+          "pubDate": "Fri, 20 Nov 2026 01:57:27 GMT",
+          "score": 1
+        },
+        {
+          "title": "廣宇明年營運向上光通產品Q1出貨 AI伺服器代工業務貢獻估破百億元 - 鉅亨網",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ReTN2dFBQdWYySFdkU3FZX3liRmNYOEtRSVUtWnpFZ3RTREw0VXJtOXlYQzBKNTRQLUxjb0xMVjB2V2JFVEMtY2dJMl9QYW8?oc=5",
+          "pubDate": "Thu, 19 Nov 2026 11:51:49 GMT",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "rank": 3,
       "theme": "CPO/光通訊",
-      "score": 25.3,
+      "score": 24.45,
       "news": [
         {
           "title": "黃仁勳請辭，CPO會延後嗎？上詮、華星光等概念股受衝擊程度全解析｜產業熱話｜豐雲學堂2026 年 11 月 - 永豐金證券",
           "link": "https://news.google.com/rss/articles/CBMi7gNBVV95cUxOSkhPaTRXVW10YlYzMS1QS3U4YzN0c1NJdzA2TUY3enlSMTRORUlqMkJyTm94OHV2c3F0bm5qaUpIel9iUWtnTk8xMnNYYlYtOG41NFIxSlB5SHV4eEFiakxRajMyM2xHVl9GTVFFUE1UeGFfcjhDazRoc3FPamFoX3NzSzNHa216UnVjYXR2d1E1LXFNMHNIZU1LdVQwTVltUld6UUt2MFloWlY2cUlIaHNBbW9TNmV6blR5V2ozQW5BdUhMZ3RrWkFaMUl5MVlUeW9tTy1pN0lwZjd3a0k0cV9VZUJPTEQzZ3k2bndLbWd0dENWTmM2dDA4dnlUNGJlajEtdm9fTlpJUTlwczgyVUlodU5pOG14LVAxNTRtelBIYVZqYnF1Y0lLQUVpRkx1MXFEdG5QVlBwU01MTzNuUTB6LTJiM0FiX2RSRlNEZXJoNFdxSWYwbzdUSG1kYTFKOS1tamlweUV5a25ZUzFFYWlOOFMyTlI1bFpwZFZxOVhmX3JBVGJBeHl0OHIzQjItdkRhWGpod05MblNtZDZqTWI2YndXdk1OSmR6VlFEd21ydFQ1MEdZMjVta251RkhpS2JRU2FTYnp2cFM2dDk1Q2hGNGVYZ3BfUVNVVTdCZm1kdnYzRi1XYTFpd280UQ?oc=5",
           "pubDate": "Tue, 17 Nov 2026 06:00:06 GMT",
-          "score": 0.8
+          "score": 0.55
         },
         {
           "title": "CPO還沒全面爆發，NPO先搶商機！聯亞、上詮、華星光3檔受惠股出列-?叔台股攻略-台股 - 商周財富網",
           "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Kdl96d3JrRTI5bmxOeVlJRE45Y05uMUlmVnowc3M4OTRuSl8zcDBJN0dlLWxMMTRucGp1ZlFxVUdfSGstUU9PTmFuVVFWZXVBbXpRZ1FWekxKSlExMndVYkF5TUk5UDVpN1hBcjhPTGM0QUtucXc?oc=5",
           "pubDate": "Thu, 19 Nov 2026 06:35:39 GMT",
-          "score": 1
+          "score": 0.8
         },
         {
           "title": "美擬禁中國光模組 美、台股CPO影響6檔曝 - Yahoo新聞",
@@ -57,34 +82,9 @@
       ]
     },
     {
-      "rank": 3,
-      "theme": "半導體",
-      "score": 22.8,
-      "news": [
-        {
-          "title": "戴爾股價週五暴跌近12% 科技股拋售、AI伺服器與記憶體疑慮齊發 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc3MyZnZaS0ZYNEFqR2xBaDBneW5hRzhpLWpWbmw1WUdVR1h3VEd0WEhiVUxIU1EwYnkwM19zTnM5dlZiejRWZUVXZmJtZEd4ODdncTdOUjdHa28wUXFUOVAzaEE5TUttR2FvU1RRNkIzcThKOVhIaUJ2c1FuSnVGVmF6RmRoMFFqbFdGMEJR?oc=5",
-          "pubDate": "Sat, 21 Nov 2026 07:47:21 GMT",
-          "score": 1.35
-        },
-        {
-          "title": "台股狂漲809點！記憶體大漲回血「南亞科、華邦電、群聯噴半根」 IC設計聯傑、精拓科齊亮燈 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxOeUNvdnEyVWEtUXFTbi1ZSTFGeW82SW1tZWdQV0hKU3RDeGliaXpPZElONUVqdkQ0Uk11QTZqSW1jSEUxbzhhVGdVaWhETFFPMlk1WDF5TDhqR1YtYlllTXFKV25DZV9qdDdwMGY0U1FQUHVuSDJDVFRqTXBHN2NUQnNIUTdMYmlrM1dOSTQzem5JMHFfNjZkeS1fQmQ3SnVvcW9oWVB1WjRXd2tJZFdEdmVvTzRtZ3dISVVVbTEwSjhFbUtlU1VTWXBWam5ERUp0TFNzR3VfSjRvSFU3MTU0eG0wdU9oVmdzaW0xNFdDakVDblJrV2Q4Tk9CeXVwandEWFBIOWRxdGNSY01iazBxcldBWm95TThqbGh2cm5kVmpvMTktVmpPc2NxUXpMczBnOXV5Rl90TUJHSWdUN1hNX2JVa2dtVkRkdy0tQ2k4WlIxVFhJWXBweVA0RUphbXFlQ0RmVzhYOS1TWVpTTzlqQU9NS2QxeHN6?oc=5",
-          "pubDate": "Thu, 17 Sep 2026 07:00:00 GMT",
-          "score": 1.1
-        },
-        {
-          "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43T3RHRjZtNVdIQkFLQ1RSYlk1d045RzdBTEVVWW5QYzRvbWJMVEZtdENFa21HcVVLTHV6a04wb243TklQaXBpN1FFYTdER19XSGJJUE5oTVdOd9IBX0FVX3lxTE04RGpIQTRLdWdaUWM2SFVnSEJIaU1scjRVak1keUw5ZVV4M3QxSWNYbEFCUzgwTnl0ajBDQW12dVFZQTl6SVdaWmg0UGZxMHQ3Yk1BZE5jVnprUFM1NTJr?oc=5",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "score": 1.1
-        }
-      ]
-    },
-    {
       "rank": 4,
       "theme": "機器人/自動化",
-      "score": 10.45,
+      "score": 7.15,
       "news": [
         {
           "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體 ETF 大啖記憶體紅利 - 經濟日報",
@@ -109,7 +109,7 @@
     {
       "rank": 5,
       "theme": "PCB/載板",
-      "score": 4.4,
+      "score": 5.5,
       "news": [
         {
           "title": "AI下一波飆股藏在這？光通訊、CPO、高階PCB成新主戰場 13檔台廠被點名受惠 - Yahoo股市",
@@ -118,9 +118,9 @@
           "score": 0.55
         },
         {
-          "title": "AI伺服器供應鏈發威！PCB產值估破兆元，散熱與半導體先進製程同受惠-財經焦點情報站 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMXBPeUJseGJtRXB1aS1NdWxxYkFyLVBzTVhnR2FRRlIxSGJOdXpMQWVrcXJWbFV3UXBock15Q0lkMzlZazNDMGIzS1UwR2ZjMUxkc1FTYUZDTXZVUU9OVUo0alR5WDV6RzVaRGl1RjRMMHZLOWZzSXlFRzdUVlBPTUF3?oc=5",
-          "pubDate": "Sun, 27 Sep 2026 07:00:00 GMT",
+          "title": "台股狂殺2230點！PCB、ASIC全面潰敗，創意股后寶座還沒坐熱 | 下班經濟學 | 財經 - 風傳媒",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE85djVONFhlSWIyQWZrOW5SdFBycV9YTUNXMWZFdFpUUVhxM1hUMDBSZFRUTXpiUGctNHhaek5wZk1jRTRyTFpXRU81V2dfdw?oc=5",
+          "pubDate": "Mon, 16 Nov 2026 04:29:00 GMT",
           "score": 0.55
         },
         {
