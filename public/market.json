@@ -1,36 +1,40 @@
 {
-  "generatedAt": "2026-11-23T02:31:35.589Z",
-  "asOfLocal": "2026-11-23 10:31:35",
-  "signalDate": "2026-11-20",
-  "stale": true,
-  "signal": "bad",
-  "label": "🔴 偏空",
-  "sources": {
-    "usMarket": {
+  "version": "market-v3.9.1",
+  "generatedAt": "2026-11-23T15:57:21+08:00",
+  "signal": {
+    "state": "bad",
+    "label": "🔴 偏弱",
+    "text": "美股或台指期訊號偏弱，短線操作需保守。"
+  },
+  "us": {
+    "sp500": {
       "symbol": "^GSPC",
-      "last": 6910.39013671875,
-      "prev": 7175.830078125,
-      "change": -265.43994140625,
-      "changePct": -3.6990834302978346,
-      "lastDate": "2026-11-20",
-      "lastTs": "2026-11-20T22:30:00+08:00",
-      "ok": true,
-      "error": null
+      "name": "S&P 500",
+      "price": 6910.39,
+      "previousClose": 7561.67,
+      "change": -651.28,
+      "changePct": -0.0861,
+      "source": "Yahoo Finance chart"
     },
-    "nightProxy": {
-      "symbol": "^N225",
-      "direction": "down",
-      "last": 56436.6484375,
-      "prev": 59444.2109375,
-      "change": -3007.5625,
-      "changePct": -5.059470808960976,
-      "lastDate": "2026-11-20",
-      "lastTs": "2026-11-20T08:00:00+08:00",
-      "note": null,
-      "ok": true,
-      "error": null
+    "nasdaq": {
+      "symbol": "^IXIC",
+      "name": "NASDAQ Composite",
+      "price": 22617.73,
+      "previousClose": 25136.27,
+      "change": -2518.54,
+      "changePct": -0.1002,
+      "source": "Yahoo Finance chart"
     }
   },
-  "message": "美股與夜盤同向下跌，偏空盤勢：建議保守、降低部位或等待。",
-  "note": "夜盤目前先用 ^N225 作為穩定 proxy；後續可替換為台指期夜盤更精準資料源（不影響個股推薦）。"
+  "taiwan": {
+    "nightFuture": {
+      "symbol": "WTX&",
+      "name": "台指期近一",
+      "price": 36559,
+      "change": 0,
+      "changePct": 0,
+      "source": "Yahoo Taiwan WTX& page"
+    }
+  },
+  "note": "美股以 S&P 500 為主，台期夜盤以 Yahoo 台指期近一 WTX& 為參考。"
 }
