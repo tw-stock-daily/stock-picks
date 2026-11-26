@@ -1,106 +1,52 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-25T22:11:23.801Z",
+  "generatedAt": "2026-11-26T08:42:28.338Z",
   "range": "2026-02-05 ~ 2026-11-26",
   "totalHistoryFiles": 279,
   "validPickDays": 225,
-  "totalSamples": 388,
+  "totalSamples": 385,
   "d1": {
-    "samples": 388,
-    "wins": 187,
-    "winRate": 0.48195876288659795
+    "samples": 385,
+    "wins": 185,
+    "winRate": 0.4805194805194805
   },
   "d3": {
-    "samples": 388,
+    "samples": 385,
     "wins": 198,
-    "winRate": 0.5103092783505154
+    "winRate": 0.5142857142857142
   },
   "d5": {
-    "samples": 388,
-    "wins": 162,
-    "winRate": 0.4175257731958763
+    "samples": 385,
+    "wins": 161,
+    "winRate": 0.41818181818181815
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 388,
-    "hits": 300,
-    "hitRate": 0.7731958762886598
+    "samples": 385,
+    "hits": 298,
+    "hitRate": 0.7740259740259741
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 388,
-    "hits": 244,
-    "hitRate": 0.6288659793814433
+    "samples": 385,
+    "hits": 242,
+    "hitRate": 0.6285714285714286
   },
   "dailyHit": {
     "tp1": {
       "days": 225,
-      "hitDays": 127,
-      "hitRate": 0.5644444444444444
+      "hitDays": 126,
+      "hitRate": 0.56
     },
     "tp2": {
       "days": 225,
-      "hitDays": 117,
-      "hitRate": 0.52
+      "hitDays": 116,
+      "hitRate": 0.5155555555555555
     }
   },
   "details": [
-    {
-      "date": "2026-05-25",
-      "pickDate": "2026-05-25",
-      "symbol": "6719",
-      "name": "力智",
-      "entry": 255,
-      "d1Close": 273.5,
-      "d3Close": 248.5,
-      "d5Close": 243.5,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 262.65,
-      "tp2Price": 267.75,
-      "d5HighMax": 286,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-25",
-      "pickDate": "2026-05-25",
-      "symbol": "2455",
-      "name": "全新",
-      "entry": 444,
-      "d1Close": 423.5,
-      "d3Close": 391.5,
-      "d5Close": 415.5,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 457.32,
-      "tp2Price": 466.2,
-      "d5HighMax": 440,
-      "tp1Hit": false,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-05-25",
-      "pickDate": "2026-05-25",
-      "symbol": "3305",
-      "name": "昇貿",
-      "entry": 160.5,
-      "d1Close": 163.5,
-      "d3Close": 158,
-      "d5Close": 167.5,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": true,
-      "tp1Price": 165.31,
-      "tp2Price": 168.53,
-      "d5HighMax": 169.5,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
     {
       "date": "2026-05-26",
       "pickDate": "2026-05-26",
