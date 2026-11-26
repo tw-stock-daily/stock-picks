@@ -1,40 +1,65 @@
 {
   "version": "v3.9.2",
   "tradeStyle": "資金流強勢版v3.9.2",
-  "generatedAt": "2026-11-26T16:42:12+08:00",
-  "asOfLocal": "2026-11-26T16:42:12+08:00",
-  "date": "2026-11-26",
+  "generatedAt": "2026-11-27T06:09:40+08:00",
+  "asOfLocal": "2026-11-27T06:09:40+08:00",
+  "date": "2026-11-27",
   "marketState": "weak",
   "hotThemes": [
     {
       "rank": 1,
       "theme": "AI伺服器",
-      "score": 47.1,
+      "score": 42.2,
       "news": [
         {
-          "title": "目標價上看430元！「伺服器大廠」AI訂單看到2027年底 Q4營收估年增107%、今明兩年獲利拚新高 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMi5wNBVV95cUxOaHV6Yl9jdS03Sy1VZGU5blFaYjFEaDkzVTROTC01bFpDLUhRWjJJNDEwTVcyUWVLZkdUamdRVl9JREplSWF4d1c2cC1WWDBuaDJoVmlkQWpmZ1pxNTlRb0J2eWF1ZVpXam5DeU9UZ2Z6S3V1ZWRtVWhJTnlQRlJiWlJ6MGI0dklhT0JHMWZwMWhMYmZfamk4LTNDRnlNUDBVU0VBZUs1M25rQnBEZGhUVERSSHRGYnEtR1hBN2J5TnV1U0ZBX0tBck42YU1ReWx2RUxjRzN3cVg2TWo5eDVZSXpfc3loT2o2d2NBVExuMVR5aW5zYllEckx1bl9iOHUxRFJpdUxMcUxaNE5xQU92UUJ3emlpeVRQOEQybU9MY0F4bHB6VXhlbmp2RnM3dmN2NV9yeEhnRHliUWlncDRUWnZiRjV1U05hbWYzT3VMSmtUNHN6WlVMODVXeXVZWlB0T2NJZnRmZmJwLVA3SGJzdnoyM25sM0hSZ3B6YUJvR25lcHhmUDVneE8tc052ZjVFa280UkczT203WktOb3laRmpRNXZ4NlhvVGpnRy03TTlNV0k1dzJYLTJXOG5ERXMtZmJjWFA0Z3NTTHFoM2xJYVpLcGw3OVBnQklvZVFoTFE4eF9KaVNz?oc=5",
-          "pubDate": "Wed, 25 Nov 2026 22:20:00 GMT",
+          "title": "【Follow法人】外資提款台積電392億元！同步翻臉重砍台玻8萬張 中華電也難逃萬張賣超 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiggRBVV95cUxQSHNncVJnMWFUUUxPSWxUSjhIVHZNWC1lMlJoMEVzQlc0WTdlRkphazhxbEFqWFRVSmNYZ2hLMmxmSy1uZ19qdFNtUjg4b3A1WXRVZGpuZjhRSWw3SkRJeEVoRlJOMnhmdTNmNDJsTDBTeUJha2tpY2JDOVRRV1k4R1NyQkZlWFByUDNLQ0JCcTRxbkNLRks1TG1GVnFqVENqaWROcTlRUHdVZVFKUGtZVFFkR3hfUW9BQnA2aUtCc1FHVGZuek1VX3dlNmZORDJkVFR3UnZoUzlmX3J6TzZfbzJuUFJSUGhzaXZnM2JFXzllLVlZTTlWeHlDdjlWTGhpUTN0Wl9yQjVCN1RDQUQ1VHZjZjB2YVZVOUtzOW5JckZmaDd2QUNwWnR2M3pRRDlBa2ZTY2RyLWZvb3dfNkM0MUhjOUlzMDNBdldITS15NWNJNlNPdGJpM1R3TjF5RmVIYy1JMmNHQjFnZTZQWWNRU3ZOVmdPRVE3S1dVakhyNjgwRnZCWnhNSnFEMmRXcU9Bdi1nVHJoNU5qZGdRcnpTdEhjRU92RlBvbm42RGtQeTM4dDZ4b2wzX1JQNlJLd1lLX0FFRWU5NGtiU1ZSNWRuOWdKTzBIVTE4TDd3VEdWQjNQZnJJT2tsS3lDWU9DaHF6aGJrYi04ajFHU21rMHVwaDZn?oc=5",
+          "pubDate": "Thu, 26 Nov 2026 08:36:40 GMT",
+          "score": 1.35
+        },
+        {
+          "title": "AI伺服器增77%！「21檔」目標價一次看 - 三立新聞",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBxYXdFZUMwTlB5UWlWYmlIV2o1eEwyaHZSdVR3TTZ5MzJzcmlsS1pwMExCcElJOWFJQlJlT2hBVXRYeUtXbHZIZGxWOA?oc=5",
+          "pubDate": "Thu, 26 Nov 2026 22:03:37 GMT",
+          "score": 3.2
+        },
+        {
+          "title": "AI Server爆發性成長！華碩、技嘉營運火力全開 法人力挺喊買、目標價一次看 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxOSy11eEdzY2R0ekR4UTQ1emxFWmxPOEQtQXZHcXMzTVVnTGQ1bHhzZF93ZVFqWnhOZ0ZnLU1MOGdsQ2pleDNWWWZkTmRoNzBWeWpuN2dONnNBOUhXQ0ktdDBkNUtuYkMybmZhZ0NDS2NwSmNLbDQ4dzJqTUlwekNDMWp0M3hTNjdVRmJjcDJ5SmRZazcyNjBwc1hXaE5Ma1pLcTBWcjFxcFRzZWM5WDhvdE1kdDNMSHRwZnU5QmxWNFlqT19HOXhOSHlOX2NCLTBkc3pHUC1RX1BUam5OenNWaXV4MEZFVXJQZ25GaVZlR1JucFRtRTNWRTZIc2k5WHJQdVl1N052VEpaTHFPY3lMTjNYdDlFNlNIVDI1WEp4U21yX0h6ZjRPTGhaVWx1b3RJX1dWWTJBbHVSQldxT3BMQ1M2YWNQZjdibmF5dE8tLXhJeUE3bnNSWUkzS2FMWThJVnJzZHl1QQ?oc=5",
+          "pubDate": "Thu, 26 Nov 2026 12:12:00 GMT",
           "score": 1.6
-        },
-        {
-          "title": "【12:38 即時新聞】緯創(3231)亮燈漲停，AI伺服器題材成盤中焦點 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMnNQZ2o0MGFiSHlqSEp6VlRzS2NSeWpzWGcwNWU1Y0RDMWNuMHlqR3Ewc2s4bGdmSm5KWFVOVVN6MGN4Znlyb0haN1pCeTc0NUsxSzZ5MUFCTXo0UDVwWUd6WVNCNDlOSDBuS19kUnpwTmFydnBHVl9CbnotZm9tOGQtTmJGaGFHcHU1OGF3?oc=5",
-          "pubDate": "Thu, 26 Nov 2026 04:38:13 GMT",
-          "score": 3.2
-        },
-        {
-          "title": "【13:30 即時新聞】營邦(3693)亮燈漲停，AI伺服器機殼題材續受關注 - CMoney投資網誌",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNR0c1dFRTNE9Ub3V6UnZkOHkyQWZOMENyNHo3dDRLZXFueHJva3k4TDBZMVlPMC1wdV9IblloZ2YxTHFYNUlhRWJvVVFKbWVRcXE2RV9GQWJrTGNBVWxjaE9peXlublQtRUw5bVVNNmxRZWQxYmo0eGRZbVpNZHk0MkN1ME5wbGl1NVVwcXhn?oc=5",
-          "pubDate": "Thu, 26 Nov 2026 05:31:19 GMT",
-          "score": 3.2
         }
       ]
     },
     {
       "rank": 2,
+      "theme": "半導體",
+      "score": 27.45,
+      "news": [
+        {
+          "title": "台股反彈大漲逾900點！2大權值股狂噴 PCB、記憶體復活 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZ3ROMXAxTE1VSThYcVlTSzktS1pBRUVEa2VIdEVIeTh0VmFKX1M4R2JGdzFyLWR4MWtsTEFadkNiaWpSUWhPV2c4YnhJTWNRY1FPT2RhQnVqSmgwcWprYmpVb2hLc1pBdkFPZmZoV1VIWHYwUERnaWFKeWNNRmhybGlMaVQyb05ZRTlXRFhDcEs2cEFQei10eVNJamlsSm4xeml4b1R6UTJlTmp0ODNFMDQ0UmJrSkQzMkJYTTJuTERweVhyQVFMQjMybnRqWWp3bGI1R3JUVTFzX3RJNHRRdlJ5OUNWVmVOWU5CQ1dHRTBlYjhJSk80eEI1X3VYUkdONFJIemc2M2NXOFVKQS0xeGhUc29zaEYwRGpWV0RkSG12M2dZcjM4WERjLWVJQkRGdkdjS0JjdVFxSkxQeHFnQnlmUnNKU2d0QXJJaw?oc=5",
+          "pubDate": "Thu, 26 Nov 2026 01:41:58 GMT",
+          "score": 1.35
+        },
+        {
+          "title": "台股收盤大漲956點！台積電小跌 PCB記憶體5檔熱門漲停 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxOZE83d20wMmRjbkFRZEtGM0VSQ1RXZzVSVlZNRTl1OGZkZS1XbUF0NzlRWWNZbzQza2hHUUZEVW1HQlQ1UlhWZ0JrREJYSUgtcGZDWE5rNWtxME1DVExkanF2dmpGaTUwVlVselAtdWhWNW5BdFdxVkNGQmZ1SGJwcWVuUkwzYWc4elVDdTZTaWNkWDJGMVBWZnU0eGxkRVpJS1Z2UUFYZ05qMk84amVNY3hTSDdqc0psQWZxWXFwWGRFTnR4VWhZRFBhVjFUNzc4UFpLaURqbnd0blFObG1kNy04SmdaX2E1NENHck1aMjdHcWxXbXVYU2JoaHFnUmprU01sdS1SallxN3g5M2dzNHNoYzhTQXFyQUZ1MzNRUlVIUzJxbGxzdTZQR2hOWXNKTU5Cd2lDMkp0NnhHbHlLYjF2T1U4eUYxeEJFMWFmQWVJM1dib2Nv?oc=5",
+          "pubDate": "Thu, 26 Nov 2026 06:07:24 GMT",
+          "score": 1.35
+        },
+        {
+          "title": "今日漲停股｜台股大漲956點，PCB、記憶體、被動元件齊攻，華邦電、南亞科、華通亮燈1126｜豐雲學堂2026 年 11 月 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxQTnBDc2ZOUEZhZ1kwTXY5Ui1hNlhJVW02ejNjWnhWeGJ5alpEV0NfVGMxQ1ROLUhQV2FObHlmX0t3SnlLWHdZS2xSdFVlSFBEM1BBZWlzT0RLQzFVd0RrM1VZUmJGaVlCQmd1R1ZzVHhhdzNaMmhRa04zOWV1amprTlliNTNYM0o0YW55cXJmZnMyUk9sY2tLZHZfd1l1SUFFd056em5hQzZLUW9OaG5IZjB6RWtpTm5jTjc0OHZDVG15SDl1aU1fMVVmdy1NOGRXN0VwT0NxUkdnbEZ6cDc5T0hjUTdnelZOTVE3bFBialRCUlRqV0FyQmVZWU1LY3dPWUJicWtDdE9lMDFNZVJPN21raFlVcGEtMjRZdUJfVDA1eG5paDVMWk1HNDRXN3NlOFEtZ2NpX2t1LWNlZDhITV9QeGlQWEtnOFI1UER0dEFLenFOb2UtUHN1dVN2UlltNVRMOTJBMlpzZEJXNWsyMXhGRkFQTzZrVG9TdVkwQmZZc0J1ekdqOFVVY1BpV0hkUGtsV1RkQ3V1ZE1vSVo3djVTTEJnQWRxa1JBcHk2VGpESVpmNlpKaXBRVzNDRTlSd3U2QU1pSVQ2c2poeGJzdm82VHVrWVZYeUtrbnc5R1ZWUVVpRlhWcHVMcFVpbk5KN1NIVjhn?oc=5",
+          "pubDate": "Thu, 26 Nov 2026 12:08:23 GMT",
+          "score": 1.6
+        }
+      ]
+    },
+    {
+      "rank": 3,
       "theme": "CPO/光通訊",
-      "score": 24.5,
+      "score": 20.25,
       "news": [
         {
           "title": "CPO 進了 AI 機房，聯亞、上詮的光通訊生意做到哪一步？ - 口袋證券",
@@ -43,10 +68,10 @@
           "score": 2
         },
         {
-          "title": "光通訊殺爆！CPO元年是買點還是逃命？ - 聚財網",
-          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5sSlJEM2E0UjE5X3ZQTnNvMHdQN3VPdXdQdVJkOGxIaW5WWU8wYmZ5czRnbzVYYkI0Q214NWI4Z2dQd01mUzQ4dmpMaEM?oc=5",
-          "pubDate": "Wed, 25 Nov 2026 11:28:42 GMT",
-          "score": 2.7
+          "title": "百萬顆XPU 時代，AI 光互連概念股有哪些？Marvell、Coherent 如何受惠CPO 升級？｜美股產業｜豐雲學堂2026 年 11 月 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMizANBVV95cUxQYzV4bl9SS3BiajlraGt0eDdGb0JfTTVEcHh6RUMwQnFXcTVwR2FWRHcteXdQSmU5cWtBZmh6R2dkeVRXQ3Uta3ZHNVhXZm5WUF9VZW51WG9lcnNvc2FYWlBSMDd4MjlhMml6WldaMFktTDh5Q2dMZFV6UGR0SWxoWHFMZ2M5bnotNmNjeDdvNmxTYlVvLUVFYXFJYWRSTk02b1RZckU4S25sSHNqNXFWYWJNMkxEWE1PbDFLb2VsOUFDZHlVVmZueFlaZUJtS3lMYjJrRmxfNTlaeFdUckhnc3Ezc01nWHNVWmluMWtTYXRaM2ZRVVZQcUFXR2xPc1lQdVhFY1k3XzBmRGJsMU5icUtyUzNqVmdJOVRuUlRDQ3RYa1Z5RDVNaFRlNFhPd2hCVG04V0lya2FZQURBOENfamF4MkxxdWkzNXZNUi1xNTB2c1lTRU5NVXc4Q2xLbmw1TnVBTG9VMDNZSnFjb1FiTWc0R0dBUGNzWlR6NEpsY0FwdXFEdXRKYlM1M3FxNzBoZWJnQW5pMGlNck9aTWowZll2SmJuQWpqYy1NTmpNeGI2RVdVQ0VFNHFlbm5rc0R4UTI4QmwyUHdIWmdf?oc=5",
+          "pubDate": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "score": 0.55
         },
         {
           "title": "邁威爾3.75兆併Lumentum！光通訊概念股有哪些？17檔台股、CPO進度一次看 - 數位時代",
@@ -57,64 +82,39 @@
       ]
     },
     {
-      "rank": 3,
+      "rank": 4,
       "theme": "PCB/載板",
-      "score": 16.8,
+      "score": 13.9,
       "news": [
         {
           "title": "台股反彈大漲逾900點！2大權值股狂噴 PCB、記憶體復活 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZ3ROMXAxTE1VSThYcVlTSzktS1pBRUVEa2VIdEVIeTh0VmFKX1M4R2JGdzFyLWR4MWtsTEFadkNiaWpSUWhPV2c4YnhJTWNRY1FPT2RhQnVqSmgwcWprYmpVb2hLc1pBdkFPZmZoV1VIWHYwUERnaWFKeWNNRmhybGlMaVQyb05ZRTlXRFhDcEs2cEFQei10eVNJamlsSm4xeml4b1R6UTJlTmp0ODNFMDQ0UmJrSkQzMkJYTTJuTERweVhyQVFMQjMybnRqWWp3bGI1R3JUVTFzX3RJNHRRdlJ5OUNWVmVOWU5CQ1dHRTBlYjhJSk80eEI1X3VYUkdONFJIemc2M2NXOFVKQS0xeGhUc29zaEYwRGpWV0RkSG12M2dZcjM4WERjLWVJQkRGdkdjS0JjdVFxSkxQeHFnQnlmUnNKU2d0QXJJaw?oc=5",
           "pubDate": "Thu, 26 Nov 2026 01:41:58 GMT",
-          "score": 1.6
+          "score": 1.35
         },
         {
           "title": "台股收盤大漲956點！台積電小跌 PCB記憶體5檔熱門漲停 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxOZE83d20wMmRjbkFRZEtGM0VSQ1RXZzVSVlZNRTl1OGZkZS1XbUF0NzlRWWNZbzQza2hHUUZEVW1HQlQ1UlhWZ0JrREJYSUgtcGZDWE5rNWtxME1DVExkanF2dmpGaTUwVlVselAtdWhWNW5BdFdxVkNGQmZ1SGJwcWVuUkwzYWc4elVDdTZTaWNkWDJGMVBWZnU0eGxkRVpJS1Z2UUFYZ05qMk84amVNY3hTSDdqc0psQWZxWXFwWGRFTnR4VWhZRFBhVjFUNzc4UFpLaURqbnd0blFObG1kNy04SmdaX2E1NENHck1aMjdHcWxXbXVYU2JoaHFnUmprU01sdS1SallxN3g5M2dzNHNoYzhTQXFyQUZ1MzNRUlVIUzJxbGxzdTZQR2hOWXNKTU5Cd2lDMkp0NnhHbHlLYjF2T1U4eUYxeEJFMWFmQWVJM1dib2Nv?oc=5",
           "pubDate": "Thu, 26 Nov 2026 06:07:24 GMT",
-          "score": 1.6
+          "score": 1.35
         },
         {
           "title": "台積電尾盤被偷襲！台股收漲956點 被動元件、PCB大噴漲 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxNdWRzOTRpRm9FLWxVMV9sOS1pbGZzNVdteWY3bmdIUm1QQW1ULXdnR0NKUkh5MlI4aG5xN3hUTnlDc0lFNl9aZXUtYkQ5NFJIdVlBVExEMWthbGxPRmE4R3JqbS1sTGxLdEFkNzNKQThwTEhzRkVqOS1jV0dyNV80aW8tMHRnUXRlREwzend2NFBVRTZLalVDZUtFNmstZk1ReGt6bUNYb2xwSm9hM0tfTjVqNzNJR1hFdG93czgwcnlFMWJTV3h3aWxvTzZLbWJJUWdmMDFNaU1JRjhBaVJTNDVHc0RYTnpWVHRVRm9HMlBrbERpaGNCZkVJZE05Rm51cDRfUWxQVkZ2Qk5lMnItNUFRZzlSM1AwRHRZVkxLQmZTTWNKajhGZnJsMXZ6cTVQdzZidmtTUURMVWoycmx1TzJGdUJqdVpOajd3VU05QW8tOUxpamNZ?oc=5",
-          "pubDate": "Thu, 26 Nov 2026 06:32:32 GMT",
-          "score": 1.6
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "theme": "半導體",
-      "score": 11.55,
-      "news": [
-        {
-          "title": "台股反彈大漲逾900點！2大權值股狂噴 PCB、記憶體復活 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZ3ROMXAxTE1VSThYcVlTSzktS1pBRUVEa2VIdEVIeTh0VmFKX1M4R2JGdzFyLWR4MWtsTEFadkNiaWpSUWhPV2c4YnhJTWNRY1FPT2RhQnVqSmgwcWprYmpVb2hLc1pBdkFPZmZoV1VIWHYwUERnaWFKeWNNRmhybGlMaVQyb05ZRTlXRFhDcEs2cEFQei10eVNJamlsSm4xeml4b1R6UTJlTmp0ODNFMDQ0UmJrSkQzMkJYTTJuTERweVhyQVFMQjMybnRqWWp3bGI1R3JUVTFzX3RJNHRRdlJ5OUNWVmVOWU5CQ1dHRTBlYjhJSk80eEI1X3VYUkdONFJIemc2M2NXOFVKQS0xeGhUc29zaEYwRGpWV0RkSG12M2dZcjM4WERjLWVJQkRGdkdjS0JjdVFxSkxQeHFnQnlmUnNKU2d0QXJJaw?oc=5",
-          "pubDate": "Thu, 26 Nov 2026 01:41:58 GMT",
-          "score": 1.6
-        },
-        {
-          "title": "台股收盤大漲956點！台積電小跌 PCB記憶體5檔熱門漲停 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxOZE83d20wMmRjbkFRZEtGM0VSQ1RXZzVSVlZNRTl1OGZkZS1XbUF0NzlRWWNZbzQza2hHUUZEVW1HQlQ1UlhWZ0JrREJYSUgtcGZDWE5rNWtxME1DVExkanF2dmpGaTUwVlVselAtdWhWNW5BdFdxVkNGQmZ1SGJwcWVuUkwzYWc4elVDdTZTaWNkWDJGMVBWZnU0eGxkRVpJS1Z2UUFYZ05qMk84amVNY3hTSDdqc0psQWZxWXFwWGRFTnR4VWhZRFBhVjFUNzc4UFpLaURqbnd0blFObG1kNy04SmdaX2E1NENHck1aMjdHcWxXbXVYU2JoaHFnUmprU01sdS1SallxN3g5M2dzNHNoYzhTQXFyQUZ1MzNRUlVIUzJxbGxzdTZQR2hOWXNKTU5Cd2lDMkp0NnhHbHlLYjF2T1U4eUYxeEJFMWFmQWVJM1dib2Nv?oc=5",
-          "pubDate": "Thu, 26 Nov 2026 06:07:24 GMT",
-          "score": 1.6
-        },
-        {
-          "title": "今日漲停股｜台股大漲956點，PCB、記憶體、被動元件齊攻，華邦電、南亞科、華通亮燈1126｜豐雲學堂2026 年 11 月 - 永豐金證券",
-          "link": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxQTnBDc2ZOUEZhZ1kwTXY5Ui1hNlhJVW02ejNjWnhWeGJ5alpEV0NfVGMxQ1ROLUhQV2FObHlmX0t3SnlLWHdZS2xSdFVlSFBEM1BBZWlzT0RLQzFVd0RrM1VZUmJGaVlCQmd1R1ZzVHhhdzNaMmhRa04zOWV1amprTlliNTNYM0o0YW55cXJmZnMyUk9sY2tLZHZfd1l1SUFFd056em5hQzZLUW9OaG5IZjB6RWtpTm5jTjc0OHZDVG15SDl1aU1fMVVmdy1NOGRXN0VwT0NxUkdnbEZ6cDc5T0hjUTdnelZOTVE3bFBialRCUlRqV0FyQmVZWU1LY3dPWUJicWtDdE9lMDFNZVJPN21raFlVcGEtMjRZdUJfVDA1eG5paDVMWk1HNDRXN3NlOFEtZ2NpX2t1LWNlZDhITV9QeGlQWEtnOFI1UER0dEFLenFOb2UtUHN1dVN2UlltNVRMOTJBMlpzZEJXNWsyMXhGRkFQTzZrVG9TdVkwQmZZc0J1ekdqOFVVY1BpV0hkUGtsV1RkQ3V1ZE1vSVo3djVTTEJnQWRxa1JBcHk2VGpESVpmNlpKaXBRVzNDRTlSd3U2QU1pSVQ2c2poeGJzdm82VHVrWVZYeUtrbnc5R1ZWUVVpRlhWcHVMcFVpbk5KN1NIVjhn?oc=5",
-          "pubDate": "Thu, 26 Nov 2026 07:10:25 GMT",
-          "score": 1.6
+          "pubDate": "Thu, 26 Nov 2026 06:08:00 GMT",
+          "score": 1.35
         }
       ]
     },
     {
       "rank": 5,
       "theme": "機器人/自動化",
-      "score": 8.8,
+      "score": 8.25,
       "news": [
         {
-          "title": "今日漲停股｜面板反彈與AI機器人逆勢發酵，大盤震盪爆出1.11兆，誠美材、GIS-KY、東台強勢鎖漲停 1104 - 永豐金證券",
-          "link": "https://news.google.com/rss/articles/CBMitwRBVV95cUxNeGkxY3U3d1VzLUM2UWI0clplckRsaTg2TzlKNVFCM2FFUUM5Mm8zNURuSDJkYkhqeWJ2djZaeUtPOGJZWEVBeTRrTHNKb21zUk10akh0ZDgyeE5CemlKbG5qa3BPMEloalJlWEVIeWhOdm1hZjZOcVRXMVQ2c2czdTNhYkVYcVFnazFkVHVMUDA1TEdyRlhOUmE1WU93elJXSGd2a29ZYUF2TktKZklQX0IteFFJSEZOLTRudy10d3Zka1VuOHdzUHJGdUlPR0hOdml5T19qSVJVYnAyRXFEWDI0QlgwY0VPMFJweFJ1RGlIYmEwS2pNUVNEV0JObGRZanhTR2prWjkxZC1JZm14V2dhZkZTdXdnRTc0NHdadXVYdjdCZU45Tm5nQjJaY2Qwc0VNMEU5SXJoRkdRWWFwMjlNUndDTlpJOW1kUjR1Y1MzMzJIem54NEhxMkljeXhUd0R6Y09sR3Y5X0QyQWJSbzJXNi04d1ZCU1pnMlNNZXhORTdVTFF4WTY3dmFCVTFfbGYyUEhuU0RFTWFFNGZKWWIwc3Q0RFpCZjdxb0RCLWNXNERMTk5YdWFMOWVwR3p0TnFoeDdVaVB3TFNaWWtadmJTQ1libWFvSzl4cnJHRlNQSnB1bTE1VlFiVURkOVAyVlEyV1J4YmNoZmViOGIxRjFtMWVwT2lDbTVIWWhXLXRpSHFrNHdDZHk2bnlnU0g2dzhuRmNNS2tNOXdWNXVtTndsX285b0E?oc=5",
-          "pubDate": "Tue, 03 Nov 2026 08:00:00 GMT",
+          "title": "馬斯克：機器人未來量產、記憶體缺爆 半導體ETF大啖記憶體紅利 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rd1dxQUdFZU1aMG5GYlJ0eTRiYjRmd0JweWRWdzJOTXljaXdySHJlbVdfemVaYmM1cXNCbFJMcEZCOVhJRnZOOS11SEIycTduWHNR0gFYQVVfeXFMTzFtZGl3MkNRSks1RFVYalp0eGQxWlA2YjZ0T0I3RzBpa2R5U0NUUDZnLXljaXZTZXRveEdpbWdleEMwQnJHUEZpaTVLOWZxNkpQcS0zS1BKVQ?oc=5",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
           "score": 0.55
         },
         {
@@ -144,7 +144,7 @@
       "themeScore": 0,
       "lastClose": 310.5,
       "rsi14": 68.51,
-      "volRatio": 1.28,
+      "volRatio": 1.25,
       "ma5": 292.3,
       "ma10": 284.4,
       "ma20": 276.93,
@@ -207,13 +207,13 @@
       "rank": 5,
       "symbol": "2597",
       "name": "潤弘",
-      "score": 35.867,
-      "baseScore": 42.637,
+      "score": 32.767,
+      "baseScore": 39.537,
       "instScore": 3.8,
       "themeScore": 0,
       "lastClose": 193,
       "rsi14": 74.38,
-      "volRatio": 1.84,
+      "volRatio": 1.8,
       "ma5": 186,
       "ma10": 181.05,
       "ma20": 173.28,
@@ -268,7 +268,7 @@
       "theme": null,
       "marketState": "weak",
       "asOfDataDate": "2026-11-26",
-      "reason": "主力爆量 / MACD多方 / 短線加速 / 投信偏多 / 逆勢篩選",
+      "reason": "量能放大 / MACD多方 / 短線加速 / 投信偏多 / 逆勢篩選",
       "tradeStyle": "資金流強勢版v3.9",
       "isAlternate": true
     },
@@ -276,13 +276,13 @@
       "rank": 6,
       "symbol": "1477",
       "name": "聚陽",
-      "score": 35.001,
-      "baseScore": 40.156,
+      "score": 30.801,
+      "baseScore": 35.956,
       "instScore": 5.7,
       "themeScore": 0,
       "lastClose": 233,
       "rsi14": 71.17,
-      "volRatio": 1.35,
+      "volRatio": 1.32,
       "ma5": 224.5,
       "ma10": 224.7,
       "ma20": 217.68,
@@ -337,7 +337,7 @@
       "theme": null,
       "marketState": "weak",
       "asOfDataDate": "2026-11-26",
-      "reason": "20日強勢突破 / 量能放大 / MACD多方 / 短線加速 / 投信加碼 / 逆勢篩選",
+      "reason": "20日強勢突破 / MACD多方 / 短線加速 / 投信加碼 / 逆勢篩選",
       "tradeStyle": "資金流強勢版v3.9",
       "isAlternate": true
     }
