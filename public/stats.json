@@ -1,106 +1,52 @@
 {
   "version": "stats-v2-with-tp2",
-  "generatedAt": "2026-11-26T22:09:57.942Z",
+  "generatedAt": "2026-11-27T08:53:25.961Z",
   "range": "2026-02-05 ~ 2026-11-27",
   "totalHistoryFiles": 280,
   "validPickDays": 225,
-  "totalSamples": 385,
+  "totalSamples": 382,
   "d1": {
-    "samples": 385,
-    "wins": 185,
-    "winRate": 0.4805194805194805
+    "samples": 382,
+    "wins": 183,
+    "winRate": 0.4790575916230366
   },
   "d3": {
-    "samples": 385,
-    "wins": 198,
-    "winRate": 0.5142857142857142
+    "samples": 382,
+    "wins": 197,
+    "winRate": 0.5157068062827225
   },
   "d5": {
-    "samples": 385,
-    "wins": 161,
-    "winRate": 0.41818181818181815
+    "samples": 382,
+    "wins": 160,
+    "winRate": 0.418848167539267
   },
   "tp1": {
     "label": "+3% within 5 trading days",
     "pct": 0.03,
-    "samples": 385,
-    "hits": 298,
-    "hitRate": 0.7740259740259741
+    "samples": 382,
+    "hits": 296,
+    "hitRate": 0.774869109947644
   },
   "tp2": {
     "label": "+5% within 5 trading days",
     "pct": 0.05,
-    "samples": 385,
-    "hits": 242,
-    "hitRate": 0.6285714285714286
+    "samples": 382,
+    "hits": 240,
+    "hitRate": 0.6282722513089005
   },
   "dailyHit": {
     "tp1": {
       "days": 225,
-      "hitDays": 126,
-      "hitRate": 0.56
+      "hitDays": 125,
+      "hitRate": 0.5555555555555556
     },
     "tp2": {
       "days": 225,
-      "hitDays": 116,
-      "hitRate": 0.5155555555555555
+      "hitDays": 115,
+      "hitRate": 0.5111111111111111
     }
   },
   "details": [
-    {
-      "date": "2026-05-26",
-      "pickDate": "2026-05-26",
-      "symbol": "8926",
-      "name": "台汽電",
-      "entry": 68.7,
-      "d1Close": 72.30000305175781,
-      "d3Close": 66.5999984741211,
-      "d5Close": 67.4000015258789,
-      "d1Win": true,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 70.76,
-      "tp2Price": 72.14,
-      "d5HighMax": 72.5,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
-    {
-      "date": "2026-05-26",
-      "pickDate": "2026-05-26",
-      "symbol": "6525",
-      "name": "捷敏-KY",
-      "entry": 134,
-      "d1Close": 129.5,
-      "d3Close": 123,
-      "d5Close": 119.5,
-      "d1Win": false,
-      "d3Win": false,
-      "d5Win": false,
-      "tp1Price": 138.02,
-      "tp2Price": 140.7,
-      "d5HighMax": 138,
-      "tp1Hit": false,
-      "tp2Hit": false
-    },
-    {
-      "date": "2026-05-26",
-      "pickDate": "2026-05-26",
-      "symbol": "3704",
-      "name": "合勤控",
-      "entry": 44.45,
-      "d1Close": 45.25,
-      "d3Close": 46.349998474121094,
-      "d5Close": 48,
-      "d1Win": true,
-      "d3Win": true,
-      "d5Win": true,
-      "tp1Price": 45.78,
-      "tp2Price": 46.67,
-      "d5HighMax": 48.29999923706055,
-      "tp1Hit": true,
-      "tp2Hit": true
-    },
     {
       "date": "2026-05-27",
       "pickDate": "2026-05-27",
